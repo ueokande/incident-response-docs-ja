@@ -1,0 +1,51 @@
+name: Build static sites and deploy them to github pages
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 2.7.18
+    - name: Install mkdocs
+      run: pip install --requirement requirements.txt
+    - name: Build mkdocs
+      run: |
+        mkdocs build --clean
+
+    - name: Checkout gh-pages
+      uses: actions/checkout@v2
+      with:
+        path: gh-pages
+        ref: gh-pages
+    - name: Deploy sites to github pages
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
+      run: |
+        cp -r gh-pages/.git site/
+        cd site/
+
+        git add .
+        if [ -z "$(git diff --cached --name-only)" ]; then
+          exit 0
+        fi
+
+        git config --global user.name "Shin'ya Ueoka"
+        git config --global user.email "ueokande@i-beam.org"
+        eval "$(ssh-agent -s)"
+        ssh-add - <<< "${DEPLOY_KEY}"
+
+        git commit -m"Update on $(date +'%Y-%m-%d %H:%M:%S%z')"
+        git remote set-url origin "git@github.com:${GITHUB_REPOSITORY}"
+        git push origin gh-pages

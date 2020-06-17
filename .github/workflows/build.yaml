@@ -1,0 +1,23 @@
+name: Build static sites
+
+on:
+  push:
+    branches:
+      - "!master"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 2.7.18
+    - name: Install mkdocs
+      run: pip install --requirement requirements.txt
+    - name: Build mkdocs
+      run: mkdocs build --clean
