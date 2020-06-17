@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <title>Getting Started - PagerDuty Incident Response Documentation</title>
+
+    <!-- Author and License -->
+    <meta name="author" content="PagerDuty, Inc." />
+    <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
+
+    <!-- Page Description -->
+    <meta name="description" content="This 'Getting Started' guide will help you to navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in." />
+    <meta name="keywords" content="pagerduty, incident, response" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/getting_started/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="PagerDuty Incident Response Documentation" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://response.pagerduty.com/getting_started/" />
+    <meta property="og:title" content="Getting Started - PagerDuty Incident Response Documentation" />
+    <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
+    <meta property="og:description" content="This 'Getting Started' guide will help you to navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in." />
+    <meta property="og:image" content="https://response.pagerduty.com/assets/img/covers/getting_started.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Getting Started - PagerDuty Incident Response Documentation" />
+    <meta name="twitter:description" content="This 'Getting Started' guide will help you to navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in." />
+    <meta name="twitter:image" content="https://response.pagerduty.com/assets/img/covers/getting_started.png" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../assets/css/pagerduty.css">
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    
+
+    <!-- Scripts -->
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-blue-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="mainlogo">
+        <a href="/" title="Go to homepage.">
+          <img src="../assets/img/logo.png" title="PagerDuty" />
+        </a>
+      </div>
+      <div class="title">
+        <span class="path">
+          <a href="/">Incident Response</a>
+          <i class="icon icon-link"></i>
+        </span>
+        
+          <span class="path">
+            
+          </span>
+        
+        Getting Started
+      </div>
+    </div>
+    <div class="button button-pagerduty" role="button" aria-label="PagerDuty">
+      <a href="https://www.pagerduty.com" title="PagerDuty Website" target="_blank" class="toggle-button icon icon-pagerduty"></a>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/PagerDuty" title="@PagerDuty on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/PagerDuty" title="@PagerDuty on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  <div class="repo_header">
+    <a href="" class="project"  title="GitHub repo pagerduty/incident-response-docs">
+      <div class="banner">
+        
+          <div class="logo">
+            <img src="../assets/img/icon.png">
+          </div>
+        
+        <div class="name">
+          <strong>
+            PagerDuty Incident Response Documentation
+            <span class="version">
+              
+            </span>
+          </strong>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-link">
+            
+            <a href="https://github.com/pagerduty/incident-response-docs" target="_blank" title="View Source" data-action="download">
+              <i class="icon icon-github"></i> Repo
+            </a>
+          </li>
+          <li class="repo-forks">
+            <a href="https://github.com/pagerduty/incident-response-docs/fork" target="_blank" title="Fork" data-action="fork">
+              <i class="icon icon-code-fork"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/pagerduty/incident-response-docs/stargazers" target="_blank" title="Stars" data-action="star">
+              <i class="icon icon-star"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr/>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="Getting Started" href="./">
+      Getting Started
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Define what an "Incident" and "Major Incident" are for you." href="#define-what-an-incident-and-major-incident-are-for-you">
+                Define what an "Incident" and "Major Incident" are for you.
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Determine how you will mobilize responders." href="#determine-how-you-will-mobilize-responders">
+                Determine how you will mobilize responders.
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Define the incident response roles." href="#define-the-incident-response-roles">
+                Define the incident response roles.
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Create a post-mortem template." href="#create-a-post-mortem-template">
+                Create a post-mortem template.
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Practice" href="#practice">
+                Practice
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Use it for a real incident." href="#use-it-for-a-real-incident">
+                Use it for a real incident.
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What comes next?" href="#what-comes-next">
+                What comes next?
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">On-Call</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Being On-Call" href="../oncall/being_oncall/">
+      Being On-Call
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Who's On-Call?" href="../oncall/whos_oncall/">
+      Who's On-Call?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Alerting Principles" href="../oncall/alerting_principles/">
+      Alerting Principles
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Before an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="What is an Incident?" href="../before/what_is_an_incident/">
+      What is an Incident?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Severity Levels" href="../before/severity_levels/">
+      Severity Levels
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Different Roles" href="../before/different_roles/">
+      Different Roles
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Call Etiquette" href="../before/call_etiquette/">
+      Call Etiquette
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Complex Incidents" href="../before/complex_incidents/">
+      Complex Incidents
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">During an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="During an Incident" href="../during/during_an_incident/">
+      During an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Security Incident" href="../during/security_incident_response/">
+      Security Incident
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">After an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="After an Incident" href="../after/after_an_incident/">
+      After an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Process" href="../after/post_mortem_process/">
+      Post-Mortem Process
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Template" href="../after/post_mortem_template/">
+      Post-Mortem Template
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Effective Post-Mortems" href="../after/effective_post_mortems/">
+      Effective Post-Mortems
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../training/overview/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Incident Commander" href="../training/incident_commander/">
+      Incident Commander
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Deputy" href="../training/deputy/">
+      Deputy
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Scribe" href="../training/scribe/">
+      Scribe
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Subject Matter Expert" href="../training/subject_matter_expert/">
+      Subject Matter Expert
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Customer Liaison" href="../training/customer_liaison/">
+      Customer Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Internal Liaison" href="../training/internal_liaison/">
+      Internal Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Glossary" href="../training/glossary/">
+      Glossary
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training Courses</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Incident Response" href="../training/courses/incident_response/">
+      Incident Response
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Additional Resources</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Reading" href="../resources/reading/">
+      Reading
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="ChatOps" href="../resources/chatops/">
+      ChatOps
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Anti-Patterns" href="../resources/anti_patterns/">
+      Anti-Patterns
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="About" href="../about/">
+      About
+    </a>
+    
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Getting Started</h1>
+          
+          
+          <p><img alt="Getting Started" src="../../assets/img/headers/getting_started.jpg" />
+<em>Credit: <a href="https://www.pexels.com/photo/young-game-match-kids-2923/">Breakingpic @ Pexels</a></em></p>
+<p>If you don't yet have a process in your own organization, or if you're just starting out, you may find the sheer quantity of information in this documentation overwhelming. It's important to remember that this <strong>isn't something you'll be able to implement overnight</strong>. It's a process that should be built up over time. While it took us years to get to this point, our hope is that you can make use of this documentation to skip some of the awkward growing pains we went through, and reach a more mature incident response process in the most efficient way possible.</p>
+<p>To that end, we've put together this "Getting Started" guide to help you navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in.</p>
+<h2 id="define-what-an-incident-and-major-incident-are-for-you">Define what an "Incident" and "Major Incident" are for you.<a class="headerlink" href="#define-what-an-incident-and-major-incident-are-for-you" title="Permanent link">#</a></h2>
+<p>You don't have to use <a href="../before/severity_levels/">our definitions</a>, they're just a starting point. Feel free to come up with whatever you want. The point is that the definition should be a short, simple statement that makes sure everyone is on the same page. You want to remove any discussion around whether something is an incident or not during your response process. If you have a metric to use (e.g. "if errors go above 100/minute it's a major incident"), that's great. If not, don't let that stop you from defining what a Major Incident is.</p>
+<p>The reason this should be your first step is because you can't respond to an incident until you know what an incident is. If one person considers something an incident but the rest of the organization doesn't, that's going to create ambiguity and confusion during any sort of incident response. Having a clear definition that's disseminated to your entire organization makes sure that everyone has the same understanding and prevents any confusion.</p>
+<div class="admonition question">
+<p class="admonition-title">What about Severity Levels?</p>
+<p>You shouldn't need to worry about "Severity Levels" at the beginning. Just whether something is an incident or not. You can add severity levels later once you want to flesh out your response process more.</p>
+</div>
+<h2 id="determine-how-you-will-mobilize-responders">Determine how you will mobilize responders.<a class="headerlink" href="#determine-how-you-will-mobilize-responders" title="Permanent link">#</a></h2>
+<p>What is going to trigger your incident response process? Will it be an automated alert tied to a metric? That's a great place to start! Even if it's just a single alert that goes out to a group of responders.</p>
+<div class="admonition tip">
+<p class="admonition-title">Have a way to manually trigger incident response</p>
+<p>Having a way for humans to manually trigger incident response when they see something wrong will help to improve your response times. It took us a while to do this, but if we could go back in time we'd do this from the start!</p>
+</div>
+<p>Make sure to set up a phone bridge and chat room dedicated for incident response. You want to prepare this in advance, and make sure the numbers and connection information are written down and shared with anyone who may need to respond. You don't want to be setting up the call and chat room while trying to respond to an incident. You should make the call and room names static or as easily discoverable as possible.</p>
+<p>You also want to <a href="../oncall/being_oncall/">set expectations for your responders</a>. Make sure they know that they need to join the call and chat room if they get paged and that they shouldn't just jump into solving the problem.</p>
+<p>Finally, you want to make sure your <a href="../oncall/alerting_principles/">alerts are actionable</a>. There's nothing worse than waking everyone up for something you cannot control. Make sure anything that is going to trigger your incident response and page people is something that requires <strong>immediate human action</strong> to resolve.</p>
+<h2 id="define-the-incident-response-roles">Define the incident response roles.<a class="headerlink" href="#define-the-incident-response-roles" title="Permanent link">#</a></h2>
+<p>You only care about the <a href="../before/different_roles#incident-commander-ic">Incident Commander</a> role to begin with. If you have enough people you can also have a <a href="../before/different_roles#scribe">Scribe</a>. But to start with, just have an Incident Commander and your responders. The Incident Commander shouldn't be taking any remediation actions at all, they should just be leading the response and making the decisions. You don't need to follow the entire <a href="../training/incident_commander/">training guide</a> to begin with, just the basics of asking questions and assigning tasks are enough to get you started.</p>
+<h2 id="create-a-post-mortem-template">Create a post-mortem template.<a class="headerlink" href="#create-a-post-mortem-template" title="Permanent link">#</a></h2>
+<p>You can use <a href="../after/post_mortem_template/">our template</a> to get started, or come up with your own version. Just make sure that you have a structured template so that it makes it easier to compare incidents to each other. It can be as simple as three headings to begin with: "What happened?", "Why did it happen?", "How are we going to make sure it doesn't happen again?". Adding more detailed fields and information can come later.</p>
+<div class="admonition tip">
+<p class="admonition-title">Name Doesn't Matter</p>
+<p>You don't need to call them "post-mortem"'s. After-action review, learning review, retrospective, etc. are all valid names. The point is that you review what happened and learn from it, the name you give to the process doesn't really matter.</p>
+</div>
+<h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">#</a></h2>
+<p>Run a fake incident, mobilize your responders, and have someone act as the Incident Commander. Get used to the switch from normal day-to-day operations, and the emergency operations of an incident. Switching to having an Incident Commander running the show can be jarring at first, so it helps to practice it in a low-risk situation to begin with. Playing a game of "<a href="http://www.keeptalkinggame.com/">Keep Talking and Nobody Explodes</a>" is a light-hearted way of practicing the skills required for incident response. You can also run your own version of <a href="https://www.pagerduty.com/blog/failure-fridays-four-years/">Failure Friday</a>, where you manually inject some failure into your system and treat it as a major incident.</p>
+<h2 id="use-it-for-a-real-incident">Use it for a real incident.<a class="headerlink" href="#use-it-for-a-real-incident" title="Permanent link">#</a></h2>
+<p>Once you've got the basics in place, start using the process for a real incident. The more you use it, the more natural it will become. As you use it more and more, you can add more process into it and tweak it for your needs. Things may not go smoothly the first time, but don't give up!</p>
+<h2 id="what-comes-next">What comes next?<a class="headerlink" href="#what-comes-next" title="Permanent link">#</a></h2>
+<p>You can now start expanding your process and adding some more things. Here are our recommendations for the next things you should incorporate:</p>
+<h3 id="add-a-scribe-if-you-havent-already">Add a scribe, if you haven't already.<a class="headerlink" href="#add-a-scribe-if-you-havent-already" title="Permanent link">#</a></h3>
+<p>Keeping an accurate timeline of events becomes really important when you want to go back and review your incidents. <a href="../before/different_roles#scribe">Scribe</a> should be the next role you start using.</p>
+<h3 id="expand-your-ic-rotation">Expand your IC rotation.<a class="headerlink" href="#expand-your-ic-rotation" title="Permanent link">#</a></h3>
+<p>You don't want to just have a single IC, you want as many as you can get. Start training up more people and create an on-call rotation for it. At first, you will probably use weekly rotations. We recommend trying to get to a daily rotation as quickly as you can.</p>
+<h3 id="add-in-a-deputy-as-a-role">Add in a deputy as a role.<a class="headerlink" href="#add-in-a-deputy-as-a-role" title="Permanent link">#</a></h3>
+<p>Once you have a few more IC's, start adding a deputy to your response. Having a <a href="../before/different_roles#deputy">Deputy</a> will give you the ability to quickly handover in longer incidents, and also gives the IC some backup for shorter incidents.</p>
+<h3 id="define-severity-levels">Define severity levels.<a class="headerlink" href="#define-severity-levels" title="Permanent link">#</a></h3>
+<p>Once you have the process working well, you can start to add more granularity to your response and incident definitions. Perhaps you don't want to do a "full" response for certain incidents. Define some <a href="../before/severity_levels/">severity levels</a> to document the level of response you want.</p>
+<h3 id="start-adding-other-roles">Start adding other roles.<a class="headerlink" href="#start-adding-other-roles" title="Permanent link">#</a></h3>
+<p>As your process becomes more established, you want to start adding other roles. We recommend a <a href="../before/different_roles#customer-liaison">Customer Liaison</a> as the next one you include.</p>
+<h3 id="practice-practice-practice">Practice, practice, practice.<a class="headerlink" href="#practice-practice-practice" title="Permanent link">#</a></h3>
+<p>It cannot be overstated how much it helps to practice your incident response. If you trigger incident response and realize it's not really an incident, treat it as one anyway. You've already mobilized your responders, so it's free practice.</p>
+<h3 id="define-a-process-for-larger-incidents">Define a process for larger incidents.<a class="headerlink" href="#define-a-process-for-larger-incidents" title="Permanent link">#</a></h3>
+<p>We call these <a href="../before/complex_incidents/">Complex Incidents</a>. You won't use this often, but you'll want the phone bridge numbers and chat rooms prepared ahead of time. You'll also want to make sure your responders are aware of the process.</p>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; PagerDuty, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href=".." title="Home">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Home
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../oncall/being_oncall/" title="Being On-Call">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Being On-Call
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = 'pagerduty/incident-response-docs';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../js/github_forks.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

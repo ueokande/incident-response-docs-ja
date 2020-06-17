@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <title>During an Incident - PagerDuty Incident Response Documentation</title>
+
+    <!-- Author and License -->
+    <meta name="author" content="PagerDuty, Inc." />
+    <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
+
+    <!-- Page Description -->
+    <meta name="description" content="Information on what to do during a major incident." />
+    <meta name="keywords" content="pagerduty, incident, response" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/during/during_an_incident/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="PagerDuty Incident Response Documentation" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://response.pagerduty.com/during/during_an_incident/" />
+    <meta property="og:title" content="During an Incident - PagerDuty Incident Response Documentation" />
+    <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
+    <meta property="og:description" content="Information on what to do during a major incident." />
+    <meta property="og:image" content="https://response.pagerduty.com/assets/img/covers/dont_panic.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="During an Incident - PagerDuty Incident Response Documentation" />
+    <meta name="twitter:description" content="Information on what to do during a major incident." />
+    <meta name="twitter:image" content="https://response.pagerduty.com/assets/img/covers/dont_panic.png" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/css/pagerduty.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+
+    <!-- Scripts -->
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-blue-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="mainlogo">
+        <a href="/" title="Go to homepage.">
+          <img src="../../assets/img/logo.png" title="PagerDuty" />
+        </a>
+      </div>
+      <div class="title">
+        <span class="path">
+          <a href="/">Incident Response</a>
+          <i class="icon icon-link"></i>
+        </span>
+        
+          <span class="path">
+            
+              
+                During an Incident <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        During an Incident
+      </div>
+    </div>
+    <div class="button button-pagerduty" role="button" aria-label="PagerDuty">
+      <a href="https://www.pagerduty.com" title="PagerDuty Website" target="_blank" class="toggle-button icon icon-pagerduty"></a>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/PagerDuty" title="@PagerDuty on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/PagerDuty" title="@PagerDuty on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  <div class="repo_header">
+    <a href="" class="project"  title="GitHub repo pagerduty/incident-response-docs">
+      <div class="banner">
+        
+          <div class="logo">
+            <img src="../../assets/img/icon.png">
+          </div>
+        
+        <div class="name">
+          <strong>
+            PagerDuty Incident Response Documentation
+            <span class="version">
+              
+            </span>
+          </strong>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-link">
+            
+            <a href="https://github.com/pagerduty/incident-response-docs" target="_blank" title="View Source" data-action="download">
+              <i class="icon icon-github"></i> Repo
+            </a>
+          </li>
+          <li class="repo-forks">
+            <a href="https://github.com/pagerduty/incident-response-docs/fork" target="_blank" title="Fork" data-action="fork">
+              <i class="icon icon-code-fork"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/pagerduty/incident-response-docs/stargazers" target="_blank" title="Stars" data-action="star">
+              <i class="icon icon-star"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr/>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Getting Started" href="../../getting_started/">
+      Getting Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">On-Call</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Being On-Call" href="../../oncall/being_oncall/">
+      Being On-Call
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Who's On-Call?" href="../../oncall/whos_oncall/">
+      Who's On-Call?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Alerting Principles" href="../../oncall/alerting_principles/">
+      Alerting Principles
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Before an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="What is an Incident?" href="../../before/what_is_an_incident/">
+      What is an Incident?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Severity Levels" href="../../before/severity_levels/">
+      Severity Levels
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Different Roles" href="../../before/different_roles/">
+      Different Roles
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Call Etiquette" href="../../before/call_etiquette/">
+      Call Etiquette
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Complex Incidents" href="../../before/complex_incidents/">
+      Complex Incidents
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">During an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="During an Incident" href="./">
+      During an Incident
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Don't Panic!" href="#dont-panic">
+                Don't Panic!
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Steps for Incident Commander" href="#steps-for-incident-commander">
+                Steps for Incident Commander
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Steps for Deputy" href="#steps-for-deputy">
+                Steps for Deputy
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Steps for Scribe" href="#steps-for-scribe">
+                Steps for Scribe
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Steps for Subject Matter Experts" href="#steps-for-subject-matter-experts">
+                Steps for Subject Matter Experts
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Steps for Customer Liaison" href="#steps-for-customer-liaison">
+                Steps for Customer Liaison
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Steps for Internal Liaison" href="#steps-for-internal-liaison">
+                Steps for Internal Liaison
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Security Incident" href="../security_incident_response/">
+      Security Incident
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">After an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="After an Incident" href="../../after/after_an_incident/">
+      After an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Process" href="../../after/post_mortem_process/">
+      Post-Mortem Process
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Template" href="../../after/post_mortem_template/">
+      Post-Mortem Template
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Effective Post-Mortems" href="../../after/effective_post_mortems/">
+      Effective Post-Mortems
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../../training/overview/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Incident Commander" href="../../training/incident_commander/">
+      Incident Commander
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Deputy" href="../../training/deputy/">
+      Deputy
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Scribe" href="../../training/scribe/">
+      Scribe
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Subject Matter Expert" href="../../training/subject_matter_expert/">
+      Subject Matter Expert
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Customer Liaison" href="../../training/customer_liaison/">
+      Customer Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Internal Liaison" href="../../training/internal_liaison/">
+      Internal Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Glossary" href="../../training/glossary/">
+      Glossary
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training Courses</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Incident Response" href="../../training/courses/incident_response/">
+      Incident Response
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Additional Resources</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Reading" href="../../resources/reading/">
+      Reading
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="ChatOps" href="../../resources/chatops/">
+      ChatOps
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Anti-Patterns" href="../../resources/anti_patterns/">
+      Anti-Patterns
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="About" href="../../about/">
+      About
+    </a>
+    
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>During an Incident</h1>
+          
+          
+          <p>Information on what to do during a major incident. See our <a href="../../before/severity_levels/">severity level descriptions</a> for what constitutes a major incident.</p>
+<div class="admonition note">
+<p class="admonition-title">Documentation</p>
+<p>For your own internal documentation, you should make sure that this page has all of the necessary information prominently displayed. Such as: phone bridge numbers, Slack rooms, important chat commands, etc. Here is an example,</p>
+<p><table class="custom-table" id="contact-summary">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">#incident-chat</a></td>
+      <td><a href="#">https://a-voip-provider.com/incident-call</a></td>
+      <td><a href="#">+1 555 BIG FIRE</a> (+1 555 244 3473) / PIN: 123456</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="centered">Need an IC? Do <code>!ic page</code> in Slack</td>
+    </tr>
+    <tr>
+      <td colspan="3"><em>For executive summary updates only, join <a href="#">#executive-summary-updates</a>.</em></td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Security Incident?</p>
+<p>If this is a security incident, you should follow the <a href="../security_incident_response/">Security Incident Response</a> process.</p>
+</div>
+<h2 id="dont-panic">Don't Panic!<a class="headerlink" href="#dont-panic" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Join the incident call and chat (see links above).</p>
+<ul>
+<li>Anyone is free to join the call or chat to observe and follow along with the incident.</li>
+<li>If you wish to participate however, you should join both. If you can't join the call for some reason, you should have a dedicated proxy for the call. Disjointed discussions in the chat room are ultimately distracting.</li>
+</ul>
+</li>
+<li>
+<p>Follow along with the call/chat, add any comments you feel are appropriate, but keep the discussion relevant to the problem at hand.</p>
+<ul>
+<li>If you are not an SME, try to filter any discussion through the primary SME for your service. Too many people discussing at once get become overwhelming, so we should try to maintain a hierarchical structure to the call if possible.</li>
+</ul>
+</li>
+<li>
+<p>Follow instructions from the Incident Commander.</p>
+<ul>
+<li><strong>Is there no IC on the call?</strong><ul>
+<li>Manually page them via Slack, with <code>!ic page</code> in Slack. This will page the primary and backup IC's at the same time.</li>
+<li>Never hesitate to page the IC. It's much better to have them and not need them than the other way around.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="steps-for-incident-commander">Steps for Incident Commander<a class="headerlink" href="#steps-for-incident-commander" title="Permanent link">#</a></h2>
+<p>Resolve the incident as quickly and as safely as possible, use the Deputy to assist you. Delegate any tasks to relevant experts at your discretion.</p>
+<ol>
+<li>
+<p>Announce on the call and in Slack that you are the incident commander, who you have designated as deputy (usually the backup IC), and scribe.</p>
+</li>
+<li>
+<p>Identify if there is an obvious cause to the incident (recent deployment, spike in traffic, etc.), delegate investigation to relevant experts,</p>
+<ul>
+<li>Use the service experts on the call to assist in the analysis. They should be able to quickly provide confirmation of the cause, but not always. It's the call of the IC on how to proceed in cases where the cause is not positively known. Confer with service owners and use their knowledge to help you.</li>
+</ul>
+</li>
+<li>
+<p>Identify investigation &amp; repair actions (roll back, rate-limit services, etc) and delegate actions to relevant service experts. Typically something like this (obviously not an exhaustive list),</p>
+<ul>
+<li><strong>Bad Deployment:</strong> Roll it back.</li>
+<li><strong>Web Application Stuck/Crashed:</strong> Do a rolling restart.</li>
+<li><strong>Event Flood:</strong> Validate automatic throttling is sufficient, adjust manually if not.</li>
+<li><strong>Data Center Outage:</strong> Validate automation has removed bad data center. Force it to do so if not.</li>
+<li><strong>Degraded Service Behavior without load:</strong> Gather forensic data (heap dumps, etc), and consider doing a rolling restart.</li>
+</ul>
+</li>
+<li>
+<p>Listen for prompts from your Deputy regarding severity escalations, decide whether we need to announce publicly, and instruct customer liaison accordingly.</p>
+<ul>
+<li>Announcing publicly is at your discretion as IC. If you are unsure, then announce publicly ("If in doubt, tweet it out").</li>
+</ul>
+</li>
+<li>
+<p>Keep track of your <a href="../../training/glossary/#span-of-control">span of control</a>. If the response starts to become larger, or the incident increases in complexity, consider <a href="../../before/complex_incidents/#spinning-off-sub-teams">splitting off sub-teams</a> in order to get a more effective response.</p>
+</li>
+<li>
+<p>Once incident has recovered or is actively recovering, you can announce that the incident is over and that the call is ending. This usually indicates there's no more productive work to be done for the incident right now.</p>
+<ul>
+<li>Move the remaining, non-time-critical discussion to Slack.</li>
+<li>Follow up to ensure the customer liaison wraps up the incident publicly.</li>
+<li>Identify any post-incident clean-up work.</li>
+<li>You may need to perform debriefing/analysis of the underlying contributing factor.</li>
+</ul>
+</li>
+<li>
+<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
+</li>
+</ol>
+<h2 id="steps-for-deputy">Steps for Deputy<a class="headerlink" href="#steps-for-deputy" title="Permanent link">#</a></h2>
+<p>You are there to support the IC in whatever they need.</p>
+<ol>
+<li>
+<p>Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.</p>
+</li>
+<li>
+<p>Follow instructions from the Incident Commander.</p>
+</li>
+<li>
+<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
+</li>
+</ol>
+<h2 id="steps-for-scribe">Steps for Scribe<a class="headerlink" href="#steps-for-scribe" title="Permanent link">#</a></h2>
+<p>You are there to document the key information from the incident in Slack.</p>
+<ol>
+<li>
+<p>Update the Slack room with who the IC is, who the Deputy is, and that you're the scribe (if not already done).</p>
+<ul>
+<li>e.g. "IC: Bob Boberson, Deputy: Deputy Deputyson, Scribe: Writer McWriterson"</li>
+</ul>
+</li>
+<li>
+<p>Start our status monitoring bot so that all responders can see the current state without needing to ask.</p>
+<ul>
+<li>OfficerURL can help you to monitor the status on Slack,<ul>
+<li><code>!status</code> - Will tell you the current status.</li>
+<li><code>!status stalk</code> - Will continually monitor the status and report it to the room every 30s.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>You should add notes to Slack when significant actions are taken, or findings are determined. You don't need to wait for the IC to direct this - use your own judgment.</p>
+<ul>
+<li>You should also add <code>TODO</code> notes to the Slack room that indicate follow-ups slated for later.</li>
+</ul>
+</li>
+<li>
+<p>Follow instructions from the Incident Commander.</p>
+</li>
+<li>
+<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
+</li>
+</ol>
+<h2 id="steps-for-subject-matter-experts">Steps for Subject Matter Experts<a class="headerlink" href="#steps-for-subject-matter-experts" title="Permanent link">#</a></h2>
+<p>You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation repair actions, and following through on the repair actions.</p>
+<ol>
+<li>
+<p>Investigate the incident by analyzing any graphs or logs at your disposal. Announce all findings to the incident commander.</p>
+<ul>
+<li>If you are unsure of the cause, that's fine, state that you are investigating and provide regular updates to the IC.</li>
+</ul>
+</li>
+<li>
+<p>Announce all suggestions for resolution to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so!</p>
+</li>
+<li>
+<p>Follow instructions from the incident commander.</p>
+</li>
+<li>
+<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
+</li>
+</ol>
+<h2 id="steps-for-customer-liaison">Steps for Customer Liaison<a class="headerlink" href="#steps-for-customer-liaison" title="Permanent link">#</a></h2>
+<p>Be on stand-by to post public facing messages regarding the incident.</p>
+<ol>
+<li>
+<p>You will typically be required to update the status page and to send Tweets from our various accounts at certain times during the call.</p>
+</li>
+<li>
+<p>Follow instructions from the Incident Commander.</p>
+</li>
+<li>
+<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
+</li>
+</ol>
+<h2 id="steps-for-internal-liaison">Steps for Internal Liaison<a class="headerlink" href="#steps-for-internal-liaison" title="Permanent link">#</a></h2>
+<p>You are there to provide updates to internal stakeholders, and to mobilize additional internal responders as necessary.</p>
+<ol>
+<li>
+<p>Be prepared to page other people as directed by the Incident Commander.</p>
+</li>
+<li>
+<p>Notify internal stakeholders as necessary, adding subscribers to the PagerDuty incident. We have pre-defined teams called "SEV-1 Stakeholders" and "SEV-2 Stakeholders" which can be used.</p>
+</li>
+<li>
+<p>Provide regular status updates in Slack (roughly every 30mins) to the executive team, giving an executive summary of the current status. Keep it short and to the point, and use <code>@here</code>.</p>
+</li>
+<li>
+<p>Follow instructions from the Incident Commander.</p>
+</li>
+<li>
+<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
+</li>
+</ol>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; PagerDuty, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../../before/complex_incidents/" title="Complex Incidents">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Complex Incidents
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../security_incident_response/" title="Security Incident">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Security Incident
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'pagerduty/incident-response-docs';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../js/github_forks.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

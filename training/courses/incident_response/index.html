@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <title>Incident Response Training - PagerDuty Incident Response Documentation</title>
+
+    <!-- Author and License -->
+    <meta name="author" content="PagerDuty, Inc." />
+    <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
+
+    <!-- Page Description -->
+    <meta name="description" content="This is an open-source version of PagerDuty's Incident Response training course. What started as an internal course to train new Incident Commanders at PagerDuty has since developed into training that we now deliver publicly. Learn more about incident response and the role of an Incident Commander." />
+    <meta name="keywords" content="pagerduty, incident, response" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/training/courses/incident_response/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="PagerDuty Incident Response Documentation" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://response.pagerduty.com/training/courses/incident_response/" />
+    <meta property="og:title" content="Incident Response Training - PagerDuty Incident Response Documentation" />
+    <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
+    <meta property="og:description" content="This is an open-source version of PagerDuty's Incident Response training course. What started as an internal course to train new Incident Commanders at PagerDuty has since developed into training that we now deliver publicly. Learn more about incident response and the role of an Incident Commander." />
+    <meta property="og:image" content="https://response.pagerduty.com/assets/slides/incident_response/incident_response.001.jpeg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Incident Response Training - PagerDuty Incident Response Documentation" />
+    <meta name="twitter:description" content="This is an open-source version of PagerDuty's Incident Response training course. What started as an internal course to train new Incident Commanders at PagerDuty has since developed into training that we now deliver publicly. Learn more about incident response and the role of an Incident Commander." />
+    <meta name="twitter:image" content="https://response.pagerduty.com/assets/slides/incident_response/incident_response.001.jpeg" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/pagerduty.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/slides.css">
+    
+
+    <!-- Scripts -->
+    <script src="../../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-blue-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="mainlogo">
+        <a href="/" title="Go to homepage.">
+          <img src="../../../assets/img/logo.png" title="PagerDuty" />
+        </a>
+      </div>
+      <div class="title">
+        <span class="path">
+          <a href="/">Incident Response</a>
+          <i class="icon icon-link"></i>
+        </span>
+        
+          <span class="path">
+            
+              
+                Training Courses <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Incident Response
+      </div>
+    </div>
+    <div class="button button-pagerduty" role="button" aria-label="PagerDuty">
+      <a href="https://www.pagerduty.com" title="PagerDuty Website" target="_blank" class="toggle-button icon icon-pagerduty"></a>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/PagerDuty" title="@PagerDuty on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/PagerDuty" title="@PagerDuty on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  <div class="repo_header">
+    <a href="" class="project"  title="GitHub repo pagerduty/incident-response-docs">
+      <div class="banner">
+        
+          <div class="logo">
+            <img src="../../../assets/img/icon.png">
+          </div>
+        
+        <div class="name">
+          <strong>
+            PagerDuty Incident Response Documentation
+            <span class="version">
+              
+            </span>
+          </strong>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-link">
+            
+            <a href="https://github.com/pagerduty/incident-response-docs" target="_blank" title="View Source" data-action="download">
+              <i class="icon icon-github"></i> Repo
+            </a>
+          </li>
+          <li class="repo-forks">
+            <a href="https://github.com/pagerduty/incident-response-docs/fork" target="_blank" title="Fork" data-action="fork">
+              <i class="icon icon-code-fork"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/pagerduty/incident-response-docs/stargazers" target="_blank" title="Stars" data-action="star">
+              <i class="icon icon-star"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr/>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Getting Started" href="../../../getting_started/">
+      Getting Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">On-Call</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Being On-Call" href="../../../oncall/being_oncall/">
+      Being On-Call
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Who's On-Call?" href="../../../oncall/whos_oncall/">
+      Who's On-Call?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Alerting Principles" href="../../../oncall/alerting_principles/">
+      Alerting Principles
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Before an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="What is an Incident?" href="../../../before/what_is_an_incident/">
+      What is an Incident?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Severity Levels" href="../../../before/severity_levels/">
+      Severity Levels
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Different Roles" href="../../../before/different_roles/">
+      Different Roles
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Call Etiquette" href="../../../before/call_etiquette/">
+      Call Etiquette
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Complex Incidents" href="../../../before/complex_incidents/">
+      Complex Incidents
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">During an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="During an Incident" href="../../../during/during_an_incident/">
+      During an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Security Incident" href="../../../during/security_incident_response/">
+      Security Incident
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">After an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="After an Incident" href="../../../after/after_an_incident/">
+      After an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Process" href="../../../after/post_mortem_process/">
+      Post-Mortem Process
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Template" href="../../../after/post_mortem_template/">
+      Post-Mortem Template
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Effective Post-Mortems" href="../../../after/effective_post_mortems/">
+      Effective Post-Mortems
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../../overview/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Incident Commander" href="../../incident_commander/">
+      Incident Commander
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Deputy" href="../../deputy/">
+      Deputy
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Scribe" href="../../scribe/">
+      Scribe
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Subject Matter Expert" href="../../subject_matter_expert/">
+      Subject Matter Expert
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Customer Liaison" href="../../customer_liaison/">
+      Customer Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Internal Liaison" href="../../internal_liaison/">
+      Internal Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Glossary" href="../../glossary/">
+      Glossary
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training Courses</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="Incident Response" href="./">
+      Incident Response
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Introduction" href="#introduction">
+                Introduction
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Learn How to Effectively Manage Incidents" href="#learn-how-to-effectively-manage-incidents">
+                Learn How to Effectively Manage Incidents
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Replace Chaos with Calm" href="#replace-chaos-with-calm">
+                Replace Chaos with Calm
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What is Incident Response?" href="#what-is-incident-response">
+                What is Incident Response?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Goal of Incident Response" href="#goal-of-incident-response">
+                Goal of Incident Response
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What is an Incident?" href="#what-is-an-incident">
+                What is an Incident?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What is a Major Incident?" href="#what-is-a-major-incident">
+                What is a Major Incident?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Severity Levels" href="#severity-levels">
+                Severity Levels
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Anyone Can Trigger Incident Response" href="#anyone-can-trigger-incident-response">
+                Anyone Can Trigger Incident Response
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Triggering Incidents via Chat" href="#triggering-incidents-via-chat">
+                Triggering Incidents via Chat
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Peacetime vs Wartime" href="#peacetime-vs-wartime">
+                Peacetime vs Wartime
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Normal vs Emergency" href="#normal-vs-emergency">
+                Normal vs Emergency
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="OK vs Not OK" href="#ok-vs-not-ok">
+                OK vs Not OK
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Incident Command System" href="#incident-command-system">
+                Incident Command System
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Incident Response Around The World" href="#incident-response-around-the-world">
+                Incident Response Around The World
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Roles" href="#roles">
+                Roles
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Incident Commander" href="#incident-commander">
+                Incident Commander
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Single Source of Truth" href="#single-source-of-truth">
+                Single Source of Truth
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Highest Ranking Person" href="#highest-ranking-person">
+                Highest Ranking Person
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Higher than the CEO" href="#higher-than-the-ceo">
+                Higher than the CEO
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Not a Resolver" href="#not-a-resolver">
+                Not a Resolver
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="BSOD" href="#bsod">
+                BSOD
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Don't Panic" href="#dont-panic">
+                Don't Panic
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="IC Introduction" href="#ic-introduction">
+                IC Introduction
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Introduce Yourself" href="#introduce-yourself">
+                Introduce Yourself
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Say Incident Commander" href="#say-incident-commander">
+                Say Incident Commander
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Good Communication" href="#good-communication">
+                Good Communication
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Acronym Overload" href="#acronym-overload">
+                Acronym Overload
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Clear is Better Than Concise" href="#clear-is-better-than-concise">
+                Clear is Better Than Concise
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What's Wrong?" href="#whats-wrong">
+                What's Wrong?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What Actions Can We Take?" href="#what-actions-can-we-take">
+                What Actions Can We Take?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="What Risks Are Involved?" href="#what-risks-are-involved">
+                What Risks Are Involved?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Make a Decision" href="#make-a-decision">
+                Make a Decision
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Gain Consensus" href="#gain-consensus">
+                Gain Consensus
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Blue Background" href="#blue-background">
+                Blue Background
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Any Strong Objections?" href="#any-strong-objections">
+                Any Strong Objections?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Strong" href="#strong">
+                Strong
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="How Long Have I Been Talking?" href="#how-long-have-i-been-talking">
+                How Long Have I Been Talking?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Bystander Effect" href="#bystander-effect">
+                Bystander Effect
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Assigning Tasks" href="#assigning-tasks">
+                Assigning Tasks
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Assign Specific People" href="#assign-specific-people">
+                Assign Specific People
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Time Limit" href="#time-limit">
+                Time Limit
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Acknowledgement" href="#acknowledgement">
+                Acknowledgement
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Followup" href="#followup">
+                Followup
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Need More Time?" href="#need-more-time">
+                Need More Time?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="More Time" href="#more-time">
+                More Time
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Solving Incidents (1)" href="#solving-incidents-1">
+                Solving Incidents (1)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Solving Incidents (2)" href="#solving-incidents-2">
+                Solving Incidents (2)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ignore the IC" href="#ignore-the-ic">
+                Ignore the IC
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Do You Wish To Take Command?" href="#do-you-wish-to-take-command">
+                Do You Wish To Take Command?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Executive Swoop" href="#executive-swoop">
+                Executive Swoop
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Let's Resolve This in 10 Minutes" href="#lets-resolve-this-in-10-minutes">
+                Let's Resolve This in 10 Minutes
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Keep Comments Until The End" href="#keep-comments-until-the-end">
+                Keep Comments Until The End
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Spreadsheet of Affected Customers" href="#spreadsheet-of-affected-customers">
+                Spreadsheet of Affected Customers
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="The Incident Takes Priority" href="#the-incident-takes-priority">
+                The Incident Takes Priority
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Really a SEV-1?" href="#really-a-sev-1">
+                Really a SEV-1?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Treating as a SEV-1" href="#treating-as-a-sev-1">
+                Treating as a SEV-1
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Notify Stakeholders" href="#notify-stakeholders">
+                Notify Stakeholders
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Belligerent Responder" href="#belligerent-responder">
+                Belligerent Responder
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Disruptive" href="#disruptive">
+                Disruptive
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Do Responders Get Tired?" href="#do-responders-get-tired">
+                Do Responders Get Tired?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Handovers Are Encouraged" href="#handovers-are-encouraged">
+                Handovers Are Encouraged
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Handover" href="#handover">
+                Handover
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Anti-Patterns" href="#anti-patterns">
+                Anti-Patterns
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Getting Everyone on the Call" href="#getting-everyone-on-the-call">
+                Getting Everyone on the Call
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Not Letting Responders Leave" href="#not-letting-responders-leave">
+                Not Letting Responders Leave
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Too Frequent Status Updates" href="#too-frequent-status-updates">
+                Too Frequent Status Updates
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Being Overly Focussed On An Issue" href="#being-overly-focussed-on-an-issue">
+                Being Overly Focussed On An Issue
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Requiring Deeply Technical ICs" href="#requiring-deeply-technical-ics">
+                Requiring Deeply Technical ICs
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Taking on Multiple Roles" href="#taking-on-multiple-roles">
+                Taking on Multiple Roles
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Litigating Policy" href="#litigating-policy">
+                Litigating Policy
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Averse to Process Changes" href="#averse-to-process-changes">
+                Averse to Process Changes
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Resolved" href="#resolved">
+                Resolved
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Don't Neglect The Post-Mortem" href="#dont-neglect-the-post-mortem">
+                Don't Neglect The Post-Mortem
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Create the Post-Mortem" href="#create-the-post-mortem">
+                Create the Post-Mortem
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Pick an Owner" href="#pick-an-owner">
+                Pick an Owner
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Blameless" href="#blameless">
+                Blameless
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Review the Process" href="#review-the-process">
+                Review the Process
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Practice" href="#practice">
+                Practice
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Open-Source Response Docs" href="#open-source-response-docs">
+                Open-Source Response Docs
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Response Docs Image" href="#response-docs-image">
+                Response Docs Image
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Summary" href="#summary">
+                Summary
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Image Credits" href="#image-credits">
+                Image Credits
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="PagerDuty University" href="#pagerduty-university">
+                PagerDuty University
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Video" href="#video">
+                Video
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Additional Resources</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Reading" href="../../../resources/reading/">
+      Reading
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="ChatOps" href="../../../resources/chatops/">
+      ChatOps
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Anti-Patterns" href="../../../resources/anti_patterns/">
+      Anti-Patterns
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="About" href="../../../about/">
+      About
+    </a>
+    
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Incident Response</h1>
+          
+          
+          <div id="download-link-pdf" class="download-link">
+            <a href="/assets/pdf/pagerduty_incident_response_training_public.pdf" target="_blank" title="Download slides as PDF." data-action="download">
+              <i class="icon icon-download"></i>Slides
+            </a>
+          </div>
+          
+          <div class="admonition info">
+<p class="admonition-title">Incident Response Training Course</p>
+<p>This is an open-source version of "Incident Response Training", our PagerDuty training course for incident response and incident command. It started as an internal course to train new Incident Commanders and has since developed into one that we now deliver publicly.</p>
+<p>It includes lots of introductory information on our process, and details on the Incident Commander role specifically. All the information is already available as part of our <a href="https://response.pagerduty.com">public documentation</a> , this is just a different way of presenting it that's hopefully more engaging. Feel free to use this as a base for training in your own organization.</p>
+<p>The text presented here is a semi-accurate transcription of how the training is usually delivered. You can also watch a <a href="#video">video</a> of an older version of this course if you prefer.</p>
+</div>
+<hr />
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="001" /><label for="001"><img alt="001" src="../../../assets/slides/incident_response/incident_response.001.jpeg" /></label>
+<em>001. "Incident Response Training".</em></p>
+<p>Hi, I'm Rich, and welcome to "Incident Response Training". This is a shorter version of our internal training at PagerDuty, which we use to train up our new Incident Commanders. It's been slightly adapted for a wider audience, but the majority is exactly what we run ourselves. We're not going to be able to cover everything, otherwise we'd be here for a few days, but I'll cover some of the most important parts of our process. I'll try to keep this as short as I can.</p>
+<p>Actually, how long do we have? Can someone keep track of time for me? That would be great, thanks!</p>
+<hr />
+<h3 id="learn-how-to-effectively-manage-incidents">Learn How to Effectively Manage Incidents<a class="headerlink" href="#learn-how-to-effectively-manage-incidents" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="002" /><label for="002"><img alt="002" src="../../../assets/slides/incident_response/incident_response.002.jpeg" /></label>
+<em>002. Learn how to effectively manage incidents.</em></p>
+<p>The goal of this session is to give you an understanding of how to effectively manage incidents within your organization. I'll describe the process we use at PagerDuty for managing critical incidents, and talk in more detail about a specific role called the "Incident Commander".</p>
+<p>This isn't a sales pitch. I'm not on our sales team, and this isn't a talk about how to use PagerDuty to manage your incidents (although obviously it would be awesome if you did). The intent today is to introduce you to how we manage incidents internally at PagerDuty, and provide you with lots of practical information you can take away to your own organizations to either start or improve your own incident response processes.</p>
+<hr />
+<h3 id="replace-chaos-with-calm">Replace Chaos with Calm<a class="headerlink" href="#replace-chaos-with-calm" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="003" /><label for="003"><img alt="003" src="../../../assets/slides/incident_response/incident_response.003.jpeg" /></label>
+<em>003. Replace chaos with calm.</em></p>
+<p>Let's start with a quick question. How does incident response usually go in your organization today? Is it a smooth and streamlined process, or is it a lot of people talking over one another? For most of you it's probably going to be somewhere in the middle.</p>
+<p>We want less of the latter, and more of the former. We want to replace chaos with calm. Panic and chaos are not good during an incident, they only exacerbate things and causes more confusion. We want things to be calm and organized.</p>
+<hr />
+<h3 id="what-is-incident-response">What is Incident Response?<a class="headerlink" href="#what-is-incident-response" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="004" /><label for="004"><img alt="004" src="../../../assets/slides/incident_response/incident_response.004.jpeg" /></label>
+<em>004. What is incident response? <a href="../../../before/what_is_an_incident/#what-is-incident-response">Docs Reference</a></em></p>
+<p>So when we talk about incident response, what we're really talking about is an organized approach to addressing and managing an incident. This is how we define incident response at PagerDuty. They key here is on the word <em>organized</em>. We don't want to be running around in a panic anytime an alert goes off. We want our response to be almost routine, and for everyone to work together like a well-oiled machine.</p>
+<p>There's a quote I really like from an excellent book called <a href="http://shop.oreilly.com/product/0636920036159.do">Incident Management for Operations</a> that's appropriate here,</p>
+<blockquote>
+<p>Fire is not an emergency to the fire department . . . [Y]ou expect a rapid response from a group of professionals, skilled in the art of solving whatever issues you are having.</p>
+</blockquote>
+<hr />
+<h3 id="goal-of-incident-response">Goal of Incident Response<a class="headerlink" href="#goal-of-incident-response" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="005" /><label for="005"><img alt="005" src="../../../assets/slides/incident_response/incident_response.005.jpeg" /></label>
+<em>005. Goal of incident response. <a href="../../../before/what_is_an_incident/#what-is-incident-response">Docs Reference</a></em></p>
+<p>It may surprise you to learn the goal of incident response isn’t just about solving the problem. Give a thousand monkeys a keyboard and enough time and they can probably solve your problem. That's not good incident response. We want to solve the problem in a way which limits the damage caused, and reduces the recovery time and costs. I don’t just mean <em>financial</em> cost either, there’s a cost associated with engineer health too. Constantly waking people up at 3am can have a dramatic negative effect on their health and happiness.</p>
+<p>If financial impact is all you care about though, let's not forget that <strong>people are expensive</strong>. In a large organization, a phone bridge with 100 people sitting there mostly idle for several hours is not unheard of. If each of those people cost ~$100/hour, that’s $10K every hour! That’s <em>really</em> expensive to the business.</p>
+<hr />
+<h3 id="what-is-an-incident">What is an Incident?<a class="headerlink" href="#what-is-an-incident" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="006" /><label for="006"><img alt="006" src="../../../assets/slides/incident_response/incident_response.006.jpeg" /></label>
+<em>006. What is an incident? <a href="../../../before/what_is_an_incident/#what-is-an-incident">Docs Reference</a></em></p>
+<p>Before we can respond to an incident though, we need to <a href="../../../before/what_is_an_incident/">define what an incident actually is</a>. It sounds silly, but if you’re not sure whether something’s an incident, you don’t know whether to respond to it.</p>
+<p>Here is PagerDuty’s definition of an incident,</p>
+<blockquote>
+<p>An unplanned disruption or degradation of service that is actively affecting customers' ability to use the product.</p>
+</blockquote>
+<p>"Customers" here doesn't just refer to external customers, but can refer to internal customers too.</p>
+<p>Your definition might be different, and that’s OK. I just wanted to give you an idea of the kind of definition that can get you started. You want your definition to be simple, no more than a sentence, and easily understood by anyone.</p>
+<p>You may notice that this is quite a broad definition though. A typo technically fits this description. As does a full outage. Obviously these are very different scenarios. So we do have something else too.</p>
+<hr />
+<h3 id="what-is-a-major-incident">What is a Major Incident?<a class="headerlink" href="#what-is-a-major-incident" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="007" /><label for="007"><img alt="007" src="../../../assets/slides/incident_response/incident_response.007.jpeg" /></label>
+<em>007. What is a major incident? <a href="../../../before/what_is_an_incident/#what-is-a-major-incident">Docs Reference</a></em></p>
+<p>We also have something we call a <strong>major incident</strong>. This is any incident where we require a coordinated response between teams. Again, this is just our definition at PagerDuty, feel free to use your own.</p>
+<p>The intention behind this definition is that sometimes incidents can be handled by a single team, maybe the owners of a service that's having trouble. That rarely requires a large response in and of itself. But as soon as they need to involve another team, whether it's customer support, or database administrators, then we declare it to be a major incident and kick off a much larger response. The <em>coordination</em> is key here, and we’ll talk more about this later.</p>
+<p>But this still covers quite a range of potential incidents. We can get more granular.</p>
+<hr />
+<h3 id="severity-levels">Severity Levels<a class="headerlink" href="#severity-levels" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="008" /><label for="008"><img alt="008" src="../../../assets/slides/incident_response/incident_response.008.jpeg" /></label>
+<em>008. Severity levels. <a href="../../../before/severity_levels/">Docs Reference</a></em></p>
+<p>We also use <a href="../../../before/severity_levels/">severity levels</a> to determine how severe an incident is, and what type of response it gets. We use <code>SEV-5</code> through <code>SEV-1</code> for our levels, but you may use a different scheme, <code>P0</code> through <code>P5</code>, or maybe even emoji, 🔥 through 💩, etc.</p>
+<p>Let's imagine you're looking at a graph of traffic to your website. You can typically determine severity based on how drastically your metrics are affected. So as your website traffic drops, the severity increases.</p>
+<p>You will usually reach a point where you've set some predefined target or watermark, where as soon as the metric passes, you automatically consider something a major incident. At PagerDuty it's the difference between a <code>SEV-3</code> and <code>SEV-2</code>, but it may be different for your organization. Then as things get even more dire, we get into our <code>SEV-2</code>'s and our <code>SEV-1</code>'s when things completely flatline.</p>
+<p>Having pre-defined thresholds and metrics can allow you to have automatic triggers for your response process.</p>
+<details class="aside hide-arrow" open="open"><summary>We recommend using metrics tied to business impact.</summary><p>Metrics can be very useful, and often work best when they're tied to <em>business impact</em>. For example, a metric we monitor at PagerDuty is "number of outbound notifications per second", at Amazon it could be "number of orders per second", at Netflix it might be "stream starts per second", etc. Monitoring these important business metrics will then let you use automation to determine the severity of an incident and the type of response you use.</p>
+<p>If you use metrics that aren't tied to business impact (e.g. "CPU usage is high on a host"), then it's difficult, and sometimes impossible, to determine the severity of an incident associated with that metric.</p>
+<p>You want to use a metric that lets you know how your business is doing, not how a particular piece of equipment is doing.</p>
+</details>
+<hr />
+<h3 id="anyone-can-trigger-incident-response">Anyone Can Trigger Incident Response<a class="headerlink" href="#anyone-can-trigger-incident-response" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="009" /><label for="009"><img alt="009" src="../../../assets/slides/incident_response/incident_response.009.jpeg" /></label></em>
+<em>009. Anyone can trigger incident response at any time.</em></p>
+<p>But sometimes you won't know the impact straight away. Or maybe your metric hasn't reached the predefined threshold yet. We still need a way for a human to jump in and call something a major incident.</p>
+<p>So even though we have automation at PagerDuty, we also have a mechanism whereby anyone can trigger our major incident response process at any time. This is very important for us. We've found that <strong>lowering the barrier to triggering incident response has lead to a dramatic increase in the speed with which incidents are resolved</strong>.</p>
+<p>We don't want people to sit on something because the official alarm hasn't gone off yet. If customer support gets lots of requests very quickly, it's a good sign there's something wrong, and we need them to be able to raise the alarm. We've even had interns trigger our incident response process in their first week. If the janitor walks past a graph and thinks it looks wrong, I want them to be able to trigger incident response.</p>
+<p>We were initially hesitant to introduce this, as we feared it would lead to lots of false positives. People triggering the alarm in an abundance of caution and it not really being an incident. But we've seen quite the opposite, people are pretty good at policing this themselves. Only twice have we had it be a false alarm, and both times it was warranted based on the information available at the time. Even if you do get a false positive now and then, you can use it as free practice.</p>
+<hr />
+<h3 id="triggering-incidents-via-chat">Triggering Incidents via Chat<a class="headerlink" href="#triggering-incidents-via-chat" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="010" /><label for="010"><img alt="010" src="../../../assets/slides/incident_response/incident_response.010.jpeg" /></label>
+<em>010. Triggering incidents via chat. <a href="../../../resources/chatops/#ic-page">Docs Reference</a></em></p>
+<p>So how do we let humans trigger the process? We do it with a <a href="../../../resources/chatops/">chat command</a>, but don’t feel like that’s the only right way. I just wanted to demonstrate how we do it to give you an idea. You can do it however your want. Air horn, flashing light in the office, hire a mariachi band, etc.</p>
+<p>The point is you want a way to trigger your response that's fast, easy, and available to everyone.</p>
+<hr />
+<h3 id="peacetime-vs-wartime">Peacetime vs Wartime<a class="headerlink" href="#peacetime-vs-wartime" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="011" /><label for="011"><img alt="011" src="../../../assets/slides/incident_response/incident_response.011.jpeg" /></label>
+<em>011. Peacetime vs Wartime. <a href="../../../before/what_is_an_incident/#mentality-shift">Docs Reference</a></em></p>
+<p>Once an incident is triggered, we need to switch our mode of thinking. We need a <a href="../../../before/what_is_an_incident/#mentality-shift">mentality shift</a>. We want a distinction between “normal operations” and “there’s an incident in progress”. We need to switch decision making from peacetime to wartime. From day-to-day operations, to defending the business.</p>
+<p>Something that would be considered completely unacceptable during normal operations, such as deploying code without running any tests, might be perfectly acceptable during a major incident when you need to restore service quickly.</p>
+<p>The way you operate, your role hierarchy, and the level of risk you’re willing to take will all change as we make this shift.</p>
+<hr />
+<h3 id="normal-vs-emergency">Normal vs Emergency<a class="headerlink" href="#normal-vs-emergency" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="012" /><label for="012"><img alt="012" src="../../../assets/slides/incident_response/incident_response.012.jpeg" /></label>
+<em>012. Normal vs Emergency. <a href="../../../before/what_is_an_incident/#mentality-shift">Docs Reference</a></em></p>
+<p>Some people don’t like the peacetime/wartime analogy, so you can call it what you want. Normal/Emergency.</p>
+<hr />
+<h3 id="ok-vs-not-ok">OK vs Not OK<a class="headerlink" href="#ok-vs-not-ok" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="013" /><label for="013"><img alt="013" src="../../../assets/slides/incident_response/incident_response.013.jpeg" /></label>
+<em>013. OK vs Not OK. <a href="../../../before/what_is_an_incident/#mentality-shift">Docs Reference</a></em></p>
+<p>Or OK/NOT OK. What you call it isn't as important as being able to make the mental shift.</p>
+<hr />
+<h3 id="incident-command-system">Incident Command System<a class="headerlink" href="#incident-command-system" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="014" /><label for="014"><img alt="014" src="../../../assets/slides/incident_response/incident_response.014.jpeg" /></label>
+<em>014. Incident Command System (ICS). <a href="../../../training/overview/#national-incident-management-system-nims">Docs Reference</a></em></p>
+<p>So let’s talk about our process a bit more. The way we do incident response at PagerDuty isn’t something we invented ourselves, it is heavily based on the <a href="https://en.wikipedia.org/wiki/Incident_Command_System">Incident Command System</a>, usually abbreviated to ICS.</p>
+<p>ICS was developed after some <a href="https://en.wikipedia.org/wiki/Laguna_Fire">devastating wildfires in Southern California</a> in 1970. Thousands of firefighters responded, but found it difficult to work together. They knew how to fight fires individually, but lacked a common framework to work effectively as a larger group.</p>
+<p>After the fires, an interagency group called <a href="https://en.wikipedia.org/wiki/FIRESCOPE">FIRESCOPE</a> (Which believe it or not is an acronym for "FIrefighting REsources of Southern California Organized for Potential Emergencies") was formed and set out to develop two systems for managing wildland fire. One of those systems became known as ICS, and eventually became a national model for command structures at any major incident.</p>
+<p>In 2004, the <a href="https://en.wikipedia.org/wiki/National_Incident_Management_System">National Incident Management System (NIMS)</a> was established by FEMA, and is now used as the standard for emergency management by all public agencies in the United States. NIMS defines several operational systems as part of it, of which ICS is one.</p>
+<p>It’s used by everyone from the local fire department responding to a house fire, to the US government responding to a natural disaster. It provides a standardized response framework that everyone is familiar with.</p>
+<p>NIMS and ICS are the basis of the process we use at PagerDuty, however we have heavily modified it for our needs. Turns out that things can be streamlined a bit when human life isn't on the line.</p>
+<hr />
+<h3 id="incident-response-around-the-world">Incident Response Around The World<a class="headerlink" href="#incident-response-around-the-world" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="015" /><label for="015"><img alt="015" src="../../../assets/slides/incident_response/incident_response.015.jpeg" /></label>
+<em>015. Incident response around the world. <a href="../../../training/overview/#incident-response-around-the-world">Docs Reference</a></em></p>
+<p>It's worth noting that even though our process is based on the US systems, NIMS and ICS, there are many similar systems in use all over the world. While many are also based on ICS, some were developed separately, yet offer many of the same features.</p>
+<p>I particularly like <a href="https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure">the UK system</a>, simply because it has a role called the "Gold Commander", which just sounds like a Bond villain.</p>
+<p>When developing our process at PagerDuty, we looked at a few of the other systems in use around the world, and chose the bits we liked the most to add to our own.</p>
+<details class="aside hide-arrow" open="open"><summary>Emergency Management Around the World</summary><p>If you're interested in learning more about the systems in use by other countries, we have <a href="../../../resources/reading/#official-resources">links to some official resources</a>.</p>
+<p>There's also a book available from the US FEMA website, called "<a href="https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/">Comparative Emergency Management: Understanding Disaster Policies, Organizations, and Initiatives from Around the World</a>" where it compares the systems used by about 30 different countries.</p>
+</details>
+<hr />
+<h3 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="016" /><label for="016"><img alt="016" src="../../../assets/slides/incident_response/incident_response.016.jpeg" /></label></em>
+<em>016. Roles of incident response.</em></p>
+<p>So let's talk about the <a href="../../../before/different_roles/">roles involved in our process</a>. I'm going to introduce the roles one by one, but I don't want you to get scared by the number that will be on the slide by the end. We didn't start with this many roles, and we don't have people filling all the roles in every incident. This is just showing the available roles, and defining what they are. The process and roles will grow and shrink to fit the size of the incident at hand.</p>
+<p>While we don’t use exactly the same roles as ICS, we picked out the ones that matter for us in order to get our role structure.</p>
+<ul>
+<li>
+<p>First up is the <strong>Incident Commander</strong>, usually abbreviated to IC. They're the person in charge and the most important role in the process. They make all the decisions, and all information flows up to them. What they say goes. I'm going to be talking more about this role in a moment, so we'll continue on with the others for now.</p>
+</li>
+<li>
+<p>Next up we have the <strong>Deputy</strong>. This is basically a backup Incident Commander. They're training as an IC and will be listening to all the same information. They help to make sure nothing gets missed by the IC, and acts as a hot-swap standby should the IC want to handover command. This is one of those roles you won't need if you're just starting out. For a long time our Deputy and Scribe would be the same person.</p>
+</li>
+<li>
+<p>Then we have the <strong>Scribe</strong>. The scribe's job is to keep an accurate timeline of events. What has happened, when it happened, and the key decisions that have been made. We use Slack for this, and the Scribe will be writing down notes into a Slack room, which gets us nicely timestamped data. It's worth noting that they're <strong>not doing a direct dictation</strong> of a voice call. It's not "John said this, Mary said this". It's more like "We're deciding between A and B, we've decided on A".</p>
+</li>
+</ul>
+<p>Together, these roles are called the Command Staff.</p>
+<ul>
+<li>
+<p>Next we have the <strong>Customer Liaison</strong>. This is a member of our support team, and their job is to handle the two-way interaction with our customers. So they'll update customers as to what is going on, whether that's via email, tweet, or updating our status page. But they'll also let us know what customers are saying too. If we're getting 100's of support requests, or no one has raised a ticket at all. Since this can be useful information in tracking down a cause, and determining the level of risk we can take during our recovery.</p>
+</li>
+<li>
+<p>The <strong>Internal Liaison</strong> is a relatively new role in our process. Their job is to handle all the interaction with internal teams, such as our executives, or our marketing teams, and so on. We have a separate Slack channel for incident updates, to which the Internal Liaison will post regular status updates, and answer any questions from the rest of the organization. This keeps those questions out of our main response, but allows people to still get answers. The internal liaison will also page other teams as necessary if they're needed on the response. Again, this isn't a role you'll need for most companies, for a while this was also handled by our Deputy/Scribe role.</p>
+</li>
+</ul>
+<p>Together, these are the liaisons.</p>
+<ul>
+<li>Finally, we have the <strong>Subject Matter Experts</strong>, or SME's. These are the people who will actually be fixing the problem. They'll be the ones logging into servers, changing code, and running commands.</li>
+</ul>
+<p>Today, I’m going to focus on one role in particular, that of the Incident Commander.</p>
+<hr />
+<h3 id="incident-commander">Incident Commander<a class="headerlink" href="#incident-commander" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="017" /><label for="017"><img alt="017" src="../../../assets/slides/incident_response/incident_response.017.jpeg" /></label>
+<em>017. Incident commander. <a href="../../../training/incident_commander/">Docs Reference</a></em></p>
+<p>The incident commander is one of the most important roles you can have. Even if you don’t have deputy, scribe, customer liaison, etc. The Incident Commander is one you should get first (well, after the SME’s of course, you probably need someone to solve your problem before you need someone to coordinate the response).</p>
+<hr />
+<h3 id="single-source-of-truth">Single Source of Truth<a class="headerlink" href="#single-source-of-truth" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="018" /><label for="018"><img alt="018" src="../../../assets/slides/incident_response/incident_response.018.jpeg" /></label>
+<em>018. Single source of truth.</em></p>
+<p>They’re the single source of truth during an incident, and are the ones in charge. The big cheese. They make all decisions, and no action should be performed unless the IC has said so.</p>
+<hr />
+<h3 id="highest-ranking-person">Highest Ranking Person<a class="headerlink" href="#highest-ranking-person" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="019" /><label for="019"><img alt="019" src="../../../assets/slides/incident_response/incident_response.019.jpeg" /></label>
+<em>019. Highest ranking person.</em></p>
+<p>No matter their day-to-day role, and IC is always becomes the highest ranking person on the response. They're running the show. Remember what we talked about earlier with the mentality shift? Well, this is one of the things that will change during an incident.</p>
+<details class="aside hide-arrow" open="open"><summary>Is the Incident Commander a dictator?</summary><p>Only in the sense that they are in charge and their decisions cannot be overruled. They do not rule by force, or go on power trips and order people around for the sake of it. A good Incident Commander will <strong>listen</strong> to their experts and make the best decision they can based on the information available. Incident Commanders should show empathy towards all responders.</p>
+</details>
+<hr />
+<h3 id="higher-than-the-ceo">Higher than the CEO<a class="headerlink" href="#higher-than-the-ceo" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="020" /><label for="020"><img alt="020" src="../../../assets/slides/incident_response/incident_response.020.jpeg" /></label>
+<em>020. Higher than the CEO.</em></p>
+<p>Even if the CEO joins the response, the IC still outranks them in an incident response situation. <strong>This is absolutely critical for successful incident response, but it does require buy-in from your executives.</strong> Please don't surprise your CEO with this, it will not go well for you.</p>
+<p>Whether this works for you will depend on your organization. This is how we do it at PagerDuty and it works well for us, but I can imagine it not being easy to get this sort of buy-in in other organizations. I used to work in the airline industry, and I don't think this rule would fly there (Get it? Airline industry. Fly. Hello? This thing on?).</p>
+<hr />
+<h3 id="not-a-resolver">Not a Resolver<a class="headerlink" href="#not-a-resolver" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="021" /><label for="021"><img alt="021" src="../../../assets/slides/incident_response/incident_response.021.jpeg" /></label>
+<em>021. Not a resolver.</em></p>
+<p>Importantly, the IC doesn't resolve the incident, they coordinate and delegate all tasks. They're the conductor of the orchestra, they're not playing an instrument. They're not acting as a resolver, and shouldn't be looking at graphs, or logging into servers.</p>
+<p>This can be especially hard sometimes if the IC is an engineer in their day-to-day role, as they may naturally want to jump in to try and help, but that urge must be resisted if they're acting as an IC. If they absolutely are the only person who can solve the problem, then they should handover to another Incident Commander and assume the role of a Subject Matter Expert instead. We'll talk a bit more about this scenario later.</p>
+<hr />
+<h3 id="bsod">BSOD<a class="headerlink" href="#bsod" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="022" /><label for="022"><img alt="022" src="../../../assets/slides/incident_response/incident_response.022.jpeg" /></label></em>
+<em>022. Uh oh!</em></p>
+<p>Oh dear, that’s not good. Did something go wrong? Seems we have ourselves an incident!</p>
+<p>So what do you do when things break in the middle of the night? What's the first step to responding to an incident?</p>
+<p>It turns out that the first step in any incident response is always the same, whether you're a small startup or a large enterprise. Whether there's 25 cents on the line, or 25 billion dollars.</p>
+<hr />
+<h3 id="dont-panic">Don't Panic<a class="headerlink" href="#dont-panic" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="023" /><label for="023"><img alt="023" src="../../../assets/slides/incident_response/incident_response.023.jpeg" /></label>
+<em>023. Don't panic.</em></p>
+<p><strong>Don’t panic.</strong> It elevates stress, and causes others to panic. It’ll end up hurting your incident response a lot more.</p>
+<p><em>It's OK to panic on the inside.</em> We're only human after all. It's a natural reaction to panic in these sorts of situations a little bit. Everything about getting paged is designed to get adrenaline flowing. Loud pager sounds and so on. Just try not to outwardly show panic, because it will cause others to do the same. Act calm, and others will follow suit.</p>
+<p>Those with experience will stay calm, and that can make the difference between a chaotic incident, and one that resolves smoothly. So don’t panic!</p>
+<hr />
+<h3 id="ic-introduction">IC Introduction<a class="headerlink" href="#ic-introduction" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="024" /><label for="024"><img alt="024" src="../../../assets/slides/incident_response/incident_response.024.jpeg" /></label>
+<em>024. "Hi, I'm Rich, I'm the Incident Commander". <a href="../../../training/incident_commander/#start-of-call-announcement">Docs Reference</a></em></p>
+<p>But today we're lucky to have an IC here.</p>
+<blockquote>
+<p>Hi, I'm Rich, I'm the Incident Commander.</p>
+</blockquote>
+<p>Every call should start like this. Well, use your own name and not mine, but you get the idea.</p>
+<p>There are a few important things here with the way I phrased this.</p>
+<details class="aside"><summary>What if you join a call and there's no IC?</summary><p>It doesn't always work out that the first person to join the call is the incident commander. So what do you do in that case? Some guides will recommend the first person who joins acts as the Incident Commander, regardless of training. ICS usually works this way, where the first person on-site acts as the IC until someone more qualified arrives. We tried that and found it just doesn't work in practice. For example, let's say that the first person to join your response call becomes the acting IC. After an incident occurs, how long do you think it will be before one of your responders joins the call?</p>
+<p>Yeah, turns out it's about 10 minutes. Because people are afraid of being the IC. You can't force someone to be an IC, and we prefer to make sure the acting IC at least has the training. It may add a few minutes to the start of an incident, but it makes it go smoother and quicker overall. If a trained IC joins the call and there's isn't an existing IC, they will take on the role. They ask "Is there an IC on the call?.... hearing nothing, this is X, I'm the Incident Commander".</p>
+<p>It's also worth noting that the on-call IC doesn't automatically take over when they join. Whoever is the active IC on the call is in charge until they perform a handover.</p>
+</details>
+<hr />
+<h3 id="introduce-yourself">Introduce Yourself<a class="headerlink" href="#introduce-yourself" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="025" /><label for="025"><img alt="025" src="../../../assets/slides/incident_response/incident_response.025.jpeg" /></label>
+<em>025. Introduce yourself.</em></p>
+<p>Firstly, I introduced myself by name. I didn't just say "Hi, I'm the IC". I'm not an emotionless robot.</p>
+<p>Introductions are important so that people know who you are. They’ll usually be referring to you as "IC", rather than by name, but it still humanizes you more. If you introduce yourself by name people will treat you differently and it'll help to make things go a little bit smoother.</p>
+<p>You’ll find soon that a lot of the job of an IC involves psychology and phrasing more than technical expertise.</p>
+<hr />
+<h3 id="say-incident-commander">Say Incident Commander<a class="headerlink" href="#say-incident-commander" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="026" /><label for="026"><img alt="026" src="../../../assets/slides/incident_response/incident_response.026.jpeg" /></label>
+<em>026. Say "Incident Commander".</em></p>
+<p>Then I said that I'm the "Incident Commander". I didn't abbreviate to IC, since new people might not understand the lingo yet. Stating it that way made it very clear. We want to make sure we <strong>always use clear language</strong>. Additionally, saying the word "Commander" here will subconsciously instill in people that you're in charge.</p>
+<hr />
+<h3 id="good-communication">Good Communication<a class="headerlink" href="#good-communication" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="027" /><label for="027"><img alt="027" src="../../../assets/slides/incident_response/incident_response.027.jpeg" /></label>
+<em>027. Good communication is essential.</em></p>
+<p>Good communication is essential. A breakdown in communication can hamper the entire response process. One of your jobs as an IC is to keep the lines of communication clear and maintain discipline. Don’t throw weird or unfamiliar acronyms into the discussion.</p>
+<hr />
+<h3 id="acronym-overload">Acronym Overload<a class="headerlink" href="#acronym-overload" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="028" /><label for="028"><img alt="028" src="../../../assets/slides/incident_response/incident_response.028.jpeg" /></label>
+<em>028. Acronym overload.</em></p>
+<p>Too many acronyms and internal lingo will upset newcomers and adds cognitive overhead. As shown in this completely realistic example.</p>
+<p>It takes much longer to say "Let's get the Incident Commander on the response call, then get a bacon, lettuce, and tomato sandwich for all the Subject Matter Experts". But it's much clearer what is being asked for.</p>
+<hr />
+<h3 id="clear-is-better-than-concise">Clear is Better Than Concise<a class="headerlink" href="#clear-is-better-than-concise" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="029" /><label for="029"><img alt="029" src="../../../assets/slides/incident_response/incident_response.029.jpeg" /></label>
+<em>029. Clear is better than concise. <a href="../../../before/call_etiquette/#lingo">Docs Reference</a></em></p>
+<p>Clear instructions are more important than concise instructions. You want to <strong>favor explicit and clear communication over all else</strong>. If you have the choice between taking 5 seconds and abbreviating, or taking 30 seconds and making it clear, take 30 seconds. Don’t give a long essay, but make sure the instructions are unambiguous.</p>
+<p>There's a tendency to want to rush through an incident, that every second counts, and that you need to use abbreviations to get the fastest possible response. Unfortunately you'll find that using unfamiliar and unclear language will almost always prolong an incident.</p>
+<hr />
+<h3 id="whats-wrong">What's Wrong?<a class="headerlink" href="#whats-wrong" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="030" /><label for="030"><img alt="030" src="../../../assets/slides/incident_response/incident_response.030.jpeg" /></label>
+<em>030. What's wrong? <a href="../../../training/incident_commander/#size-up">Docs Reference</a></em></p>
+<p>OK, so how do we actually start solving our problem?</p>
+<p>The first step is to collect information from your Subject Matter Experts (SME) for their services/area of ownership. Ask what's wrong, and gather the symptoms of the incident. Is it only affecting one system? Is it affecting everything? Was there a specific metric that triggered an alarm?</p>
+<p>We call this “<a href="../../../training/incident_commander/#size-up">sizing up</a>”. We're trying to get an idea of the scope of the incident.</p>
+<hr />
+<h3 id="what-actions-can-we-take">What Actions Can We Take?<a class="headerlink" href="#what-actions-can-we-take" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="031" /><label for="031"><img alt="031" src="../../../assets/slides/incident_response/incident_response.031.jpeg" /></label>
+<em>031. What actions can we take? <a href="../../../training/incident_commander/#stabilize">Docs Reference</a></em></p>
+<p>Next we want to ask our experts what they want to do to fix their systems. Remember, the IC isn't coming up with solutions, we want to ask the people who are the experts for their services what they want to do to. They will have a much better idea of the actions that can be taken. We want to collect proposed repair actions.</p>
+<hr />
+<h3 id="what-risks-are-involved">What Risks Are Involved?<a class="headerlink" href="#what-risks-are-involved" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="032" /><label for="032"><img alt="032" src="../../../assets/slides/incident_response/incident_response.032.jpeg" /></label>
+<em>032. What are the risks involved?</em></p>
+<p>Importantly, we also want to make sure we ask what risks are involved with the proposed actions. "What impact will that have?", "What are the risks involved?", "How confident are you it will work?".</p>
+<p>Without this information, we can't make an informed decision. For example, if we need to restart our servers to fix a problem, we could either reboot them all at once and be done in 30 seconds, or we could do a rolling restart and take 10 minutes. On the surface of it, the first option sounds like the best.</p>
+<p>But, if we ask for the risks involved, we'll learn that the first option will cause downtime for everyone in those 30s, whereas the second option, while slower, will result in no downtime for end users. This can change the decision you make, so it's important to get the information.</p>
+<hr />
+<h3 id="make-a-decision">Make a Decision<a class="headerlink" href="#make-a-decision" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="033" /><label for="033"><img alt="033" src="../../../assets/slides/incident_response/incident_response.033.jpeg" /></label>
+<em>033. Make a decision.</em></p>
+<p>Once we have a collection of actions and their associated risks, it's time to make a decision. Sometimes there's an obvious path forward, with one option being clearly better. But sometimes you're presented with two equally bad options.</p>
+<p>There’s no golden rule here I can give you, it’ll be up to context and your company culture. But my advice if you can't decide between two options is to literally flip a coin. <strong>Making the wrong decision is better than making no decision.</strong> Making no decision doesn't help to make forward progress, you learn nothing new and the incident is still going on. Making a decision, even if it's the "wrong" one will give you more information. If it turns out to be wrong, you can then put all your resources into the other option.</p>
+<p>A wrong decision gives you more useful information, making no decision gives you nothing. You want to avoid <a href="https://xkcd.com/1801/">decision paralysis</a> at all costs, as it can prolong your incident further.</p>
+<details class="aside hide-arrow" open="open"><summary>'Do nothing' is an acceptable decision.</summary><p>I should note that the above advice is intended for the situation when you can't decide between two options. "Do nothing" is a perfectly acceptable decision if that's the course of action you want to take. It is sometimes appropriate to get more information by waiting and seeing what changes.</p>
+</details>
+<hr />
+<h3 id="gain-consensus">Gain Consensus<a class="headerlink" href="#gain-consensus" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="034" /><label for="034"><img alt="034" src="../../../assets/slides/incident_response/incident_response.034.jpeg" /></label>
+<em>034. Gain consensus.</em></p>
+<p>Once we've made a decision, we need to gain consensus for our plan. But wait, why? Didn't I say earlier that the IC is basically a dictator and everyone should follow their instructions? While technically true, we want to be sure we give a chance to listen to any potential problems our experts may have with the plan. We don't want people to come back later and say things like "I knew that wouldn't work". We want to make sure we stop the <a href="https://en.wikipedia.org/wiki/Hindsight_bias">hindsight 20/20 problem</a>. It demotivates responders, and wastes time.</p>
+<p>But gaining consensus amongst a large group of people can be a bit difficult.</p>
+<hr />
+<h3 id="blue-background">Blue Background<a class="headerlink" href="#blue-background" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="035" /><label for="035"><img alt="035" src="../../../assets/slides/incident_response/incident_response.035.jpeg" /></label>
+<em>035. This background is blue.</em></p>
+<p>Let's look at a quick example to show what I mean,</p>
+<blockquote>
+<p>I propose that this background is blue. Does everyone agree?</p>
+</blockquote>
+<details class="aside hide-arrow" open="open"><summary>Audience participation!</summary><p>This is where I would usually get few people from the audience nodding or quietly saying "Yes". I'll point to about 5 or 6 people who did nothing and ask them one by one if they agree. Until it gets uncomfortable.</p>
+</details>
+<p>See how long it’s taking us to reach consensus? <strong>Distributed consensus is hard</strong>, you’ll be there forever trying to agree on the proposed actions.</p>
+<p>Let's try it a different way,</p>
+<blockquote>
+<p>I propose that this background is blue. Are there any strong objections? ... Hearing none, the background is blue, let's proceed.</p>
+</blockquote>
+<hr />
+<h3 id="any-strong-objections">Any Strong Objections?<a class="headerlink" href="#any-strong-objections" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="036" /><label for="036"><img alt="036" src="../../../assets/slides/incident_response/incident_response.036.jpeg" /></label>
+<em>036. Are there any strong objections? <a href="../../../training/incident_commander/#gaining-consensus-polling-during-a-decision">Docs Reference</a></em></p>
+<p>See how much faster that was? I <strong>implicitly got the consensus of everyone in the room</strong>, so none of you could come back later and say you didn't think the background was blue, because I gave you all a chance to object.</p>
+<p>Doing it this way optimizes for the 99% case. Most of the time there won’t be any objections and you can just continue. But likewise, we don't really care if people agree with us. We care if people <em>disagree</em>, that's the information we need the most. If you ask everyone to agree, you may get one person saying "No" with a really important point, but you can't hear them because everyone else is saying "Yes".</p>
+<hr />
+<h3 id="strong">Strong<a class="headerlink" href="#strong" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="037" /><label for="037"><img alt="037" src="../../../assets/slides/incident_response/incident_response.037.jpeg" /></label>
+<em>037. STRONG objections.</em></p>
+<p>This is one of the most useful phrases in your toolkit as an IC as it allows you to get consensus on a decision very quickly, and prevents the hindsight problem from popping up later. The way we phrased it though is important, the word "<strong>strong</strong>" subconsciously instills in people that we're still in an incident situation, and normal concerns might not apply.</p>
+<p>Make sure to leave enough of a pause for people to raise any objections they may have. It's no good asking for strong objections then moving on. All responders need to have the opportunity to raise a concern.</p>
+<p>So now that we have consensus, we need to execute the plan, that means assigning the task to someone. Before we do that though, I have a quick question.</p>
+<hr />
+<h3 id="how-long-have-i-been-talking">How Long Have I Been Talking?<a class="headerlink" href="#how-long-have-i-been-talking" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="038" /><label for="038"><img alt="038" src="../../../assets/slides/incident_response/incident_response.038.jpeg" /></label>
+<em>038. How long have I been talking?</em></p>
+<p>At the start, I asked if someone could keep track of the time for me. Did anyone actually do that? Can anyone tell me exactly how long I've been talking?</p>
+<p>Probably not. But why not? I clearly asked.</p>
+<p>It's likely because of how I phrased the question.</p>
+<hr />
+<h3 id="bystander-effect">Bystander Effect<a class="headerlink" href="#bystander-effect" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="039" /><label for="039"><img alt="039" src="../../../assets/slides/incident_response/incident_response.039.jpeg" /></label>
+<em>039. Bystander effect.</em></p>
+<p>I said "Can someone...". This is called the <a href="https://en.wikipedia.org/wiki/Bystander_effect">bystander effect</a>. Everyone assumed someone else was doing it, so no one ended up doing it. If by some chance, someone actually did do it, you won't know who it is anyway, or if they've even started.</p>
+<p>A good example of this is if there's a medical emergency, and you shout "Somebody call 911!", you'll find that no one does, because everyone assumes someone else is doing it. If you're ever in that situation, you want to point to someone and say "You, call 911". Then it'll get done.</p>
+<details class="aside hide-arrow" open="open"><summary>Localization</summary><p>If you're outside the US, substitute 911 for whatever your local emergency number is. You probably don't want to be shouting "You, call 911" if you're in Europe for example.</p>
+</details>
+<p>So what I should've done was point to someone in the room and say,</p>
+<blockquote>
+<p>You, please keep track of the time and give me a little wave when we get to 30 minutes, starting now. Understood?</p>
+</blockquote>
+<p>See how different that was?</p>
+<hr />
+<h3 id="assigning-tasks">Assigning Tasks<a class="headerlink" href="#assigning-tasks" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="040" /><label for="040"><img alt="040" src="../../../assets/slides/incident_response/incident_response.040.jpeg" /></label>
+<em>040. Assigning tasks. <a href="../../../training/incident_commander/#assigning-tasks">Docs Reference</a></em></p>
+<p>In the context of an incident, that might look like this. It's a little more verbose than "Can someone investigate the cause?", but it's a lot clearer what I want to happen. Brings us back to clear is better than concise from earlier.</p>
+<p>Several important things happened in this exchange as I was assigning the task.</p>
+<hr />
+<h3 id="assign-specific-people">Assign Specific People<a class="headerlink" href="#assign-specific-people" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="041" /><label for="041"><img alt="041" src="../../../assets/slides/incident_response/incident_response.041.jpeg" /></label>
+<em>041. Assign tasks to a specific person.</em></p>
+<p>First, the task was assigned <strong>directly to a specific person</strong>. It’s ok to assign it to a role to “DBA on-call…”, etc. But it must be a single individual. Don't assign things to a group, because they won't get done.</p>
+<hr />
+<h3 id="time-limit">Time Limit<a class="headerlink" href="#time-limit" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="042" /><label for="042"><img alt="042" src="../../../assets/slides/incident_response/incident_response.042.jpeg" /></label>
+<em>042. Time-box all tasks.</em></p>
+<p>Second, the task was given a time-limit. This means the SME knows exactly how long until I come back to them for an answer, so they won’t be surprised or caught off guard. It sets the expectations.</p>
+<hr />
+<h3 id="acknowledgement">Acknowledgement<a class="headerlink" href="#acknowledgement" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="043" /><label for="043"><img alt="043" src="../../../assets/slides/incident_response/incident_response.043.jpeg" /></label>
+<em>043. Get acknowledgement.</em></p>
+<p>Finally, I confirmed that they had understood the instructions and are going to carry them out. So I don’t come back in 5 minutes and find they never started, or have additional questions.</p>
+<hr />
+<h3 id="followup">Followup<a class="headerlink" href="#followup" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="044" /><label for="044"><img alt="044" src="../../../assets/slides/incident_response/incident_response.044.jpeg" /></label>
+<em>044. Followup.</em></p>
+<p>Then after the time is up, we can simply ask for the results of their task. Of course they will always have the right answer the first time and will never need any additional time to investigate, right?</p>
+<hr />
+<h3 id="need-more-time">Need More Time?<a class="headerlink" href="#need-more-time" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="045" /><label for="045"><img alt="045" src="../../../assets/slides/incident_response/incident_response.045.jpeg" /></label>
+<em>045. What if they need more time?</em></p>
+<p>It's not always going to be the case that things get done within the timeframe. So what do you do if, after 5 minutes, they need more time?</p>
+<p>Don’t just give them another arbitrary time limit, because they’ll keep coming back and you’re just going to be wasting time giving them 5 minutes chunks for an hour. Instead, ask your experts how long they need.</p>
+<hr />
+<h3 id="more-time">More Time<a class="headerlink" href="#more-time" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="046" /><label for="046"><img alt="046" src="../../../assets/slides/incident_response/incident_response.046.jpeg" /></label>
+<em>046. More time.</em></p>
+<p>This isn't going to be like in the movies, where you ask how long someone needs, they say two hours and you slam you fist on a table and say "You've got one!". You need to <strong>trust in your experts</strong> to give you accurate estimates, and give them the time they need. Putting people under unreasonable pressure is only going to lead to mistakes being made.</p>
+<details class="aside hide-arrow" open="open"><summary>You can do this the first time too.</summary><p>You can also just ask your experts how long they need the first time you hand out the task instead of picking a time yourself. Sometimes we've found it easier to give a time-limit ourselves if it's an action that's been done before and we have a rough idea of how long it should take. But there's nothing wrong with asking how long someone needs as you assign the task either.</p>
+</details>
+<hr />
+<h3 id="solving-incidents-1">Solving Incidents (1)<a class="headerlink" href="#solving-incidents-1" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="047" /><label for="047"><img alt="047" src="../../../assets/slides/incident_response/incident_response.047.jpeg" /></label>
+<em>047. Flow chart for solving incidents.</em></p>
+<p>And we just keep following this pattern until the incident is resolved.</p>
+<ol>
+<li>Ask for a status from your experts.</li>
+<li>Decide on an action based on what you’re told, gaining consensus for the plan.</li>
+<li>Assign the task out.</li>
+<li>Follow up with the tasks once done, and repeat if there are still problems.</li>
+</ol>
+<hr />
+<h3 id="solving-incidents-2">Solving Incidents (2)<a class="headerlink" href="#solving-incidents-2" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="048" /><label for="048"><img alt="048" src="../../../assets/slides/incident_response/incident_response.048.jpeg" /></label>
+<em>048. Another flow chart for solving incidents..</em></p>
+<p>More generally, we’re following <a href="../../../training/incident_commander/#handling-incidents">this cycle</a> for each incident. We size-up the situation, stabilize things (that's the loop we just showed), keep everyone updated as to what's going on, then verify the situation is fixed before ending the response. If it's not fixed, we start again.</p>
+<hr />
+<h3 id="ignore-the-ic">Ignore the IC<a class="headerlink" href="#ignore-the-ic" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="049" /><label for="049"><img alt="049" src="../../../assets/slides/incident_response/incident_response.049.jpeg" /></label></em>
+<em>049. "Ignore the IC, do what I say!"</em></p>
+<p>Uh oh, an executive has joined the response and is trying to override the IC’s decisions. That’s not great.</p>
+<p>Remember that the IC is the ultimate authority in incident response, their decisions are the ones that matter. So how do you handle the awkward situation when someone tries to override those decisions?</p>
+<p>We have a top tip here, a great question to keep in your tool belt as an incident commander. A simple question that can immediately diffuse this situation.</p>
+<hr />
+<h3 id="do-you-wish-to-take-command">Do You Wish To Take Command?<a class="headerlink" href="#do-you-wish-to-take-command" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="050" /><label for="050"><img alt="050" src="../../../assets/slides/incident_response/incident_response.050.jpeg" /></label>
+<em>050. Do you wish to take command? <a href="../../../training/incident_commander/#executive-swoop-overriding-the-incident-commander">Docs Reference</a></em></p>
+<blockquote>
+<p>Do you wish to take command?</p>
+</blockquote>
+<p>Watch how quickly they don’t answer with “yes”.</p>
+<p>If they do, great! You’re off the hook and can respond with,</p>
+<blockquote>
+<p>Understood. Everyone on the call be advised, I'm handing over command to executive A. They are now the Incident Commander.</p>
+</blockquote>
+<p>But most of the time they’ll say either say "No"", or not answer at all, in which case you can continue on as normal, perhaps saying,</p>
+<blockquote>
+<p>In that case, please cause no further interruptions or I will have to remove you from the call.</p>
+</blockquote>
+<p>But "Do you wish to take command?" is the most useful phrase for dealing with that kind of executive hostile takeover.</p>
+<hr />
+<h3 id="executive-swoop">Executive Swoop<a class="headerlink" href="#executive-swoop" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="051" /><label for="051"><img alt="051" src="../../../assets/slides/incident_response/incident_response.051.jpeg" /></label>
+<em>051. Executive swoop.</em></p>
+<p>This is a class of problem we call Executive Swoop. Well, actually it's "Executive Swoop and Poop", but I was asked not to put that on the slide.</p>
+<p>The previous example isn't typical though. It's rare for someone to come in and purposefully start causing a problem like that.</p>
+<p>We're going to look at some more common examples of executive swoop next, but it's worth noting that <strong>none of these happen maliciously</strong>. No executive joins with the intent of hindering the process, they’re trying to motivate people and find out what’s going on. It’s their business too! Making sure your executives understand why these things are a problem is important, so be sure to followup after an incident if these things happen.</p>
+<hr />
+<h3 id="lets-resolve-this-in-10-minutes">Let's Resolve This in 10 Minutes<a class="headerlink" href="#lets-resolve-this-in-10-minutes" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="052" /><label for="052"><img alt="052" src="../../../assets/slides/incident_response/incident_response.052.jpeg" /></label>
+<em>052. Let's try and resolve this in 10 minutes.</em></p>
+<blockquote>
+<p>Let's try and resolve this in 10 minutes please!</p>
+</blockquote>
+<p>This one definitely wasn't said by anyone at PagerDuty ever. Nope. Definitely not.</p>
+<p>On the surface this seems pretty benign. The executive is merely trying to motivate staff and encourage them to solve the problem quickly, right?</p>
+<p>Unfortunately, that's not how others on the call are going to interpret it. Instead they're more likely to be sarcastically thinking "Well, I was going to take an hour, but since you've said that, OK I'll do it in 10 minutes". It assumes people aren’t already working as hard as possible to solve the problem. It demotivates responders, and adds additional stress.</p>
+<p>Your job as IC is to nip this in the bud and keep things on track.</p>
+<hr />
+<h3 id="keep-comments-until-the-end">Keep Comments Until The End<a class="headerlink" href="#keep-comments-until-the-end" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="053" /><label for="053"><img alt="053" src="../../../assets/slides/incident_response/incident_response.053.jpeg" /></label>
+<em>053. Keep your comments until the end. <a href="../../../training/incident_commander/#executive-swoop-anti-motivation">Docs Reference</a></em></p>
+<p>To keep things moving, you need to remind the executive of what's going on, and direct questions to be handled at a later time. It may come across slightly abrupt, but it gets the point across quickly and allows you to keep moving. Most people will pick up on the subtext here.</p>
+<blockquote>
+<p>We're in the middle of an incident, please keep your comments until the end.</p>
+</blockquote>
+<p>Remember, <strong>don't be mean</strong>, just state the facts and keep things flowing. We're not trying to shame people or make them feel bad, we're trying to keep our incident moving towards a resolution.</p>
+<hr />
+<h3 id="spreadsheet-of-affected-customers">Spreadsheet of Affected Customers<a class="headerlink" href="#spreadsheet-of-affected-customers" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="054" /><label for="054"><img alt="054" src="../../../assets/slides/incident_response/incident_response.054.jpeg" /></label>
+<em>054. Can I get a spreadsheet of affected customers?</em></p>
+<blockquote>
+<p>Can I get a spreadsheet of all affected customers?</p>
+</blockquote>
+<p>Another one that's definitely never been mentioned on any PagerDuty incident response call ever.</p>
+<p>An exec joins the call and wants to get a list of impacted customers. The problem is that in order to find that out, we'll need to take someone away from the effort of responding to the incident, at a time when we need them most. If you can spare the resources, then feel free to dedicate some to finding the information. But more often than not you wont have the resources to spare. So we can just tell the executive that.</p>
+<hr />
+<h3 id="the-incident-takes-priority">The Incident Takes Priority<a class="headerlink" href="#the-incident-takes-priority" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="055" /><label for="055"><img alt="055" src="../../../assets/slides/incident_response/incident_response.055.jpeg" /></label>
+<em>055. The incident takes priority. <a href="../../../training/incident_commander/#executive-swoop-wants-information">Docs Reference</a></em></p>
+<blockquote>
+<p>We can either get you that list, or fix the incident. Not both. The incident takes priority.</p>
+</blockquote>
+<p>Note how this isn't phrased as a question, it wasn't "We can either get you that list or fix the incident, which do you want?". The <strong>incident commander has already made the decision</strong>, they're simply letting the executive know what it is.</p>
+<p>Remember that the IC is still in charge, you don't want to cede decision making to someone else during an incident.</p>
+<hr />
+<h3 id="really-a-sev-1">Really a SEV-1?<a class="headerlink" href="#really-a-sev-1" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="056" /><label for="056"><img alt="056" src="../../../assets/slides/incident_response/incident_response.056.jpeg" /></label>
+<em>056. Is this really a SEV-1?</em></p>
+<blockquote>
+<p>Is this really a SEV-1?</p>
+</blockquote>
+<p>Oh look, it's another one that's never ever happened at PagerDuty. We used to have a really big problem with this one. We'd start incident response calls, then spend the first 10 minutes arguing over whether it was a <code>SEV-3</code> or a <code>SEV-2</code>. By the time we were finished, we would be 10 minutes into a <code>SEV-1</code> and have made no progress.</p>
+<p>So now we have a rule. We don't discuss incident severity during the call. If we can't decide between two, we always assume it's the higher severity and move on.</p>
+<p>Don't litigate severities during an incident. It's a waste of time.</p>
+<hr />
+<h3 id="treating-as-a-sev-1">Treating as a SEV-1<a class="headerlink" href="#treating-as-a-sev-1" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="057" /><label for="057"><img alt="057" src="../../../assets/slides/incident_response/incident_response.057.jpeg" /></label>
+<em>057. We're treating this as a SEV-1. <a href="../../../training/incident_commander/#executive-swoop-questioning-severity">Docs Reference</a></em></p>
+<p>So the IC will need to make it clear we don’t discuss, and that we’re treating it as a <code>SEV-1</code>. It may turn out to be a <code>SEV-4</code>, who knows, it doesn’t matter. That's a discussion for the post-mortem.</p>
+<blockquote>
+<p>We do not discuss incident severity during the call. We're treating this as a SEV-1.</p>
+</blockquote>
+<p>Once you’ve spun up the gears of incident response, you may as well finish the process, if anything it just gives you all more practice.</p>
+<hr />
+<h3 id="notify-stakeholders">Notify Stakeholders<a class="headerlink" href="#notify-stakeholders" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="058" /><label for="058"><img alt="058" src="../../../assets/slides/incident_response/incident_response.058.jpeg" /></label>
+<em>058. Notify stakeholders.</em></p>
+<p>Pretty much all of these examples of executive swoop can be pre-empted by <strong>involving stakeholders in the process</strong>, giving them a way to stay up to date.</p>
+<p>At PagerDuty we have a separate Slack room just for incident updates. It's less noisy than our main response room, and gives succinct updates for folks who want it. This allows execs to stay in the loop, and also ask questions without affecting the main response. In our process, the Internal Liaison is responsible for monitoring and updating that channel.</p>
+<p>Stakeholders are not allowed to talk on our response call, or in our main incident response chat room. They must take all discussion to the updates room or via the Internal Liaison. The Incident Commander is responsible for keeping our primary communication channels free of those types of discussions or questions, and direct people towards the Internal Liaison.</p>
+<hr />
+<h3 id="belligerent-responder">Belligerent Responder<a class="headerlink" href="#belligerent-responder" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="059" /><label for="059"><img alt="059" src="../../../assets/slides/incident_response/incident_response.059.jpeg" /></label>
+<em>059. The belligerent responder.</em></p>
+<p>There are other things than can hinder your response though that don't fall under the category of executive swoop. This one we call the belligerent responder. It was originally called <em>The Drunk Engineer</em>, but again, I was asked not to put that in the slide.</p>
+<p>There are plenty of awkward situations that can present themselves on response calls. There can be big ego’s and strong opinions. What do you do when someone on the call is being belligerent and hampering the response process?</p>
+<p>You need to be firm, and let them know what will happen if they continue.</p>
+<hr />
+<h3 id="disruptive">Disruptive<a class="headerlink" href="#disruptive" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="060" /><label for="060"><img alt="060" src="../../../assets/slides/incident_response/incident_response.060.jpeg" /></label>
+<em>060. You're being disruptive. <a href="../../../training/incident_commander/#the-belligerent-responder">Docs Reference</a></em></p>
+<blockquote>
+<p>You're being disruptive. Please stop, or I will have to remove you from the call.</p>
+</blockquote>
+<p>State the facts, <strong>give them a way out to save face</strong>, but state what will happen if they don’t. No second chances, follow through on the action if they don’t respond. It can be harsh, but that’s what needs to be done.</p>
+<p>Again, we've phrased this in a particular way. We said "I will have to remove you", rather than "I will remove you". It makes it seem like the decision is out of your hands and that you'll be forced to do it. It can make it less personal and less likely to cause awkward problems after the call is over.</p>
+<hr />
+<h3 id="do-responders-get-tired">Do Responders Get Tired?<a class="headerlink" href="#do-responders-get-tired" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="061" /><label for="061"><img alt="061" src="../../../assets/slides/incident_response/incident_response.061.jpeg" /></label>
+<em>061. Do responders get tired?</em></p>
+<p>Another problem that can pop up during a response is when we have long running incidents.</p>
+<p>Do we use the same IC for a 12 hour incident? Do IC's even get tired? Well, of course they do! They're people too. This is another human cost associated with incident response that you want to try and minimize.</p>
+<p>All of the roles in the response process can be mentally fatiguing. When you get tired you start to forget things and make mistakes, so it's important to try and keep a fresh perspective as often as you can.</p>
+<hr />
+<h3 id="handovers-are-encouraged">Handovers Are Encouraged<a class="headerlink" href="#handovers-are-encouraged" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="062" /><label for="062"><img alt="062" src="../../../assets/slides/incident_response/incident_response.062.jpeg" /></label>
+<em>062. Handovers are encouraged.</em></p>
+<p>For this reason, we <strong>actively encourage handovers</strong> in our process. Usually every hour or so is what we recommend, but it's at the discretion of the people involved. 3 hours would be the absolute upper limit where we would start requiring a handover.</p>
+<details class="aside hide-arrow" open="open"><summary>Make sure to rest after handing over.</summary><p>It can be very tempting after handing over command to want to stay on the call and listen in, to try and stay on top of things and see how things are going. <strong>Avoid this at all costs.</strong> Once handing over your role to someone else, you should leave the response call and all associated chat rooms. Take a break away from anything related to the incident.</p>
+<p>You may be required to take the role again later if the incident is very long running. If you've stayed listening in the entire time, then while you would be up to speed, you would still be fatigued and would not be able to respond as efficient as if you'd taken a real break.</p>
+</details>
+<p>Handing over command is important, and really easy. Get the new IC up to speed out-of-band from the main discussion. We privately message on Slack for example. If you have a deputy, then it's even better, because they would already be on the call and up to speed.</p>
+<p>Then you handover.</p>
+<hr />
+<h3 id="handover">Handover<a class="headerlink" href="#handover" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="063" /><label for="063"><img alt="063" src="../../../assets/slides/incident_response/incident_response.063.jpeg" /></label>
+<em>063. Handover. <a href="../../../training/incident_commander/#transfer-of-command">Docs Reference</a></em></p>
+<p>State that you are handing over command, and then the new IC begins as if it were a new call. Simple!</p>
+<p>Since we want to be able to handover, it's important to have as many trained IC's as you can. The more you have, the better. Ideally you want enough for at least a daily rotation.</p>
+<details class="aside"><summary>How do you get lots of trained Incident Commands?</summary><p>This is a question we get a lot, and not something we have a golden solution for. Many people are hesitant to take on the responsibilities of being an IC in addition to their current work and on-call responsibilities, which is a perfectly valid concern. One of the best ways we found to increase the pool of Incident Commanders is to encourage folks outside of normal engineering teams to take on the role. Those who wouldn't normally be part of an on-call rotation. Not only can they provide an outside perspective during incidents that is sometimes missing, but it can also help to build further empathy with others in the organization who regularly go on-call.</p>
+</details>
+<hr />
+<h3 id="anti-patterns">Anti-Patterns<a class="headerlink" href="#anti-patterns" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="064" /><label for="064"><img alt="064" src="../../../assets/slides/incident_response/incident_response.064.jpeg" /></label></em>
+<em>064. Anti-Patterns. <a href="../../../resources/anti_patterns/">Docs Reference</a></em></p>
+<p>Let’s talk about some <a href="../../../resources/anti_patterns/">anti-patterns</a>. Things which seem like they would help incident response, but really don’t. Knowing these now will save you the headaches and growing pains we went through.</p>
+<hr />
+<h3 id="getting-everyone-on-the-call">Getting Everyone on the Call<a class="headerlink" href="#getting-everyone-on-the-call" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="065" /><label for="065"><img alt="065" src="../../../assets/slides/incident_response/incident_response.065.jpeg" /></label>
+<em>065. Getting everyone on the call. <a href="../../../resources/anti_patterns/#getting-everyone-on-the-call">Docs Reference</a></em></p>
+<p>Believe it or not, we used to page every single engineer at PagerDuty whenever we had a <code>SEV-2</code>. I'm not joking. It was horrible. It worked great when we only had 5 engineers, less so when we had 50.</p>
+<p>It's important to <strong>maintain an effective <a href="../../../training/glossary/#span-of-control">span of control</a></strong> during an incident. No one person should have more than ~7 people reporting to them. Any more than that and you have too many cooks in the kitchen.</p>
+<p>Waking up 30 engineers at 3am causes untold damage. Please don't do it.</p>
+<hr />
+<h3 id="not-letting-responders-leave">Not Letting Responders Leave<a class="headerlink" href="#not-letting-responders-leave" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="066" /><label for="066"><img alt="066" src="../../../assets/slides/incident_response/incident_response.066.jpeg" /></label>
+<em>066. Not letting responders leave. <a href="../../../resources/anti_patterns/#forcing-everyone-to-stay-on-the-call">Docs Reference</a></em></p>
+<p>Remember I mentioned at the beginning that one of our goals is to reduce the cost associated with an incident? That includes the human cost. Waking people up at 3am is costly. But keeping those people on a call in which they can’t do anything is even worse.</p>
+<p>So if some responders are no longer needed, let them leave the call. Your co-workers time is more costly than servers, don’t burn them out!</p>
+<p>I would recommend you not list everyone you want to leave the call, since you might miss people. Better to say who you want to stay, that way it also solidifies who you want to stay too. For example,</p>
+<blockquote>
+<p>Operations, Support, and Rich, please stay on the call. Everyone else, feel free to drop off at your discretion.</p>
+</blockquote>
+<hr />
+<h3 id="too-frequent-status-updates">Too Frequent Status Updates<a class="headerlink" href="#too-frequent-status-updates" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="067" /><label for="067"><img alt="067" src="../../../assets/slides/incident_response/incident_response.067.jpeg" /></label>
+<em>067. Too frequent status updates. <a href="../../../resources/anti_patterns/#too-frequent-status-updates">Docs Reference</a></em></p>
+<p>Executives especially love frequent status updates. But providing them too frequently can cause things to get out of hand. If it takes 5 minutes to write an update, and they want an update every 5 minutes, you can start to see how long it's going to take to solve the incident.</p>
+<p>At PagerDuty, we keep our internal updates to about once every 20-30 minutes. Writing the update takes away time from solving the incident, so that needs to be balanced. This cadence has worked well for us.</p>
+<hr />
+<h3 id="being-overly-focussed-on-an-issue">Being Overly Focussed On An Issue<a class="headerlink" href="#being-overly-focussed-on-an-issue" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="068" /><label for="068"><img alt="068" src="../../../assets/slides/incident_response/incident_response.068.jpeg" /></label>
+<em>068. Being overly focussed on an issue. <a href="../../../resources/anti_patterns/#being-too-focussed-on-the-problem-in-front-of-you">Docs Reference</a></em></p>
+<p>The IC is generally the person who has the bigger picture of what's going on. But there can be a tendency for responders to become too focussed on the problem they see in front of them, rather than taking the bigger picture into account.</p>
+<p>This usually presents itself on an incident call with an SME constantly bringing up the same issue without listening to instructions from the incident commander, and having tunnel vision for the specific issue on their system.</p>
+<p>Try not to get tunnel vision or chase red herrings. Always keep the bigger picture in mind.</p>
+<hr />
+<h3 id="requiring-deeply-technical-ics">Requiring Deeply Technical ICs<a class="headerlink" href="#requiring-deeply-technical-ics" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="069" /><label for="069"><img alt="069" src="../../../assets/slides/incident_response/incident_response.069.jpeg" /></label>
+<em>069. Requiring deeply technical incident commanders. <a href="../../../resources/anti_patterns/#requiring-incident-commanders-to-have-deep-technical-knowledge">Docs Reference</a></em></p>
+<p>We used to require that all of our Incident Commanders be experienced engineers with deep technical knowledge of all PagerDuty systems. <strong>This was one of our bigger mistakes.</strong> Remember that IC's aren't responders, they aren't the ones actually fixing the problem, so they don't need deep technical knowledge. IC's are experts at coordinating the response, not at solving technical issues. You should be relying on your SMEs for that.</p>
+<p><strong>Removing the restriction on technical knowledge led to a dramatic increase in our pool of available incident commanders</strong>, and didn't have any effect on our ability to respond to incidents. We now have ICs from all across the organization, with even more currently in training.</p>
+<p>It's already hard enough to get people to want to be an IC, so don't add further unnecessary restrictions to your pool.</p>
+<hr />
+<h3 id="taking-on-multiple-roles">Taking on Multiple Roles<a class="headerlink" href="#taking-on-multiple-roles" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="070" /><label for="070"><img alt="070" src="../../../assets/slides/incident_response/incident_response.070.jpeg" /></label>
+<em>070. Taking on multiple roles. <a href="../../../resources/anti_patterns/#trying-to-take-on-multiple-roles">Docs Reference</a></em></p>
+<p>In past PagerDuty incidents, we've had instances where the Incident Commander has started to assume the Subject Matter Expert role and attempted to solve the problem themselves. This typically happens when an engineer is the IC, and the incident is something to do with a system they helped to build. It's very tempting to say "I know how to fix this!" and jump in and solve the problem yourself. But you cannot do that as an IC.</p>
+<p>Inevitably, the incident will be bigger than you think, and while you're trying to fix you little fire, there's another one happening in another service and you've lost sight of the bigger picture.</p>
+<p>You cannot take on another role at the same time as being an Incident Commander. If you absolutely are the only person who can solve the problem, then handover to another IC and assume the role of an SME for the remainder of the incident.</p>
+<hr />
+<h3 id="litigating-policy">Litigating Policy<a class="headerlink" href="#litigating-policy" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="071" /><label for="071"><img alt="071" src="../../../assets/slides/incident_response/incident_response.071.jpeg" /></label>
+<em>071. Litigating policy during an incident. <a href="../../../resources/anti_patterns/#discussing-process-and-policy-decisions-during-the-incident-call">Docs Reference</a></em></p>
+<p>Just like with severities, policy and processes should not be discussed during an incident. The current process should be followed, and any concerns should be raised afterwards, either during a post-mortem or directly to the team managing the incident response process.</p>
+<p>Trying to change the process during an incident is only going to prolong the current incident. That's not the time to have that discussion.</p>
+<hr />
+<h3 id="averse-to-process-changes">Averse to Process Changes<a class="headerlink" href="#averse-to-process-changes" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="072" /><label for="072"><img alt="072" src="../../../assets/slides/incident_response/incident_response.072.jpeg" /></label>
+<em>072. Being averse to process changes. <a href="../../../resources/anti_patterns/#being-averse-to-policy-and-process-changes">Docs Reference</a></em></p>
+<p>Finally, once a stable process is in place and incidents are getting resolved, there can be lots of hesitation and resistance to changing that process. "If it ain't broke don't fix it". As your company grows, your response will need to change. Holding on to your old processes and practices for too long can hinder your incident response going forward. Don't be reckless, of course, but try to introduce sensible changes and don't be afraid to make changes which might slow things down in the short-term, but will make things faster in the long-run. These are the hardest changes to make, but ultimately the most worthwhile.</p>
+<hr />
+<h3 id="resolved">Resolved<a class="headerlink" href="#resolved" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="073" /><label for="073"><img alt="073" src="../../../assets/slides/incident_response/incident_response.073.jpeg" /></label></em>
+<em>073. Resolved.</em></p>
+<p>OK, so if all goes well, you're incident will get resolved. That means we're all done and we can go home, right?!</p>
+<p>Well, not quite yet. There's still one more thing we need to do.</p>
+<hr />
+<h3 id="dont-neglect-the-post-mortem">Don't Neglect The Post-Mortem<a class="headerlink" href="#dont-neglect-the-post-mortem" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="074" /><label for="074"><img alt="074" src="../../../assets/slides/incident_response/incident_response.074.jpeg" /></label>
+<em>074. Don't neglect the post-mortem. <a href="../../../resources/anti_patterns/#neglecting-the-post-mortem-and-followup-activities">Docs Reference</a></em></p>
+<p>We need to do a <a href="../../../after/post_mortem_process/">post-mortem</a>. Or after-action review, learning review, retrospective, incident report, etc. Whatever you want to call it, the name doesn't matter as much as actually doing one!</p>
+<p>Don't make the mistake of neglecting a post-mortem after an incident. Without a post-mortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless post-mortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.</p>
+<p>Post-mortems are an important followup action and should never be missed. Even if you triggered an incident and then decided it was a false alarm, you should still do a brief post-mortem. You just mobilized a response when you didn't need to, so you want to identify how you can make sure that doesn't happen again.</p>
+<hr />
+<h3 id="create-the-post-mortem">Create the Post-Mortem<a class="headerlink" href="#create-the-post-mortem" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="075" /><label for="075"><img alt="075" src="../../../assets/slides/incident_response/incident_response.075.jpeg" /></label>
+<em>075. Create the post-mortem. <a href="../../../after/post_mortem_template/">Docs Reference</a></em></p>
+<p>The first step is to create the post-mortem itself. This is the job of the Incident Commander. I don't mean they're going to write the entire post-mortem, they're just going to create the <a href="../../../after/post_mortem_template/">initial template</a>. We want to make sure that a link exists so that when people ask "When will we know what went wrong?" you have something to give them.</p>
+<hr />
+<h3 id="pick-an-owner">Pick an Owner<a class="headerlink" href="#pick-an-owner" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="076" /><label for="076"><img alt="076" src="../../../assets/slides/incident_response/incident_response.076.jpeg" /></label>
+<em>076. Pick an owner.</em></p>
+<p>Then the IC needs to assign an owner. Remember how we assigned tasks to specific individuals? It’s no different with a post-mortem. Make sure there’s a clear owner, and that it's an <strong>individual</strong> and not a team. The most surefire way to make sure a post-mortem doesn't get completed is to assign it to a team instead of a specific person.</p>
+<p>The person you assign is responsible for completing the post-mortem, but they don't have to do it all themselves. They can delegate out sections as they see fit. But you need someone on the hook for making sure it gets finished.</p>
+<p>As with assigning other tasks, you also want to give them a deadline, and make sure they've understood that they're responsible for completing the post-mortem.</p>
+<hr />
+<h3 id="blameless">Blameless<a class="headerlink" href="#blameless" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="077" /><label for="077"><img alt="077" src="../../../assets/slides/incident_response/incident_response.077.jpeg" /></label>
+<em>077. Blameless.</em></p>
+<p>Importantly, post-mortems need to be <strong>blameless</strong>. If someone made a mistake, you just spent lots of money training them to never do it again. <strong>You can’t fire your way to reliability.</strong></p>
+<p>Let's say Bob ran a command which deleted your entire database. Your post-mortem shouldn't be "Bob made a mistake and should be fired or have his access revoked!". The post-mortem should be "Why is our system configured in a way which  allowed a single user to delete the entire database?".</p>
+<p>If you name and shame people in a post-mortem, it demotivates everyone. Next time someone makes a mistake, they're not going to own up to it, because they'll be afraid of getting shamed too. You want people to bring up problems, because then you get to fix them quickly.</p>
+<hr />
+<h3 id="review-the-process">Review the Process<a class="headerlink" href="#review-the-process" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="078" /><label for="078"><img alt="078" src="../../../assets/slides/incident_response/incident_response.078.jpeg" /></label>
+<em>078. Review the process too!</em></p>
+<p>Don’t forget to also review the process as part of the post-mortem. How can you change the process to make it better? What isn’t working out well? Just as it’s important to learn from and fix mistakes in your software, you want to do the same for your incident response process.</p>
+<hr />
+<h3 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="079" /><label for="079"><img alt="079" src="../../../assets/slides/incident_response/incident_response.079.jpeg" /></label></em>
+<em>079. Practice makes perfect.</em></p>
+<p>Finally, you want to practice your incident response process as much as you can. <strong>You don't want to be doing it for the first time during a real incident.</strong> Reading about it is one thing, but going through the motions is very different.</p>
+<p>Start by running mock incidents. Then treat your smaller incidents as if they're larger ones. If you trigger incident response and find it's not a real incident, treat it like one anyway since it's free practice.</p>
+<p>At PagerDuty, we run something called <a href="https://www.pagerduty.com/blog/failure-friday-at-pagerduty/">Failure Friday</a> where we purposefully inject failure into our systems to test their resilience. We treat this like a major incident, with an incident commander and everything. It allows us to practice while we're not under the stress of a normal incident.</p>
+<p>We also play a game called <a href="http://www.keeptalkinggame.com">Keep Talking And Nobody Explodes</a>. Yes, that's right, we play video games at work. But we've found that this game really helps to simulate a lot of the things an incident commander has to deal with, and is a great way to get some stress free practice.</p>
+<p>The bottom line is to practice as much as you can, so that when you do have the inevitable incident, your response is just routine.</p>
+<hr />
+<h3 id="open-source-response-docs">Open-Source Response Docs<a class="headerlink" href="#open-source-response-docs" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="080" /><label for="080"><img alt="080" src="../../../assets/slides/incident_response/incident_response.080.jpeg" /></label>
+<em>080. Our open-source incident response documentation.</em></p>
+<p>This was just a brief taste of the training we run at PagerDuty for our own Incident Commanders. We had nowhere near enough time to cover everything.</p>
+<p>Good news though! We have published our entire incident response process online. It is an exact copy of our internal documentation only with things like phone numbers removed. It's complete free to use, and is open-sourced under an Apache 2 license so you can use it in your own organizations. <a href="https://github.com/PagerDuty/incident-response-docs">It's on GitHub</a> and we do accept pull requests if you spot any mistakes or have improvement suggestions.</p>
+<p>Everything I've talked about today can be found in the documentation, and there's lots of great <a href="../../../resources/reading/">additional reading material</a> if you want to learn more.</p>
+<hr />
+<h3 id="response-docs-image">Response Docs Image<a class="headerlink" href="#response-docs-image" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="081" /><label for="081"><img alt="081" src="../../../assets/slides/incident_response/incident_response.081.jpeg" /></label>
+<em>081. Response docs screenshot.</em></p>
+<p>It looks pretty too.</p>
+<hr />
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="082" /><label for="082"><img alt="082" src="../../../assets/slides/incident_response/incident_response.082.jpeg" /></label>
+<em>082. Summary.</em></p>
+<p>Incident command training is useful in so many situations outside of a server exploding in the night. It can be applicable to many different things in your life, whether it's staying calm after a fender bender on the highway, or jumping into action to help during a major natural disaster. You'd be surprised at how useful it can be in everyday life.</p>
+<p>I even wrote a slightly tongue-in-cheek blog post called "<a href="https://www.pagerduty.com/blog/babyduty/">BabyDuty or: How PagerDuty Accidentally Prepared me for Fatherhood</a>" where I compared childbirth to a major incident, and the role of a parent with that of an Incident Commander. Though the older my daughter gets, the more I'm starting to realize it perhaps wasn't quite as tongue-in-cheek as I first thought.</p>
+<p>Anyway, with that, I'll leave you with a quick summary of the main things we discussed today. Thanks!</p>
+<details class="aside hide-arrow" open="open"><summary>Questions?</summary><p>If you have questions about this training material, feel free to ask me on Twitter, I'm <a href="https://twitter.com/r_adams">@r_adams</a>.</p>
+</details>
+<hr />
+<h3 id="image-credits">Image Credits<a class="headerlink" href="#image-credits" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="083" /><label for="083"><img alt="083" src="../../../assets/slides/incident_response/incident_response.083.jpeg" /></label>
+<em>083. Image credits.</em></p>
+<details class="aside hide-arrow" open="open"><summary>Image Credits</summary><p>Here are the credits for all the images used throughout this training material.</p>
+</details>
+<hr />
+<h3 id="pagerduty-university">PagerDuty University<a class="headerlink" href="#pagerduty-university" title="Permanent link">#</a></h3>
+<p><input type="checkbox" id="084" /><label for="084"><img alt="084" src="../../../assets/slides/incident_response/incident_response.084.jpeg" /></label>
+<em>084. PagerDuty University.</em></p>
+<details class="aside hide-arrow" open="open"><summary>PagerDuty University</summary><p>Shameless plug: If you're interested in our longer courses on this and other topics, including how to use PagerDuty to do it, we offer a variety of different training programs as part of <a href="https://www.pagerduty.com/training/">PagerDuty University</a> — from private full-day courses at your own offices, to public instructor-led training.</p>
+</details>
+<hr />
+<h3 id="video">Video<a class="headerlink" href="#video" title="Permanent link">#</a></h3>
+<p><em><input type="checkbox" id="085" /><label for="085"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BI7nfkoTmiA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></label></em></p>
+<details class="aside hide-arrow full-width" open="open"><summary>PagerDuty Summit Series Chicago 2017</summary><p>As a special bonus for making it to the end, here's a recording of an earlier version of this training given at a PagerDuty event in September 2017. The material will differ slightly from that shown on this website, as we have made changes and refined the content since then. But it should give you a decent idea of how the course is usually presented.</p>
+</details>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; PagerDuty, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../../glossary/" title="Glossary">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Glossary
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../../../resources/reading/" title="Reading">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Reading
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../../..';
+      var repo_id  = 'pagerduty/incident-response-docs';
+    </script>
+    <script src="../../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../../js/github_forks.js"></script>
+    
+    
+      <script src="/assets/js/jquery-1.10.2.min.js"></script>
+      <script src="/assets/js/lazy_load_images.js"></script>
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

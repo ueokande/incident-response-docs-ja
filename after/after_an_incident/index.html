@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <title>After an Incident - PagerDuty Incident Response Documentation</title>
+
+    <!-- Author and License -->
+    <meta name="author" content="PagerDuty, Inc." />
+    <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
+
+    <!-- Page Description -->
+    <meta name="description" content="Information on what to do after a major incident. Our followup and after action review procedures." />
+    <meta name="keywords" content="pagerduty, incident, response" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/after/after_an_incident/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="PagerDuty Incident Response Documentation" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://response.pagerduty.com/after/after_an_incident/" />
+    <meta property="og:title" content="After an Incident - PagerDuty Incident Response Documentation" />
+    <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
+    <meta property="og:description" content="Information on what to do after a major incident. Our followup and after action review procedures." />
+    <meta property="og:image" content="https://response.pagerduty.com/assets/img/covers/resolved.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="After an Incident - PagerDuty Incident Response Documentation" />
+    <meta name="twitter:description" content="Information on what to do after a major incident. Our followup and after action review procedures." />
+    <meta name="twitter:image" content="https://response.pagerduty.com/assets/img/covers/resolved.png" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/css/pagerduty.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+
+    <!-- Scripts -->
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-blue-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="mainlogo">
+        <a href="/" title="Go to homepage.">
+          <img src="../../assets/img/logo.png" title="PagerDuty" />
+        </a>
+      </div>
+      <div class="title">
+        <span class="path">
+          <a href="/">Incident Response</a>
+          <i class="icon icon-link"></i>
+        </span>
+        
+          <span class="path">
+            
+              
+                After an Incident <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        After an Incident
+      </div>
+    </div>
+    <div class="button button-pagerduty" role="button" aria-label="PagerDuty">
+      <a href="https://www.pagerduty.com" title="PagerDuty Website" target="_blank" class="toggle-button icon icon-pagerduty"></a>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/PagerDuty" title="@PagerDuty on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/PagerDuty" title="@PagerDuty on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  <div class="repo_header">
+    <a href="" class="project"  title="GitHub repo pagerduty/incident-response-docs">
+      <div class="banner">
+        
+          <div class="logo">
+            <img src="../../assets/img/icon.png">
+          </div>
+        
+        <div class="name">
+          <strong>
+            PagerDuty Incident Response Documentation
+            <span class="version">
+              
+            </span>
+          </strong>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-link">
+            
+            <a href="https://github.com/pagerduty/incident-response-docs" target="_blank" title="View Source" data-action="download">
+              <i class="icon icon-github"></i> Repo
+            </a>
+          </li>
+          <li class="repo-forks">
+            <a href="https://github.com/pagerduty/incident-response-docs/fork" target="_blank" title="Fork" data-action="fork">
+              <i class="icon icon-code-fork"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/pagerduty/incident-response-docs/stargazers" target="_blank" title="Stars" data-action="star">
+              <i class="icon icon-star"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr/>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Getting Started" href="../../getting_started/">
+      Getting Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">On-Call</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Being On-Call" href="../../oncall/being_oncall/">
+      Being On-Call
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Who's On-Call?" href="../../oncall/whos_oncall/">
+      Who's On-Call?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Alerting Principles" href="../../oncall/alerting_principles/">
+      Alerting Principles
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Before an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="What is an Incident?" href="../../before/what_is_an_incident/">
+      What is an Incident?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Severity Levels" href="../../before/severity_levels/">
+      Severity Levels
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Different Roles" href="../../before/different_roles/">
+      Different Roles
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Call Etiquette" href="../../before/call_etiquette/">
+      Call Etiquette
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Complex Incidents" href="../../before/complex_incidents/">
+      Complex Incidents
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">During an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="During an Incident" href="../../during/during_an_incident/">
+      During an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Security Incident" href="../../during/security_incident_response/">
+      Security Incident
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">After an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="After an Incident" href="./">
+      After an Incident
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Followup Actions for Response Roles" href="#followup-actions-for-response-roles">
+                Followup Actions for Response Roles
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Reviewing the Incident" href="#reviewing-the-incident">
+                Reviewing the Incident
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Reviewing the Process" href="#reviewing-the-process">
+                Reviewing the Process
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Process" href="../post_mortem_process/">
+      Post-Mortem Process
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Template" href="../post_mortem_template/">
+      Post-Mortem Template
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Effective Post-Mortems" href="../effective_post_mortems/">
+      Effective Post-Mortems
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../../training/overview/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Incident Commander" href="../../training/incident_commander/">
+      Incident Commander
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Deputy" href="../../training/deputy/">
+      Deputy
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Scribe" href="../../training/scribe/">
+      Scribe
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Subject Matter Expert" href="../../training/subject_matter_expert/">
+      Subject Matter Expert
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Customer Liaison" href="../../training/customer_liaison/">
+      Customer Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Internal Liaison" href="../../training/internal_liaison/">
+      Internal Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Glossary" href="../../training/glossary/">
+      Glossary
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training Courses</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Incident Response" href="../../training/courses/incident_response/">
+      Incident Response
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Additional Resources</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Reading" href="../../resources/reading/">
+      Reading
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="ChatOps" href="../../resources/chatops/">
+      ChatOps
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Anti-Patterns" href="../../resources/anti_patterns/">
+      Anti-Patterns
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="About" href="../../about/">
+      About
+    </a>
+    
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>After an Incident</h1>
+          
+          
+          <p>Information on what to do after a major incident. Our followup and after action review procedures.</p>
+<h2 id="followup-actions-for-response-roles">Followup Actions for Response Roles<a class="headerlink" href="#followup-actions-for-response-roles" title="Permanent link">#</a></h2>
+<p>In addition to any direct followup items generated from an incident, each of our response roles will have a few standard followup tasks. These are generally lightweight actions that ensure we organize information and followup with customers appropriately.</p>
+<h3 id="steps-for-incident-commander">Steps for Incident Commander<a class="headerlink" href="#steps-for-incident-commander" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Update the incident in PagerDuty.</p>
+<ul>
+<li>Group any related incidents under the primary incident.</li>
+<li>Set the final severity of the incident.</li>
+<li>Resolve the incident.</li>
+</ul>
+</li>
+<li>
+<p>Create the post-mortem, and assign an owner to the post-mortem for the incident.</p>
+</li>
+<li>
+<p>Send out an internal email to the relevant stakeholders explaining that we had an incident, provide a link to the post-mortem.</p>
+</li>
+<li>
+<p>Occasionally check on the progress of the post-mortem to ensure that it is completed within the desired time frame.</p>
+</li>
+</ol>
+<h3 id="steps-for-deputy">Steps for Deputy<a class="headerlink" href="#steps-for-deputy" title="Permanent link">#</a></h3>
+<p>There are no additional steps after an incident is resolved. However the IC may ask for your help with their steps.</p>
+<h3 id="steps-for-scribe">Steps for Scribe<a class="headerlink" href="#steps-for-scribe" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Review the chat communications and extract any relevant items from key events.</p>
+</li>
+<li>
+<p>Collect all <code>TODO</code> items and add them to the post-mortem.</p>
+</li>
+</ol>
+<h3 id="steps-for-subject-matter-experts">Steps for Subject Matter Experts<a class="headerlink" href="#steps-for-subject-matter-experts" title="Permanent link">#</a></h3>
+<ol>
+<li>Add any notes you think are relevant to the post-mortem.</li>
+</ol>
+<h3 id="steps-for-customer-liaison">Steps for Customer Liaison<a class="headerlink" href="#steps-for-customer-liaison" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Reply to any customer enquiries we received about the incident.</p>
+</li>
+<li>
+<p>Follow the post-mortem progress, and update our status page with the external message once it is available.</p>
+</li>
+</ol>
+<h3 id="steps-for-internal-liaison">Steps for Internal Liaison<a class="headerlink" href="#steps-for-internal-liaison" title="Permanent link">#</a></h3>
+<p>There are no additional steps after an incident is resolved. However the IC may ask for your help with answering questions from internal stakeholders.</p>
+<h2 id="reviewing-the-incident">Reviewing the Incident<a class="headerlink" href="#reviewing-the-incident" title="Permanent link">#</a></h2>
+<p>It's important that we review the incident in detail to see exactly what went wrong, why it went wrong, and what we can do to make sure it doesn't happen again. These take many names; after-action reviews, incident review, followup review, etc. We use the term post-mortem.</p>
+<p>You can read all about our <a href="../post_mortem_process/">post-mortem process</a>, which goes over this in more detail.</p>
+<h2 id="reviewing-the-process">Reviewing the Process<a class="headerlink" href="#reviewing-the-process" title="Permanent link">#</a></h2>
+<p>As well as reviewing the incident, it's important to review our process. Did we handle the incident well, or are there things we could have done better?</p>
+<p>This review isn't very formal yet, and typically involves a few of the incident commanders getting together to discuss how we might have done things differently, or if there are any tweaks we can make to our incident response process.</p>
+<p>If you're interested in joining these meetings, just let one of the incident commanders know and we'll be sure to invite you.</p>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; PagerDuty, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../../during/security_incident_response/" title="Security Incident">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Security Incident
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../post_mortem_process/" title="Post-Mortem Process">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Post-Mortem Process
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'pagerduty/incident-response-docs';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../js/github_forks.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

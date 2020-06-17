@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <title>Subject Matter Expert - PagerDuty Incident Response Documentation</title>
+
+    <!-- Author and License -->
+    <meta name="author" content="PagerDuty, Inc." />
+    <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
+
+    <!-- Page Description -->
+    <meta name="description" content="If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility." />
+    <meta name="keywords" content="pagerduty, incident, response" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/training/subject_matter_expert/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="PagerDuty Incident Response Documentation" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://response.pagerduty.com/training/subject_matter_expert/" />
+    <meta property="og:title" content="Subject Matter Expert - PagerDuty Incident Response Documentation" />
+    <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
+    <meta property="og:description" content="If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility." />
+    <meta property="og:image" content="https://response.pagerduty.com/assets/img/covers/sme.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Subject Matter Expert - PagerDuty Incident Response Documentation" />
+    <meta name="twitter:description" content="If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility." />
+    <meta name="twitter:image" content="https://response.pagerduty.com/assets/img/covers/sme.png" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/css/pagerduty.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+
+    <!-- Scripts -->
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-blue-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="mainlogo">
+        <a href="/" title="Go to homepage.">
+          <img src="../../assets/img/logo.png" title="PagerDuty" />
+        </a>
+      </div>
+      <div class="title">
+        <span class="path">
+          <a href="/">Incident Response</a>
+          <i class="icon icon-link"></i>
+        </span>
+        
+          <span class="path">
+            
+              
+                Training <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Subject Matter Expert
+      </div>
+    </div>
+    <div class="button button-pagerduty" role="button" aria-label="PagerDuty">
+      <a href="https://www.pagerduty.com" title="PagerDuty Website" target="_blank" class="toggle-button icon icon-pagerduty"></a>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/PagerDuty" title="@PagerDuty on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/PagerDuty" title="@PagerDuty on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  <div class="repo_header">
+    <a href="" class="project"  title="GitHub repo pagerduty/incident-response-docs">
+      <div class="banner">
+        
+          <div class="logo">
+            <img src="../../assets/img/icon.png">
+          </div>
+        
+        <div class="name">
+          <strong>
+            PagerDuty Incident Response Documentation
+            <span class="version">
+              
+            </span>
+          </strong>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-link">
+            
+            <a href="https://github.com/pagerduty/incident-response-docs" target="_blank" title="View Source" data-action="download">
+              <i class="icon icon-github"></i> Repo
+            </a>
+          </li>
+          <li class="repo-forks">
+            <a href="https://github.com/pagerduty/incident-response-docs/fork" target="_blank" title="Fork" data-action="fork">
+              <i class="icon icon-code-fork"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/pagerduty/incident-response-docs/stargazers" target="_blank" title="Stars" data-action="star">
+              <i class="icon icon-star"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr/>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Getting Started" href="../../getting_started/">
+      Getting Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">On-Call</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Being On-Call" href="../../oncall/being_oncall/">
+      Being On-Call
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Who's On-Call?" href="../../oncall/whos_oncall/">
+      Who's On-Call?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Alerting Principles" href="../../oncall/alerting_principles/">
+      Alerting Principles
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Before an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="What is an Incident?" href="../../before/what_is_an_incident/">
+      What is an Incident?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Severity Levels" href="../../before/severity_levels/">
+      Severity Levels
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Different Roles" href="../../before/different_roles/">
+      Different Roles
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Call Etiquette" href="../../before/call_etiquette/">
+      Call Etiquette
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Complex Incidents" href="../../before/complex_incidents/">
+      Complex Incidents
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">During an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="During an Incident" href="../../during/during_an_incident/">
+      During an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Security Incident" href="../../during/security_incident_response/">
+      Security Incident
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">After an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="After an Incident" href="../../after/after_an_incident/">
+      After an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Process" href="../../after/post_mortem_process/">
+      Post-Mortem Process
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Template" href="../../after/post_mortem_template/">
+      Post-Mortem Template
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Effective Post-Mortems" href="../../after/effective_post_mortems/">
+      Effective Post-Mortems
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../overview/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Incident Commander" href="../incident_commander/">
+      Incident Commander
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Deputy" href="../deputy/">
+      Deputy
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Scribe" href="../scribe/">
+      Scribe
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Subject Matter Expert" href="./">
+      Subject Matter Expert
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="On-Call Expectations" href="#on-call-expectations">
+                On-Call Expectations
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Response Mobilization" href="#response-mobilization">
+                Response Mobilization
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title=""Never Hesitate to Escalate"" href="#never-hesitate-to-escalate">
+                "Never Hesitate to Escalate"
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Blameless" href="#blameless">
+                Blameless
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Wartime vs Peacetime" href="#wartime-vs-peacetime">
+                Wartime vs Peacetime
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Customer Liaison" href="../customer_liaison/">
+      Customer Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Internal Liaison" href="../internal_liaison/">
+      Internal Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Glossary" href="../glossary/">
+      Glossary
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training Courses</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Incident Response" href="../courses/incident_response/">
+      Incident Response
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Additional Resources</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Reading" href="../../resources/reading/">
+      Reading
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="ChatOps" href="../../resources/chatops/">
+      ChatOps
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Anti-Patterns" href="../../resources/anti_patterns/">
+      Anti-Patterns
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="About" href="../../about/">
+      About
+    </a>
+    
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Subject Matter Expert</h1>
+          
+          
+          <p><img alt="Incident Response" src="../../assets/img/headers/incident_response.jpg" />
+<em>Credit: <a href="https://www.flickr.com/photos/oregondot/8743809853/in/album-72157633494644719/">oregondot @ Flickr</a></em></p>
+<p>If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility. If you are interested in becoming an Incident Commander, take a look at the <a href="../incident_commander/">Incident Commander Training page</a>.</p>
+<h2 id="on-call-expectations">On-Call Expectations<a class="headerlink" href="#on-call-expectations" title="Permanent link">#</a></h2>
+<p>If you are on-call for your team, there are certain expectations of you as that on-call. This applies to both the primary and secondary on-calls. Getting paged about a SEV-3 or SEV-4 in your system comes with different expectations than getting paged with a major SEV-2.</p>
+<h3 id="before-going-on-call">Before Going On-Call<a class="headerlink" href="#before-going-on-call" title="Permanent link">#</a></h3>
+<ol>
+<li>Be prepared, by having already familiarized yourself with our incident response policies and procedures. In particular,<ol>
+<li><a href="../../before/different_roles/">Different Roles for Incidents</a> - You will be acting as a "Resolver" or "SME". But you should familiarize yourself with the other roles and what they will be doing.</li>
+<li><a href="../../before/call_etiquette/">Incident Call Etiquette</a> - How to behave during an incident call.</li>
+<li><a href="../../during/during_an_incident/">During an Incident</a> - What to do during an incident. You are specifically interested in the "Resolver" steps, but you should familiarize yourself with the entire document.</li>
+<li><a href="../glossary/">Glossary</a> - Familiarize yourself with the terminology that may be used during the call.</li>
+</ol>
+</li>
+<li>Make sure you have set up your alerting methods, and that PagerDuty can <a href="https://support.pagerduty.com/docs/notification-phone-numbers">bypass your "Do Not Disturb" settings</a>.</li>
+<li>Check you can join the incident call. You may need to install a browser plugin. You don't want to be doing that the first time you get paged.</li>
+<li>Be aware of your upcoming on-call time and arrange swaps around travel, vacations, appointments, etc.</li>
+<li>If you are an Incident Commander, make sure you are not on-call for your team at the same time as being on-call as Incident Commander.</li>
+</ol>
+<h3 id="during-on-call-period">During On-Call Period<a class="headerlink" href="#during-on-call-period" title="Permanent link">#</a></h3>
+<ol>
+<li>Have your laptop and Internet with you at all times during your on-call period (office, home, a MiFi, a phone with a tethering plan, etc).</li>
+<li>If you have important appointments, you need to get someone else on your team to cover that time slot in advance.</li>
+<li>When you receive an alert for a major incident, you are expected to join the incident call and Slack as quickly as possible (within minutes).<ol>
+<li>You will be asked questions or given actions by the Incident Commander. Answer questions concisely, and follow all actions given (even if you disagree with them).</li>
+</ol>
+</li>
+</ol>
+<h2 id="response-mobilization">Response Mobilization<a class="headerlink" href="#response-mobilization" title="Permanent link">#</a></h2>
+<p>When an incident occurs, you must be mobilized or assigned to become part of the incident response. In other words, until you are mobilized to the incident via a page or being directly asked by someone else on the incident, you remain in your everyday role. After being mobilized, your first task is to check in and receive an assignment. While it's tempting to see an incident happening and want to jump in and help, when resources show up that have not been requested, the management of the incident can be compromised.</p>
+<h2 id="never-hesitate-to-escalate">"Never Hesitate to Escalate"<a class="headerlink" href="#never-hesitate-to-escalate" title="Permanent link">#</a></h2>
+<p>If you're not sure about something, it is perfectly acceptable to bring in other SMEs from your team that you believe know a given system better than you. Don't let your ego keep you from bringing in additional help. Our motto is "Never hesitate to escalate", you will never be looked down upon for escalating something because you didn't know how to handle it.</p>
+<h2 id="blameless">Blameless<a class="headerlink" href="#blameless" title="Permanent link">#</a></h2>
+<p>There will be incidents. Some will be caused by you, some will be caused by others... some will just happen. Our entire incident response process is completely blameless. Blaming people is counter productive and just distracts from the problem at hand. No matter how an incident started, they all need to get solved as quickly as possible.</p>
+<h2 id="wartime-vs-peacetime">Wartime vs Peacetime<a class="headerlink" href="#wartime-vs-peacetime" title="Permanent link">#</a></h2>
+<p>Behavior during a major incident is very different to any other alert you may have received in the past. We call a major incident "wartime", and make a distinction between that and normal everyday operations ("peacetime").</p>
+<h3 id="peacetime">Peacetime<a class="headerlink" href="#peacetime" title="Permanent link">#</a></h3>
+<p>The organizational structure is generally based on seniority. The more senior members of a team will lead discussions, and managers or team leads will have the final say. Decisions are made after careful consideration of all options, and to minimize potential risk to customers.</p>
+<h3 id="wartime">Wartime<a class="headerlink" href="#wartime" title="Permanent link">#</a></h3>
+<p>Wartime is different, and you will notice on our major incident calls that there's a different organizational structure.</p>
+<ul>
+<li>The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.</li>
+<li>Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.</li>
+<li>Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.</li>
+<li>Riskier decisions can be made by the IC than would normally be considered during peacetime.<ul>
+<li>For example, the IC may decide to drop events for a particular customer in order to maintain the integrity of the system for everyone else.</li>
+</ul>
+</li>
+<li>The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.<ul>
+<li>Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.</li>
+</ul>
+</li>
+<li>The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is never anything personal, and something you should be prepared to experience if you've never been in a wartime situation before.</li>
+<li>You may be asked to leave the call by the IC, or you may even be forceable kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is nothing personal and you should remember that wartime is different than peacetime.</li>
+</ul>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; PagerDuty, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../scribe/" title="Scribe">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Scribe
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../customer_liaison/" title="Customer Liaison">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Customer Liaison
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'pagerduty/incident-response-docs';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../js/github_forks.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <title>Different Roles - PagerDuty Incident Response Documentation</title>
+
+    <!-- Author and License -->
+    <meta name="author" content="PagerDuty, Inc." />
+    <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
+
+    <!-- Page Description -->
+    <meta name="description" content="There are several main roles for our incident response teams at PagerDuty. This page describes each of our roles in detail, why it's important to have them, and what their responsibilities are." />
+    <meta name="keywords" content="pagerduty, incident, response" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/before/different_roles/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="PagerDuty Incident Response Documentation" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://response.pagerduty.com/before/different_roles/" />
+    <meta property="og:title" content="Different Roles - PagerDuty Incident Response Documentation" />
+    <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
+    <meta property="og:description" content="There are several main roles for our incident response teams at PagerDuty. This page describes each of our roles in detail, why it's important to have them, and what their responsibilities are." />
+    <meta property="og:image" content="https://response.pagerduty.com/assets/img/covers/roles.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Different Roles - PagerDuty Incident Response Documentation" />
+    <meta name="twitter:description" content="There are several main roles for our incident response teams at PagerDuty. This page describes each of our roles in detail, why it's important to have them, and what their responsibilities are." />
+    <meta name="twitter:image" content="https://response.pagerduty.com/assets/img/covers/roles.png" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/css/pagerduty.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+
+    <!-- Scripts -->
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-blue-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="mainlogo">
+        <a href="/" title="Go to homepage.">
+          <img src="../../assets/img/logo.png" title="PagerDuty" />
+        </a>
+      </div>
+      <div class="title">
+        <span class="path">
+          <a href="/">Incident Response</a>
+          <i class="icon icon-link"></i>
+        </span>
+        
+          <span class="path">
+            
+              
+                Before an Incident <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Different Roles
+      </div>
+    </div>
+    <div class="button button-pagerduty" role="button" aria-label="PagerDuty">
+      <a href="https://www.pagerduty.com" title="PagerDuty Website" target="_blank" class="toggle-button icon icon-pagerduty"></a>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/PagerDuty" title="@PagerDuty on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/PagerDuty" title="@PagerDuty on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  <div class="repo_header">
+    <a href="" class="project"  title="GitHub repo pagerduty/incident-response-docs">
+      <div class="banner">
+        
+          <div class="logo">
+            <img src="../../assets/img/icon.png">
+          </div>
+        
+        <div class="name">
+          <strong>
+            PagerDuty Incident Response Documentation
+            <span class="version">
+              
+            </span>
+          </strong>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-link">
+            
+            <a href="https://github.com/pagerduty/incident-response-docs" target="_blank" title="View Source" data-action="download">
+              <i class="icon icon-github"></i> Repo
+            </a>
+          </li>
+          <li class="repo-forks">
+            <a href="https://github.com/pagerduty/incident-response-docs/fork" target="_blank" title="Fork" data-action="fork">
+              <i class="icon icon-code-fork"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/pagerduty/incident-response-docs/stargazers" target="_blank" title="Stars" data-action="star">
+              <i class="icon icon-star"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr/>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Getting Started" href="../../getting_started/">
+      Getting Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">On-Call</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Being On-Call" href="../../oncall/being_oncall/">
+      Being On-Call
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Who's On-Call?" href="../../oncall/whos_oncall/">
+      Who's On-Call?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Alerting Principles" href="../../oncall/alerting_principles/">
+      Alerting Principles
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Before an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="What is an Incident?" href="../what_is_an_incident/">
+      What is an Incident?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Severity Levels" href="../severity_levels/">
+      Severity Levels
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Different Roles" href="./">
+      Different Roles
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Incident Commander (IC)" href="#incident-commander-ic">
+                Incident Commander (IC)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Deputy" href="#deputy">
+                Deputy
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Scribe" href="#scribe">
+                Scribe
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Subject Matter Expert" href="#subject-matter-expert">
+                Subject Matter Expert
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Customer Liaison" href="#customer-liaison">
+                Customer Liaison
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Internal Liaison" href="#internal-liaison">
+                Internal Liaison
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Call Etiquette" href="../call_etiquette/">
+      Call Etiquette
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Complex Incidents" href="../complex_incidents/">
+      Complex Incidents
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">During an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="During an Incident" href="../../during/during_an_incident/">
+      During an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Security Incident" href="../../during/security_incident_response/">
+      Security Incident
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">After an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="After an Incident" href="../../after/after_an_incident/">
+      After an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Process" href="../../after/post_mortem_process/">
+      Post-Mortem Process
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Template" href="../../after/post_mortem_template/">
+      Post-Mortem Template
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Effective Post-Mortems" href="../../after/effective_post_mortems/">
+      Effective Post-Mortems
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../../training/overview/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Incident Commander" href="../../training/incident_commander/">
+      Incident Commander
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Deputy" href="../../training/deputy/">
+      Deputy
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Scribe" href="../../training/scribe/">
+      Scribe
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Subject Matter Expert" href="../../training/subject_matter_expert/">
+      Subject Matter Expert
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Customer Liaison" href="../../training/customer_liaison/">
+      Customer Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Internal Liaison" href="../../training/internal_liaison/">
+      Internal Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Glossary" href="../../training/glossary/">
+      Glossary
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training Courses</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Incident Response" href="../../training/courses/incident_response/">
+      Incident Response
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Additional Resources</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Reading" href="../../resources/reading/">
+      Reading
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="ChatOps" href="../../resources/chatops/">
+      ChatOps
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Anti-Patterns" href="../../resources/anti_patterns/">
+      Anti-Patterns
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="About" href="../../about/">
+      About
+    </a>
+    
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Different Roles</h1>
+          
+          
+          <p>There are several main roles for our incident response teams at PagerDuty. Certain roles only have one person per incident (e.g. IC), whereas other roles can have multiple people (e.g. Subject Matter Expert, SME). It's all about coming together as a team, working the problem, and getting a solution quickly.</p>
+<p>Here is a rough outline of our role hierarchy, with each role discussed in more detail on the rest of this page.</p>
+<p><img alt="Incident Response Structure" src="../../assets/img/misc/incident_response_roles.png" /></p>
+<p>During larger complex incidents, the role structure may be adjusted to account for the creation of sub-teams. Read about how we handle <a href="../complex_incidents/">complex incidents</a> for more information.</p>
+<div class="admonition tip">
+<p class="admonition-title">Flexible Structure</p>
+<p>It is not intended that every role be filled by a different person for every incident. For example, if the incident is small enough in scope, the Deputy might also take on the responsibilities of the Scribe and Internal Liaison for that specific incident. The structure should be flexible and scale based on the size and scope of the incident.</p>
+</div>
+<hr />
+<h2 id="incident-commander-ic">Incident Commander (IC)<a class="headerlink" href="#incident-commander-ic" title="Permanent link">#</a></h2>
+<h3 id="what-is-it">What is it?<a class="headerlink" href="#what-is-it" title="Permanent link">#</a></h3>
+<p>An Incident Commander acts as the single source of truth of what is currently happening and what is going to happen during an major incident. They come in all shapes, sizes, and colors.</p>
+<h3 id="why-have-one">Why have one?<a class="headerlink" href="#why-have-one" title="Permanent link">#</a></h3>
+<p>As any software system grows in size and complexity, things break and cause incidents. The Incident Commander is needed to help drive major incidents to resolution.</p>
+<h3 id="what-are-the-responsibilities">What are the responsibilities?<a class="headerlink" href="#what-are-the-responsibilities" title="Permanent link">#</a></h3>
+<ol>
+<li>Help prepare for major incidents,<ul>
+<li>Setup communications channels for major incidents.</li>
+<li>Funnel people to these communications channels when there is a major incident.</li>
+<li>Train team members on how to communicate during major incidents and train other Incident Commanders.</li>
+</ul>
+</li>
+<li>Drive major incidents to resolution,<ul>
+<li>Get everyone on the same communication channel.</li>
+<li>Collect information from team members for their services/area of ownership status.</li>
+<li>Collect proposed repair actions, then recommend repair actions to be taken.</li>
+<li>Delegate all repair actions, the Incident Commander is NOT a resolver.</li>
+<li>Be the single authority on system status</li>
+</ul>
+</li>
+<li>Post Mortem,<ul>
+<li>Creating the initial template right after the incident so people can put in their thoughts while fresh.</li>
+<li>Assigning the post-mortem after the event is over, this can be done after the call.</li>
+<li>Work with Team Leads/Managers on scheduling preventive actions.</li>
+</ul>
+</li>
+</ol>
+<h3 id="who-are-they">Who are they?<a class="headerlink" href="#who-are-they" title="Permanent link">#</a></h3>
+<p>Anyone on the Incident Commander on-call schedule. Trainees are typically on the Incident Commander Shadow schedule.</p>
+<h3 id="how-can-i-become-one">How can I become one?<a class="headerlink" href="#how-can-i-become-one" title="Permanent link">#</a></h3>
+<p>Take a look at our <a href="../../training/incident_commander/">Incident Commander training guide</a>.</p>
+<hr />
+<h2 id="deputy">Deputy<a class="headerlink" href="#deputy" title="Permanent link">#</a></h2>
+<h3 id="what-is-it_1">What is it?<a class="headerlink" href="#what-is-it_1" title="Permanent link">#</a></h3>
+<p>A Deputy is a direct support role for the Incident Commander. This is not a shadow where the person just observes, the Deputy is expected to perform important tasks during an incident.</p>
+<h3 id="why-have-one_1">Why have one?<a class="headerlink" href="#why-have-one_1" title="Permanent link">#</a></h3>
+<p>It's important for the IC to focus on the problem at hand, rather than worrying about documenting the steps or monitoring timers. The deputy helps to support the IC and keep them focussed on the incident.</p>
+<h3 id="what-are-the-responsibilities_1">What are the responsibilities?<a class="headerlink" href="#what-are-the-responsibilities_1" title="Permanent link">#</a></h3>
+<p>The Deputy is expected to:</p>
+<ol>
+<li>Bring up issues to the Incident Commander that may otherwise not be addressed (keeping an eye on timers that have been started, circling back around to missed items from a roll call, etc).</li>
+<li>Be a "hot standby" Incident Commander, should the primary need to either transition to a SME, or otherwise have to step away from the IC role.</li>
+<li>Manage the incident call, and be prepared to remove people from the call if instructed by the Incident Commander.</li>
+</ol>
+<h3 id="who-are-they_1">Who are they?<a class="headerlink" href="#who-are-they_1" title="Permanent link">#</a></h3>
+<p>Any Incident Commander can act as a deputy. Deputies need to be trained as an Incident Commander as they may be required to take over command.</p>
+<h3 id="how-can-i-become-one_1">How can I become one?<a class="headerlink" href="#how-can-i-become-one_1" title="Permanent link">#</a></h3>
+<p>Take a look at our <a href="../../training/deputy/">Deputy training guide</a>. Deputies also need to be <a href="../../training/incident_commander/">trained as an Incident Commander</a>.</p>
+<hr />
+<h2 id="scribe">Scribe<a class="headerlink" href="#scribe" title="Permanent link">#</a></h2>
+<h3 id="what-is-it_2">What is it?<a class="headerlink" href="#what-is-it_2" title="Permanent link">#</a></h3>
+<p>A Scribe documents the timeline of an incident as it progresses, and makes sure all important decisions and data are captured for later review.</p>
+<h3 id="why-have-one_2">Why have one?<a class="headerlink" href="#why-have-one_2" title="Permanent link">#</a></h3>
+<p>The incident commander will need to focus on the problem at hand, and the subject matter experts will need to focus on resolving the incident. It is important to capture a timeline of events as they happen so that they can be reviewed during the post-mortem to determine how well we performed, and so we can accurately determine any additional impact that we might not have noticed at the time.</p>
+<h3 id="what-are-the-responsibilities_2">What are the responsibilities?<a class="headerlink" href="#what-are-the-responsibilities_2" title="Permanent link">#</a></h3>
+<p>The Scribe is expected to:</p>
+<ol>
+<li>Ensure the incident call is being recorded.</li>
+<li>Note in Slack important data, events, and actions, as they happen. Specifically:<ul>
+<li>Key actions as they are taken (Example: "prod-server-387723 is being restarted to attempt to remove the stuck lock")</li>
+<li>Status reports when one is provided by the IC (Example: "We are in SEV-1, service A is currently not processing events due to a stuck lock, X is restarting the app stack, next checkin in 3 minutes")</li>
+<li>Any key callouts either during the call or at the ending review (Example: "Note: (Bob B) We should have a better way to determine stuck locks.")</li>
+</ul>
+</li>
+</ol>
+<h3 id="who-are-they_2">Who are they?<a class="headerlink" href="#who-are-they_2" title="Permanent link">#</a></h3>
+<p>Anyone can act as a scribe during an incident, and are chosen by the Incident Commander at the start of the call. Typically the Deputy will act as the Scribe, but that doesn't necessarily need to happen, and for larger incidents may not be possible.</p>
+<h3 id="how-can-i-become-one_2">How can I become one?<a class="headerlink" href="#how-can-i-become-one_2" title="Permanent link">#</a></h3>
+<p>Follow our <a href="../../training/scribe/">Scribe training guide</a>, and then notify the Incident Commanders that you would like to be considered for scribing for the next incident.</p>
+<hr />
+<h2 id="subject-matter-expert">Subject Matter Expert<a class="headerlink" href="#subject-matter-expert" title="Permanent link">#</a></h2>
+<h3 id="what-is-it_3">What is it?<a class="headerlink" href="#what-is-it_3" title="Permanent link">#</a></h3>
+<p>A Subject Matter Expert (SME), sometimes called a "Resolver", is a domain expert or designated owner of a component or service that is part of the PagerDuty software stack.</p>
+<h3 id="why-have-one_3">Why have one?<a class="headerlink" href="#why-have-one_3" title="Permanent link">#</a></h3>
+<p>The IC and deputy are not all-knowing super beings. When there is a problem with a service, an expert in that service is needed to be able to quickly help identify and fix issues.</p>
+<h3 id="what-are-the-responsibilities_3">What are the responsibilities?<a class="headerlink" href="#what-are-the-responsibilities_3" title="Permanent link">#</a></h3>
+<ol>
+<li>Being able to diagnose common problems with the service.</li>
+<li>Being able to rapidly fix issues found during an incident.</li>
+<li>Concise communication skills, specifically for CAN reports:<ul>
+<li>Condition: What is the current state of the service? Is it healthy or not?</li>
+<li>Actions: What actions need to be taken if the service is not in a healthy state?</li>
+<li>Needs: What support does the resolver need to perform an action?</li>
+</ul>
+</li>
+</ol>
+<h3 id="who-are-they_3">Who are they?<a class="headerlink" href="#who-are-they_3" title="Permanent link">#</a></h3>
+<p>Anyone who is considered a "domain expert" can act as a resolver for an incident. Typically the service's primary on-call will act as the SME for that service.</p>
+<h3 id="how-can-i-become-one_3">How can I become one?<a class="headerlink" href="#how-can-i-become-one_3" title="Permanent link">#</a></h3>
+<p>Take a look at our <a href="../../training/subject_matter_expert/">Subject Matter Expert training guide</a>. You should also discuss with your team and service owner to determine what the requirements are for your particular service.</p>
+<hr />
+<h2 id="customer-liaison">Customer Liaison<a class="headerlink" href="#customer-liaison" title="Permanent link">#</a></h2>
+<h3 id="what-is-it_4">What is it?<a class="headerlink" href="#what-is-it_4" title="Permanent link">#</a></h3>
+<p>A person responsible for interacting with customers, either directly, or via our public communication channels. Typically a member of the Customer Support team.</p>
+<h3 id="why-have-one_4">Why have one?<a class="headerlink" href="#why-have-one_4" title="Permanent link">#</a></h3>
+<p>All of the other roles will be actively working on identifying the cause and resolving the issue, we need a role which is focused purely on the customer interaction side of things so that it can be done properly, with the due care and attention it needs.</p>
+<h3 id="what-are-the-responsibilities_4">What are the responsibilities?<a class="headerlink" href="#what-are-the-responsibilities_4" title="Permanent link">#</a></h3>
+<ol>
+<li>Post any publicly facing messages regarding the incident (Twitter, StatusPage, etc).</li>
+<li>Notify the IC of any customers reporting that they are affected by the incident.</li>
+<li>Provide customers with the external message from the post-mortem once it is completed.</li>
+</ol>
+<h3 id="who-are-they_4">Who are they?<a class="headerlink" href="#who-are-they_4" title="Permanent link">#</a></h3>
+<p>Any member of the Support Team can act as a customer liaison.</p>
+<h3 id="how-can-i-become-one_4">How can I become one?<a class="headerlink" href="#how-can-i-become-one_4" title="Permanent link">#</a></h3>
+<p>Follow our <a href="../../training/customer_liaison/">Customer Liaison training guide</a>, and discuss with the Support Team about becoming our next Customer Liaison.</p>
+<hr />
+<h2 id="internal-liaison">Internal Liaison<a class="headerlink" href="#internal-liaison" title="Permanent link">#</a></h2>
+<h3 id="what-is-it_5">What is it?<a class="headerlink" href="#what-is-it_5" title="Permanent link">#</a></h3>
+<p>A person responsible for interacting with internal stakeholders. Whether it's notifying an internal team of the incident, or mobilizing additional responders within the organization.</p>
+<h3 id="why-have-one_5">Why have one?<a class="headerlink" href="#why-have-one_5" title="Permanent link">#</a></h3>
+<p>For larger incidents, we may have multiple teams across the organization involved. Having a dedicated liaison to mobilize those teams and bring them up to speed free's up the rest of the responders to handle the incident.</p>
+<h3 id="what-are-the-responsibilities_5">What are the responsibilities?<a class="headerlink" href="#what-are-the-responsibilities_5" title="Permanent link">#</a></h3>
+<ol>
+<li>Page SME's or other on-call engineers as instructed by the Incident Commander.</li>
+<li>Notify other teams within the organization (e.g. Finance, Legal, Marketing), as instructed by the Incident Commander.</li>
+<li>Liaise with stakeholders and provide status updates as necessary.</li>
+<li>Interact with internal stakeholders to answer their questions, to keep the primary call distraction free.</li>
+</ol>
+<h3 id="who-are-they_5">Who are they?<a class="headerlink" href="#who-are-they_5" title="Permanent link">#</a></h3>
+<p>Anyone designated by the Incident Commander during incident response.</p>
+<h3 id="how-can-i-become-one_5">How can I become one?<a class="headerlink" href="#how-can-i-become-one_5" title="Permanent link">#</a></h3>
+<p>Follow our <a href="../../training/internal_liaison/">Internal Liaison training</a>.</p>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; PagerDuty, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../severity_levels/" title="Severity Levels">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Severity Levels
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../call_etiquette/" title="Call Etiquette">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Call Etiquette
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'pagerduty/incident-response-docs';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../js/github_forks.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>

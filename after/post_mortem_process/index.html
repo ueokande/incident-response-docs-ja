@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <title>Post-Mortem Process - PagerDuty Incident Response Documentation</title>
+
+    <!-- Author and License -->
+    <meta name="author" content="PagerDuty, Inc." />
+    <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
+
+    <!-- Page Description -->
+    <meta name="description" content="For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future." />
+    <meta name="keywords" content="pagerduty, incident, response" />
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://response.pagerduty.com/after/post_mortem_process/">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="PagerDuty Incident Response Documentation" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://response.pagerduty.com/after/post_mortem_process/" />
+    <meta property="og:title" content="Post-Mortem Process - PagerDuty Incident Response Documentation" />
+    <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
+    <meta property="og:description" content="For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future." />
+    <meta property="og:image" content="https://response.pagerduty.com/assets/img/covers/post-mortem_process.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Post-Mortem Process - PagerDuty Incident Response Documentation" />
+    <meta name="twitter:description" content="For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future." />
+    <meta name="twitter:image" content="https://response.pagerduty.com/assets/img/covers/post-mortem_process.png" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/css/pagerduty.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+
+    <!-- Scripts -->
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-green palette-accent-blue-grey">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="mainlogo">
+        <a href="/" title="Go to homepage.">
+          <img src="../../assets/img/logo.png" title="PagerDuty" />
+        </a>
+      </div>
+      <div class="title">
+        <span class="path">
+          <a href="/">Incident Response</a>
+          <i class="icon icon-link"></i>
+        </span>
+        
+          <span class="path">
+            
+              
+                After an Incident <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Post-Mortem Process
+      </div>
+    </div>
+    <div class="button button-pagerduty" role="button" aria-label="PagerDuty">
+      <a href="https://www.pagerduty.com" title="PagerDuty Website" target="_blank" class="toggle-button icon icon-pagerduty"></a>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/PagerDuty" title="@PagerDuty on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/PagerDuty" title="@PagerDuty on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  <div class="repo_header">
+    <a href="" class="project"  title="GitHub repo pagerduty/incident-response-docs">
+      <div class="banner">
+        
+          <div class="logo">
+            <img src="../../assets/img/icon.png">
+          </div>
+        
+        <div class="name">
+          <strong>
+            PagerDuty Incident Response Documentation
+            <span class="version">
+              
+            </span>
+          </strong>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-link">
+            
+            <a href="https://github.com/pagerduty/incident-response-docs" target="_blank" title="View Source" data-action="download">
+              <i class="icon icon-github"></i> Repo
+            </a>
+          </li>
+          <li class="repo-forks">
+            <a href="https://github.com/pagerduty/incident-response-docs/fork" target="_blank" title="Fork" data-action="fork">
+              <i class="icon icon-code-fork"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/pagerduty/incident-response-docs/stargazers" target="_blank" title="Stars" data-action="star">
+              <i class="icon icon-star"></i>
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr/>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Getting Started" href="../../getting_started/">
+      Getting Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">On-Call</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Being On-Call" href="../../oncall/being_oncall/">
+      Being On-Call
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Who's On-Call?" href="../../oncall/whos_oncall/">
+      Who's On-Call?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Alerting Principles" href="../../oncall/alerting_principles/">
+      Alerting Principles
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Before an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="What is an Incident?" href="../../before/what_is_an_incident/">
+      What is an Incident?
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Severity Levels" href="../../before/severity_levels/">
+      Severity Levels
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Different Roles" href="../../before/different_roles/">
+      Different Roles
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Call Etiquette" href="../../before/call_etiquette/">
+      Call Etiquette
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Complex Incidents" href="../../before/complex_incidents/">
+      Complex Incidents
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">During an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="During an Incident" href="../../during/during_an_incident/">
+      During an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Security Incident" href="../../during/security_incident_response/">
+      Security Incident
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">After an Incident</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="After an Incident" href="../after_an_incident/">
+      After an Incident
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Post-Mortem Process" href="./">
+      Post-Mortem Process
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Owner Designation" href="#owner-designation">
+                Owner Designation
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Owner Responsibilities" href="#owner-responsibilities">
+                Owner Responsibilities
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Status Descriptions" href="#status-descriptions">
+                Status Descriptions
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Post-Mortem" href="#post-mortem">
+                Post-Mortem
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Post-Mortem Meeting" href="#post-mortem-meeting">
+                Post-Mortem Meeting
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Examples" href="#examples">
+                Examples
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Useful Resources" href="#useful-resources">
+                Useful Resources
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Post-Mortem Template" href="../post_mortem_template/">
+      Post-Mortem Template
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Effective Post-Mortems" href="../effective_post_mortems/">
+      Effective Post-Mortems
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../../training/overview/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Incident Commander" href="../../training/incident_commander/">
+      Incident Commander
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Deputy" href="../../training/deputy/">
+      Deputy
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Scribe" href="../../training/scribe/">
+      Scribe
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Subject Matter Expert" href="../../training/subject_matter_expert/">
+      Subject Matter Expert
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Customer Liaison" href="../../training/customer_liaison/">
+      Customer Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Internal Liaison" href="../../training/internal_liaison/">
+      Internal Liaison
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Glossary" href="../../training/glossary/">
+      Glossary
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Training Courses</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Incident Response" href="../../training/courses/incident_response/">
+      Incident Response
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Additional Resources</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Reading" href="../../resources/reading/">
+      Reading
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="ChatOps" href="../../resources/chatops/">
+      ChatOps
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Anti-Patterns" href="../../resources/anti_patterns/">
+      Anti-Patterns
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="About" href="../../about/">
+      About
+    </a>
+    
+  </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Post-Mortem Process</h1>
+          
+          
+          <p><img alt="Post-Mortem" src="../../assets/img/headers/pagerduty_post_mortem.jpg" /></p>
+<p>For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.</p>
+<div class="admonition warning">
+<p class="admonition-title">Don't Neglect the Post-Mortem</p>
+<p>Don't make the mistake of neglecting a post-mortem after an incident. Without a post-mortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless post-mortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.</p>
+</div>
+<h2 id="owner-designation">Owner Designation<a class="headerlink" href="#owner-designation" title="Permanent link">#</a></h2>
+<p>The first step is that a post-mortem owner will be designated. This is done by the IC either at the end of a major incident call, or very shortly after. You will be notified directly by the IC if you are the owner for the post-mortem. The owner is responsible for populating the post-mortem, looking up logs, managing the followup investigation, and keeping all interested parties in the loop. Please use Slack for coordinating followup. A detailed list of the steps is available below,</p>
+<h2 id="owner-responsibilities">Owner Responsibilities<a class="headerlink" href="#owner-responsibilities" title="Permanent link">#</a></h2>
+<p>As owner of a post-mortem, you are responsible for the following,</p>
+<ul>
+<li>Scheduling the post-mortem meeting (on the shared calendar) and inviting the relevant people (this should be <strong>scheduled within 3 calendar days</strong> for a SEV-1 and <strong>5 business days</strong> for a SEV-2).</li>
+<li>Investigating the incident, pulling in whomever you need from other teams to assist in the investigation.</li>
+<li>Updating the page with all of the necessary content.</li>
+<li>Creating follow-up JIRA tickets (<em>You are only responsible for creating the tickets, not following them up to resolution</em>).</li>
+<li>Reviewing the post-mortem content with appropriate parties before the meeting.</li>
+<li>Running through the topics at the post-mortem meeting (the IC will "run" the meeting and keep the discussion on track, but you will likely be doing most of the talking).</li>
+<li>Communicating the results of the post-mortem internally.</li>
+</ul>
+<h2 id="status-descriptions">Status Descriptions<a class="headerlink" href="#status-descriptions" title="Permanent link">#</a></h2>
+<p>Our post-mortems have a "Status" field which indicates where in our process the post-mortem currently is. Here's a description of the values and how we use them.</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Draft</strong></td>
+<td>Indicates that the content of the post-mortem is still being worked on.</td>
+</tr>
+<tr>
+<td><strong>In Review</strong></td>
+<td>The content of the post-mortem has been completed, and is ready to be reviewed during the post-mortem meeting.</td>
+</tr>
+<tr>
+<td><strong>Reviewed</strong></td>
+<td>The meeting is over and the content has been reviewed and agreed upon.<br/>If there is an "External Message", the Customer Support team will take the message and update our status page as appropriate.</td>
+</tr>
+<tr>
+<td><strong>Closed</strong></td>
+<td>No further actions are needed on the post-mortem (outstanding issues are tracked in JIRA).<br/>If no "External Message", you can skip straight to this once the meeting is over.<br/>If there's an "External Message", then the Support team will update it to this status once the message is posted.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="post-mortem">Post-Mortem<a class="headerlink" href="#post-mortem" title="Permanent link">#</a></h2>
+<p>Once you've been designated as the owner of a post-mortem, you should start creating one and updating it with all the relevant information.</p>
+<ol>
+<li>
+<p>(If not already done by the IC) Create a new post-mortem for the incident.</p>
+</li>
+<li>
+<p>Schedule a post-mortem meeting for within <strong>3 calendar days</strong> for a SEV-1 and <strong>5 business days</strong> for a SEV-2. You should schedule this before filling in the post-mortem, just so it's on the calendar.</p>
+<ul>
+<li>Create the meeting on the "Incident Post-Mortem Meetings" shared calendar.</li>
+</ul>
+</li>
+<li>
+<p>Begin populating the page with all of the information you have.</p>
+<ul>
+<li>The timeline should be the main focus to begin with.<ul>
+<li>The timeline should include important changes in status/impact, and also key actions taken by responders.</li>
+</ul>
+</li>
+<li>Go through the history in Slack to identify the responders, and add them to the page.<ul>
+<li>Identify the Incident Commander and Scribe in this list.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Populate the post-mortem with more detailed information.</p>
+<ul>
+<li>For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a Tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.</li>
+<li>Add a link to the incident call recording.</li>
+</ul>
+</li>
+<li>
+<p>Perform an analysis of the incident.</p>
+<ul>
+<li>Capture all available data regarding the incident. What caused it, how many customers were affected, etc.<ul>
+<li>Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.</li>
+</ul>
+</li>
+<li>Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)</li>
+<li>Identify the underlying cause of the incident (What happened, and <em>why</em> did it happen).</li>
+</ul>
+</li>
+<li>
+<p>Write the external message that will be sent to customers. This will be reviewed during the post-mortem meeting before it is sent out.</p>
+<ul>
+<li>Avoid using the word "outage" unless it really was a full outage, use the word "incident" or "service degradation" instead. Customers generally see "outage" and assume the worst.</li>
+<li>Look at other examples of previous post-mortems to see the kind of thing you should send.</li>
+</ul>
+</li>
+<li>
+<p>Post a link to the post-mortem into Slack to be reviewed for style and content by internal parties, you should try to do this about <strong>24 hours before</strong> the meeting is scheduled.</p>
+<ul>
+<li>Experienced post-mortem writers will give you feedback on the level of detail and content of the post-mortem. This avoids wasted time during the meeting.</li>
+</ul>
+</li>
+<li>
+<p>Attend the post-mortem meeting (see below section for more information).</p>
+</li>
+<li>
+<p>Create any followup action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),</p>
+<ul>
+<li>Go through the history in Slack to identify any TODO items.</li>
+<li>Label all tickets with their severity level and date tags.</li>
+<li>Any actions which can reduce re-occurrence of the incident.<ul>
+<li>(There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).</li>
+</ul>
+</li>
+<li>Identify any actions which can make our incident response process better.</li>
+<li>Be careful with creating too many tickets. Generally we only want to create things that are P0/P1's. Things that absolutely should be dealt with.</li>
+</ul>
+</li>
+<li>
+<p>Communicate internally so we can learn from the incident.</p>
+<ul>
+<li>Send out an internal email to the relevant stakeholders describing the results and key learnings.</li>
+<li>Include a link to the post-mortem.</li>
+</ul>
+</li>
+</ol>
+<h2 id="post-mortem-meeting">Post-Mortem Meeting<a class="headerlink" href="#post-mortem-meeting" title="Permanent link">#</a></h2>
+<p>These meetings should generally last 15-30 minutes, and are intended to be a wrap up of the post-mortem process. We should discuss what happened, what we could've done better, and any followup actions we need to take. The goal is to suss out any disagreement on the facts, analysis, or recommended actions, and to get some wider awareness of the problems that are causing reliability issues for us.</p>
+<p>You should invite the following people to the post-mortem meeting,</p>
+<ul>
+<li>Always<ul>
+<li>The incident commander.</li>
+<li>The incident commander shadowee (if there was one).</li>
+<li>Service owners involved in the incident.</li>
+<li>Key engineer(s)/responders involved in the incident.</li>
+<li>Engineering manager for impacted systems.</li>
+<li>Product manager for impacted systems. </li>
+</ul>
+</li>
+<li>Optional<ul>
+<li>Customer liaison. (Only SEV-1 incidents)</li>
+</ul>
+</li>
+</ul>
+<p>The incident commander will run the meeting, keeping the discussion focused and on track. However the post-mortem owner will likely be doing most of the talking as they walk through the post-mortem report.</p>
+<p>A general agenda for the meeting would be something like,</p>
+<ol>
+<li>Recap the timeline, to make sure everyone agrees and is on the same page.</li>
+<li>Recap important points, and any unusual items.</li>
+<li>Discuss how the problem could've been caught.<ul>
+<li>Did it show up in <a href="https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases">canary</a>?</li>
+<li>Could it have been caught in tests, or loadtest environment?</li>
+</ul>
+</li>
+<li>Discuss customer impact. Any comments from customers, etc.</li>
+<li>Review action items that have been created, discuss if appropriate, or if more are needed, etc.</li>
+</ol>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<p>Here are some examples of post-mortems from other companies as a reference,</p>
+<ul>
+<li><a href="https://support.stripe.com/questions/outage-postmortem-2015-10-08-utc">Stripe</a></li>
+<li><a href="https://blog.lastpass.com/2015/06/lastpass-security-notice.html/comment-page-2/">LastPass</a></li>
+<li><a href="https://aws.amazon.com/message/5467D2/">AWS</a></li>
+<li><a href="https://www.twilio.com/blog/2013/07/billing-incident-post-mortem-breakdown-analysis-and-root-cause.html">Twilio</a></li>
+<li><a href="https://status.heroku.com/incidents/151">Heroku</a></li>
+<li><a href="http://techblog.netflix.com/2012/10/post-mortem-of-october-222012-aws.html">Netflix</a></li>
+<li><a href="https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016">GOV.UK Rail Accident Investigation</a></li>
+<li><a href="https://github.com/danluu/post-mortems">A List of Post-mortems!</a></li>
+</ul>
+<h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011">Advanced PostMortem Fu and Human Error 101 (Velocity 2011)</a></li>
+<li><a href="http://fractio.nl/2015/10/30/blame-language-sharing/">Blame. Language. Sharing.</a></li>
+</ul>
+          <aside class="copyright" role="note">
+            
+              Copyright &copy; PagerDuty, Inc. &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../after_an_incident/" title="After an Incident">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                After an Incident
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../post_mortem_template/" title="Post-Mortem Template">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Post-Mortem Template
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'pagerduty/incident-response-docs';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../js/github_forks.js"></script>
+    
+    
+    
+      <script>
+        /* Google Analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8759953-1', 'auto');
+        ga('send', 'pageview');
+
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>
