@@ -347,11 +347,11 @@ the usual pagerduty.css loaded beforehand as it overrides from that.
   font-family: 'loading';
   font-style: normal;
   font-weight: normal;
-  src: url('/fonts/icons/loading.eot');
-  src: url('/fonts/icons/loading.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/icons/loading.woff') format('woff'),
-       url('/fonts/icons/loading.ttf') format('truetype'),
-       url('/fonts/icons/loading.svg#hour-glass') format('svg');
+  src: url('/incident-response-docs-ja/fonts/icons/loading.eot');
+  src: url('/incident-response-docs-ja/fonts/icons/loading.eot?#iefix') format('embedded-opentype'),
+       url('/incident-response-docs-ja/fonts/icons/loading.woff') format('woff'),
+       url('/incident-response-docs-ja/fonts/icons/loading.ttf') format('truetype'),
+       url('/incident-response-docs-ja/fonts/icons/loading.svg#hour-glass') format('svg');
 }
 
 /* For image lazy loading. */
