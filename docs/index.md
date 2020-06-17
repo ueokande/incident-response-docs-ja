@@ -1,70 +1,76 @@
 ---
 cover: assets/img/covers/incident_response_docs.png
 ---
-![Incident Response at PagerDuty](./assets/img/headers/pagerduty_ir.jpg)
+![Incident Response at PagerDuty (PagerDutyにおけるインシデント対応)](./assets/img/headers/pagerduty_ir.jpg)
 
-This documentation covers parts of the PagerDuty Incident Response process. It is a cut-down version of our internal documentation, used at PagerDuty for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after. It is intended to be used by on-call practitioners and those involved in an operational incident response process (or those wishing to enact a formal incident response process). See the [about page](about.md) for more information on what this documentation is and why it exists.
+このドキュメントは、PagerDutyにおけるインシデント対応手順を紹介します。
+これはPagerDutyにおいて、オンコールを始める従業員や、普段のインシデントで利用されている、内部ドキュメントの一部を切り出したものです。
+このドキュメントはインシデントに備えるものだけでなく、インシデント発生中、また発生後の対応についても述べています。
+オンコールに対応する人や、インシデント対応する人（またはきちんとしたインシデント対応手順を制定したい人）が利用することを想定しています。
+このドキュメントがなにか、なぜあるかは、[about page](about.md)を参照してください。
 
-!!! tip "Don't know where to start?"
-    If you're new to incident response and don't yet have a formal process in your organization, we recommend looking at our [Getting Started](/getting_started.md) page for a quick list of things you can do to begin, and our [Training Course](training/courses/incident_response.md) page for a more detailed overview of our process.
+!!! tip "どこから手を付けるべきか？"
+    もしあなたがインシデント対応が初めてで、組織で決められた手順がない場合は、まず[Getting Started](/getting_started.md)で何ができるかを確認して、[Training Course](training/courses/incident_response.md)で詳細な手順について確認することをお勧めします
 
-## Being On-Call
+## オンコールになること
 
-If you've never been on-call before, you might be wondering what it's all about. These pages describe what the expectations of being on-call are, along with some resources to help you.
+まだあなたがオンコールを体験してないのなら、何が肝心か気になりますよね？
+以下のページは、オンコールに期待されることをいくつかの実例と共に紹介します。
 
-* [Being On-Call](oncall/being_oncall.md) - _A guide to being on-call, both what your responsibilities are, and what they are not._
-* [Alerting Principles](oncall/alerting_principles.md) - _The principles we use to determine what things page an engineer, and what time of day they page._
+* [オンコールになること](oncall/being_oncall.md) - _オンコールになるには、あなたの責務とそうでないもの_
+* [アラートの原則](oncall/alerting_principles.md) - _エンジニアを呼び出すための手段やタイミングなどの原則_
 
-## Before an Incident
+## インシデント発生前
 
-Reading material for things you probably want to know before an incident occurs. You likely don't want to be reading these during an actual incident.
+インシデントが発生する前に読むべきもの。実際にインシデントが発生してからでは読むべきでは無いでしょう。
 
-* [What is an Incident?](before/what_is_an_incident.md) - _Before we can talk about incident response, we need to define what an incident actually is._
-* [Severity Levels](before/severity_levels.md) - _Information on our severity level classification. What constitutes a SEV-3 vs SEV-1? What response do they get?_
-* [Different Roles for Incidents](before/different_roles.md) - _Information on the roles during an incident; Incident Commander, Scribe, etc._
-* [Incident Call Etiquette](before/call_etiquette.md) - _Our etiquette guidelines for incident calls, before you find yourself in one._
-* [Complex Incidents](before/complex_incidents.md) - _Our guide for handling larger, more complex incidents._
+* [インシデントとはなにか？](before/what_is_an_incident.md) - _インシデント対応について議論する前に、インシデントとは一体なんなのか？_
+* [深刻度レベル](before/severity_levels.md) - _ 深刻度レベルの種類分け、SEV-3とSEV-1の違いや、その時の対応方法_
+* [インシデント発生時の役割](before/different_roles.md) - _インシデント司令官 (Incident Commander) や補佐 (Deputy) などの、インシデント発生時の役割_
+* [インシデント呼び出しのエチケット](before/call_etiquette.md) - _Our etiquette guidelines for incident calls, before you find yourself in one._
+* [複雑なインシデント](before/complex_incidents.md) - _大規模インシデントや複雑なインシデントに立ち向かうための手引き_
 
-## During an Incident
+## インシデント発生中
 
-Information and processes during a major incident.
+通常のインシデント発生時の情報や手順
 
-* [During an Incident](during/during_an_incident.md) - _Information on what to do during an incident, and how to constructively contribute._
-* [Security Incident Response](during/security_incident_response.md) - _Security incidents are handled differently to normal operational incidents._
+* [インシデント発生](during/during_an_incident.md) - _インシデント発生中に何をすべきか、なにをするのが効果的か_
+* [セキュリティインシデントへの対応](during/security_incident_response.md) - _運用的なインシデントとは異なる、セキュリティインシデントへの対応_
 
-## After an Incident
+## インシデント対応後
 
-Our followup processes, how we make sure we don't repeat mistakes and are always improving.
+対応後の後処理。再発防止や常に改善するためには。
 
-* [After an Incident](after/after_an_incident.md) - _Information on what to do after an incident is resolved._
-* [Post-Mortem Process](after/post_mortem_process.md) - _Information on our post-mortem process; what's involved and how to write or run a post-mortem._
-* [Post-Mortem Template](after/post_mortem_template.md) - _The template we use for writing our post-mortems for major incidents._
-* [Effective Post-Mortems](after/effective_post_mortems.md) - _A guide for writing effective post-mortems._
+* [インシデント対応後](after/after_an_incident.md) - _インシデントが解決した後に何をすべきか_
+* [Post-Mortemのプロセス](after/post_mortem_process.md) - _post-mortemには何を含むべきか、どうやって書くか、そしでどうやって実行するか_
+* [Post-Mortemテンプレート](after/post_mortem_template.md) - _主なインシデントで利用しているpost-mortemのテンプレート例_
+* [効果的なPost-Mortem](after/effective_post_mortems.md) - _効果的なpost-mortemを書くには_
 
-## Training
+## トレーニング
 
-So, you want to learn about incident response? You've come to the right place.
+インシデント対応について学ぶには。
 
-* [Training Overview](training/overview.md) - _An overview of our training guides and additional training material from third-parties._
-* [Glossary of Incident Response Terms](training/glossary.md) - _A collection of terms that you may hear being used, along with their definition._
+* [トレーニング概要](training/overview.md) - _トレーニングガイドの概要と、サードパーティーのガイド_
+* [用語集](training/glossary.md) - _インシデント対応で用いられる用語とその定義_
 
-### Training Guides
+### トレーニングガイド
 
-* [Incident Commander Training](training/incident_commander.md) - _A guide to becoming our next Incident Commander._
-* [Deputy Training](training/deputy.md) - _How to be a deputy and back up the Incident Commander._
-* [Scribe Training](training/scribe.md) - _A guide to scribing._
-* [Subject Matter Expert Training](training/subject_matter_expert.md) - _A guide on responsibilities and behavior for all participants in a major incident._
-* [Customer Liaison Training](training/customer_liaison.md) - _A guide on how to act as our public representative during an incident._
-* [Internal Liaison Training](training/internal_liaison.md) - _A guide on how to liaise with internal teams during an incident._
+* [インシデント司令官トレーニング](training/incident_commander.md) - _Incident Commanderを磨くには_
+* [補佐のトレーニング](training/deputy.md) - 補佐になる方法とIncident Commanderへのバックアップ_
+* [記録を付けるトレーニング](training/scribe.md) - _記録をつけるには_
+* [Subject Matter Expertトレーニング](training/subject_matter_expert.md) - _主なインシデントに対応している全ての人の、責任と行動ガイド_
+* [Customer Liaisonトレーニング](training/customer_liaison.md) - _インシデント発生中に、外部に向けて情報を公開するには_
+* [Internal Liaisonトレーニング](training/internal_liaison.md) - _インシデントと内部チームとの連絡をするには_
 
-### Training Courses
+### トレーニングコース
 
-* [Incident Response Training Course](training/courses/incident_response.md) - _An introductory course on incident response and the role of the Incident Commander._
+* [インシデント対応トレーニングコース](training/courses/incident_response.md) - _インシデント対応とIncident Commanderの入門コース_
 
-## Additional Resources
+## 追加情報
 
-Useful material and resources from external parties that are relevant to incident response.
+インシデント対応に関する外部の資料一覧
 
-* [Reading](resources/reading.md) - _Recommended reading material relevant to incident response._
-* [ChatOps](resources/chatops.md) - _Description of the chat bot commands we've referenced in this documentation._
-* [Anti-Patterns](resources/anti_patterns.md) - _List of things we've tried and then rejected, learn from our mistakes._
+
+* [読み物](resources/reading.md) - _インシデント対応に関するオススメの資料_
+* [ChatOps](resources/chatops.md) - _このドキュメントで参照しているChat Botについて_
+* [アンチパターン](resources/anti_patterns.md) - _失敗に基づく知見や、採用できなかったパターン_
