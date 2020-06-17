@@ -6,48 +6,48 @@ Edit assets/custom.css if you want to make modifications just for this site.
 /* Colfax Font */
 @font-face {
   font-family: 'Colfax';
-  src: url('/fonts/colfax/ColfaxWebMedium.eot');
-  src: url('/fonts/colfax/ColfaxWebMedium.woff') format("woff");
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebMedium.eot');
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebMedium.woff') format("woff");
   font-weight: 700;
   font-style: normal
 }
 
 @font-face {
   font-family: 'Colfax';
-  src: url('/fonts/colfax/ColfaxWebMediumItalic.eot');
-  src: url('/fonts/colfax/ColfaxWebMediumItalic.woff') format("woff");
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebMediumItalic.eot');
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebMediumItalic.woff') format("woff");
   font-weight: 700;
   font-style: italic
 }
 
 @font-face {
   font-family: 'Colfax';
-  src: url('/fonts/colfax/ColfaxWebRegular.eot');
-  src: url('/fonts/colfax/ColfaxWebRegular.woff') format("woff");
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebRegular.eot');
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebRegular.woff') format("woff");
   font-weight: 400;
   font-style: normal
 }
 
 @font-face {
   font-family: 'Colfax';
-  src: url('/fonts/colfax/ColfaxWebRegularItalic.eot');
-  src: url('/fonts/colfax/ColfaxWebRegularItalic.woff') format("woff");
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebRegularItalic.eot');
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebRegularItalic.woff') format("woff");
   font-weight: 400;
   font-style: italic
 }
 
 @font-face {
   font-family: 'Colfax';
-  src: url('/fonts/colfax/ColfaxWebLight.eot');
-  src: url('/fonts/colfax/ColfaxWebLight.woff') format("woff");
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebLight.eot');
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebLight.woff') format("woff");
   font-weight: 100;
   font-style: normal
 }
 
 @font-face {
   font-family: 'Colfax';
-  src: url('/fonts/colfax/ColfaxWebLightItalic.eot');
-  src: url('/fonts/colfax/ColfaxWebLightItalic.woff') format("woff");
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebLightItalic.eot');
+  src: url('/incident-response-docs-ja/fonts/colfax/ColfaxWebLightItalic.woff') format("woff");
   font-weight: 100;
   font-style: italic
 }
@@ -57,11 +57,11 @@ Edit assets/custom.css if you want to make modifications just for this site.
   font-family: 'Icon';
   font-weight: normal;
   font-style: normal;
-  src: url('/assets/fonts/icon.eot');
-  src: url('/assets/fonts/icon.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/icon.woff') format('woff'),
-       url('/assets/fonts/icon.ttf') format('truetype'),
-       url('/assets/fonts/icon.svg#pagerduty') format('svg');
+  src: url('/incident-response-docs-ja/assets/fonts/icon.eot');
+  src: url('/incident-response-docs-ja/assets/fonts/icon.eot?#iefix') format('embedded-opentype'),
+       url('/incident-response-docs-ja/assets/fonts/icon.woff') format('woff'),
+       url('/incident-response-docs-ja/assets/fonts/icon.ttf') format('truetype'),
+       url('/incident-response-docs-ja/assets/fonts/icon.svg#pagerduty') format('svg');
 }
 
 /* The PD icon. */
@@ -69,11 +69,11 @@ Edit assets/custom.css if you want to make modifications just for this site.
   font-family: 'pagerduty';
   font-style: normal;
   font-weight: normal;
-  src: url('/fonts/icons/pagerduty.eot');
-  src: url('/fonts/icons/pagerduty.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/icons/pagerduty.woff') format('woff'),
-       url('/fonts/icons/pagerduty.ttf') format('truetype'),
-       url('/fonts/icons/pagerduty.svg#pagerduty') format('svg');
+  src: url('/incident-response-docs-ja/fonts/icons/pagerduty.eot');
+  src: url('/incident-response-docs-ja/fonts/icons/pagerduty.eot?#iefix') format('embedded-opentype'),
+       url('/incident-response-docs-ja/fonts/icons/pagerduty.woff') format('woff'),
+       url('/incident-response-docs-ja/fonts/icons/pagerduty.ttf') format('truetype'),
+       url('/incident-response-docs-ja/fonts/icons/pagerduty.svg#pagerduty') format('svg');
 }
 
 /* Extra icons we've added, Fork, Note, etc. */
@@ -81,11 +81,11 @@ Edit assets/custom.css if you want to make modifications just for this site.
   font-family: 'icons';
   font-style: normal;
   font-weight: normal;
-  src: url('/fonts/icons/icons.eot');
-  src: url('/fonts/icons/icons.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/icons/icons.woff') format('woff'),
-       url('/fonts/icons/icons.ttf') format('truetype'),
-       url('/fonts/icons/icons.svg#pagerduty') format('svg');
+  src: url('/incident-response-docs-ja/fonts/icons/icons.eot');
+  src: url('/incident-response-docs-ja/fonts/icons/icons.eot?#iefix') format('embedded-opentype'),
+       url('/incident-response-docs-ja/fonts/icons/icons.woff') format('woff'),
+       url('/incident-response-docs-ja/fonts/icons/icons.ttf') format('truetype'),
+       url('/incident-response-docs-ja/fonts/icons/icons.svg#pagerduty') format('svg');
 }
 
 body, input {
@@ -262,7 +262,7 @@ ul.repo {
 
   /* Also add a heading when printing */
   .article h1:before {
-    background: url(/assets/img/logo.png) 0em 0em no-repeat;
+    background: url(/incident-response-docs-ja/assets/img/logo.png) 0em 0em no-repeat;
     background-size: 5.8em;
     display: block;
     height: 1.7em;
@@ -364,7 +364,7 @@ nav div.mainlogo a {
   margin-bottom: -.7em;
   width: 120px;
 
-  background: url(/assets/img/logo.svg) 0em 0em no-repeat;
+  background: url(/incident-response-docs-ja/assets/img/logo.svg) 0em 0em no-repeat;
   background-size: contain;
 }
 
