@@ -3,6 +3,7 @@ name: Build static sites
 on:
   push:
     branches:
+      - "*"
       - "!master"
 
 jobs:
