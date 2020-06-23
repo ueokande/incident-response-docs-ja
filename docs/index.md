@@ -4,7 +4,7 @@ cover: assets/img/covers/incident_response_docs.png
 ![Incident Response at PagerDuty (PagerDutyにおけるインシデント対応)](./assets/img/headers/pagerduty_ir.jpg)
 
 このドキュメントは、PagerDutyにおけるインシデント対応手順を紹介します。
-これはPagerDutyにおいて、オンコールを始める従業員や、普段のインシデントで利用されている、内部ドキュメントの一部を切り出したものです。
+これはPagerDutyにおいて、オンコールを始める従業員や、重大インシデントで利用されている、内部ドキュメントの一部を切り出したものです。
 このドキュメントはインシデントに備えるものだけでなく、インシデント発生中、また発生後の対応についても述べています。
 オンコールに対応する人や、インシデント対応する人（またはきちんとしたインシデント対応手順を制定したい人）が利用することを想定しています。
 このドキュメントがなにか、なぜあるかは、[about page](about.md)を参照してください。
@@ -32,7 +32,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 ## インシデント発生中
 
-通常のインシデント発生時の情報や手順
+重大インシデント発生時の情報や手順
 
 * [インシデント発生](during/during_an_incident.md) - _インシデント発生中に何をすべきか、なにをするのが効果的か_
 * [セキュリティインシデントへの対応](during/security_incident_response.md) - _運用的なインシデントとは異なる、セキュリティインシデントへの対応_
@@ -43,7 +43,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 * [インシデント対応後](after/after_an_incident.md) - _インシデントが解決した後に何をすべきか_
 * [Post-Mortemのプロセス](after/post_mortem_process.md) - _post-mortemには何を含むべきか、どうやって書くか、そしでどうやって実行するか_
-* [Post-Mortemテンプレート](after/post_mortem_template.md) - _主なインシデントで利用しているpost-mortemのテンプレート例_
+* [Post-Mortemテンプレート](after/post_mortem_template.md) - _重大ンシデントのpost-mortemで利用しているテンプレート例_
 * [効果的なPost-Mortem](after/effective_post_mortems.md) - _効果的なpost-mortemを書くには_
 
 ## トレーニング
@@ -58,7 +58,7 @@ cover: assets/img/covers/incident_response_docs.png
 * [インシデント司令官トレーニング](training/incident_commander.md) - _Incident Commanderを磨くには_
 * [補佐のトレーニング](training/deputy.md) - 補佐になる方法とIncident Commanderへのバックアップ_
 * [記録を付けるトレーニング](training/scribe.md) - _記録をつけるには_
-* [Subject Matter Expertトレーニング](training/subject_matter_expert.md) - _主なインシデントに対応している全ての人の、責任と行動ガイド_
+* [Subject Matter Expertトレーニング](training/subject_matter_expert.md) - _重大インシデントに対応している全ての人の、責任と行動ガイド_
 * [Customer Liaisonトレーニング](training/customer_liaison.md) - _インシデント発生中に、外部に向けて情報を公開するには_
 * [Internal Liaisonトレーニング](training/internal_liaison.md) - _インシデントと内部チームとの連絡をするには_
 

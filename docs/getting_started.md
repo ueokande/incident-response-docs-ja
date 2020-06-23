@@ -5,65 +5,127 @@ description: This 'Getting Started' guide will help you to navigate the most imp
 ![Getting Started](../assets/img/headers/getting_started.jpg)
 *Credit: [Breakingpic @ Pexels](https://www.pexels.com/photo/young-game-match-kids-2923/)*
 
-If you don't yet have a process in your own organization, or if you're just starting out, you may find the sheer quantity of information in this documentation overwhelming. It's important to remember that this **isn't something you'll be able to implement overnight**. It's a process that should be built up over time. While it took us years to get to this point, our hope is that you can make use of this documentation to skip some of the awkward growing pains we went through, and reach a more mature incident response process in the most efficient way possible.
+もしあなたの組織に手順が無かったり、まさに取り組もうとしているのなら、このドキュメントから膨大な情報量を見つけられるでしょう。
+それを **人団で実装できるものではない** というのを覚えておいてください。
+この手順は時間をかけて築き上げられるものです。
+我々も問題の核心を突くまでは何年もかかりました。
+このドキュメントを読むことで私達が遭遇した落とし穴を回避し、より成熟したインシデント対応手順に効率的に到達できることを願いします。
 
-To that end, we've put together this "Getting Started" guide to help you navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in.
+このため、我々の手順の最もン大事な部分に到達し、どこから始めるべきかのガイドラインとなるように、この "はじめに (Getting Started)" をまとめました。
 
-## Define what an "Incident" and "Major Incident" are for you.
-You don't have to use [our definitions](/before/severity_levels.md), they're just a starting point. Feel free to come up with whatever you want. The point is that the definition should be a short, simple statement that makes sure everyone is on the same page. You want to remove any discussion around whether something is an incident or not during your response process. If you have a metric to use (e.g. "if errors go above 100/minute it's a major incident"), that's great. If not, don't let that stop you from defining what a Major Incident is.
+## なにが "インシデント" で、なにが "重大インシデント" なのか
+あなたは[我々の定義](/before/severity_levels.md)を使う必要はありません。
+これは単なる出発点で、好きな言葉を使ってもよいです。
+重要なのは、定義は短く簡潔な文章で、誰もが同じページで確認できるということです。
+対応手順について説明する時に、何がインシデントなのかを議論しないためです。
+もしメトリクスなどで説明できればよいです（たとえば、エラーが毎分100件を超えれば重大インシデントである）。
+そうでないのなら、重大インシデントを定義するのを止めないでください。
 
-The reason this should be your first step is because you can't respond to an incident until you know what an incident is. If one person considers something an incident but the rest of the organization doesn't, that's going to create ambiguity and confusion during any sort of incident response. Having a clear definition that's disseminated to your entire organization makes sure that everyone has the same understanding and prevents any confusion.
+これが最初のステップとして重要で、何がインシデントなのかわからなければ対応もできないからです。
+もしある人がインシデントだと思っていても、組織の他のメンバーがそう思って無ければ、インシデント対応中に曖昧さや混乱が発生するからです。
+明確な定義を組織全体に広めることで、全員が同じ理解を持つことができ、混乱を防ぐことができます。
 
-!!! question "What about Severity Levels?"
-    You shouldn't need to worry about "Severity Levels" at the beginning. Just whether something is an incident or not. You can add severity levels later once you want to flesh out your response process more.
+!!! question "重要度レベルはどうか？"
+    最初は"重要度レベル"について気にすることはなく、インシデントかそうでないのかで十分です。
+    後から対応手順を具体化する時に、重要度レベルを追加すればよいのです。
 
-## Determine how you will mobilize responders.
-What is going to trigger your incident response process? Will it be an automated alert tied to a metric? That's a great place to start! Even if it's just a single alert that goes out to a group of responders.
+## 動員する方法を決める
 
-!!! tip "Have a way to manually trigger incident response"
-    Having a way for humans to manually trigger incident response when they see something wrong will help to improve your response times. It took us a while to do this, but if we could go back in time we'd do this from the start!
+インシデント対応のとき何がトリガーになっていますか？
+メトリクスを元にした自動アラートですか？
+スタートとしてはよいです。
+たとえ対応する人のグループに一斉送信されるアラートであっても。
 
-Make sure to set up a phone bridge and chat room dedicated for incident response. You want to prepare this in advance, and make sure the numbers and connection information are written down and shared with anyone who may need to respond. You don't want to be setting up the call and chat room while trying to respond to an incident. You should make the call and room names static or as easily discoverable as possible.
+!!! tip "手動でインシデント対応をトリガーする方法を用意しよう"
+    なにか問題が発生した時に、インシデント対応を人間が手動でトリガーできると、応答時間の短縮に繋がります。
+    我々は少し時間がかかりましたが、過去に戻れるのなら最初から用意するでしょう。
 
-You also want to [set expectations for your responders](/oncall/being_oncall.md). Make sure they know that they need to join the call and chat room if they get paged and that they shouldn't just jump into solving the problem.
+インシデント対応専用の、電話会議室 (phone bridge) やチャットルームを用意しておきましょう。
+事前に準備しておき、番号や接続情報を書き留めて、対応する必要があるすべての人で共有しておきましょう。
+インシデントに対応する時に、これらの設定をしたくないですよね。
+電話会議室やチャットルームの名前は固定にしておくか、簡単に見つけラル名前にしましょう。
 
-Finally, you want to make sure your [alerts are actionable](/oncall/alerting_principles.md). There's nothing worse than waking everyone up for something you cannot control. Make sure anything that is going to trigger your incident response and page people is something that requires **immediate human action** to resolve.
+また、[対応する人に期待すること](/oncall/being_oncall.md)を決めましょう。
+彼らが呼び出された時、Web会議やチャットにすることや、問題解決に飛び込むべきで無いことです。
 
-## Define the incident response roles.
-You only care about the [Incident Commander](/before/different_roles#incident-commander-ic) role to begin with. If you have enough people you can also have a [Scribe](/before/different_roles#scribe). But to start with, just have an Incident Commander and your responders. The Incident Commander shouldn't be taking any remediation actions at all, they should just be leading the response and making the decisions. You don't need to follow the entire [training guide](/training/incident_commander.md) to begin with, just the basics of asking questions and assigning tasks are enough to get you started.
+最後に、[アラートが実行可能](/oncall/alerting_principles.md)であることを確認しましょう。
+制禦できない何かのために、みんなを目覚めさせるほど悪いことはありません。
+インシデント対応をトリガーと、対応者の呼び出しは、**緊急対応 (immediate human action)**が必要か確認してください。
 
-## Create a post-mortem template.
-You can use [our template](/after/post_mortem_template.md) to get started, or come up with your own version. Just make sure that you have a structured template so that it makes it easier to compare incidents to each other. It can be as simple as three headings to begin with: "What happened?", "Why did it happen?", "How are we going to make sure it doesn't happen again?". Adding more detailed fields and information can come later.
+## インシデント対応の役割を決めよう
 
-!!! tip "Name Doesn't Matter"
-    You don't need to call them "post-mortem"'s. After-action review, learning review, retrospective, etc. are all valid names. The point is that you review what happened and learn from it, the name you give to the process doesn't really matter.
+まずは[インシデント司令官](/before/different_roles#incident-commander-ic)のみを考えます。
+もしチームに十分な人数がいれば、[書記(Scribe)](/before/different_roles#scribe)も決めます。
+しかし最初は、インシデント司令官と対応者がいればよいです。
+インシデント司令官は、いかなるときも修正措置はスべきではなく、インシデント対応のリードと意思決定をスべきです。
+まず最初は[トレーニングガイド](/training/incident_commander.md)の全てをなぞらえる必要は無く、質問をしてタスクを割り当てるだけで十分です。
 
-## Practice
-Run a fake incident, mobilize your responders, and have someone act as the Incident Commander. Get used to the switch from normal day-to-day operations, and the emergency operations of an incident. Switching to having an Incident Commander running the show can be jarring at first, so it helps to practice it in a low-risk situation to begin with. Playing a game of "[Keep Talking and Nobody Explodes](http://www.keeptalkinggame.com/)" is a light-hearted way of practicing the skills required for incident response. You can also run your own version of [Failure Friday](https://www.pagerduty.com/blog/failure-fridays-four-years/), where you manually inject some failure into your system and treat it as a major incident.
+## post-mortemテンプレートを作ろう
+まずは[PagerDutyのテンプレート](/after/post_mortem_template.md)を使ってみるか、独自のものを作成しても構いません。
+インシデントの比較を容易にするために、構造化されたテンプレートであることを確認してください。
+まず最初は簡単な「なにが起こったか」「なぜ起こったか」「再発防止のために何をしたか」の3つの見出しで十分です。
+後により詳細なフィールドや情報を追加できます
 
-## Use it for a real incident.
-Once you've got the basics in place, start using the process for a real incident. The more you use it, the more natural it will become. As you use it more and more, you can add more process into it and tweak it for your needs. Things may not go smoothly the first time, but don't give up!
+!!! tip "名前は重要ではない"
+    "post-mortem" と呼ぶ必要はありません。 
+    事後レビュー(After-action review)、学習レベル (learning review)、振り返り (retrospective) などの名前でも良いです。
+    重要なのは、それを見返して何を発見して、何を学ぶかであって、プロセスの名前は重要ではありません。
 
-## What comes next?
-You can now start expanding your process and adding some more things. Here are our recommendations for the next things you should incorporate:
+## 練習しよう
 
-### Add a scribe, if you haven't already.
-Keeping an accurate timeline of events becomes really important when you want to go back and review your incidents. [Scribe](/before/different_roles#scribe) should be the next role you start using.
+仮のインシデントを引き起こして、対応者を動員し、誰かにインシデント司令官になってもらいます。
+通常の業務から切り替えて、インシデントへの緊急対応に慣れます。
+インシデント司令官に切り替えるのは最初は戸惑うかも知れないので、リスクの低い状況で練習すると良いでしょう。
+"[完全爆弾解除マニュアル (Keep Talking and Nobody Explodes)](http://www.keeptalkinggame.com/)" というゲームをすると、インシデント対応に必要なスキルを楽しく学べます。
+また独自のバージョンの[Failure Friday](https://www.pagerduty.com/blog/failure-fridays-four-years/)を実行することもできます。
+これは種層でなにかの障害をシステムに注入し、それを重大インシデントとして扱います。
 
-### Expand your IC rotation.
-You don't want to just have a single IC, you want as many as you can get. Start training up more people and create an on-call rotation for it. At first, you will probably use weekly rotations. We recommend trying to get to a daily rotation as quickly as you can.
+## 実際のインシデントで使おう
+基本ができれば、このプロセスを実際のインシデントで使ってみましょう。
+使えば使うほど、より自然なものとなります。
+使い続けるに連れて、別の手順を追加して必要に応じて修正できます。
+初めはスムーズに進まないかも知れませんが、諦めないでください！
 
-### Add in a deputy as a role.
-Once you have a few more IC's, start adding a deputy to your response. Having a [Deputy](/before/different_roles#deputy) will give you the ability to quickly handover in longer incidents, and also gives the IC some backup for shorter incidents.
+## 次は何をするか
 
-### Define severity levels.
-Once you have the process working well, you can start to add more granularity to your response and incident definitions. Perhaps you don't want to do a "full" response for certain incidents. Define some [severity levels](/before/severity_levels.md) to document the level of response you want.
+これで、プロセスを改良して、更にプロセスを追加することもできます。
+次に取り入れるいくつかの物を紹介します。
 
-### Start adding other roles.
-As your process becomes more established, you want to start adding other roles. We recommend a [Customer Liaison](/before/different_roles#customer-liaison) as the next one you include.
+### 書記 (Scribe) の追加
 
-### Practice, practice, practice.
-It cannot be overstated how much it helps to practice your incident response. If you trigger incident response and realize it's not really an incident, treat it as one anyway. You've already mobilized your responders, so it's free practice.
+インシデントを振り返るとき、事象のタイムラインを正確に記録する事が本当に重要です。
+[書記 (Scribe)](/before/different_roles#scribe) は次に割り当てるべき役割です。
 
-### Define a process for larger incidents.
-We call these [Complex Incidents](/before/complex_incidents.md). You won't use this often, but you'll want the phone bridge numbers and chat rooms prepared ahead of time. You'll also want to make sure your responders are aware of the process.
+### インシデント司令官をローテーションする
+
+1人がインシデント司令官をするのではなく、できるだけ多くの人が体験する事が重要です。
+そのために、多くの人にトレーニングして、オンコールのローテーションを始めましょう。
+まず最初は週ごとのローテーションになるでしょう。
+できるだけ早く、日ごとのローテーションを目指すことをお勧めします。
+
+### 副官 (Deputy) の追加
+インシデント司令官をできる人が増えれば、次に副官 (Deputy) を使いしましょう。
+[副官 (Deputy)](/before/different_roles#deputy) は長いインシデント対応を引き継いだり、短いインシデントでのバックアップとなります。
+
+### 深刻度レベルの定義
+
+プロセスがうまく機能するようにあったら、更に細かくインシデント対応やインシデントの定義を細かくしましょう。
+おそらく、一部のインシデントには "完全な" 対応をしたくないでしょう。
+[深刻度レベル (Severity level)](/before/severity_levels.md)を定義して、必要な対応の度合いを文書化します。
+
+### 他の役割の追加
+
+プロセスが確立するに連れて、他の役割も追加しましょう。
+次に追加する役割として[顧客連絡 (Customer Liaison)](/before/different_roles#customer-liaison)があります。
+
+### 練習、練習、そして練習
+
+インシデント対応の練習にやり過ぎはありません。
+インシデント対応を開始して、それが実際にはインシデントで無かったとしても、それをインシデントとして扱います。
+すでにインシデントの対応者を動員しているので、自由に練習できます。
+
+### 大規模障害の手順を定義
+
+我々は[複雑なインシデント (Complex Incidents)](/before/complex_incidents.md)と読んでいます。
+ｋろえはあまり使うことは無いでしょうが、Web会議とチャットルームを事前に用意する必要があります。
+またインシデント対応者が手順を認識してるかを確認しましょう。

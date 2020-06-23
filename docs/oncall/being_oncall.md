@@ -4,94 +4,130 @@ description: A summary of the expectations and responsibilities of being on-call
 ---
 ![Alert Fatigue](../assets/img/headers/alert_fatigue.png)
 
-A summary of expectations and helpful information for being on-call.
+オンコールに期待することと役立つ情報のまとめ。
 
-## What is On-Call?
-Being on-call means that you are able to be contacted at any time in order to investigate and fix issues that may arise for the system you are responsible for. For example, if you are on-call for your service at PagerDuty, should any alarms be triggered for that service, you will receive a "page" (an alert on your mobile device, email, phone call, or SMS, etc.) giving you details on what has broken and how to fix it. You will be expected to take whatever actions are necessary in order to resolve the issue and return your service to a normal state.
+## オンコール (On-call) とは？
 
-On-call responsibilities extend beyond normal office hours, and if you are on-call you are expected to be able to respond to issues, even at 2am. This sounds horrible (and it can be), but this is what our customers go through, and is the problem that the PagerDuty product itself is trying to fix!
+オンコールとは、あなたが担当するシステムで発生する問題解決の問題の調査、解決をするために、いつでも連絡を取れることを意味します。
+例えばPagerDutyのオンコールでは、サービスによってアラームがトリガーされ、何が起こっているか、どのように修正するかの「警告 (page) 」を受け取ります（モバイルデバイス、Eメール、電話、SMSなどを使ったアラート）。
+問題を解決して、サービスを元の状態に戻すために必要なアクションを求められます。
 
-## Responsibilities
+## 責務
 
-1. **Prepare**
-    * Have your laptop and Internet with you (office, home, a MiFi dongle, a phone with a tethering plan, etc).
-        * Have a way to charge your MiFi.
-    * Team alert escalation happens within 5 minutes, set/stagger your notification timeouts (push, SMS, phone...) accordingly.
-        * Make sure PagerDuty texts and calls can [bypass your "Do Not Disturb" settings](https://support.pagerduty.com/docs/notification-phone-numbers).
-    * Be prepared (environment is set up, a current working copy of the necessary repos is local and functioning, you have configured and tested environments on workstations, your credentials for third-party services are current and so on...)
-    * Read our Incident Response documentation (that's this!) to understand how we handle serious incidents, what the different roles and methods of communication are, etc.
-    * Be aware of your upcoming on-call time (primary, backup) and arrange swaps around travel, vacations, appointments etc.
+1. **準備**
+    * ラップトップとインターネット回線の準備（会社、家、MiFiドングル、デザリングできる携帯電話、など）
+    * アラートのエスカレーションは5分ごとに発生し、それぞれが設定されている（プッシュ、SMSなど、電話）
+        * PagerDutyのテキストと呼び出しが、[おやすみモード (Do Not Disturb) を回避](https://support.pagerduty.com/docs/notification-phone-numbers) することを確認してください。
+    * 準備が整っている事 （環境が整い、必要なレポジトリが手元にコピーされて動作する、ワークステーションの設定がされテストができている、サードパーティーのクレデンシャルが細心である、など）
+    * 我々のIncident Response （このドキュメント）をよ読み、重大なインシデントへの対応やコミュニケーション方法やそれぞれのロールなどを、理解している。
+    * 休暇、旅行、約束の予定と、オンコールの日程（プライマリ、バックアップ）が調整できている。
 
-1. **Triage**
-    * Acknowledge and act on alerts whenever you can (see the first "Not responsibilities" point below)
-    * Determine the urgency of the problem:
-        * Is it something that should be worked on right now or escalated into a major incident? ("production server on fire" situations. Security alerts) - do so.
-        * Is it some tactical work that doesn't have to happen during the night? (for example, disk utilization high watermark, but there's plenty of space left and the trend is not indicating impending doom) - snooze the alert until a more suitable time (working hours, the next morning...) and get back to fixing it then.
-    * Check Slack for current activity. Often (but not always) actions that could potentially cause alerts will be announced there.
-    * Does the alert and your initial investigation indicate a general problem or an issue with a specific service that the relevant team should look into? If it does not look like a problem you are the expert for, then escalate to another team.
+1. **トリアージ**
+    * 可能ならアラートを意識して行動する（下記の「責務ではない」を参照）
+    * 問題の緊急性を判断する
+        * すぐに対応する必要があるのか、重大インシデントにエスカレーションする必要があるのか（本番サーバーが炎上している状況、セキュリティアラート）
+        * 夜間に行う必要が無いようなものか（例えばディスク使用量が一定水準を超えたが、まだ空き容量があり、差し迫った状況になる傾向ではない）。
+          適切な時間（勤務時間、次の朝、など）までアラートを無効化しておき、その時にたいおうします。
+    * Slackで現在のアクティビティを確認します。
+      しばしば（いつもではない）アラートが発生する可能性のある行動が告知されています。
+    * アラートと初期調査は一般的な問題なのか、関連するチームが見るべき特定のサービスなのか。
+      自分の専門でないようなら、他のチームにエスカレーションしましょう。
+1. **修正**
+    * あなたには問題に飛び込み修正する権限があります。
+    * 必要に応じて他チームのメンバーも巻き込みいましょう。
+      通常の時間で問題が解決しない場合や、対応したことが無いサービスやアラートの場合に、エスカレーションすることをためらわないでください。
+    * 問題の緊急性が低くて、他の優先的なタスクがある場合は、JIRAチケットを（適切な優先度で）作成して後で対応できるようにします。
+1. **改善**
+    * 特定の問題が継続する場合。アラートが成り続けるが対応できる問題ではない場合、おそらく改善するには時間がかかるでしょう。
+        * ディスクがいっぱいになったり、ログのローテートが必要だったり、アラートがうるさかったり、など
+    * もし原因を見つけるのが難しい場合は、それを書き留めてください。
+      知見をとドキュメントを、常にリファクタリングしてかいぜんするのです。
+      もしwikiやコードベースのイメージが整理されてない場合は、冗長なリンクやポインタを追加してください。
+1. **サポート**
+    * オンコールの "シフト" が終わったとき、次のオンコールに未解決の問題と、注意すべき点を伝えます。
+    * スケジュールの変更がある場合（例えば追加や削除）、前もってオンコールのスケジュールを組むために、他のメンバーに伝えてください。
+    * 互いにサポートしてください。大量の計画が発生する可能性がある場合は、オンコールの人に知らせて新たなスケジュールを組み、警告を奪うのが礼儀です。
 
-1. **Fix**
-    * You are empowered to dive into any problem and act to fix it.
-    * Involve other team members as necessary: do not hesitate to escalate if you cannot figure out the cause within a reasonable timeframe or if the service / alert is something you have not tackled before.
-    * If the issue is not very time sensitive and you have other priority work, create a JIRA ticket to keep a track of it (with an appropriate severity).
+## 責務ではない
 
-1. **Improve**
-    * If a particular issue keeps happening; if an issue alerts often but turns out to be a preventable non-issue – perhaps improving this should be a longer-term task.
-        * Disks that fill up, logs that should be rotated, noisy alerts...
-    * If information is difficult / impossible to find, write it down. Constantly refactor and improve our knowledge base and documentation. Add redundant links and pointers if your mental model of the wiki / codebase does not match the way it is currently organized.
+1. オンコール期間中は、必ずしも最初のアラートで応答する必要はありません。
+    * 通勤（および他の休憩）は生活に必要で、スカレーション前にアラートに応答できないこともあります。
+      これがオンコールのバックアップとスケジュールです。
+1. 全ての問題を解決できる必要はありません。
+    * 誰もが全知全能ではありません。
+      チーム全員がサポートします。
+      確信がない問題をエスカレーションしても、恥じることではありませんし、学ぶこともあります。
+      我々のモットーは「エスカレーションをためらわない」です。
+    * サービスの所有者は、サービスがどのように機能するかを知っています。
+      特にドキュメントが少ない場合、ミスを防ぐために関連するチームでダブルチェックします。
+      念には念を、専門家に確認することが良いです。
 
-1. **Support**
-    * When your on-call "shift" ends, let the next on-call know about issues that have not been resolved yet and other experiences of note.
-    * If you are making a change that impacts the schedule (adding / removing yourself, for example), let others know since many of us make arrangements around the on-call schedule well in advance.
-    * Support each other: when doing activities that might generate plenty of pages, it is courteous to "take the page" away from the on-call by notifying them and scheduling an override for the duration.
+## 推奨事項
 
-## Not Responsibilities
+もしチームが独自のオンコールローテーションを組んでいるばいい、運用チームが推奨するスケジューリングをいくつか紹介します。
 
-1. No expectation to be the first to acknowledge _all_ of the alerts during the on-call period.
-    * Commute (and other necessary distractions) are facts of life, and sometimes it is not possible to receive or act on an alert before it escalates. That's what we have the backup on-call and schedule for.
+* 常にバックアップを用意する。これは同じオンコール枠に2人を用意するということです。
+  連絡の取れるメンバーが待機していると、主対応するひとのストレスを軽減できます。
+    * バックアップシフトは、通常主対応のシフト後にすることがおおいです。
+      前回の主対応が追加の文脈を引き継ぐ事ができるためです。
+      また前の対応した人が、次のシフトに問題を修正させようと問題を放置するのを防ぐためでもあります。
 
-1. No expectation to fix all issues by yourself.
-    * No one knows everything. Your whole team is here to help. There is no shame, and much to be learned, by escalating issues you are not certain about. Our motto is "Never hesitate to escalate".
-    * Service owners will always know more about how their stuff works. Especially if our and their documentation is lacking, double-checking with the relevant team avoids mistakes. Measure twice, cut once – and it's often best to let the subject matter expert do the cutting.
-
-## Recommendations
-If your team is starting its own on-call rotation, here are some scheduling recommendations from the Operations team.
-
-* Always have a backup schedule. Yes, this means two people being on-call at the same time, however it takes a lot of the stress off of the primary if they know they have a specific backup they can contact, rather than trying to chose a random member of the team.
-    * A backup shift should generally come directly after a primary shift. It gives chance for the previous primary to pass on additional context which may have come up during their shift. It also helps to prevent people from sitting on issues with the intent of letting the next shift fix it.
-
-* The third-level of your escalation (after backup schedule) should probably be your entire team. This should hopefully never happen (it's happened once in the history of the Operations team), but when it does, it's useful to be able to just get the next available person.
+* エスカレーションの第3段階（バックアップスケジュールのあと）は、チーム全体です。
+  これは置きないことを祈りますが（運用チームで1度起こりました）、これは次に対応できる人を見つけるのが簡単です。
 
 ![Escalation](../assets/img/misc/escalation.png)
 
-* Team managers can (and should) be part of your normal rotation. It gives a better insight into what has been going on.
+* チームのマネージャーも通常のローテーションに組めます（組むべきです）。
+  実際何が起こっているかを理解できます。
 
-* New members of the team should shadow your on-call rotation during the first few weeks. They should get all alerts, and should follow along with what you are doing. (All new employees shadow the Operations team for one week of on-call, but it's useful to have new team members shadow your team rotations also. Just not at the same time).
+* 新しいチームメンバーは、最初の数週間はオンコールのローテーションを追従すべきです。
+  新しいチームメンバーは、全てのアラートを受けて、チームが何をしているかを追う必要があります
+  （全ての新入社員は、1週間のオンコールを追従します。これは新しいチームメンバーがチームのローテーションに追従するのにも役に立ちます。）
 
-* We recommend you set your escalation timeout to 5 minutes. This should be plenty of time for someone to acknowledge the incident if they're able to. If they're not able to within 5 minutes, then they're probably not in a good position to respond to the incident anyway.
+* エスカレーションのタイムアウトは5分に設定スるることをお勧めします。
+  この時間はインシデントに応答できる、十分な時間である必要があります。
+  5分以内に応答できない場合は、インシデント対応するとに適した環境でない可能性があります。
 
-* When going off-call, you should provide a quick summary to the next on-call about any issues that may come up during their shift. A service has been flapping, an issue is likely to re-occur, etc. If you want to be formal, this can be a written report via email, but generally a verbal summary is sufficient.
+* オンコールから外れるときは、シフトで発生しうる問題を、次のオンコール当番に簡単に説明する必要があります。
+  サービスがバタバタしている (flapped) 場合や、問題が再発しやすい場合などです。
+  きちんと伝えたいのならEメールでも良いですが、口頭での報告でも十分です。
 
-### Notification Method Recommendations
-You are free to set up your notification rules as you see fit, to match how you would like to best respond to incidents. If you're not sure how to configure them, the Operations team has some recommendations,
+### 推奨する通知方法
+
+インシデントに対応できるのなら、好きな方法で通知を受け取っても構いません。
+もしそれがわからない場合は、運用チームはいくつかの推奨する方法があります。
 
 ![Mobile Alerts](../assets/img/misc/mobile_alerts.png)
 
-* Use Push Notification and Email as your first method of notification. Most of us have phones with us at all times, so this is a prudent first method and is usually sufficient.
-* Use Phone and/or SMS notification each minute after, until the escalation time. If Push didn't work, then it's likely you need something stronger, like a phone call. Keep calling every minute until it's too late. If you don't pick up by the 3rd time, then it's unlikely you are able to respond, and the incident will get escalated away from you.
+* まずプッシュ通知とEメールで通知します。
+  ほとんどは常に携帯電話を持っているので、これは十分によい方法です。
+* その後は毎分、携帯、あるいはSMSから通知します。
+  通知がうまく届かない場合、電話をかけるなどの強力な方法で連絡します。
+  手遅れになるまでに、毎分電話をします。
+  3回目までに電話に出ない場合は対応できない可能性が高く、別の人にエスカレーションされます。
 
-## Etiquette
+## エチケット
 
-* If the current on-call comes into the office at 12pm looking tired, it's not because they're lazy. They probably got paged in the night. Cut them some slack and be nice.
-
-* Don't acknowledge an incident out from under someone else. If you didn't get paged for the incident, then you shouldn't be acknowledging it. Add a comment with your notes instead.
+* もし現在のオンコール当番が、疲れた顔をして昼の12時にオフィスに来ても、それは怠惰だからではありません。
+  おそらく夜に呼び出されたためです。
+  ゆっくりさせてください。
+* 他の人が対応中のインシデントに応答しないでください。
+  インシデントで呼び出されていない場合は、それに応答してはいけません。
+  代わりにメモをコメントに書き残してください。
 
 ![Acknowledging](../assets/img/misc/ack.png)
 
-* If you are testing something, or performing an action that you know will cause a page, it's customary to "take the pager" for the time during which you will be testing. Notify the person on-call that you are taking the pager for the next hour while you test.
+* もしテストなどで警告が発生しそうな場合は、その時間は「警告を取得」してください。
+  オンコール当番の人に、これから1時間警告を取得すると伝えてください。
 
-* "Never hesitate to escalate" - Never feel ashamed to rope in someone else if you're not sure how to resolve an issue. Likewise, never look down on someone else if they ask you for help.
+* エスカレーションを躊躇しない。
+  問題の解決方法がわからないときは、他人に相談することを恥ずかしく思わないでください。
+  同様に、もし他の人に頼られても、決して他人を見下してはいけません。
 
-* Always consider covering an hour or so of someone else's on-call time if they request it and you are able. We all have lives which might get in the way of on-call time, and one day it might be you who needs to swap their on-call time in order to have a night out with your friend from out of town.
+* 他のメンバーがオンコールを交代したいと言っているとき、常に代行を考えてください。
+  私達はいつでもオンコールに出られない事があるかも知れません。
+  たとえばあなたが町の外からの友達と夜を過ごす時に、オンコールを交代してもらうこともあります。
 
-* If an issue comes up during your on-call shift for which you got paged, you are responsible for resolving it. Even if it takes 3 hours and there's only 1 hour left of your shift. You can hand over to the next on-call if they agree, but you should never assume that's possible.
+* オンコールシフト中に警告が鳴ると、その問題を解決する責任があります。
+  たとえ3時間かかってシフトが残り1時間であったとしてもです。
+  次のオンコールに引き継ぐこともできますが、いつも可能だとは限りません。

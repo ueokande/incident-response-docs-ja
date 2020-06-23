@@ -3,31 +3,51 @@ cover: assets/img/covers/incident_response_docs.png
 ---
 ![PagerDuty](../assets/img/headers/pagerduty_logo.png)
 
-This site documents parts of the PagerDuty Incident Response process. It is a cut-down version of our internal documentation, used at PagerDuty for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after.
 
-Few companies seem to talk about their internal processes for dealing with major incidents. We would like to change that by opening up our documentation to the community, in the hopes that it proves useful to others who may want to formalize their own processes. Additionally, it provides an opportunity for others to suggest improvements, which ends up helping everyone.
+このサイトはPagerDutyのインシデント対応手順を記述しています。
+これはPagerDutyにおいて、オンコールを始める従業員や、重大インシデントで利用されている、内部ドキュメントの一部を切り出したものです。
+このドキュメントはインシデントに備えるものだけでなく、インシデント発生中、また発生後の対応についても述べています。
 
-## What is this?
+重大インシデントへの内部手順を議論している会社は少ないようです。
+私達は、PagerDutyの手順をコミュニティに公開して、手順を制定したい人が参考にしてくれることを願いします。
+そして、全ての人が助かる改善提案の機会に慣ればと思います。
 
-A collection of pages detailing how to efficiently deal with any major incidents that might arise, along with information on how to go on-call effectively. It provides lessons learned the hard way, along with training material for getting you up to speed quickly.
+## これはなに？
 
-## Who is this for?
+このドキュメントには、重大インシデントに効果的な対応方法や、オンコールを効果的に実行するための情報をまとめています。
+ハードウェイで学ぶレッスンや、すばやく習得できるトレーニング資料を含みます。
 
-It is intended for on-call practitioners and those involved in an operational incident response process, or those wishing to enact a formal incident response process.
+## 誰のためのドキュメント？
 
-## Why do I need it?
+これはオンコールを実施する人と、運用インシデント対応に関与している人、またインシデント対応手順を制定したいと思っている人を対象としています。
 
-Incident response is something you hope to never need, but when you do, you want it to go smoothly and seamlessly. Normally the knowledge of how to handle incidents within your company will be built up over time, getting better with each incident. While tools such as [PagerDuty's Major Incidents Application](https://www.pagerduty.com/applications/#major-incidents-application) can help you recover quickly, the process you follow is just as important. This documentation will allow you to learn from the start something which has taken us years to build up. Giving you a head start on how to deal with major incidents in a way which leads to the fastest possible recovery time.
+## なぜ必要か？
 
-## What is covered?
+インシデント対応は決して必要ないと祈りたいですが、必要になったときはスムーズでシームレスに行いたいです。
+通常、社内でのインシデント対応の知見は、ンシデントに遭遇する度に良くなっていきます。
+PagerDutyのようなツールは、より早くインシデントから復帰するのに役立ち、インシデント対応する人にとって本当に大事なものに集中できます。
+このドキュメントではPagerDutyで数年に渡り積み重ねられたものから、学ぶことができます。
+重大インシデントへの対応方法を先取りして、最速の復旧時間を実現します。
 
-Anything from preparing to [go on-call](/oncall/being_oncall.md), definitions of [severities](/before/severity_levels.md), incident [call etiquette](/before/call_etiquette.md), all the way to how to run a [post-mortem](/after/post_mortem_process.md), and providing our [post-mortem template](/after/post_mortem_template.md). We even include our [security incident response process](/during/security_incident_response.md).
+## このドキュメントがカバーすること
 
-## What is missing?
+[オンコール](/oncall/being_oncall.md)の準備や、[深刻度](/before/severity_levels.md)の定義、インシデント呼び出しの[エチケット](/before/call_etiquette.md)、[post-mortem](/after/post_mortem_process.md)の進め方とテンプレートなどです。
+また[セキュリティインシデントの対応手順](/during/security_incident_response.md)もあります。
 
-This isn't an exact clone of our internal documentation, but instead has some information removed. Things such as our phone bridge numbers, names of internal tools and systems which are not (yet) open sourced, images of our dashboards, etc. Basically anything that is specific to PagerDuty or is too sensitive to share.
+## このドキュメントがカバーしないこと
+
+これはPagerDutyの内部ドキュメントの複製ではなく、いくつかの情報が削除されています。
+電話番号、オープンソース化してない内部ツールやシステム名、ダッシュボードの画像などです。
+基本的にはPagerDuty特有のものや共有できないものはありません。
 
 ## License
+
+この邦訳、および原文の[PagerDuty Incident Reponse](https://response.pagerduty.com/)はApache License 2.0以下で配布されています。
+このドキュメントの編集や利用して、商用およびプライベート利用が可能です。
+その場合は元のコピーライトと、LICENSEファイルを含んでください。
+
+PagerDutyの顧客であってもなくても、このドキュメントをあなたの社内で使えるようにしたいです。
+このドキュメントのソースコードはGitHub上で公開されており、自由にフォークや独自の内部ドキュメントのベースに利用できます。
 
 This documentation is provided under the Apache License 2.0. In plain English that means you can use and modify this documentation and use it both commercially and for private use. However, you must include any original copyright notices, and the original LICENSE file.
 

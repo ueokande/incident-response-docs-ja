@@ -30,7 +30,7 @@ extra:
 # Contents
 pages:
   - Home: 'index.md'
-  - Getting Started: 'getting_started.md'
+  - はじめに (Getting Started): 'getting_started.md'
   - On-Call:
     - Being On-Call: 'oncall/being_oncall.md'
     - Who's On-Call?: 'oncall/whos_oncall.md'
