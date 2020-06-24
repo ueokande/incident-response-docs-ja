@@ -6,16 +6,23 @@ description: Before defining an incident response process, we should first defin
 
 Before we can define our incident response process, we should first define what an incident (and a major incident) is.
 
-## What is an incident?
-Any unplanned disruption or degradation of service that is actively affecting customers ability to use PagerDuty.
+まずインシデント対応手順を定義する前に、何がインシデントで何が重大インシデントであるかを定義スべきです。
 
-## What is a major incident?
-Any incident that requires a co-ordinated response between multiple teams.
+## インシデントとはなにか？
 
-## What is Incident Response?
-An organized approach to addressing and managing an incident. The goal isn't just to solve the incident, but to handle the situation in a way that limits damage and reduces recovery time and costs.
+PagerDutyを使う顧客に影響のある、計画していないサービスの中断や劣化です。
 
-## What triggers our incident response process?
+## 何が重大インシデントか？
+
+複数のチーム間で協調して、対応が必要なインシデントです。
+
+## インシデント対応とはなにか？
+
+インシデントへの対応や管理をするための、組織的なローチです。
+ゴールはインシデントを対応するだけでなく、被害を最小に抑えたり復帰時間、コストを減らすことも必要です。
+
+## インシデント対応手順のトリガーはなに？
+
 Our incident response process should be initiated for any major incident. It provides a framework for effectively responding and reaching a fast resolution time. Our incident response process can be triggered one of two ways, either via automated monitoring and alerting, or manually via human action.
 
 ### Automated Monitoring
