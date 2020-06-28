@@ -2,123 +2,133 @@
 cover: assets/img/covers/severity_levels.png
 description: Incidents are typically classified by severity or priority. At PagerDuty we use 'SEV' levels, with lower numbered severities being more urgent. Operational issues can be classified at one of these severity levels, and in general you are able to take more risky moves to resolve a higher severity issue.
 ---
-The first step in any incident response process is to determine what actually [constitutes an incident](/before/what_is_an_incident.md). Incidents can then be classified by severity, usually done by using "SEV" definitions, with lower numbered severities being more urgent. Operational issues can be classified at one of these severity levels, and in general you are able to take more risky moves to resolve a higher severity issue. Anything above a SEV-3 is automatically considered a "major incident" and gets a more intensive response than a normal incident.
 
-!!! tip "Always Assume The Worst"
-     If you are unsure which level an incident is (e.g. not sure if SEV-2 or SEV-1), **treat it as the higher one**. During an incident is not the time to discuss or litigate severities, just assume the highest and review during a post-mortem.
+どのようなインシデント対応手順でも最初のステップは、何が[インシデントを引き起こしている](/before/what_is_an_incident.md)かを特定することです。
+その後インシデントは重要度によって種類分けされ、通常は低い数字になると緊急度が高くなる "SEV" 定義が利用されます。
+運用上の問題はこの深刻度レベルによって分類され、深刻度の高い問題を解決するために、リクスの高い行動をトルことができます。
+SEV-3とり深刻なものは自動で重大インシデント (Major Incident) とみなされ、通常インシデントよりも集中的な対応がとられます。
 
-!!! question "Can a SEV-3 be a major incident?"
-     All SEV-2's are major incidents, but not all major incidents need to be SEV-2's. If you require co-ordinated response, even for lower severity issues, then trigger our incident response process. The IC can make a determination on whether full incident response is necessary.
+!!! tip "常に最悪の場合を考える"
+    もしインシデントがどれに分類されるかわからない場合（たとえば、SEV-2かSEV-1かわからない場合など）は、より深刻度の高いものとして扱います。
+    インシデント対応中は、深刻度を議論したり決めたりする時間ではありません。
+    重要度の高いものとして扱い、post-mortemで振り返りましょう。
+
+!!! question "SEV-3は重大インシデントか？"
+    全てのSEV-2は重大インシデントですが、全ての重大インシデントがSEV-2である必要はありません。
+    低い深刻度の問題であっても、連携した対応が必要な場合は、インシデント対応手順を発動するのです。
+    インシデント司令官がインシデント対応が必要かどうかを判断します。
 
 <table class="custom-table">
   <thead>
     <tr>
-      <th class="sev">Severity</th>
-      <th>Description</th>
-      <th>Typical Response</th>
+      <th class="sev">深刻度</th>
+      <th>解説</th>
+      <th>典型的な対応</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td class="sev-1">SEV-1</td>
       <td>
-        <p class="intent">Critical issue that warrants public notification and liaison with executive teams.</p>
+        <p class="intent">外部への通知と幹部との連絡が必要な、致命的な問題</p>
         <ul>
-          <li>The system is in a critical state and is actively impacting a large number of customers.</li>
-          <li>Functionality has been severely impaired for a long time, breaking SLA.</li>
-          <li>Customer-data-exposing security vulnerability has come to our attention.</li>
+          <li>システムは致命的な状態で、多くの顧客に影響がある状態。</li>
+          <li>長期的にわたり機能的に利用できず、SLAを破っている。</li>
+          <li>顧客データが漏洩する可能性のある脆弱性が報告されている。</li>
         </ul>
       </td>
       <td>
-        <p class="response">Major incident response.</p>
+        <p class="response">重大インシデント対応</p>
         <ul>
-          <li>Page an IC in Slack <code>!ic page</code>.</li>
-          <li>See <a href="/during/during_an_incident">During an Incident</a>.</li>
-          <li>Notify internal stakeholders.</li>
-          <li>Public notification.</li>
+          <li>Slackでインシデント司令官を呼び出す<code>!ic page</code>.</li>
+          <li><a href="/during/during_an_incident">インシデント対応中</a>を読む</li>
+          <li>社内のステークホルダーに通知する</li>
+          <li>外部へ通知する</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td class="sev-2">SEV-2</td>
       <td>
-        <p class="intent">Critical system issue actively impacting many customers' ability to use the product.</p>
+        <p class="intent">顧客が製品を利用するのに影響がある致命的なシステムの問題</p>
         <ul>
-          <li>Notification pipeline is severely impaired.</li>
-          <li>Incident response functionality (ack, resolve, etc) is severely impaired.</li>
-          <li>Web app is unavailable or experiencing severe performance degradation for most/all users.</li>
-          <li>Monitoring of PagerDuty systems for major incident conditions is impaired.</li>
-          <li>Any other event to which a PagerDuty employee deems necessary of incident response.</li>
+          <li>通知パイプラインに重大な障害が発生している。</li>
+          <li>インシデント対応の機能(応答、解決、など)が利用できない。</li>
+          <li>Webアプリが利用できないか、多くのユーザーにパフォーマンス劣化が発生している。</li>
+          <li>重大インシデントに対するPagerDutyの監視システムが停止している</li>
+          <li>PagerDutyの従業員がインシデント対応が必要だとみなしたイベント</li>
         </ul>
       </td>
       <td>
-        <p class="response">Major incident response.</p>
+        <p class="response">重大インシデント対応</p>
         <ul>
-          <li>Page an IC in Slack <code>!ic page</code>.</li>
-          <li>See <a href="/during/during_an_incident">During an Incident</a>.</li>
+          <li>Slackでインシデント司令官を呼び出す<code>!ic page</code>.</li>
+          <li><a href="/during/during_an_incident">インシデント対応中</a>を読む</li>
         </ul>
     </tr>
     <tr>
-      <td class="warning" colspan="3">Anything above this line is considered a "Major Incident". Our incident response process should be triggered for any major incidents.</td>
+      <td class="warning" colspan="3">このラインを超えるのは「重大インシデント」と扱います。我々のインシデント対応手順は、あらゆる重大インシデントに対して発動されるべきです。</td>
     </tr>
     <tr>
       <td class="sev-3">SEV-3</td>
       <td>
-        <p class="intent">Stability or minor customer-impacting issues that require immediate attention from service owners.</p>
+        <p class="intent">サービス所有者が直ちに対応する必要がある、安定性や一部の顧客に影響がある軽微な問題。</p>
         <ul>
-          <li>Partial loss of functionality, not affecting majority of customers.</li>
-          <li>Something that has the likelihood of becoming a SEV-2 if nothing is done.</li>
-          <li>No redundancy in a service (failure of 1 more node will cause outage).</li>
+          <li>一部の機能が使えないが、多くの顧客には影響しない。</li>
+          <li>何もしなければSEV-2になる可能性があるもの。</li>
+          <li>サービスの冗長度がないもの（もう1つのノードが停止すると障害になる）</li>
         </ul>
       </td>
       <td>
-        <p class="response">High-Urgency page to service team.</p>
+        <p class="response">サービスチームへの緊急度の高い呼び出し</p>
         <ul>
-          <li>Work on issue as your top priority.</li>
-          <li>Liaise with engineers of affected systems to identify cause.</li>
-          <li>If related to recent deployment, rollback.</li>
-          <li>Monitor status and notice if/when it escalates.</li>
-          <li>Mention on Slack if you think it has the potential to escalate.</li>
-          <li>Trigger incident response if necessary (<code>!ic page</code>).</li>
+          <li>最優先で問題に取り掛かる。</li>
+          <li>影響するシステムのエンジニアと連絡をとり、原因の特定する。</li>
+          <li>最近の開発によるものならロールバックする。</li>
+          <li>ステータスを監視して事態が悪化しているか、いつから悪化しているかを知らせる。</li>
+          <li>エスカレーションする可能性のある人にSlackで通知する。</li>
+          <li>必要ならインシデント対応を発動する(<code>!ic page</code>)。</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td class="sev-4">SEV-4</td>
       <td>
-        <p class="intent">Minor issues requiring action, but not affecting customer ability to use the product.</p>
+        <p class="intent">顧客が製品を使うのには影響しない、軽微な問題</p>
         <ul>
-          <li>Performance issues (delays, etc).</li>
-          <li>Individual host failure (i.e. one node out of a cluster).</li>
-          <li>Delayed job failure (not impacting event & notification pipeline).</li>
-          <li>Cron failure (not impacting event & notification pipeline).</li>
+          <li>パフォーマンス問題（遅延など）</li>
+          <li>1つのホストでの障害（クラスタから1つのノードが抜けるなど）</li>
+          <li>遅延したジョブによる障害（イベント、通知パイプラインには影響しない）</li>
+          <li>Cronの障害（イベント、通知パイプラインには影響しない）</li>
         </ul>
       </td>
       <td>
-        <p class="response">Low-Urgency page to service team.</p>
+        <p class="response">サービスチームへの緊急度の低い呼び出し</p>
         <ul>
-          <li>Work on the issue as your first priority (above "normal" tasks).</li>
-          <li>Monitor status and notice if/when it escalates.</li>
+          <li>最優先で問題に取り掛かる（通常のタスクよりも上）。</li>
+          <li>ステータスを監視して事態が悪化しているか、いつから悪化しているかを知らせる。</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td class="sev-5">SEV-5</td>
       <td>
-        <p class="intent">Cosmetic issues or bugs, not affecting customer ability to use the product.</li>
+        <p class="intent">製品を利用する顧客には影響しない、表面的な問題やバグ</p>
         <ul>
-          <li>Bugs not impacting the immediate ability to use the system.</li>
+          <li>システムを使う上で即座に影響しないバグ</li>
         </ul>
       </td>
       <td>
-        <p class="response">JIRA ticket.</p>
+        <p class="response">JIRAチケット</p>
         <ul>
-          <li>Create a JIRA ticket and assign to owner of affected system.</li>
+          <li>JIRAチケットを作成して影響のあるシステムの所有者に割り当てる。</li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-!!! note "Be Specific"
-    These severity descriptions have been changed from the PagerDuty internal definitions to be more generic. For your own documentation, you are encouraged to make your definitions very specific, usually referring to a % of users/accounts affected. You will usually want your severity definitions to be metric driven.
+!!! note "具体的に"
+    これらの緊急度の記述は、PagerDuty内部で使われている定義から、より一般的な説明に置換されています。
+    あなたたちの独自のドキュメントでは、ユーザーやアカウントの何%に影響するかなどを参考にして、具体的な独自の定義を作ることをお勧めします。
+    通常は、メトリックに基づく深刻度の定義が望ましいです。
