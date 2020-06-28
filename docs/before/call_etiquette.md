@@ -5,50 +5,63 @@ description: You've just joined an incident call, and you've never been on one b
 ![Obama phone](../assets/img/headers/obama_phone.jpg)
 *Credit: [Official White House Photo](https://commons.wikimedia.org/wiki/File:Barack_Obama_on_phone_with_Benjamin_Netanyahu_2009-06-08.jpg) by Pete Souza*
 
-You've just joined an incident call, and you've never been on one before. You have no idea what's going on, or what you're supposed to be doing. This page will help you through your first time on an incident call, and will provide a reference for future calls you may be a part of.
+あなたはインシデントの通話に参加しましたが、これまで対応したことがありません。
+あなたは何が起こっているかわかりませんし、何をしたら良いかもわかりません。
+このページは初めてのインシデント呼び出しの助けになり、あるいは将来の呼び出しに備えて参考にしてください。
 
-## First Steps
+## 最初のステップ
 
-* If you intend on participating on the incident call you should join both the call, and Slack.
-* Make sure you are in a quiet environment in order to participate on the call. Background noise should be kept to a minimum.
-* Keep your microphone muted until you have something to say.
-* Identify yourself when you join the call; State your name and the system you are the expert for.
-* Speak up and speak clearly.
-* Be direct and factual.
-* Keep conversations/discussions short and to the point.
-* Bring any concerns to the Incident Commander (IC) on the call.
-* Respect time constraints given by the Incident Commander.
+* インシデント呼び出しに参加する場合は、呼び出しとSlackの両方に参加する必要があります。
+* 通話に参加するために静かな環境にいることを確認してください。背景のノイズは最小に抑えるべきです。
+* 喋りたいことがあるまで、マイクをミュートにしておきます。
+* 通話に参加するときは、あなたの名前と専門であるシステムを宣言してください。
+* はっきりとした大きな声で喋ります。
+* 直接的で、事実に基づきましょう。
+* 会話や議論は、短く要点を絞りましょう。
+* 懸念点があれば通話中にインシデントコマンダーに報告してください。
+* インシデントコマンダーによって与えられた制限時間を守ってください。
+*
 
-## Lingo
-**Use clear terminology, and avoid using acronyms or abbreviations during a call. Clear and accurate communication is more important than quick communication.**
+## 専門用語
+
+**通話中は頭字語や略語を用いずに、明確な用語を用いてください。明確で正確な会話は素早い会話よりも大事です。**
 
 ![Communication](../assets/img/misc/communicate.png)
 
-Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) does not need to be followed on calls. However, you should familiarize yourself with the terms, as you may hear them on a call (or need to use them yourself). The ones in more active use on major incident calls are,
+通話中は標準的な[無線電話](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure)に従う必要はありません。
+しかし、通話中にそれが聞こえる聞こえるかも知れないので（あるいは自身で使うか）、それになれる必要があります。
+重要インシデントで積極的に利用されているものとして以下のようなものがあります。
 
-* **Ack/Rog** - "I have received and understood"
-* **Say Again** - "Repeat your last message"
-* **Standby** - "Please wait a moment for the next response"
-* **Wilco** - "Will comply"
+* **Ack/Rog** - 「受信して、理解しました」
+* **Say Again** - 「最後の言葉を繰り返してください」
+* **Standby** - 「次の返答まで少し待ってください」
+* **Wilco** - 「遵守します」
 
-Do not invent new abbreviations, and always favor being explicit of implicit. It is better to make things clearer than to try and save time by abbreviating, only to have a misunderstanding because others didn't know the abbreviation.
+新しい略語を作らないでください。
+他人がその略語を知らなかったために誤解が生じるので、略語によって時間を節約するよりも、明確に伝えるほうが良いです。
 
-## The Commander
-The Incident Commander (IC) is the leader of the incident response process, and is responsible for bringing the incident to resolution. They will announce themselves at the start of the call, and will generally be doing most of the talking.
+## コマンダー
 
-* Follow all instructions from the incident commander, without exception.
-* Do not perform any actions unless the incident commander has told you to do so.
-* The commander will typically poll for any strong objections before performing a large action. This is your time to raise any objections if you have them.
-* Once the commander has made a decision, that decision is final and should be followed, even if you disagreed during the poll.
-* Answer any questions the commander asks you in a clear and concise way.
-    * Answering that you "don't know" something is perfectly acceptable. Do not try to guess.
-* The commander may ask you to investigate something and get back to them in X minutes. Make sure you are ready with an answer within that time.
-    * Answering that you need more time is perfectly acceptable, but you need to give the commander an estimate of how much time.
+インシデントコマンダーはインシデント対応プロセスでのリーダーで、インシデントを解決に導く責務があります。
+インシデントコマンダーは、通話の開始をアナウンスして、普通はほどんど話しています。
 
-## Problems?
+* インシデントコマンダーからの指示は、例外なく従うこと。
+* インシデントコマンダーからの指示がない限り、いかなる行動もしないこと
+* コマンダーは通常大きな行動をする前に、強い反対意見が無いかを書くにします。意義がある場合は反対してください。
+* コマンダーが意思決定をします。その決定は確定的で、反対意見が会ったとしても従うべきである。
+* コマンダーからの質問には、明確かつ簡潔に答えてください。
+    * 「知らない」という答えも受け入れられます。推測をしないでください。
+* コマンダーはあたなに何らかの調査を依頼して、X分以内に帰ってくるよう言うかも知れません。指定された時間内に返答を返せるよう準備しましょう。
+    * 更に時間が必要だというのも受け入れられますが、どのくらい時間が必要化の見積もりを提示する必要があります。
 
-#### There's no incident commander on the call! I don't know what to do!
-Ask on the call if an IC is present. If you have no response, type `!ic page` in Slack. This will page the primary and backup IC to the call.
+## 問題発生？
 
-#### I can join the call or Slack, but not both, what should I do?
-You're welcome to join only one of the channels, however you should not actively participate in the incident response if so, as it causes disjointed communication. Liaise with someone who is both in Slack and on the call to provide any input you may have so that they can raise it.
+#### インシデントコマンダーが通話にいない。どうすればいいかわからない。
+
+通話中にインシデントコマンダーがイルカ聞いてみましょう。もしいなければ、Slackで `!ic page` を入力してください。
+これは最初とバックアップのインシデントコマンダーが呼び出されます。
+
+#### 通話またはSlackのどちらかに参加できます。どうすればいいですか？
+
+我々のチャンネル参加するのは歓迎しますが、片方のみにしか参加できない場合はコミュニケーションがまばらになるので、インシデント対応に積極的に参加スべきではありません。
+あなたが持っている情報を取り上げてもらうために、Slackと通話の両方にいる誰かと連絡をとりましょう。
