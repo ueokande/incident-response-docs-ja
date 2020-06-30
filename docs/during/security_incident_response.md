@@ -7,157 +7,180 @@ description: Checklist of actions for responding to a security incident at Pager
   <span><strong>Last Tested:</strong> <abbr title="We recommend you include with this document the date you last tested your process.">YYYY-MM-DD</abbr></span>
 </div>
 
-!!! warning "Incident Commander Required"
-     As with all major incidents at PagerDuty, security ones will also involve an Incident Commander, who will delegate the tasks to relevant resolvers. Tasks may be performed in parallel as assigned by the IC. Page one at the earliest possible opportunity `!ic page`.
+!!! warning "インシデントコマンダーは必須です"
+    PagerDutyにおける全ての重大インシデントと同じように、タスクを適切に移譲できるセキュリティインシデントもインシデントコマンダーが必要です。
+    インシデントコマンダーに割り振られたタスクは並列に実行できます。
+    `!ic page` コマンドで 可能な限り早く呼び出してください。
 
-!!! question "Not Sure it's a Security Incident?"
-    Trigger the process anyway. It's better to be safe than sorry. The Incident Commander will make a determination on if response is needed.
+!!! question "セキュリティインシデントかどうかわからない"
+    とにかく対応を開始してください。
+    それは謝るよりも良いことです。
+    インシデントコマンダーが対応が必要かどうかを判断します。
 
-## Checklist
-Details for each of these items are available in the next section.
+## チェックリスト
 
-1. Stop the attack in progress.
-1. Cut off the attack vector.
-1. Assemble the response team.
-1. Isolate affected instances.
-1. Identify timeline of attack.
-1. Identify compromised data.
-1. Assess risk to other systems.
-1. Assess risk of re-attack.
-1. Apply additional mitigations, additions to monitoring, etc.
-1. Forensic analysis of compromised systems.
-1. Internal communication.
-1. Involve law enforcement.
-1. Reach out to external parties that may have been used as vector for attack.
-1. External communication.
+これらのチェックリストは次の節で詳しく説明します。
+
+1. 現在の攻撃を停止する
+1. 攻撃ベクターを遮断する
+1. 対応チームを組む
+1. 攻撃を受けたインスタンスを隔離する
+1. 攻撃のタイムラインを明確にする
+1. 漏洩したデータを特定する
+1. 他のシステムへのリスクを評価する
+1. 再攻撃のリスクを評価する
+1. 追加の措置や監視を適用する
+1. 攻撃されたシステムのフォレンジック解析
+1. 内部のコミュニケーション
+1. 法的機関の利用
+1. 攻撃ベクターとして使われている可能性のある外部関係者に連絡
+1. 外部とのコミュニケーション
 
 ---
 
-## Attack Mitigation
-Stop the attack as quickly as you can, via any means necessary. Shut down servers, network isolate them, turn off a data center if you have to. Some common things to try,
+## 攻撃の阻止
 
-* Shutdown the instance from the provider console (do not delete or terminate if you can help it, as we'll need to do forensics).
-* If you happen to be logged into the box you can try to,
-    * Re-instate our default iptables rules to restrict traffic.
-    * `kill -9` any active session you think is an attacker.
-    * Change root password, and update /etc/shadow to lock out all other users.
+なんとしてでも、可能な限り早く攻撃を止めてください。
+サーバーをシャットダウンしたり、ネットワークから隔離したり、必要ならデータセンターを停止してください。
+一般的には以下のことを実行します。
+
+* プロバイダーコンソールからインスタンスをシャットダウンします（フォレンジック解析が必要になるので、できればインスタンスの削除はしないでください）
+* たまたまログインしていたのなら、以下のことを実行してください
+    * トラフィックを制限するために、デフォルトのiptablesルールを再設定する
+    * 攻撃者と思われるアクティブなセッションを`kill -9` で終了する
+    * rootのわすワードを変更し、`/etc/shadow` を更新して他のユーザーをロックアウトする
     * `sudo shutdown now`
 
-## Cut Off Attack Vector
-Identify the likely attack vectors and path/fix them so they cannot be re-exploited immediately after stopping the attack.
+## 攻撃ベクターを遮断する
 
-* If you suspect a third-party provider is compromised, delete all accounts except your own (and those of others who are physically present) and immediately rotate your password and MFA tokens.
-* If you suspect a service application was an attack vector, disable any relevant code paths, or shut down the service entirely.
+攻撃ベクターや経路と思われる物を特定し、攻撃を停止した後に使えないようにします。
 
-## Assemble Response Team
-Identify the key responders for the security incident, and keep them all in the loop. Set up a secure method of communicating all information associated with the incident. Details on the incident (or even the fact that an incident has occurred) should be kept private to the responders until you are confident the attack is not being triggered internally.
+* 3rdパーティーのプロバイダーに侵入されていると思われるときは、自分（および物理的にそこにいる人）以外のアカウントを削除してください。 そしてパスワーととMFAトークンを更新します。
+* もしサービスアプリケーションが攻撃ベクターだと思われるときは、関連するコードパスを無効化するか、完全にシャットダウンしてください。
 
-* Page an Incident Commander if not already done so. They will also appoint the usual incident command roles. The incident command team will be responsible for keeping documentation of actions taken, and for notifying internal stakeholders as appropriate.
-* Give the project an innocuous codename that can be used for chats/documents so if anyone overhears they don't realize it's a security incident. (e.g. sapphire-unicorn).
-* Start the voice call if not already in progress.
-* Setup chat room using the codename of the incident.
-* Invite all responders to the voice call and chat room.
-    1. The **security team should always be included**.
-    1. A representative for any affected services should be included.
-    1. Executive stakeholders and legal counsel should be invited at earliest possible opportunity, but prioritize operational responders first.
-* Do not communicate with anyone not on the response team about the incident until forensics has been performed. The attack could be happening internally.
-* Prefix all emails, and chat topics with "Attorney Work Project".
+## 対応チームを組む
 
-## Isolate Affected Instances
-Any instances which were affected by the attack should be immediately isolated from any other instances. As soon as possible, an image of the system should be taken and put into a read-only cold storage for later forensic analysis.
+セキュリティインシデントへの主要な対応者を特定し、彼らに終止してください。
+インシデントに関連する情報をやり取りする、安全な手段を確立してください。
+インシデントの詳細（またはインシデントが起こったという事実さえも）、内部犯行でないと確信するまでは秘密にしておく必要があります。
 
-* Blacklist the IP addresses for any affected instances from all other hosts.
-* Turn off and shutdown the instances immediately if you didn't do that to stop the attack.
-* Take a disk image for any disks attached to the instances, and ship them to an off-site cold storage location. You should make sure these images are read-only and cannot be tampered with.
+* インシデントコマンダーを呼び出してないときは、呼び出してください。彼らは通常のインシデントコマンダーの役割も果たします。インシデントコマンダーチームは取るべきアクションをドキュメント化して、適した社内のステークホルダーに通知する責務があります。
+* 誰かに盗聴されてもセキュリティインシデントだとわからないように、チャットやドキュメントでは、プロジェクトに無意味なコードネームを付けてください（サファイアユニコーン、など）。
+* まだ音声通話をはめてない場合は開始します。
+* インシデントのコードネームを使ったチャットルームを作ります。
+* 全ての対応者を音声通話とチャットルームに呼び出します。
+    1. **セキュリティチームは常に参加させるべきです**
+    1. 影響を受けるサービスの責任者を参加させるべきです。
+    1. 幹部のステークホルダーや法務部門も早期に招待スべきだが、まずは運用上の対応者を優先する
+* フォレンジック解析が終わるまでは、対応チーム以外とインシデントについて連絡しない。内部から攻撃されている可能性もあります。.
+* 全てのメールとチャットのトピックのプレフィクス「Attorney Work Project」を付ける
 
-## Identify Timeline of Attack
-Work with all tools at your disposal to identify the timeline of the attack, along with exactly what the attacker did.
+## 攻撃を受けたインスタンスを隔離する
 
-* Any reconnaissance the attacker performed on the system before the attack started.
-* When the attacker gained access to the system.
-* What actions the attacker performed on the system, and when.
-* Identify how long the attacker had access to the system before they were detected, and before they were kicked out.
-* Identify any queries the attacker ran on databases.
-* Try to identify if the attacker still has access to the system via another back door. Monitor logs for unusual activity, etc.
+全ての攻撃を受けたインスタンスは、すぐに他のインスタンスから隔離する必要があります。
+できるだけ早くシステムのイメージを取得して、後からフォレンジック解析するために読み取り専用のストレージに保存します。
 
-## Compromised Data
-Using forensic analysis of log files, time-series graphs, and any other information/tools at your disposal, attempt to identify what information was compromised (if any),
+* 攻撃されたインスタンスのIPアドレスを、他のホストのブラックリストに登録します。
+* 攻撃を止められなかった場合は、インスタンスをシャットダウンします。
+* インスタンスに接続されているディスクのイメージを取得して、コールドストレージに移します。このイメージは読み取り専用で、改ざんできない必要があります。
 
-* Identify any data that was compromised during the attack.
-    * Was any data exfiltrated from a database?
-    * What keys were on the system that are now considering compromised?
-    * Was the attacker able to identify other components of the system (map out the network, etc).
-* Find exactly what customer data has been compromised, if any.
+## 攻撃のタイムラインを明確にする
 
-## Assess Risk
-Based on the data that was compromised, assess the risk to other systems.
+攻撃者が何をしたかを正確に知り、攻撃のタイムラインを特定するために、ツールを使って調査する。
 
-* Does the attacker have enough information to find another way in?
-* Were any passwords or keys stored on the host? If so, they should be considered compromised, regardless of how they were stored.
-* Any user accounts that were used in the initial attack should rotate all of their keys and passwords on every other system they have an account.
+* 攻撃が開始する前に、攻撃者がシステム上で行ったことの偵察
+* いつ攻撃者がアクセスできるようになったか
+* 攻撃者がどのようなアクションをいつ行ったか
+* 発見して追い出すまで、攻撃者はどのくらいシステムにアクセスしたかの特定
+* 攻撃者がデータベースに対して行ったクエリの特定
+* まだ攻撃者がバックドアからアクセスできるかの特定。目立ったログの監視、など。
 
-## Apply Additional Mitigations
-Start applying mitigations to other parts of your system.
+## データ漏洩
 
-* Rotate any compromised data.
-* Identify any new alerting which is needed to notify of a similar breach.
-* Block any IP addresses associated with the attack.
-* Identify any keys/credentials that are compromised and revoke their access immediately.
+ログファイルのフォレンジック解析、時系列グラフ、その他の情報やツールを使って、どの情報が漏洩したかを調査。
 
-## Forensic Analysis
-Once you are confident the systems are secured, and enough monitoring is in place to detect another attack, you can move onto the forensic analysis stage.
+* 攻撃の途中で漏洩したデータを特定する
+    * データベースからデータが抜き出されたか？
+    * 漏洩したと思わるキーがシステムにあるか？
+    * 攻撃者は他のシステムのコンポーネントを特定できるか（ネットワーク構成の推測など）
+* どの顧客データが漏洩したか
 
-* Take any read-only images you created, any access logs you have, and comb through them for more information about the attack.
-* Identify exactly what happened, how it happened, and how to prevent it in future.
-* Keep track of all IP addresses involved in the attack.
-* Monitor logs for any attempt to regain access to the system by the attacker.
+## リスクの評価
 
-## Internal Communication
-**Delegate to:** VP or Director of Engineering
+漏洩したデータを元に、他のシステムへのリスクを考える。
 
-Communicate internally only once you are confident (via forensic analysis) that the attack was not sourced internally.
+* 攻撃者は他のシステムに攻撃するための十分な情報を持っていますか？
+* ホストにパスワードやキーが保存されてましたか？もしそうなら保存方法に関わらず、危険にさらされているとみなす必要があります。
+* 最初の攻撃に使われた可能性のあるアカウントの、キーやパスワードを全てのシステムで更新します。
 
-* Don't go into too much detail.
-* Overview the timeline.
-* Discuss mitigation steps taken.
-* Follow up with more information once it is known.
+## 追加の措置
 
-## Liaise With Law Enforcement / External Actors
-**Delegate to:** VP or Director of Engineering
+システムの他の部分で追加の措置を取ります。
 
-Work with law enforcement to identify the source of the attack, letting any system owners know that systems under their control may be compromised, etc.
+* 漏洩した可能性のあるデータを更新します。
+* 同じような侵入を通知するために、新しいアラートを決めます。
+* 攻撃に関連する全てのIPアドレスをブロックします。
+* 漏洩した可能性のある全てのキーやクレデンシャルを特定して、直ちに無効化します。
 
-* Contact local law enforcement.
-* Contact FBI.
-* Contact operators for any systems used in the attack, their systems may also have been compromised.
-* Contact security companies to help in assessing risk and any PR next steps.
-* Contact cyber insurance provider.
+## フォレンジック解析
 
-## External Communication
-**Delegate to:** Marketing Team
+もしシステムが安全だと自身があり、攻撃を検知できる十分なモニタリングがあるのなら、フォレンジック解析を始められます。
 
-Once you have validated all of the information you have is accurate, have a timeline of events, and know exactly what information was compromised, how it was compromised, and sure that it won't happen again. Only then should you prepare and release a public statement to customers informing them of the compromised information and any steps they need to take.
+* 作成したリードオンリーのイメージや、アクセスログから、攻撃に関する情報を精査します。
+* 何が発生して、どのように発生して、どのように母子するかを正確に特定します。
+* 攻撃に関与した全てのIPアドレスを追跡してください。
+* 攻撃者がシステムにもう一度アクセスしようとしてないか、ログを監視します。
 
-* Include the date in the title of any announcement, so that it's never confused for a potential new breach.
-* Don't say "We take security very seriously". It makes everyone cringe when they read it.
-* Be honest, accept responsibility, and present the facts, along with exactly how we plan to prevent such things in future.
-* Be as detailed as possible with the timeline.
-* Be as detailed as possible in what information was compromised, and how it affects customers. If we were storing something we shouldn't have been, be honest about it. It'll come out later and it'll be much worse.
-* Don't name and shame any external parties that might have caused the compromise. It's bad form. (Unless they've already publicly disclosed, in which case we can link to their disclosure).
-* Release the external communication as soon as possible, preferably within a few days of the compromise. The longer we wait, the worse it will be.
-* If possible, get in touch with customers' internal security teams before the general public notice is sent.
+## 内部コミュニケーション
+
+バイスプレジデント (VP) または技術ディレクター(Director of Engineering)に **委譲**してください。
+
+（フォレンジック解析により）攻撃が内部犯行でないと確信してから、内部とのコミュニケーションを図りましょう。
+
+* あまり細かいことは言わないようにしましょう。
+* タイムラインの概要を説明します。
+* 緩和策について議論します。
+* 判明したらより詳細をフォローアップします。
+
+## 法的機関や外部組織との窓口
+
+バイスプレジデント (VP) または技術ディレクター(Director of Engineering)に **委譲**してください。
+
+法的機関と一緒に攻撃の元を特定したり、システムのオーナーに侵入された可能性があることを知らせます。
+
+* 社内の法務部門に連絡します。
+* FBIに連絡します。
+* 攻撃で使用されたシステムのオペレーターに、システムが侵入された可能背があることを連絡します。
+* セキュリティ会社に連絡して、リスクの評価や次にやるべき報告の助言をもらいます。
+* サイバー保険会社に連絡します。
+
+## 外部とのコミュニケーション
+
+マーケティングチームに **委譲**してください。
+
+全ての情報が正確で、イベントのタイムラインが確認できて、どの情報が漏洩してどのように侵入されたかがわかれば、再発防止策を講じることができます。
+その上で、情報が漏洩したことと、取るべきアクションを顧客に向けて発表する必要があります。
+
+* 新たな侵入の可能性と混同されないように、告知のタイトルに日付を入れます。
+* 「我々はセキュリティに真剣に取り組んでいます」とは言わないでください。それを読むとうんざりします。
+* 正直に、責任を受け入れ、事実を提供し、再発防止のために何を計画するかを伝えてうダサい。
+* 可能な限り詳細なタイムラインにしてください。
+* 可能な限り詳細に、どの情報が漏洩して顧客にどんな影響があるか伝えてください。保存してはいけないものを保存してた場合も正直に伝えてください。後に判明すると最悪の事態になるでしょう。
+* 侵入の原因となった外部関係者の名前を上げたり恥を欠かせないようにしましょう。それは良くないです（すでに彼らが公開している場合を除く。その場合はその公表へのリンクを貼れる）。
+* 可能な限り、できるのなら侵入が発覚して数日以内に、外部に公表してください。長く待てば事態は悪化します。
+* もし可能なら一般公開の前に、顧客の内部のセキュリティチームと連絡をとってください。
 
 ---
 
-## Communicating During an Incident
+## インシデント中のコミュニケーション
 
-* Prefer voice call and Slack over any other methods.
-* Avoid email, but if you absolutely need to for some reason,
-    * Subject of emails should be "Attorney Work Project" and nothing else.
-    * If email chain has **ANY** contacts **not with the @pagerduty.com domain**, make sure your emails are encrypted.
-* Do not use SMS to communicate about the incident.
-    * The only exception is to tell someone to move to a more secure channel. e.g. "Please join Slack ASAP".
-* Do not disseminate anything about the incident to those outside the response team until you have approval to do so.
+* 音声通話やSlackを使いましょう
+* 何らかの理由で必要な場合以外はメールを避けましょう
+    * メールの件名は「Attorney Work Project」でなければいけません。
+    * **@pagerduty.comドメイン以外**のメールアドレスが宛先に含まれている場合、メールが暗号化されていることを確認してください。
+* 紳士デントに関する連絡にはSMSを使わないでください。
+    * より安全なチャンネルに誘導する場合を除きます。たとえば「Slack ASAPに参加してください」など。
+* 認証が得られるまでは、インシデントを対応しているチーム外の外部に漏らさないでください。
 
 ---
 
