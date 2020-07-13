@@ -2,54 +2,69 @@
 cover: assets/img/covers/resolved.png
 description: Information on what to do after a major incident. Our followup and after action review procedures.
 ---
-Information on what to do after a major incident. Our followup and after action review procedures.
 
-## Followup Actions for Response Roles
-In addition to any direct followup items generated from an incident, each of our response roles will have a few standard followup tasks. These are generally lightweight actions that ensure we organize information and followup with customers appropriately.
+重要インシデントで何をすべきかの情報。
+我々の片付けと、レビュー後のアクション。
 
-### Steps for Incident Commander
+## 対応ロールのフォローアップアクション
 
-1. Update the incident in PagerDuty.
-    * Group any related incidents under the primary incident.
-    * Set the final severity of the incident.
-    * Resolve the incident.
+インシデントにより発生した直接的なフォローアップ事項に加え、各インシデントの役割では標準的なフォローアップ用のタスクがあります。
+これらは通常、情報の整理と顧客のフォローアップをする、軽微なアクションです。
+These are generally lightweight actions that ensure we organize information and followup with customers appropriately.
 
-1. Create the post-mortem, and assign an owner to the post-mortem for the incident.
+### インシデント・コマンダーのステップ
 
-1. Send out an internal email to the relevant stakeholders explaining that we had an incident, provide a link to the post-mortem.
+1. PagerDuty上のインシデントを更新する。
+    * 関連するインシデントを最初のインシデントに関連付ける
+    * 最終的なインシデントの深刻度を評価する
+    * インシデントをResolveする
 
-1. Occasionally check on the progress of the post-mortem to ensure that it is completed within the desired time frame.
+1. Post-mortemを作成し、インシデントのpost-mortemのオーナーを割り当てる。
 
-### Steps for Deputy
-There are no additional steps after an incident is resolved. However the IC may ask for your help with their steps.
+1. psot-mortemのように対応したインシデントを説明する、Eメールを関連するステークホルダーに送る。
 
-### Steps for Scribe
+1. 決められた時間内にpost-mortemができあがるように、ときどき進捗を確認する。
 
-1. Review the chat communications and extract any relevant items from key events.
+### 補佐 (Deputy) のステップ
 
-1. Collect all `TODO` items and add them to the post-mortem.
+インシデント解決後に追加ですることはありません。
+しかしインシデントコマンダーは手順について確認するかも知れません。
 
-### Steps for Subject Matter Experts
+### 書記 (Scribe) のステップ
 
-1. Add any notes you think are relevant to the post-mortem.
+1. チャットの会話を見直して、キーイベントから対応する項目を洗い出します。
 
-### Steps for Customer Liaison
+1. 全ての `TODO` 項目を集め、post-mortemに追記します。
 
-1. Reply to any customer enquiries we received about the incident.
+### 内容領域専門家 (Subject Matter Experts) のステップ
 
-1. Follow the post-mortem progress, and update our status page with the external message once it is available.
+1. 関連すると思われるメモをpost-mortemに追記します。
 
-### Steps for Internal Liaison
-There are no additional steps after an incident is resolved. However the IC may ask for your help with answering questions from internal stakeholders.
+### 顧客窓口 ( Customer Liaison) のステップ
 
-## Reviewing the Incident
-It's important that we review the incident in detail to see exactly what went wrong, why it went wrong, and what we can do to make sure it doesn't happen again. These take many names; after-action reviews, incident review, followup review, etc. We use the term post-mortem.
+1. インシデントについて受け取ったお問い合わせについて返信します。
 
-You can read all about our [post-mortem process](post_mortem_process.md), which goes over this in more detail.
+1. post-mortemの進捗をフォローアップし、外部に出せるメッセージができあがったら、ステータスページを更新します。
 
-## Reviewing the Process
-As well as reviewing the incident, it's important to review our process. Did we handle the incident well, or are there things we could have done better?
+### 内部窓口 (Customer Liaison) のステップ
 
-This review isn't very formal yet, and typically involves a few of the incident commanders getting together to discuss how we might have done things differently, or if there are any tweaks we can make to our incident response process.
+インシデント解決後に追加ですることはありません。
+しかしインシデントコマンダーは、内部のステークホルダーからの問に答えるために、助けを求めるかも知れません。
 
-If you're interested in joining these meetings, just let one of the incident commanders know and we'll be sure to invite you.
+## インシデントをレビューする
+
+インシデントの詳細をレビューして、なにが問題でなぜ問題になったか、そして再発防止のために何ができるかを、正確に確認することは重要です。
+これは多くの名前があり、自己アクションレビュー、インシデントレビュー、フォローアップレビューなどの名前があります。
+我々はpost-mortemという名前を使います。
+
+我々の[post-mortemプロセス](post_mortem_process.md)について詳細を読むことができます。
+
+## 手順のレビュー
+
+インシデントのレビューをするように、プロセスのレビューも重要です。
+インシデントにうまく対応できたか、それとももっとよくできたでしょうか？
+
+このレビューはまだ正式なものではありません。
+通常、数人のインシデントコマンダーを呼び出して、他の手段が無かったかや、インシデント対応手順で工夫できる点が無かったかを議論します。
+
+これらの会議に興味がある人は、インシデントコマンダーの誰かに知らせてください。

@@ -4,10 +4,16 @@ description: For every major incident (SEV-2/1), we need to follow up with a pos
 ---
 ![Post-Mortem](../assets/img/headers/pagerduty_post_mortem.jpg)
 
-For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.
+全ての重大インシデント (SEV-2/1) において、post-mortemでフォローアップが必要です。
+誰かのせいにせず、より詳細で、正確に何がインシデントを引き起こしたかの説明と、将来似たようなインシデントが再発しないための手順のリストを記述します。
+またその時のインシデント対応手順も含める必要があります。
+A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.
 
-!!! warning "Don't Neglect the Post-Mortem"
-    Don't make the mistake of neglecting a post-mortem after an incident. Without a post-mortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless post-mortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.
+!!! warning "Post-Mortemを軽視しないで"
+    インシデント後のpost-mortemをおろそかにしないでください。
+    post-mortemが無いと、何が正しいのか、どこが改善できるのか、そして最も重要な再発防止の方法がわからなくなります。
+    よく設計された、誰も責めないpost-mortemは、チームに継続的に学ぶ機会をあたえ、インフラとインシデント対応手順を反復的に改善できます。
+
 
 ## Owner Designation
 The first step is that a post-mortem owner will be designated. This is done by the IC either at the end of a major incident call, or very shortly after. You will be notified directly by the IC if you are the owner for the post-mortem. The owner is responsible for populating the post-mortem, looking up logs, managing the followup investigation, and keeping all interested parties in the loop. Please use Slack for coordinating followup. A detailed list of the steps is available below,
