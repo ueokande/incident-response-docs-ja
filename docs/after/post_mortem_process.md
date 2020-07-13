@@ -15,104 +15,127 @@ A blame-free, detailed description, of exactly what went wrong in order to cause
     よく設計された、誰も責めないpost-mortemは、チームに継続的に学ぶ機会をあたえ、インフラとインシデント対応手順を反復的に改善できます。
 
 
-## Owner Designation
-The first step is that a post-mortem owner will be designated. This is done by the IC either at the end of a major incident call, or very shortly after. You will be notified directly by the IC if you are the owner for the post-mortem. The owner is responsible for populating the post-mortem, looking up logs, managing the followup investigation, and keeping all interested parties in the loop. Please use Slack for coordinating followup. A detailed list of the steps is available below,
+## オーナーの指名
 
-## Owner Responsibilities
-As owner of a post-mortem, you are responsible for the following,
+最初のステップは、post-mortemのオーナーを指名することです。
+これはインシデント・コマンダーが、大規模インシデント呼び出しの終了後または直後に行われます。
+もしあなたがpost-mortemのオーナーなら、インシデント・コマンダーから直接指名されます。
+オーナーはpost-mortemの記録し、ログをさかのぼり、フォローアップの調査を管理し、全ての関係ある人に情報を提供する責務があります。
+詳細ステップのリストは次で説明します。
 
-* Scheduling the post-mortem meeting (on the shared calendar) and inviting the relevant people (this should be **scheduled within 3 calendar days** for a SEV-1 and **5 business days** for a SEV-2).
-* Investigating the incident, pulling in whomever you need from other teams to assist in the investigation.
-* Updating the page with all of the necessary content.
-* Creating follow-up JIRA tickets (_You are only responsible for creating the tickets, not following them up to resolution_).
-* Reviewing the post-mortem content with appropriate parties before the meeting.
-* Running through the topics at the post-mortem meeting (the IC will "run" the meeting and keep the discussion on track, but you will likely be doing most of the talking).
-* Communicating the results of the post-mortem internally.
+## オーナーの責務
 
-## Status Descriptions
-Our post-mortems have a "Status" field which indicates where in our process the post-mortem currently is. Here's a description of the values and how we use them.
+post-mortemのオーナーであるあなたは、以下の責務があります
 
-| Status | Description |
-|-|-|
-| **Draft** | Indicates that the content of the post-mortem is still being worked on. |
-| **In Review** | The content of the post-mortem has been completed, and is ready to be reviewed during the post-mortem meeting. |
-| **Reviewed** | The meeting is over and the content has been reviewed and agreed upon.<br/>If there is an "External Message", the Customer Support team will take the message and update our status page as appropriate. |
-| **Closed** | No further actions are needed on the post-mortem (outstanding issues are tracked in JIRA).<br/>If no "External Message", you can skip straight to this once the meeting is over.<br/>If there's an "External Message", then the Support team will update it to this status once the message is posted. |
+* post-mortemのミーティングを（共有カレンダーで）設定し、関係のある人を招待します（SEV-1の場合は**3営業日以内**に、SEV-2の場合は**5営業日以内**にすべきです）。
+* インシデントの調査をし、他のチームから調査を手助けできそうな人を引き抜きます。
+* 必要な内容をまとめてページを更新します。
+* フォローアップ用のJIRAチケットを作ります（_あなたの責務はJIRAチケットを作ることであって、解決のためのフォローアップをすることではないです_）。
+* ミーティング前に関係者とpost-mortemのレビューをする。
+* post-mortemのミーティングでトピックについて説明する（インシデントコマンダーがミーティングの進行をするが、実際はあなたがほとんど話すだろう）。
+* post-mortemの結果を内部に伝える
+
+## ステータスの記述
+
+我々のpost-mortemsは、post-mortemsの現在どのステップ化を表す "Status" フィールドがあります。
+我々は以下のステータスを使います。
+
+| **Draft**     | post-mortemの内容をまだ書いている途中です
+| **In Review** | post-mortemの内容が完了して、post-mortemのミーティングでレビュー可能です
+| **Reviewed**  | ミーティングが終了して、内容がレビューされ内容が確認されました。<br/>
+                  もし外部への告知がある場合は、カスタマーサポートチームが告知をして、ステータスページを適切に更新します。
+| **Closed**    | post-mortemに関する新たなアクションはありません（まだ解決してない問題はJIRAで追従されます）<br/>
+                  もし外部への告知がない場合は、メーティングが終わるとすぐにこのステータスをスキップできます。
+                  もし外部への告知がある場合は、サポートチームが告知を出してからサポートチームがステータスを更新します。
 
 ## Post-Mortem
-Once you've been designated as the owner of a post-mortem, you should start creating one and updating it with all the relevant information.
 
-1. (If not already done by the IC) Create a new post-mortem for the incident.
+あなたはpost-mortemのオーナーに指名されました。
+まずは関連する情報から、post-mortemの作成と更新をしてみましょう。
 
-1. Schedule a post-mortem meeting for within **3 calendar days** for a SEV-1 and **5 business days** for a SEV-2. You should schedule this before filling in the post-mortem, just so it's on the calendar.
-    * Create the meeting on the "Incident Post-Mortem Meetings" shared calendar.
+1. （まだインシデントコマンダーによって作られてなければ）インシデントに対する新たなpost-mortemを作成します。
 
-1. Begin populating the page with all of the information you have.
-    * The timeline should be the main focus to begin with.
-        * The timeline should include important changes in status/impact, and also key actions taken by responders.
-    * Go through the history in Slack to identify the responders, and add them to the page.
-        * Identify the Incident Commander and Scribe in this list.
+1. SEV-1の場合は **3営業日** 以内に、SEV-2の場合は **5営業日** 以内に、post-mortemのミーティングを設定します。
+post-mortemを埋める前にミーティングを設定したほうが良いです。カレンダーに載るから。
+    * ミーティングは、共有の"Incident Post-Mortem Meetings"カレンダーに設定します
 
-1. Populate the post-mortem with more detailed information.
-    * For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a Tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.
-    * Add a link to the incident call recording.
+1. 持っている全ての情報を記入します
+    * タイムラインに主眼を置くべきです。
+        * タイムラインには重要なステータス/影響や、対応者が行った重要なアクションを記入スべきです。
+    * Slackの履歴をさかのぼって対応者を特定し、津生きます。
+        * 同時にインシデントコマンダーと書記 (Scribe) も特定します
 
-1. Perform an analysis of the incident.
-    * Capture all available data regarding the incident. What caused it, how many customers were affected, etc.
-        * Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.
-    * Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)
-    * Identify the underlying cause of the incident (What happened, and _why_ did it happen).
+1. post-mortemにより詳細を記入します
+    * タイムラインのそれぞれの項目に、データのもととなるメトリクスや、サードパーティのページを特定します。
+      たとえばDatadogのグラフ、SumoLogicの検索結果、ツイートなどです。
+      タイムラインで説明するものは何でも構いません。
+    * インシデント呼び出しのレコードへのリンクを追加します。
 
-1. Write the external message that will be sent to customers. This will be reviewed during the post-mortem meeting before it is sent out.
-    * Avoid using the word "outage" unless it really was a full outage, use the word "incident" or "service degradation" instead. Customers generally see "outage" and assume the worst.
-    * Look at other examples of previous post-mortems to see the kind of thing you should send.
+1. インシデントの解析を行う
+    * 全てのインシデントに関係するデータを記録します。何が原因で、どのくらいの顧客に影響が会ったかなどです。
+        * どのようにデータを収集したか確認できるように、データを調べるためのコマンドやクエリも追記すべきです。
+    * 顧客への影響を把握します（一般的には、イベントの送信、処理の遅延、通知の遅延などです）
+    * インシデントの根本的原因を特定します（なにが起こって、 _なぜ_ 起こったか）。
 
-1. Post a link to the post-mortem into Slack to be reviewed for style and content by internal parties, you should try to do this about **24 hours before** the meeting is scheduled.
-    * Experienced post-mortem writers will give you feedback on the level of detail and content of the post-mortem. This avoids wasted time during the meeting.
+1. 顧客に送信した告知メッセージを記述します。これは顧客に送信する前に、post-mortemのミーティングで確認します。
+    * 本当にサービスが停止している場合を除いて、"outage (停止)" という言葉を使わないでください。
+      代わりに"incident (インシデント)" や "service degradation (サービスの劣化)" を使ってください。
+      顧客は "outage (停止)"という言葉を見ると最悪の状態だと解釈します。
+    * 過去のpost-mortemsの例から、どのようなものを送るべきか確認します。
 
-1. Attend the post-mortem meeting (see below section for more information).
+1. 内部関係者でpost-mortemの内容やスタイルをレビューするために、Slackにpost-mortemへのリンクを投稿します。
+   これはミーティングの **24時間以内** を目指すべきです。
+    * 経験豊富なpost-mortem執筆者が、詳細の具合やpost-mortemの内容についてフィードバックをくれます。
+      これでミーティング中の無駄な時間を回避できます。
 
-1. Create any followup action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),
-    * Go through the history in Slack to identify any TODO items.
-    * Label all tickets with their severity level and date tags.
-    * Any actions which can reduce re-occurrence of the incident.
-        * (There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).
-    * Identify any actions which can make our incident response process better.
-    * Be careful with creating too many tickets. Generally we only want to create things that are P0/P1's. Things that absolutely should be dealt with.
+1. post-mortemミーティングに参加します（詳細は後述します）
 
-1. Communicate internally so we can learn from the incident.
-    * Send out an internal email to the relevant stakeholders describing the results and key learnings.
-    * Include a link to the post-mortem.
+1. フォローアップ用のJIRAチケットを作成します（チケットを作成するために方針を決めたい場合は、議論のためのメモを書き留めておきます）
+    * Slackの履歴をさかのぼり、全てのTODO項目を特定します。
+    * 全てのチケットに緊急度レベルと日付タグを付与します。
+    * インシデントの再発防止のためのアクション。
+        * (これはトレードオフかもしれないが、それで構わない。ときには、関心領域がそれに費やす労力に見合わないこともあります)。
+    * 我々のインシデント対応手順を良くするアクションを特定します。
+    * 多すぎるチケットを作成しないよう気をつけてください。絶対に対応スべき、P0/P1のチケットのみを作成します。
 
-## Post-Mortem Meeting
-These meetings should generally last 15-30 minutes, and are intended to be a wrap up of the post-mortem process. We should discuss what happened, what we could've done better, and any followup actions we need to take. The goal is to suss out any disagreement on the facts, analysis, or recommended actions, and to get some wider awareness of the problems that are causing reliability issues for us.
+1. インシデントから何を学んだかを社内に連絡します
+    * 関係するステークホルダーに、結果と主に何を学んだかをメールします。
+    * post-mortemのリンクも含めます
 
-You should invite the following people to the post-mortem meeting,
+## post-mortemミーティング
 
-* Always
-    * The incident commander.
-    * The incident commander shadowee (if there was one).
-    * Service owners involved in the incident.
-    * Key engineer(s)/responders involved in the incident.
-    * Engineering manager for impacted systems.
-    * Product manager for impacted systems. 
-* Optional
-    * Customer liaison. (Only SEV-1 incidents)
+このミーティングは通常15-30分で、post-mortemのまとめをすることを目的とします。
+我々は、何が起こったのかあ、どうすればよかったか、どのようなフォローアップアクションが必要かを話し合います。
+その目的は、事実や解析、また推奨アクションに基づいて意見の相違を見つけ出し、我々の信頼性にまつわる問題を引き起こしている問題を広く認知してもらうことです。
 
-The incident commander will run the meeting, keeping the discussion focused and on track. However the post-mortem owner will likely be doing most of the talking as they walk through the post-mortem report.
+post-mortemミーティングでは以下の人々を招くべきです
 
-A general agenda for the meeting would be something like,
+* 常に
+    * インシデントコマンダー
+    * インシデントコマンダーの補佐（いれば)
+    * インシデントに関係するサービイスオーナー
+    * インシデントに関係する、主要なエンジニアや対応者
+    * 影響したシステムのエンジニアリングマネージャー
+    * 影響したシステムのプロダクトマネージャー
+* 任意
+    * カスタマー窓口 (SEV-1インシデントのみ)
 
-1. Recap the timeline, to make sure everyone agrees and is on the same page.
-1. Recap important points, and any unusual items.
-1. Discuss how the problem could've been caught.
-    * Did it show up in [canary](https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases)?
-    * Could it have been caught in tests, or loadtest environment?
-1. Discuss customer impact. Any comments from customers, etc.
-1. Review action items that have been created, discuss if appropriate, or if more are needed, etc.
+インシデントコマンダーがミーティングを進行して議題から逸れないようにすべきです。
+しかしpost-mortemオーナーがpost-mortemを通してほとんどシャベルことになるでしょう。
 
-## Examples
-Here are some examples of post-mortems from other companies as a reference,
+ミーティングの主な議題は以下のとおりです。
+
+1. タイムラインの要約をして、全員が同じページを開いてることを確認します。
+1. 重要な点や変わった点を要約します。
+1. 問題がどのように発見できたかを議論します。
+    * [canary](https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases)で発見できたか？
+    * テストやロードテスト環境で見つかったか？
+1. 顧客への影響を議論します。カスタマーのコメントなど。
+1. 作成されたアクションの項目についてレビューし、適切かどうか、あるいは追加で必要かどうかなどを議論します。
+
+## 例
+
+他社のpost-mortemの例をいくつか列挙します
 
 * [Stripe](https://support.stripe.com/questions/outage-postmortem-2015-10-08-utc)
 * [LastPass](https://blog.lastpass.com/2015/06/lastpass-security-notice.html/comment-page-2/)
@@ -123,7 +146,7 @@ Here are some examples of post-mortems from other companies as a reference,
 * [GOV.UK Rail Accident Investigation](https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016)
 * [A List of Post-mortems!](https://github.com/danluu/post-mortems)
 
-## Useful Resources
+## 参考文献
 
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
