@@ -238,50 +238,50 @@
         <ul>
           
             <li class="anchor">
-              <a title="Engineering" href="#engineering">
-                Engineering
+              <a title="エンジニア" href="#_1">
+                エンジニア
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Customer Support / Customer Success" href="#customer-support-customer-success">
-                Customer Support / Customer Success
+              <a title="カスタマーサポート / カスタマーサクセス" href="#_2">
+                カスタマーサポート / カスタマーサクセス
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Marketing" href="#marketing">
-                Marketing
+              <a title="マーケティング" href="#_3">
+                マーケティング
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Product Management and Design" href="#product-management-and-design">
-                Product Management and Design
+              <a title="プロダクトマネージャーとデザイナー" href="#_4">
+                プロダクトマネージャーとデザイナー
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Executive Team" href="#executive-team">
-                Executive Team
+              <a title="経営陣" href="#_5">
+                経営陣
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Sales" href="#sales">
-                Sales
+              <a title="営業" href="#_6">
+                営業
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Human Resources (HR)" href="#human-resources-hr">
-                Human Resources (HR)
+              <a title="人事" href="#_7">
+                人事
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Finance" href="#finance">
-                Finance
+              <a title="経理" href="#_8">
+                経理
               </a>
             </li>
           
@@ -587,31 +587,45 @@
           
           
           <p><img alt="Who's On-Call?" src="../../assets/img/headers/who_oncall.png" /></p>
-<p>Organizational structures vary, but these are general guidelines about the way different functions in a business relate to incident response.</p>
-<p>Generally speaking, every department should have a primary point of contact, on-call rotation, and clear escalation path. Organizations should always strive to minimize dependencies and empower response teams as much as possible, but in novel situations you do not know who you will need to help out. A clear system for recruiting responders from all parts of the business ensures that when the unexpected happens, responders don’t waste time on manual processes or ambiguous points of contact.</p>
-<h2 id="engineering">Engineering<a class="headerlink" href="#engineering" title="Permanent link">#</a></h2>
-<p>Engineers are typically the primary responders and <a href="../../before/different_roles">subject matter experts</a> during incident response.</p>
-<p>Which engineering teams are involved in which responses varies with a company’s operational model. In some, a designated “Operations” or “Site Reliability Engineering” team may have initial responsibility for triage and assessment of new issues. At PagerDuty, the on-call engineer for an affected service has initial triage and assessment responsibility.</p>
-<h2 id="customer-support-customer-success">Customer Support / Customer Success<a class="headerlink" href="#customer-support-customer-success" title="Permanent link">#</a></h2>
-<p>Support is the voice of the customer during incident response. A member of the Customer Support team is the default <a href="../../training/customer_liaison">Customer Liaison</a> within the response team, updating customers and stakeholders about incident status through Twitter, an internal Slack channel, and other channels as needed. They may also serve as an internal liaison to keep stakeholders within the company up to date.</p>
-<h2 id="marketing">Marketing<a class="headerlink" href="#marketing" title="Permanent link">#</a></h2>
-<p>Marketing or Public Relations is the primary response team for any Public Relations Incident.</p>
-<p>Additionally, Marketing or Public Relations should be engaged in any incident of scope or severity such that the company’s brand or image is at risk, or where public updates need to be sent through customer communication channels such as mass email or the company blog.</p>
-<h2 id="product-management-and-design">Product Management and Design<a class="headerlink" href="#product-management-and-design" title="Permanent link">#</a></h2>
-<p>Product Managers and Designers are often on the hook for helping response teams make decisions when product functionality is impacted across multiple services or products. For example, if the response team has to decide which service to bring back up first, a Product Manager can help decide which one is more customer impacting.</p>
-<p>Product will also be involved in the <a href="../../after/post_mortem_process">post-mortem process</a>, for both scheduling follow-up action against other work as well as advising on any required product changes due to the issue.</p>
-<h2 id="executive-team">Executive Team<a class="headerlink" href="#executive-team" title="Permanent link">#</a></h2>
-<p>Clear processes for updating the executive team during major incident response helps ensure organization leadership has the context and information they need, and prevents <a href="../../training/glossary/#executive-swoop">executive swoops</a>. Additionally, while the Incident Commander has final authority during response, occasionally a major incident may require action at the highest levels of a company. For example, a senior executive may want to reach out to an impacted customer or partner to manage their relationship and help assure them the issue is getting the attention it needs.</p>
-<h2 id="sales">Sales<a class="headerlink" href="#sales" title="Permanent link">#</a></h2>
-<p>Sales are generally stakeholders during incident response. Salespeople should be notified when there is any impact to the product that may affect demos or customer conversations, and account owners should understand any potential impact to their accounts.</p>
-<h2 id="human-resources-hr">Human Resources (HR)<a class="headerlink" href="#human-resources-hr" title="Permanent link">#</a></h2>
-<p>HR is generally involved in any response to incidents affecting the safety or health of employees. Additionally, during a security incident, the security team may need to coordinate with HR both for management of an internal attacker as well as protection of any affected employees.</p>
-<h2 id="finance">Finance<a class="headerlink" href="#finance" title="Permanent link">#</a></h2>
-<p>Finance is most often a stakeholder during incident response, and should be kept up to date of any impacts to the platform that may affect billing, accounting, or end-of-month/quarter activities.</p>
-<p>However, finance should also have a clear on-call rotation and escalation path, as there may be components of incident response that require third-party account management or related actions.</p>
+<p>組織構造には色々ありますが、インシデント対応に関するビジネス上の様々な機能に関する一般的なガイドラインがあります。</p>
+<p>一般的に言うと、全ての部門には1次対応する窓口や、オンコールローテーション、明確なエスカレーションパスがあります。
+組織は常に依存関係を最小にして対応チームに権限を以上すべきですが、新しい状況では誰を手助けスべきかわからないこともあります。
+あらゆるビジネス部門から対応者を決める明確なシステムにより、不徳の事態が発生したときに手動手順や曖昧な連絡先に時間を浪費しなくなります。</p>
+<h2 id="_1">エンジニア<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>エンジニアは典型的なプライマリの対応社で、インシデント対応における<a href="../../before/different_roles">内容領域専門家 (Subject-matter expert)</a>です。</p>
+<p>どのエンジニアチームがどの応答に関与するかは、企業の運用モデルにより異なります。
+場合によってはオペレーションチーム、SREチームなどが、トリアージや問題を評価する最初の責務を持ちます。
+PagerDutyでは影響するサービスのオンコールエンジニアが、最初のトリアージと評価の責務があります。</p>
+<h2 id="_2">カスタマーサポート / カスタマーサクセス<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>サポートは、インシデント対応における顧客の声です。
+カスタマーサポートチームのメンバーはデフォルトで[顧客窓口 (Customer Liaison)]となり、必要に応じてTwitter、内部Slackチャネル、他のチャネルなどをつかて、インシデントの状態について顧客とステークホルダーにお知らせします。
+また社内のステークホルダーに、内部窓口として最新の情報をお知らせします。</p>
+<h2 id="_3">マーケティング<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>マーケティングまたは広報は、広報のインシデントに関する第1の対応者です。</p>
+<p>さらに、マーケティングまたは広報は、会社のブランドまたはイメージが機器にされされるような深刻なインシデントで、メールやブログなどを通じて顧客とのコミュニケーションチャネルにもなりえます。</p>
+<h2 id="_4">プロダクトマネージャーとデザイナー<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>プロダクトマネージャーとデザイナーは、多くの場合製品の機能が複数のサービスまたは製品に影響を与えるばあい、対応チームが意思決定する手助けをします。
+たとえば、対応チームが最初にどのサービスを復帰させるかを決定する時、プロダクトマネージャーはどのサービスが顧客に影響があるか手助けできます。</p>
+<p>製品は<a href="../../after/post_mortem_process">ポストモーテム</a>にも関与し、
+フォローアップをスケジュールしたり、問題に関する製品の変更をアドバイスします。</p>
+<h2 id="_5">経営陣<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>重大インシデントに対応してるとき、組織のリーダーが経営陣に必要な背景と情報を知らせることで、経営陣が<a href="../../training/glossary/#executive-swoop">現場に飛び込んでくる</a>ことを防ぎます。
+さらに、インシデントコマンダーは最終的な権限を持ちますが、大規模インシデントが会社の最高レベルのアクションを必要とすることがあります。
+たとえばシニア経営陣が、影響をうける顧客またはパートナーに連絡をとり、問題に取り組んでいるということを知らせたい場合があります。</p>
+<h2 id="_6">営業<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>インシデント対応中は、影響は通常ステークホルダーとなります。
+デモや顧客との商談に影響する場合はそれを知らせ、アカウント所有者は潜在的な影響を理解する必要があります。</p>
+<h2 id="_7">人事<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<p>人事は通常は、従業員の安全または栄光に影響のあるインシデントへの対応に関与します。
+さらにセキュリティインシデントの場合、セキュリティチームは内部犯行と影響する従業員の保護の両方のために、人事と連携する必要があります。</p>
+<h2 id="_8">経理<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<p>多くの場合、経理はインシデント対応中のステークホルダーとなり、影響のある支払い、会計、あるいは月末、四半期ごとの活動に影響があるプラットフォームへの影響を常に考える必要があります。</p>
+<p>しかし、インシデント対応でサードパーティのアカウント管理や関連するアクションが必要になるコンポーネントがある可能性があるので、経理は明確なオンコールのローテーションやエスカレーションパスを持つべきですが、</p>
 <div class="admonition tip">
-<p class="admonition-title">Consider Your Entire Organization</p>
-<p>There may be other parts of your organization that need to be part of incident response, either as responders or stakeholders. It is important to identify the different areas of your business and think through situations in which they may need to be involved, as well as ensure that anyone on-call has proper incident response training and understands their responsibilities.</p>
+<p class="admonition-title">組織全体を考えてください</p>
+<p>他の部門がインシデント対応における、対応者やステークホルダーとなるかもしれません。
+業務の異なる分野を意識し、その状況で誰が関係するかを考えるのは大事です。
+そしてオンコールをうける誰もが、インシデント対応のトレーニングや責務を理解することが重要です。</p>
 </div>
           <aside class="copyright" role="note">
             
