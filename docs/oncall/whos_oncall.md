@@ -4,50 +4,65 @@ description: Organizational structures vary, but these are general guidelines ab
 ---
 ![Who's On-Call?](../assets/img/headers/who_oncall.png)
 
-Organizational structures vary, but these are general guidelines about the way different functions in a business relate to incident response.
+組織構造には色々ありますが、インシデント対応に関するビジネス上の様々な機能に関する一般的なガイドラインがあります。
 
-Generally speaking, every department should have a primary point of contact, on-call rotation, and clear escalation path. Organizations should always strive to minimize dependencies and empower response teams as much as possible, but in novel situations you do not know who you will need to help out. A clear system for recruiting responders from all parts of the business ensures that when the unexpected happens, responders don’t waste time on manual processes or ambiguous points of contact.
+一般的に言うと、全ての部門には1次対応する窓口や、オンコールローテーション、明確なエスカレーションパスがあります。
+組織は常に依存関係を最小にして対応チームに権限を以上すべきですが、新しい状況では誰を手助けスべきかわからないこともあります。
+あらゆるビジネス部門から対応者を決める明確なシステムにより、不徳の事態が発生したときに手動手順や曖昧な連絡先に時間を浪費しなくなります。
 
-## Engineering
+## エンジニア
 
-Engineers are typically the primary responders and [subject matter experts](../before/different_roles) during incident response.
+エンジニアは典型的なプライマリの対応社で、インシデント対応における[内容領域専門家 (Subject-matter expert)](../before/different_roles)です。
 
-Which engineering teams are involved in which responses varies with a company’s operational model. In some, a designated “Operations” or “Site Reliability Engineering” team may have initial responsibility for triage and assessment of new issues. At PagerDuty, the on-call engineer for an affected service has initial triage and assessment responsibility.
+どのエンジニアチームがどの応答に関与するかは、企業の運用モデルにより異なります。
+場合によってはオペレーションチーム、SREチームなどが、トリアージや問題を評価する最初の責務を持ちます。
+PagerDutyでは影響するサービスのオンコールエンジニアが、最初のトリアージと評価の責務があります。
 
-## Customer Support / Customer Success
+## カスタマーサポート / カスタマーサクセス
 
-Support is the voice of the customer during incident response. A member of the Customer Support team is the default [Customer Liaison](../training/customer_liaison) within the response team, updating customers and stakeholders about incident status through Twitter, an internal Slack channel, and other channels as needed. They may also serve as an internal liaison to keep stakeholders within the company up to date.
+サポートは、インシデント対応における顧客の声です。
+カスタマーサポートチームのメンバーはデフォルトで[顧客窓口 (Customer Liaison)]となり、必要に応じてTwitter、内部Slackチャネル、他のチャネルなどをつかて、インシデントの状態について顧客とステークホルダーにお知らせします。
+また社内のステークホルダーに、内部窓口として最新の情報をお知らせします。
 
-## Marketing
+## マーケティング
 
-Marketing or Public Relations is the primary response team for any Public Relations Incident.
+マーケティングまたは広報は、広報のインシデントに関する第1の対応者です。
 
-Additionally, Marketing or Public Relations should be engaged in any incident of scope or severity such that the company’s brand or image is at risk, or where public updates need to be sent through customer communication channels such as mass email or the company blog.
+さらに、マーケティングまたは広報は、会社のブランドまたはイメージが機器にされされるような深刻なインシデントで、メールやブログなどを通じて顧客とのコミュニケーションチャネルにもなりえます。
 
-## Product Management and Design
+## プロダクトマネージャーとデザイナー
 
-Product Managers and Designers are often on the hook for helping response teams make decisions when product functionality is impacted across multiple services or products. For example, if the response team has to decide which service to bring back up first, a Product Manager can help decide which one is more customer impacting.
+プロダクトマネージャーとデザイナーは、多くの場合製品の機能が複数のサービスまたは製品に影響を与えるばあい、対応チームが意思決定する手助けをします。
+たとえば、対応チームが最初にどのサービスを復帰させるかを決定する時、プロダクトマネージャーはどのサービスが顧客に影響があるか手助けできます。
 
-Product will also be involved in the [post-mortem process](../after/post_mortem_process), for both scheduling follow-up action against other work as well as advising on any required product changes due to the issue.
+製品は[ポストモーテム](../after/post_mortem_process)にも関与し、
+フォローアップをスケジュールしたり、問題に関する製品の変更をアドバイスします。
 
-## Executive Team
+## 経営陣
 
-Clear processes for updating the executive team during major incident response helps ensure organization leadership has the context and information they need, and prevents [executive swoops](../training/glossary/#executive-swoop). Additionally, while the Incident Commander has final authority during response, occasionally a major incident may require action at the highest levels of a company. For example, a senior executive may want to reach out to an impacted customer or partner to manage their relationship and help assure them the issue is getting the attention it needs.
+重大インシデントに対応してるとき、組織のリーダーが経営陣に必要な背景と情報を知らせることで、経営陣が[現場に飛び込んでくる](../training/glossary/#executive-swoop)ことを防ぎます。
+さらに、インシデントコマンダーは最終的な権限を持ちますが、大規模インシデントが会社の最高レベルのアクションを必要とすることがあります。
+たとえばシニア経営陣が、影響をうける顧客またはパートナーに連絡をとり、問題に取り組んでいるということを知らせたい場合があります。
 
-## Sales
+## 営業
 
-Sales are generally stakeholders during incident response. Salespeople should be notified when there is any impact to the product that may affect demos or customer conversations, and account owners should understand any potential impact to their accounts.
+インシデント対応中は、影響は通常ステークホルダーとなります。
+デモや顧客との商談に影響する場合はそれを知らせ、アカウント所有者は潜在的な影響を理解する必要があります。
 
-## Human Resources (HR)
+## 人事
 
-HR is generally involved in any response to incidents affecting the safety or health of employees. Additionally, during a security incident, the security team may need to coordinate with HR both for management of an internal attacker as well as protection of any affected employees.
+人事は通常は、従業員の安全または栄光に影響のあるインシデントへの対応に関与します。
+さらにセキュリティインシデントの場合、セキュリティチームは内部犯行と影響する従業員の保護の両方のために、人事と連携する必要があります。
 
-## Finance
+## 経理
 
-Finance is most often a stakeholder during incident response, and should be kept up to date of any impacts to the platform that may affect billing, accounting, or end-of-month/quarter activities.
+多くの場合、経理はインシデント対応中のステークホルダーとなり、影響のある支払い、会計、あるいは月末、四半期ごとの活動に影響があるプラットフォームへの影響を常に考える必要があります。
 
-However, finance should also have a clear on-call rotation and escalation path, as there may be components of incident response that require third-party account management or related actions.
 
-!!! tip "Consider Your Entire Organization"
+しかし、インシデント対応でサードパーティのアカウント管理や関連するアクションが必要になるコンポーネントがある可能性があるので、経理は明確なオンコールのローテーションやエスカレーションパスを持つべきですが、
 
-    There may be other parts of your organization that need to be part of incident response, either as responders or stakeholders. It is important to identify the different areas of your business and think through situations in which they may need to be involved, as well as ensure that anyone on-call has proper incident response training and understands their responsibilities.
+!!! tip "組織全体を考えてください"
+
+    他の部門がインシデント対応における、対応者やステークホルダーとなるかもしれません。
+    業務の異なる分野を意識し、その状況で誰が関係するかを考えるのは大事です。
+    そしてオンコールをうける誰もが、インシデント対応のトレーニングや責務を理解することが重要です。
