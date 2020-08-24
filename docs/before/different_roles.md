@@ -2,160 +2,215 @@
 cover: assets/img/covers/roles.png
 description: There are several main roles for our incident response teams at PagerDuty. This page describes each of our roles in detail, why it's important to have them, and what their responsibilities are.
 ---
-There are several main roles for our incident response teams at PagerDuty. Certain roles only have one person per incident (e.g. IC), whereas other roles can have multiple people (e.g. Subject Matter Expert, SME). It's all about coming together as a team, working the problem, and getting a solution quickly.
 
-Here is a rough outline of our role hierarchy, with each role discussed in more detail on the rest of this page.
+PagerDutyのインシデント対応チームには、いくつかの重要な役割があります。
+特定の役割は１つのインシデントに対して1人しかいなかったり（例えばインシデントコマンダー（Incident Commander））、複数人で構成される場合があります（例えば内容領域専門家（Subject Matter Expert））。
+それらのチームが一丸と成り、問題に取り組んで迅速に問題を解決します。
+
+我々の役割の階層図を示します。
+このページの残りで、それぞれの役割について解説します。
 
 ![Incident Response Structure](../assets/img/misc/incident_response_roles.png)
 
-During larger complex incidents, the role structure may be adjusted to account for the creation of sub-teams. Read about how we handle [complex incidents](/before/complex_incidents.md) for more information.
+大規模で複雑なインシデントでは、サブチームも考慮した役割を構成できます。
+詳細については[複雑なインシデント](/before/complex_incidents.md)を参照してください。
 
-!!! tip "Flexible Structure"
-     It is not intended that every role be filled by a different person for every incident. For example, if the incident is small enough in scope, the Deputy might also take on the responsibilities of the Scribe and Internal Liaison for that specific incident. The structure should be flexible and scale based on the size and scope of the incident.
-
----
-
-## Incident Commander (IC)
-
-### What is it?
-An Incident Commander acts as the single source of truth of what is currently happening and what is going to happen during an major incident. They come in all shapes, sizes, and colors.
-
-### Why have one?
-As any software system grows in size and complexity, things break and cause incidents. The Incident Commander is needed to help drive major incidents to resolution.
-
-### What are the responsibilities?
-1. Help prepare for major incidents,
-    * Setup communications channels for major incidents.
-    * Funnel people to these communications channels when there is a major incident.
-    * Train team members on how to communicate during major incidents and train other Incident Commanders.
-1. Drive major incidents to resolution,
-    * Get everyone on the same communication channel.
-    * Collect information from team members for their services/area of ownership status.
-    * Collect proposed repair actions, then recommend repair actions to be taken.
-    * Delegate all repair actions, the Incident Commander is NOT a resolver.
-    * Be the single authority on system status
-1. Post Mortem,
-    * Creating the initial template right after the incident so people can put in their thoughts while fresh.
-    * Assigning the post-mortem after the event is over, this can be done after the call.
-    * Work with Team Leads/Managers on scheduling preventive actions.
-
-### Who are they?
-Anyone on the Incident Commander on-call schedule. Trainees are typically on the Incident Commander Shadow schedule.
-
-### How can I become one?
-Take a look at our [Incident Commander training guide](/training/incident_commander.md).
+!!! tip "柔軟に構成する"
+    全てのインシデントにおいて、各役割をそれぞれ別の人で構成する必要はありません。
+    例えばインシデントのスコープが十分に小さい場合は、補佐（Deputy）は記録係（Scribe）と内部窓口（Internal Liaison）をしても良いのです。
+    インシデントの規模に基づいてスケールできるように、チームの構成は柔軟であるべきです。
 
 ---
 
-## Deputy
+## インシデントコマンダー（Incident Commander: IC）
 
-### What is it?
-A Deputy is a direct support role for the Incident Commander. This is not a shadow where the person just observes, the Deputy is expected to perform important tasks during an incident.
+### この役割はなにか？
 
-### Why have one?
-It's important for the IC to focus on the problem at hand, rather than worrying about documenting the steps or monitoring timers. The deputy helps to support the IC and keep them focussed on the incident.
+インシデントコマンダー（Incident Commander）は、重大インシデント発生中で何が起こっているか、何が起ころうとしているかの、唯一の信頼できる情報源です。
+この役割がすることは多種多様です。
 
-### What are the responsibilities?
-The Deputy is expected to:
+### なぜ必要か？
 
-1. Bring up issues to the Incident Commander that may otherwise not be addressed (keeping an eye on timers that have been started, circling back around to missed items from a roll call, etc).
-1. Be a "hot standby" Incident Commander, should the primary need to either transition to a SME, or otherwise have to step away from the IC role.
-1. Manage the incident call, and be prepared to remove people from the call if instructed by the Incident Commander.
+ソフトウェアシステムの規模や複雑度が大きくなると、物事が壊れてインシデントが発生します。
+インシデントコマンダーは、重大インシデントを解決に導くのに必要な役割です。
 
-### Who are they?
-Any Incident Commander can act as a deputy. Deputies need to be trained as an Incident Commander as they may be required to take over command.
+### この役割の責務は？
 
-### How can I become one?
-Take a look at our [Deputy training guide](/training/deputy.md). Deputies also need to be [trained as an Incident Commander](/training/incident_commander.md).
+1. 重大インシデントの準備を支援
+    * 重大因子でのコミュニケーションチャネルの用意。
+    * 重大員市電お発生中に、人々をコミュニケーションチャネルに集める。
+    * インシデント発生中のコミュニケーションのとり方をチームメンバーに教えたり、他のインシデントコマンダーを教育する。
+1. 重大インシデントを解決に導く
+    * みんなを同じコミュニケーションチャンネルに集める。
+    * サービスや領域の所有者から、ステータスに関する情報を収集する。
+    * 問題を修正するアクションの提案を収集して、それを実施するように進める。
+    * 全てのアクセ本を以上する。インシデントコマンダーは解決する人ではない。
+    * システムの状態に関する唯一の権限を持っている
+1. ポストモーテム
+    * インシデント直後にテンプレートを作成し、記憶の新しいうちに関係者が記入できるようにする
+    * イベントが終わった後に、ポストモーテムを割り当てる。これは後日でもできる。
+    * リーダーやマネージャーと共に、再発防止のためのスケジュールを準備する。
+
+### 誰がすべきか？
+
+オンコールスケジュール上の誰でもできます。
+見習いは、通常インシデントコマンダーをシャドーイングするスケジュールにいます。
+
+### どうすればなれるか？
+
+[インシデントコマンダーのトレーニングガイド](/training/incident_commander.md)を読んでください。
 
 ---
 
-## Scribe
+## 補佐（Deputy）
 
-### What is it?
-A Scribe documents the timeline of an incident as it progresses, and makes sure all important decisions and data are captured for later review.
+### この役割はなにか？
 
-### Why have one?
-The incident commander will need to focus on the problem at hand, and the subject matter experts will need to focus on resolving the incident. It is important to capture a timeline of events as they happen so that they can be reviewed during the post-mortem to determine how well we performed, and so we can accurately determine any additional impact that we might not have noticed at the time.
+補佐（Deputy）は、インシデントコマンダーを直接サポートします。
+この役割は観察するためにただ一緒にいるだけではなく、インシデント発生中に重要な役割が期待されます。
 
-### What are the responsibilities?
+### なぜ必要か？
+
+インシデントコマンダーにとって重要なことは、手順のドキュメント化やタイマーを測ることではなく、目の前の問題に集中することです。
+補佐はインシデントコマンダーをサポートして、インシデントコマンダーがインシデントに集中できるように支援します。
+
+### この役割の責務は？
+
+補佐は以下のことが期待されます
+
+1. 他の人が対応できないことを、インシデントコマンダーに提示する（開始したタイマーを監視し、点呼で見逃した項目を後で見返すなど）。
+1. インシデントコマンダーが内容領域専門家や他の役割になった場合、インシデントコマンダーの「ホットスタンバイ」となる。
+1. インシデント呼び出しを管理し、インシデントコマンダーから指示されると呼び出しから人を外す。
+
+### 誰がすべきか？
+
+インシデントコマンダーは補佐もできます。
+補佐はインシデントコマンダーを引き継ぐ可能性があるので、インシデントコマンダーとしてのトレーニングが必要です。
+
+### どうすればなれるか？
+
+[補佐のトレーニングガイド](/training/deputy.md)を読んでください。
+補佐は[インシデントコマンダー](/training/incident_commander.md)のトレーニングも必要です。
+
+---
+
+## 記録係（Scribe）
+
+### この役割はなにか？
+
+記録係（Scribe）は、後から見返すときに役立つように、インシデントの経過を時系列に基づき記録します。
+
+### なぜ必要か？
+
+インシデントコマンダーは目の前のインシデントに集中する必要があり、内容領域専門家はインシデントの解決に集中する必要があります。
+ポストモーテムで私たちに何ができたかを振り返ったり、そのとき気づけなかった影響を正確に特定するために、何が起こったかを時系列に基づいて記録することは重要です。
+
+### この役割の責務は？
+
+記録係は以下のとこが期待されます。
 The Scribe is expected to:
 
-1. Ensure the incident call is being recorded.
-1. Note in Slack important data, events, and actions, as they happen. Specifically:
-    * Key actions as they are taken (Example: "prod-server-387723 is being restarted to attempt to remove the stuck lock")
-    * Status reports when one is provided by the IC (Example: "We are in SEV-1, service A is currently not processing events due to a stuck lock, X is restarting the app stack, next checkin in 3 minutes")
-    * Any key callouts either during the call or at the ending review (Example: "Note: (Bob B) We should have a better way to determine stuck locks.")
+1. インシデント呼び出しが記録されていることを確認する
+1. Slackの重要なデータ、イベント、行動などが発生したことを記録する。特に
+    * 事項した主要なアクション (例えば、「stuck lockを解除するために `prod-server-387723` を再起動しました」など)
+    * インシデントコマンダーからの提供された状況報告 （例えば、「インシデントはSEV-1で、サービスAは現在stuck lockのため、イベント処理をしていない。Xはアプリを再起動して、次の3分以内に報告する」）
+    * 呼び出し中やレビュー終了時の主要な発言（例えば、"Note: (Bob B) stuck lockを特定する良い方法があるはず"）
 
-### Who are they?
-Anyone can act as a scribe during an incident, and are chosen by the Incident Commander at the start of the call. Typically the Deputy will act as the Scribe, but that doesn't necessarily need to happen, and for larger incidents may not be possible.
+### 誰がすべきか？
 
-### How can I become one?
-Follow our [Scribe training guide](/training/scribe.md), and then notify the Incident Commanders that you would like to be considered for scribing for the next incident.
+インシデント対応中は誰でも記録係に成ることができ、呼び出しの最初でインシデントコマンダーが指名します。
+通常は補佐が記録係をしますが、必ずしもその必要はなく、大規模なインシデントの場合はできません。
 
----
+### どうすればなれるか？
 
-## Subject Matter Expert
-
-### What is it?
-A Subject Matter Expert (SME), sometimes called a "Resolver", is a domain expert or designated owner of a component or service that is part of the PagerDuty software stack.
-
-### Why have one?
-The IC and deputy are not all-knowing super beings. When there is a problem with a service, an expert in that service is needed to be able to quickly help identify and fix issues.
-
-### What are the responsibilities?
-1. Being able to diagnose common problems with the service.
-1. Being able to rapidly fix issues found during an incident.
-1. Concise communication skills, specifically for CAN reports:
-    * Condition: What is the current state of the service? Is it healthy or not?
-    * Actions: What actions need to be taken if the service is not in a healthy state?
-    * Needs: What support does the resolver need to perform an action?
-
-### Who are they?
-Anyone who is considered a "domain expert" can act as a resolver for an incident. Typically the service's primary on-call will act as the SME for that service.
-
-### How can I become one?
-Take a look at our [Subject Matter Expert training guide](/training/subject_matter_expert.md). You should also discuss with your team and service owner to determine what the requirements are for your particular service.
+[記録係トレーニングガイド](/training/scribe.md)を読んで、次回のインシデントで記録係になりたいとインシデントコマンダーに伝えてください。
 
 ---
 
-## Customer Liaison
+## 内容領域専門家（Subject Matter Expert）
 
-### What is it?
-A person responsible for interacting with customers, either directly, or via our public communication channels. Typically a member of the Customer Support team.
+### この役割はなにか？
 
-### Why have one?
-All of the other roles will be actively working on identifying the cause and resolving the issue, we need a role which is focused purely on the customer interaction side of things so that it can be done properly, with the due care and attention it needs.
+内容領域専門家（Subject Matter Expert : SME）は、解決者（Resolver）とも呼ばれ、PagerDutyを構成するコンポーネントやサービスの、ドメインエキスパートまたは所有者に指名された人です。
 
-### What are the responsibilities?
-1. Post any publicly facing messages regarding the incident (Twitter, StatusPage, etc).
-1. Notify the IC of any customers reporting that they are affected by the incident.
-1. Provide customers with the external message from the post-mortem once it is completed.
+### なぜ必要か？
 
-### Who are they?
-Any member of the Support Team can act as a customer liaison.
+インシデントコマンダーや補佐は、全てを知っている超人的存在ではありません。
+サービスでもんだいが発生したバイ、問題を迅速に特定して解決するために、サービスの専門家が必要になります。
 
-### How can I become one?
-Follow our [Customer Liaison training guide](/training/customer_liaison.md), and discuss with the Support Team about becoming our next Customer Liaison.
+### この役割の責務は？
+
+1. サービスの共通的な問題に対する診断をする。
+1. インシデント発生中に発見した問題を即座に修正する
+1. 簡潔にコミュニケーションするスキル、特にCANレポートと呼ばれる
+    * 状態 (Condition): サービスの現在の状態は？正常かどうか？
+    * 行動 (Actions): サービスが正常じゃない場合、どのような行動が必要か？
+    * 要請 (Needs): サービスを解決するために何が必要か？
+
+### 誰がすべきか？
+
+「ドメインエキスパート」なら誰でもできます。
+通常はサービスの最初のオンコールは、内容領域専門家となります。
+
+### どうすればなれるか？
+
+[内容領域専門家トレーニングガイド](/training/subject_matter_expert.md)を読んでください。
+また、あなたのチームのオーナーと話し合い、サービス固有の要件が何なのかを判断する必要があります。
 
 ---
 
-## Internal Liaison
+## 顧客窓口（Customer Liaison）
 
-### What is it?
-A person responsible for interacting with internal stakeholders. Whether it's notifying an internal team of the incident, or mobilizing additional responders within the organization.
+### この役割はなにか？
 
-### Why have one?
-For larger incidents, we may have multiple teams across the organization involved. Having a dedicated liaison to mobilize those teams and bring them up to speed free's up the rest of the responders to handle the incident.
+顧客と直接または外部公開してるチャネルを経由して、やり取りをする人です。
+通常はカスタマーサポートチームのメンバーです。
 
-### What are the responsibilities?
-1. Page SME's or other on-call engineers as instructed by the Incident Commander.
-1. Notify other teams within the organization (e.g. Finance, Legal, Marketing), as instructed by the Incident Commander.
-1. Liaise with stakeholders and provide status updates as necessary.
-1. Interact with internal stakeholders to answer their questions, to keep the primary call distraction free.
+### なぜ必要か？
 
-### Who are they?
+他の全ての役割は、問題の原因究明や解決に取り組んでいます。
+顧客とのやり取りを適切に処理できるよう、それに焦点を当てた役割が必要になります。
+
+### この役割の責務は？
+
+1. インシデントに関するメッセージを公開する（Twitter、StatusPageなど）
+1. インシデントの影響がある顧客について、インシデントコマンダーに知らせる
+1. ポストモーテムが完了したら、顧客にメッセージを提供する
+
+### 誰がすべきか？
+
+サポートチームのメンバーは誰でも顧客窓口になれます。
+
+### どうすればなれるか？
+
+[顧客窓口トレーニングガイド](/training/customer_liaison.md)を読んで、サポートチームで誰が顧客窓口になるか話し合ってください。
+
+---
+
+## 内部窓口（Internal Liaison）
+
+### この役割はなにか？
+
+社内のステークホルダーとのやり取りをする人です。
+インシデントの内部チームにお知らせをするか、組織名から追加の対応者を動員します。
+
+### なぜ必要か？
+
+大規模インシデントでは、組織をまたいだ複数チームが関係する事があります。
+これらのチームを動員して、迅速にインシデントに対応できるように、特定の窓口を設置します。
+
+### この役割の責務は？
+
+1. インシデントコマンダーの指示に応じて、内容領域専門家やオンコールのエンジニアを呼び出す
+1. インシデントコマンダーの指示に応じて、組織内の他のチームに通知する（経理、法務、マーケティングなど）
+1. ステークホルダーと連絡を取り、必要に応じて状況を伝える
+1. 社内のステークホルダーからの質問に答え、オンコール対応している人の妨げにならないようにする
+
+### 誰がすべきか？
+
 Anyone designated by the Incident Commander during incident response.
+インシデント対応中に、インシデントコマンダーが指名した人。
 
-### How can I become one?
-Follow our [Internal Liaison training](/training/internal_liaison.md).
+### どうすればなれるか？
+
+[内部窓口トレーニング](/training/internal_liaison.md)を読んでください。
