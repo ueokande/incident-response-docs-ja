@@ -202,14 +202,14 @@
         <ul>
           
             <li class="anchor">
-              <a title="Being On-Call" href="#being-on-call">
-                Being On-Call
+              <a title="オンコールになる" href="#_1">
+                オンコールになる
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Before an Incident" href="#before-an-incident">
-                Before an Incident
+              <a title="インシデント発生前" href="#_2">
+                インシデント発生前
               </a>
             </li>
           
@@ -571,25 +571,32 @@
           
           
           <p><img alt="Incident Response at PagerDuty" src="./assets/img/headers/pagerduty_ir.jpg" /></p>
-<p>This documentation covers parts of the PagerDuty Incident Response process. It is a cut-down version of our internal documentation, used at PagerDuty for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after. It is intended to be used by on-call practitioners and those involved in an operational incident response process (or those wishing to enact a formal incident response process). See the <a href="about/">about page</a> for more information on what this documentation is and why it exists.</p>
+<p>このドキュメントでは、PagerDutyにおけるインシデント対応プロセスを紹介します。
+これはPagerDuty内で、オンコールを始める従業員や、重大インシデントで利用されいてる、内部ドキュメントの一部を切り出したものです。
+このドキュメントではインシデントに備えることだけではなく、インシデント発生中、また発生後の対応についても説明します。
+オンコールに対応する人や、インシデントに対応する人（またきちんとしたインシデント対応プロセスを制定したい人）が読むことを想定しています。
+このドキュメントが何なのか、なぜ存在するかは、<a href="about/">About</a>を参照してください。</p>
 <div class="admonition tip">
-<p class="admonition-title">Don't know where to start?</p>
-<p>If you're new to incident response and don't yet have a formal process in your organization, we recommend looking at our <a href="getting_started/">Getting Started</a> page for a quick list of things you can do to begin, and our <a href="training/courses/incident_response/">Training Course</a> page for a more detailed overview of our process.</p>
+<p class="admonition-title">どこから手を付けるべきか？</p>
+<p>もしあなたがインシデント対応が初めてで、組織的な手順がない場合は、まず<a href="getting_started/">Getting Started</a>で何ができるかを確認してください。
+そして詳細な手順を、<a href="training/courses/incident_response/">Training Course</a>から確認することをお勧めします。</p>
 </div>
-<h2 id="being-on-call">Being On-Call<a class="headerlink" href="#being-on-call" title="Permanent link">#</a></h2>
-<p>If you've never been on-call before, you might be wondering what it's all about. These pages describe what the expectations of being on-call are, along with some resources to help you.</p>
+<h2 id="_1">オンコールになる<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>まだあなたがオンコールを体験していないのなら、それが何なのかが疑問に思うかも知れません。
+このページでは、オンコールに期待されていることと、いくつかの実例を紹介します。</p>
 <ul>
-<li><a href="oncall/being_oncall/">Being On-Call</a> - <em>A guide to being on-call, both what your responsibilities are, and what they are not.</em></li>
-<li><a href="oncall/alerting_principles/">Alerting Principles</a> - <em>The principles we use to determine what things page an engineer, and what time of day they page.</em></li>
+<li><a href="oncall/being_oncall/">オンコールになる</a> - <em>オンコールになるには。あなたの責務とそうでないもの</em></li>
+<li><a href="oncall/alerting_principles/">アラートの原則</a> - <em>エンジニアを呼び出すための手段やタイミングなどの原則</em></li>
 </ul>
-<h2 id="before-an-incident">Before an Incident<a class="headerlink" href="#before-an-incident" title="Permanent link">#</a></h2>
-<p>Reading material for things you probably want to know before an incident occurs. You likely don't want to be reading these during an actual incident.</p>
+<h2 id="_2">インシデント発生前<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>インシデントが発生する前に読むべきものです。
+実際にインシデントが発生してからでは読むものではないでしょう。</p>
 <ul>
-<li><a href="before/what_is_an_incident/">What is an Incident?</a> - <em>Before we can talk about incident response, we need to define what an incident actually is.</em></li>
-<li><a href="before/severity_levels/">Severity Levels</a> - <em>Information on our severity level classification. What constitutes a SEV-3 vs SEV-1? What response do they get?</em></li>
-<li><a href="before/different_roles/">Different Roles for Incidents</a> - <em>Information on the roles during an incident; Incident Commander, Scribe, etc.</em></li>
-<li><a href="before/call_etiquette/">Incident Call Etiquette</a> - <em>Our etiquette guidelines for incident calls, before you find yourself in one.</em></li>
-<li><a href="before/complex_incidents/">Complex Incidents</a> - <em>Our guide for handling larger, more complex incidents.</em></li>
+<li><a href="before/what_is_an_incident/">インシデントとはなにか？</a> - <em>インシデント対応について議論する前に、インシデントとは何なのか？</em></li>
+<li><a href="before/severity_levels/">深刻度レベル</a> - <em>深刻度レベルの分類。SEV-3とSEV-1のち外野、それぞれの対処方法</em></li>
+<li><a href="before/different_roles/">インシデント発生時の役割</a> - <em>インシデントコマンダー（Incident Commander）、補佐（Scribe）などの、インシデント発生時の役割</em></li>
+<li><a href="before/call_etiquette/">インシデント通話のエチケット</a> - <em>インシデント通話に参加するまでに知っておくべきエチケット</em></li>
+<li><a href="before/complex_incidents/">複雑なインシデント</a> - <em>大規模で複雑なインシデントに立ち向かうための手引き</em></li>
 </ul>
 <h2 id="during-an-incident">During an Incident<a class="headerlink" href="#during-an-incident" title="Permanent link">#</a></h2>
 <p>Information and processes during a major incident.</p>

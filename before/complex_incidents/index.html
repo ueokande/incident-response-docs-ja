@@ -301,14 +301,14 @@
         <ul>
           
             <li class="anchor">
-              <a title="Identifying Complex Incidents" href="#identifying-complex-incidents">
-                Identifying Complex Incidents
+              <a title="複雑なインシデントを特定する" href="#_1">
+                複雑なインシデントを特定する
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Sub-Teams" href="#sub-teams">
-                Sub-Teams
+              <a title="サブチーム" href="#_2">
+                サブチーム
               </a>
             </li>
           
@@ -550,31 +550,39 @@
             <h1>Complex Incidents</h1>
           
           
-          <p>There will come a time when you will be involved in an incident (or multiple concurrent incidents) which ends up spanning a large number of resources. In these cases it's important for everyone to maintain an effective <a href="../../training/glossary/#span-of-control">span of control</a>. This page describes how we manage such incidents.</p>
-<h2 id="identifying-complex-incidents">Identifying Complex Incidents<a class="headerlink" href="#identifying-complex-incidents" title="Permanent link">#</a></h2>
-<p>Perhaps multiple issues are happening at once, or an existing incident escalated and had a knock-on effect on other services. It's important to identify these types of incidents as early as possible to prevent confusion and burn-out. Here are a few key things the Incident Commanders will be watching out for to help to identify a complex incident,</p>
+          <p>多くのリソースにまたがった、インシデント（または同時多発的な複数インシデント）に出くわす時が来るでしょう。
+このような場合には、全員が効果的に<a href="../../training/glossary/#span-of-control">span of control</a>を守ることが重要です。
+このページでは、このようなインシデントにどう対処するかを説明します。</p>
+<h2 id="_1">複雑なインシデントを特定する<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>おそらく、同時に複数の問題が発生するか、すでに発生したインシデントが連鎖的に他のサービスに影響を与えることがあるでしょう。
+混乱や疲れ果てる事がないように、これらの種類のインシデントを特定するのは重要です。
+ここでは複雑なインシデントの特定に役立つ、インシデントコマンダーが注意すべきいくつかの点を紹介します。</p>
 <ol>
 <li>
-<p>Are multiple teams involved?</p>
+<p>複数のチームが関係していますか？</p>
 <ul>
-<li>Are most of them actively investigating multiple issues?</li>
+<li>それらのチームは複数の問題を調査していますか？</li>
 </ul>
 </li>
 <li>
-<p>Multiple symptoms are present, and do not appear to have any obvious correlation.</p>
+<p>複数の症状があり、明らかな相関関係がなさそうですか？</p>
 </li>
 <li>
-<p>A group of SME's are all working on the same analysis.</p>
+<p>SMEのグループが同じ分析に取り組んでいます。</p>
 </li>
 <li>
-<p>The incident calls "feels crowded". This is a rather fuzzy metric, but most people can generally get a feeling when there's too many responders on the call.</p>
+<p>インシデントの通話が「混雑」しています。これは曖昧な指標ですが、通話に参加している人が多いとそう感じるでしょう。</p>
 </li>
 </ol>
-<h2 id="sub-teams">Sub-Teams<a class="headerlink" href="#sub-teams" title="Permanent link">#</a></h2>
-<p>When it is identified that we have a complex incident, the incident commander will spin off sub-teams to work on each individual problem. We have three pre-defined sub-teams, which the Incident Commander may assign you to; Alpha, Bravo, and Charlie. Each team has it's own Slack room and conference call bridge already set up and ready for use.</p>
+<h2 id="_2">サブチーム<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>複雑なインシデントが発生していると判明した場合、インシデントコマンダーはそれぞれ独立した問題に対応する、サブチームを作るべきです。
+私たちにはインシデントコマンダーが割り当てる、3つのサブチーム、Alpha、Bravo、Charlieが予め用意されています。
+各チームはそれぞれのSlackルームとWeb会議室が設定されており、いつでもそれを利用できる状況です。</p>
 <div class="admonition note">
-<p class="admonition-title">Team Names</p>
-<p>We chose the phonetic alphabet for our teams. We did not use colors as "Red Team" and "Blue Team" have other definitions within security incident response, and we wanted to prevent confusion.</p>
+<p class="admonition-title">チーム名</p>
+<p>我々はチーム名に無線用のアルファベットを用いました。
+「Red Team」「Blue Team」という名前はセキュリティインシデント対応で別の意味を持つため採用しません。
+混乱を避けるためです。</p>
 </div>
 <table>
 <thead>
@@ -602,31 +610,38 @@
 </tr>
 </tbody>
 </table>
-<p>All three teams do not necessarily need to be active at the same time, an incident may call for only one, or even more than three if necessary. Team leaders will be picked and then assigned to a specific team designation by the Incident Commander.</p>
-<h3 id="role-structure">Role Structure<a class="headerlink" href="#role-structure" title="Permanent link">#</a></h3>
-<p>How do sub-teams fit into the role structure for our incident response? The team leaders essentially replace the SME's in the normal role structure, and then the SME's will report to their team leader. This ensures that the Incident Commander and Team Leaders can maintain an effective span of control.</p>
+<p>3つのサブチーム全てが同時に活動する必要あ張りません。
+インシデントに応じて、1チームだけでも良いですし、必要ならば3チームを超えても構いません。
+インシデントコマンダーによってチームリーダーが選ばれてそれぞれのチームに割り当てられます。</p>
+<h3 id="_3">役割構造<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p>サブチームは私たちのインシデント対応の役割構造に、どう適合するのでしょうか？
+通常は、内容領域専門家がチームリーダーとなり、それぞれの内容領域専門家のメンバーはチームリーダーに報告します。
+この構造は、インシデントコマンダーとチームリーダーが、それぞれの管理範囲を維持できます。</p>
 <p><img alt="Incident Response Structure for Complex Incidents" src="../../assets/img/misc/incident_response_roles_sub_teams.png" /></p>
-<h3 id="spinning-off-sub-teams">Spinning Off Sub-Teams<a class="headerlink" href="#spinning-off-sub-teams" title="Permanent link">#</a></h3>
+<h3 id="_4">サブチームを作る<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <ol>
 <li>
-<p>The IC will assign a leader to each team who will report to them directly. All other team members will report to their team leader.</p>
+<p>インシデントコマンダーは、直接報告してもらうチームリーダーを割り当てます。他のチームメンバーからの報告は、チームメンバーを経由します。</p>
 <ul>
-<li>When assigning a team leader, the IC will also designate which team name they fall under (Alpha, Bravo, or Charlie).</li>
-<li><em>Team leaders do not have to be trained as incident commanders, however some leadership experience would be prudent.</em></li>
+<li>チームリーダーを割り当てる時、インシデントコマンダーはどのチームに属するかを指定します。</li>
+<li><em>チームリーダーにはインシデントコマンダーとしてのトレーニングは必要ありませんが、リーダー経験があると望ましいです</em></li>
 </ul>
 </li>
 <li>
-<p>Each team will be given a specific task to complete, and will be time-boxed as they normally would for an individual responder.</p>
+<p>それぞれのチームには特定のタスクが割り当てられ、通常のインシデント対応と同じようにタイムボックスが設けられます。</p>
 </li>
 </ol>
-<p>How teams are split is at the discretion of the incident commander. Potential structures include,</p>
+<p>チームをどのように分割するかは、インシデントコマンダーの裁量に委ねられます。
+可能性のある構成は以下のとおりです。</p>
 <ul>
-<li>Cross-functional groups to address one entire problem domain per group.</li>
-<li>Groups of Subject Matter Experts to focus on one specific element of a larger problem.</li>
-<li>Teams based on normal day-to-day roles.</li>
+<li>それぞれのグループが問題全体を対応する、機能横断型グループ</li>
+<li>大きな問題の特定の1要素に焦点を当てた、内容領域専門家のグループ</li>
+<li>通常の日々の役割に基づくチーム</li>
 </ul>
-<h3 id="switching-sub-teams">Switching Sub-Teams<a class="headerlink" href="#switching-sub-teams" title="Permanent link">#</a></h3>
-<p>If you feel like you would be better suited on another sub-team, you should bring this up with your <strong>current team leader</strong>. Do not bring it up to the Incident Commander, or with the leader of the team you wish to be on. An incident is currently in progress, and the defined escalation path should still be followed.</p>
+<h3 id="_5">サブチームの切り替え<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p>もし他のサブチームの方が適していると感じた場合には、<strong>今のチームリーダー</strong>に相談してください。
+インシデントコマンダーや参加したいチームリーダーに話を持ち込まないでください。
+インシデントは現在も進行中で、引き続きエスカレーションパスに従う必要があります。</p>
           <aside class="copyright" role="note">
             
               Copyright &copy; PagerDuty, Inc. &ndash;
