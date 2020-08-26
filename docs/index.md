@@ -3,27 +3,34 @@ cover: assets/img/covers/incident_response_docs.png
 ---
 ![Incident Response at PagerDuty](./assets/img/headers/pagerduty_ir.jpg)
 
-This documentation covers parts of the PagerDuty Incident Response process. It is a cut-down version of our internal documentation, used at PagerDuty for any major incidents, and to prepare new employees for on-call responsibilities. It provides information not only on preparing for an incident, but also what to do during and after. It is intended to be used by on-call practitioners and those involved in an operational incident response process (or those wishing to enact a formal incident response process). See the [about page](about.md) for more information on what this documentation is and why it exists.
+このドキュメントでは、PagerDutyにおけるインシデント対応プロセスを紹介します。
+これはPagerDuty内で、オンコールを始める従業員や、重大インシデントで利用されいてる、内部ドキュメントの一部を切り出したものです。
+このドキュメントではインシデントに備えることだけではなく、インシデント発生中、また発生後の対応についても説明します。
+オンコールに対応する人や、インシデントに対応する人（またきちんとしたインシデント対応プロセスを制定したい人）が読むことを想定しています。
+このドキュメントが何なのか、なぜ存在するかは、[About](about.md)を参照してください。
 
-!!! tip "Don't know where to start?"
-    If you're new to incident response and don't yet have a formal process in your organization, we recommend looking at our [Getting Started](/getting_started.md) page for a quick list of things you can do to begin, and our [Training Course](training/courses/incident_response.md) page for a more detailed overview of our process.
+!!! tip "どこから手を付けるべきか？"
+    もしあなたがインシデント対応が初めてで、組織的な手順がない場合は、まず[Getting Started](/getting_started.md)で何ができるかを確認してください。
+    そして詳細な手順を、[Training Course](training/courses/incident_response.md)から確認することをお勧めします。
 
-## Being On-Call
+## オンコールになる
 
-If you've never been on-call before, you might be wondering what it's all about. These pages describe what the expectations of being on-call are, along with some resources to help you.
+まだあなたがオンコールを体験していないのなら、それが何なのかが疑問に思うかも知れません。
+このページでは、オンコールに期待されていることと、いくつかの実例を紹介します。
 
-* [Being On-Call](oncall/being_oncall.md) - _A guide to being on-call, both what your responsibilities are, and what they are not._
-* [Alerting Principles](oncall/alerting_principles.md) - _The principles we use to determine what things page an engineer, and what time of day they page._
+* [オンコールになる](oncall/being_oncall.md) - _オンコールになるには。あなたの責務とそうでないもの_
+* [アラートの原則](oncall/alerting_principles.md) - _エンジニアを呼び出すための手段やタイミングなどの原則_
 
-## Before an Incident
+## インシデント発生前
 
-Reading material for things you probably want to know before an incident occurs. You likely don't want to be reading these during an actual incident.
+インシデントが発生する前に読むべきものです。
+実際にインシデントが発生してからでは読むものではないでしょう。
 
-* [What is an Incident?](before/what_is_an_incident.md) - _Before we can talk about incident response, we need to define what an incident actually is._
-* [Severity Levels](before/severity_levels.md) - _Information on our severity level classification. What constitutes a SEV-3 vs SEV-1? What response do they get?_
-* [Different Roles for Incidents](before/different_roles.md) - _Information on the roles during an incident; Incident Commander, Scribe, etc._
-* [Incident Call Etiquette](before/call_etiquette.md) - _Our etiquette guidelines for incident calls, before you find yourself in one._
-* [Complex Incidents](before/complex_incidents.md) - _Our guide for handling larger, more complex incidents._
+* [インシデントとはなにか？](before/what_is_an_incident.md) - _インシデント対応について議論する前に、インシデントとは何なのか？_
+* [深刻度レベル](before/severity_levels.md) - _深刻度レベルの分類。SEV-3とSEV-1のち外野、それぞれの対処方法_
+* [インシデント発生時の役割](before/different_roles.md) - _インシデントコマンダー（Incident Commander）、補佐（Scribe）などの、インシデント発生時の役割_
+* [インシデント通話のエチケット](before/call_etiquette.md) - _インシデント通話に参加するまでに知っておくべきエチケット_
+* [複雑なインシデント](before/complex_incidents.md) - _大規模で複雑なインシデントに立ち向かうための手引き_
 
 ## During an Incident
 
