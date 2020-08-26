@@ -2,52 +2,72 @@
 cover: assets/img/covers/complex_incidents.png
 description: There will come a time when you will be involved in an incident (or multiple concurrent incidents) which ends up spanning a large number of resources. In these cases it's important for everyone to maintain an effective span of control. This page describes how we manage such incidents.
 ---
-There will come a time when you will be involved in an incident (or multiple concurrent incidents) which ends up spanning a large number of resources. In these cases it's important for everyone to maintain an effective [span of control](../training/glossary.md#span-of-control). This page describes how we manage such incidents.
 
-## Identifying Complex Incidents
-Perhaps multiple issues are happening at once, or an existing incident escalated and had a knock-on effect on other services. It's important to identify these types of incidents as early as possible to prevent confusion and burn-out. Here are a few key things the Incident Commanders will be watching out for to help to identify a complex incident,
+多くのリソースにまたがった、インシデント（または同時多発的な複数インシデント）に出くわす時が来るでしょう。
+このような場合には、全員が効果的に[span of control](../training/glossary.md#span-of-control)を守ることが重要です。
+このページでは、このようなインシデントにどう対処するかを説明します。
 
-1. Are multiple teams involved?
-    * Are most of them actively investigating multiple issues?
+## 複雑なインシデントを特定する
 
-1. Multiple symptoms are present, and do not appear to have any obvious correlation.
+おそらく、同時に複数の問題が発生するか、すでに発生したインシデントが連鎖的に他のサービスに影響を与えることがあるでしょう。
+混乱や疲れ果てる事がないように、これらの種類のインシデントを特定するのは重要です。
+ここでは複雑なインシデントの特定に役立つ、インシデントコマンダーが注意すべきいくつかの点を紹介します。
 
-1. A group of SME's are all working on the same analysis.
+1. 複数のチームが関係していますか？
+    * それらのチームは複数の問題を調査していますか？
 
-1. The incident calls "feels crowded". This is a rather fuzzy metric, but most people can generally get a feeling when there's too many responders on the call.
+1. 複数の症状があり、明らかな相関関係がなさそうですか？
 
-## Sub-Teams
-When it is identified that we have a complex incident, the incident commander will spin off sub-teams to work on each individual problem. We have three pre-defined sub-teams, which the Incident Commander may assign you to; Alpha, Bravo, and Charlie. Each team has it's own Slack room and conference call bridge already set up and ready for use.
+1. SMEのグループが同じ分析に取り組んでいます。
 
-!!! note "Team Names"
-    We chose the phonetic alphabet for our teams. We did not use colors as "Red Team" and "Blue Team" have other definitions within security incident response, and we wanted to prevent confusion.
+1. インシデントの通話が「混雑」しています。これは曖昧な指標ですが、通話に参加している人が多いとそう感じるでしょう。
 
-| | | |
-|-|-|-|
-| Alpha Team | #team-alpha | +1.555.123.4567 |
-| Bravo Team | #team-bravo | +1.555.123.4568 |
+## サブチーム
+
+複雑なインシデントが発生していると判明した場合、インシデントコマンダーはそれぞれ独立した問題に対応する、サブチームを作るべきです。
+私たちにはインシデントコマンダーが割り当てる、3つのサブチーム、Alpha、Bravo、Charlieが予め用意されています。
+各チームはそれぞれのSlackルームとWeb会議室が設定されており、いつでもそれを利用できる状況です。
+
+!!! note "チーム名"
+    我々はチーム名に無線用のアルファベットを用いました。
+    「Red Team」「Blue Team」という名前はセキュリティインシデント対応で別の意味を持つため採用しません。
+    混乱を避けるためです。
+
+|              |               |                 |
+| -            | -             | -               |
+| Alpha Team   | #team-alpha   | +1.555.123.4567 |
+| Bravo Team   | #team-bravo   | +1.555.123.4568 |
 | Charlie Team | #team-charlie | +1.555.123.4569 |
 
-All three teams do not necessarily need to be active at the same time, an incident may call for only one, or even more than three if necessary. Team leaders will be picked and then assigned to a specific team designation by the Incident Commander.
+3つのサブチーム全てが同時に活動する必要あ張りません。
+インシデントに応じて、1チームだけでも良いですし、必要ならば3チームを超えても構いません。
+インシデントコマンダーによってチームリーダーが選ばれてそれぞれのチームに割り当てられます。
 
-### Role Structure
-How do sub-teams fit into the role structure for our incident response? The team leaders essentially replace the SME's in the normal role structure, and then the SME's will report to their team leader. This ensures that the Incident Commander and Team Leaders can maintain an effective span of control.
+### 役割構造
+
+サブチームは私たちのインシデント対応の役割構造に、どう適合するのでしょうか？
+通常は、内容領域専門家がチームリーダーとなり、それぞれの内容領域専門家のメンバーはチームリーダーに報告します。
+この構造は、インシデントコマンダーとチームリーダーが、それぞれの管理範囲を維持できます。
 
 ![Incident Response Structure for Complex Incidents](../assets/img/misc/incident_response_roles_sub_teams.png)
 
-### Spinning Off Sub-Teams
+### サブチームを作る
 
-1. The IC will assign a leader to each team who will report to them directly. All other team members will report to their team leader.
-    * When assigning a team leader, the IC will also designate which team name they fall under (Alpha, Bravo, or Charlie).
-    * _Team leaders do not have to be trained as incident commanders, however some leadership experience would be prudent._
+1. インシデントコマンダーは、直接報告してもらうチームリーダーを割り当てます。他のチームメンバーからの報告は、チームメンバーを経由します。
+    * チームリーダーを割り当てる時、インシデントコマンダーはどのチームに属するかを指定します。
+    * _チームリーダーにはインシデントコマンダーとしてのトレーニングは必要ありませんが、リーダー経験があると望ましいです_
 
-1. Each team will be given a specific task to complete, and will be time-boxed as they normally would for an individual responder.
+1. それぞれのチームには特定のタスクが割り当てられ、通常のインシデント対応と同じようにタイムボックスが設けられます。
 
-How teams are split is at the discretion of the incident commander. Potential structures include,
+チームをどのように分割するかは、インシデントコマンダーの裁量に委ねられます。
+可能性のある構成は以下のとおりです。
 
-* Cross-functional groups to address one entire problem domain per group.
-* Groups of Subject Matter Experts to focus on one specific element of a larger problem.
-* Teams based on normal day-to-day roles.
+* それぞれのグループが問題全体を対応する、機能横断型グループ
+* 大きな問題の特定の1要素に焦点を当てた、内容領域専門家のグループ
+* 通常の日々の役割に基づくチーム
 
-### Switching Sub-Teams
-If you feel like you would be better suited on another sub-team, you should bring this up with your **current team leader**. Do not bring it up to the Incident Commander, or with the leader of the team you wish to be on. An incident is currently in progress, and the defined escalation path should still be followed.
+### サブチームの切り替え
+
+もし他のサブチームの方が適していると感じた場合には、**今のチームリーダー**に相談してください。
+インシデントコマンダーや参加したいチームリーダーに話を持ち込まないでください。
+インシデントは現在も進行中で、引き続きエスカレーションパスに従う必要があります。
