@@ -28,7 +28,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 * [インシデントとはなにか？](before/what_is_an_incident.md) - _インシデント対応について議論する前に、インシデントとは何なのか？_
 * [深刻度レベル](before/severity_levels.md) - _深刻度レベルの分類。SEV-3とSEV-1のち外野、それぞれの対処方法_
-* [インシデント発生時の役割](before/different_roles.md) - _インシデントコマンダー（Incident Commander）、補佐（Scribe）などの、インシデント発生時の役割_
+* [インシデント発生時の役割](before/different_roles.md) - _インシデントコマンダー（Incident Commander）、記録係（Scribe）などの、インシデント発生時の役割_
 * [インシデント通話のエチケット](before/call_etiquette.md) - _インシデント通話に参加するまでに知っておくべきエチケット_
 * [複雑なインシデント](before/complex_incidents.md) - _大規模で複雑なインシデントに立ち向かうための手引き_
 
