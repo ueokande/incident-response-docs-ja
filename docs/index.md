@@ -32,11 +32,11 @@ cover: assets/img/covers/incident_response_docs.png
 * [インシデント通話のエチケット](before/call_etiquette.md) - _インシデント通話に参加するまでに知っておくべきエチケット_
 * [複雑なインシデント](before/complex_incidents.md) - _大規模で複雑なインシデントに立ち向かうための手引き_
 
-## During an Incident
+## インシデント発生中
 
-Information and processes during a major incident.
+重大インシデント発生中の、情報と手順を紹介します。
 
-* [During an Incident](during/during_an_incident.md) - _Information on what to do during an incident, and how to constructively contribute._
+* [インシデント発生中](during/during_an_incident.md) - _インシデント発生中に何をすべきか、どう貢献すべきか_
 * [Security Incident Response](during/security_incident_response.md) - _Security incidents are handled differently to normal operational incidents._
 
 ## After an Incident
