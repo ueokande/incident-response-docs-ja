@@ -319,44 +319,44 @@
         <ul>
           
             <li class="anchor">
-              <a title="Don't Panic!" href="#dont-panic">
-                Don't Panic!
+              <a title="パニックにならないで" href="#_1">
+                パニックにならないで
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Steps for Incident Commander" href="#steps-for-incident-commander">
-                Steps for Incident Commander
+              <a title="インシデントコマンダーのためのステップ" href="#_2">
+                インシデントコマンダーのためのステップ
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Steps for Deputy" href="#steps-for-deputy">
-                Steps for Deputy
+              <a title="補佐のためのステップ" href="#_3">
+                補佐のためのステップ
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Steps for Scribe" href="#steps-for-scribe">
-                Steps for Scribe
+              <a title="記録係のためのステップ" href="#_4">
+                記録係のためのステップ
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Steps for Subject Matter Experts" href="#steps-for-subject-matter-experts">
-                Steps for Subject Matter Experts
+              <a title="内容領域専門家のためのステップ" href="#_5">
+                内容領域専門家のためのステップ
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Steps for Customer Liaison" href="#steps-for-customer-liaison">
-                Steps for Customer Liaison
+              <a title="カスタマー窓口のためのステップ" href="#_6">
+                カスタマー窓口のためのステップ
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Steps for Internal Liaison" href="#steps-for-internal-liaison">
-                Steps for Internal Liaison
+              <a title="内部窓口のためのステップ" href="#_7">
+                内部窓口のためのステップ
               </a>
             </li>
           
@@ -580,10 +580,13 @@
             <h1>During an Incident</h1>
           
           
-          <p>Information on what to do during a major incident. See our <a href="../../before/severity_levels/">severity level descriptions</a> for what constitutes a major incident.</p>
+          <p>重大インシデント発生中に何をすべきかについて説明します。
+何が重大インシデントに該当するかは、<a href="../../before/severity_levels/">深刻度レベル</a>を参照してください。</p>
 <div class="admonition note">
-<p class="admonition-title">Documentation</p>
-<p>For your own internal documentation, you should make sure that this page has all of the necessary information prominently displayed. Such as: phone bridge numbers, Slack rooms, important chat commands, etc. Here is an example,</p>
+<p class="admonition-title">ドキュメント化</p>
+<p>あなたの社内ドキュメントでこのページに重要な情報が掲載されていることを確認してください。
+例えばWeb会議のURLや、Slackルーム、重要なチャットコマンドなどです。
+次に例を示します。</p>
 <p><table class="custom-table" id="contact-summary">
   <thead>
   </thead>
@@ -603,173 +606,180 @@
 </table></p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Security Incident?</p>
-<p>If this is a security incident, you should follow the <a href="../security_incident_response/">Security Incident Response</a> process.</p>
+<p class="admonition-title">セキュリティインシデント？</p>
+<p>もしセキュリティインシデントは発生したのなら、<a href="../security_incident_response/">セキュリティインシデント対応</a>プロセスに従ってください。</p>
 </div>
-<h2 id="dont-panic">Don't Panic!<a class="headerlink" href="#dont-panic" title="Permanent link">#</a></h2>
+<h2 id="_1">パニックにならないで<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>Join the incident call and chat (see links above).</p>
+<p>まずインシデントの通話とチャットに参加します（リンクは後述します）。</p>
 <ul>
-<li>Anyone is free to join the call or chat to observe and follow along with the incident.</li>
-<li>If you wish to participate however, you should join both. If you can't join the call for some reason, you should have a dedicated proxy for the call. Disjointed discussions in the chat room are ultimately distracting.</li>
+<li>通話に参加したり、チャットでインシデントを追うのは誰でも歓迎します。</li>
+<li>もし参加したい場合は両方に参加すべきです。もし何らかの理由で両方に参加できない場合は、通話に参加している特定の人に代理してもらってください。チャットルームでまばらな議論をするのは返って迷惑です。</li>
 </ul>
 </li>
 <li>
-<p>Follow along with the call/chat, add any comments you feel are appropriate, but keep the discussion relevant to the problem at hand.</p>
+<p>通話、チャットに参加して、適切だと思うコメントを残してください。ただし目の前の問題に関する議論をしてください。</p>
 <ul>
-<li>If you are not an SME, try to filter any discussion through the primary SME for your service. Too many people discussing at once get become overwhelming, so we should try to maintain a hierarchical structure to the call if possible.</li>
+<li>もしあなたが内容領域専門家でない場合、プライマリの内容領域専門家を通じて議論をしてみてください。多くの人が同時に議論すると気後れするので、可能な限り通話では組織構造を維持すべきです。</li>
 </ul>
 </li>
 <li>
-<p>Follow instructions from the Incident Commander.</p>
+<p>インシデントコマンダーからの指示に従います。</p>
 <ul>
-<li><strong>Is there no IC on the call?</strong><ul>
-<li>Manually page them via Slack, with <code>!ic page</code> in Slack. This will page the primary and backup IC's at the same time.</li>
-<li>Never hesitate to page the IC. It's much better to have them and not need them than the other way around.</li>
+<li><strong>通話にインシデントコマンダーがいない？</strong><ul>
+<li>Slackで <code>!ic page</code> と打ってインシデントコマンダーを手動で呼び出してください。
+  このコマンドはプライマリとバックアップのインシデントコマンダーを呼び出します。</li>
+<li>インシデントコマンダーを呼び出すのに躊躇しないでください。
+   いないよりもいたほうがいいです。</li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
-<h2 id="steps-for-incident-commander">Steps for Incident Commander<a class="headerlink" href="#steps-for-incident-commander" title="Permanent link">#</a></h2>
-<p>Resolve the incident as quickly and as safely as possible, use the Deputy to assist you. Delegate any tasks to relevant experts at your discretion.</p>
+<h2 id="_2">インシデントコマンダーのためのステップ<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>補佐に支援をしてもらいながら、可能な限りインシデントをすばやく安全に解決に導きます。
+インシデントコマンダーの裁量で、タスクをそれぞれの専門に委譲します。</p>
 <ol>
 <li>
-<p>Announce on the call and in Slack that you are the incident commander, who you have designated as deputy (usually the backup IC), and scribe.</p>
+<p>インシデントの通話とSlackで、あなたがインシデントコマンダーであることと、指名した補佐と記録係をアナウンスします。</p>
 </li>
 <li>
-<p>Identify if there is an obvious cause to the incident (recent deployment, spike in traffic, etc.), delegate investigation to relevant experts,</p>
+<p>インシデントの明らかな原因（直近のデプロイ、トラフィックのスパイクなど）があるかどうか特定して、関係する専門家に調査を委譲してください。</p>
 <ul>
-<li>Use the service experts on the call to assist in the analysis. They should be able to quickly provide confirmation of the cause, but not always. It's the call of the IC on how to proceed in cases where the cause is not positively known. Confer with service owners and use their knowledge to help you.</li>
+<li>通話でサービスの専門家たちに、分析を支援してもらうようにします。
+  彼らは迅速に原因を特定できるはずですが、必ずしもその限りではありません。
+  原因が明らかにならない場合は、インシデントコマンダーの判断に委ねられます。
+  サービスのオーナーと話し合い、彼らの知見を元に支援してもらいます。</li>
 </ul>
 </li>
 <li>
-<p>Identify investigation &amp; repair actions (roll back, rate-limit services, etc) and delegate actions to relevant service experts. Typically something like this (obviously not an exhaustive list),</p>
+<p>調査と修復のアクションを特定し（ロールバック、レートリミットなど）、サービスの専門家にアクションを委譲します。一般的には以下のことを行います（もちろんすべて網羅してるわけではありません）。</p>
 <ul>
-<li><strong>Bad Deployment:</strong> Roll it back.</li>
-<li><strong>Web Application Stuck/Crashed:</strong> Do a rolling restart.</li>
-<li><strong>Event Flood:</strong> Validate automatic throttling is sufficient, adjust manually if not.</li>
-<li><strong>Data Center Outage:</strong> Validate automation has removed bad data center. Force it to do so if not.</li>
-<li><strong>Degraded Service Behavior without load:</strong> Gather forensic data (heap dumps, etc), and consider doing a rolling restart.</li>
+<li><strong>良くないデプロイ:</strong> ロールバックする</li>
+<li><strong>アプリケーションがスタックまたはクラッシュ:</strong> ローリングリスタートする</li>
+<li><strong>大量のイベント:</strong> 自動スロットリングが十分か確認し、そうでなければ手動で調整する</li>
+<li><strong>データセンターの停止:</strong> 悪いデータセンターが自動で外されているか確認。もしそうでなければ調整的に外す。</li>
+<li><strong>負荷がかかってないがサービスが劣化:</strong> データを収集して（ヒープダンプなど）、ローリングリスタートを検討</li>
 </ul>
 </li>
 <li>
-<p>Listen for prompts from your Deputy regarding severity escalations, decide whether we need to announce publicly, and instruct customer liaison accordingly.</p>
+<p>深刻度が上がるか補佐からの助言をもらい、外部に公開するか判断します。また状況に応じてカスタマー窓口に連絡します。</p>
 <ul>
-<li>Announcing publicly is at your discretion as IC. If you are unsure, then announce publicly ("If in doubt, tweet it out").</li>
+<li>外部に告知するかどうかは、インシデントコマンダーの判断に任されます。
+  もし判断できない場合は外部に告知してください（疑わしい場合はツイートしてください）。</li>
 </ul>
 </li>
 <li>
-<p>Keep track of your <a href="../../training/glossary/#span-of-control">span of control</a>. If the response starts to become larger, or the incident increases in complexity, consider <a href="../../before/complex_incidents/#spinning-off-sub-teams">splitting off sub-teams</a> in order to get a more effective response.</p>
+<p>自分の<a href="../../training/glossary/#span-of-control">管理範囲</a>を把握しておきます。もし対応が大規模になってきたり、インシデントが複雑化している場合は、より効率的に対応できるよう<a href="../../before/complex_incidents/#spinning-off-sub-teams">サブチームへ分割</a>することも検討してください。</p>
 </li>
 <li>
-<p>Once incident has recovered or is actively recovering, you can announce that the incident is over and that the call is ending. This usually indicates there's no more productive work to be done for the incident right now.</p>
+<p>インシデントが解決したり、解決に向かっている場合は、アナウンスして通話を終わらせます。これはインシデントに対してするべき作業が無いということです。</p>
 <ul>
-<li>Move the remaining, non-time-critical discussion to Slack.</li>
-<li>Follow up to ensure the customer liaison wraps up the incident publicly.</li>
-<li>Identify any post-incident clean-up work.</li>
-<li>You may need to perform debriefing/analysis of the underlying contributing factor.</li>
+<li>のこりの時間的にクリティカルでない議論はSlackに移行します。</li>
+<li>インシデント終了について告知するために、カスタマー窓口をフォローアップします。</li>
+<li>ポストモーテムや後処理が必要か判断します。</li>
+<li>根本的な原因の報告や分析をします。</li>
 </ul>
+</li>
+<li>
+<p>通話が終わったら、<a href="../../after/after_an_incident/">インシデント対応後</a>のステップに従います。</p>
+</li>
+</ol>
+<h2 id="_3">補佐のためのステップ<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>必要に応じてインシデントコマンダーをサポートします。</p>
+<ol>
+<li>
+<p>インシデントの状態を監視し、深刻度が上がるのならインシデントコマンダーに知らせます。</p>
+</li>
+<li>
+<p>インシデントコマンダーからの指示に従います。</p>
+</li>
+<li>
+<p>通話が終了すると、<a href="../../after/after_an_incident/">インシデント対応後</a>のステップに従います。</p>
+</li>
+</ol>
+<h2 id="_4">記録係のためのステップ<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>Slackに流れているインシデントに関する重要な情報をまとめます。</p>
+<ol>
+<li>
+<p>誰がインシデントコマンダー、補佐、記録係なのかを、Slackルームに反映します。</p>
+<ul>
+<li>例: "IC: Bob Boberson, 補佐: Deputy Deputyson, 記録係: Writer McWriterson"</li>
+</ul>
+</li>
+<li>
+<p>対応者全員が現在のステータスを聞かなくてもわかるように、ステータスを監視するBotを起動します。</p>
+<ul>
+<li>OfficerURLはSlack上でステータスを監視するのに役立ちます<ul>
+<li><code>!status</code> - 現在のステータスを知らせます</li>
+<li><code>!status stalk</code> - 監視を続け30秒毎に結果を報告します</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>重要なアクションが取られたときや調査結果が出た場合は、Slackにノートを追加します。インシデントコマンダーからの指示を待つ必要はありません。</p>
+<ul>
+<li>後でやることを <code>TODO</code> としてSlackルームに残します</li>
+</ul>
+</li>
+<li>
+<p>インシデントコマンダーからの指示に従います。</p>
+</li>
+<li>
+<p>通話が終了すると、<a href="../../after/after_an_incident/">インシデント対応後</a>のステップに従います。</p>
+</li>
+</ol>
+<h2 id="_5">内容領域専門家のためのステップ<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>インシデントの原因の特定や、修復の提案および評価をしてインシデントコマンダーをサポートし、修復を続けます。</p>
+<ol>
+<li>
+<p>グラフやログを解析してインシデントを調査します。全ての発見事項をインシデントコマンダーに報告します。</p>
+<ul>
+<li>原因が確かでなくても大丈夫です。調査と追加情報をインシデントコマンダーに提供し続けます。</li>
+</ul>
+</li>
+<li>
+<p>インシデントコマンダーに、解決のための全ての提案を報告します。どのように進めるかはインシデントコマンダーが決定し、指示があるまではどんな行動も起こさないでください。</p>
+</li>
+<li>
+<p>インシデントコマンダーからの指示に従います。</p>
+</li>
+<li>
+<p>通話が終了すると、<a href="../../after/after_an_incident/">インシデント対応後</a>のステップに従います。</p>
+</li>
+</ol>
+<h2 id="_6">カスタマー窓口のためのステップ<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>インシデントに関するメッセージを外部に告知するために待機します。</p>
+<ol>
+<li>
+<p>通話中に得られた情報から、ステータスページを更新し様々なアカウントからTwitterでツイートします。</p>
+</li>
+<li>
+<p>インシデントコマンダーからの指示に従います。</p>
 </li>
 <li>
 <p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
 </li>
 </ol>
-<h2 id="steps-for-deputy">Steps for Deputy<a class="headerlink" href="#steps-for-deputy" title="Permanent link">#</a></h2>
-<p>You are there to support the IC in whatever they need.</p>
+<h2 id="_7">内部窓口のためのステップ<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<p>社内のステークホルダーに対して状態を提供し、必要に応じて社内から対応者を動員します。</p>
 <ol>
 <li>
-<p>Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.</p>
+<p>インシデントコマンダーからの指示に従い、他の人を呼び出す準備をします。</p>
 </li>
 <li>
-<p>Follow instructions from the Incident Commander.</p>
+<p>必要に応じて社内のステークホルダーに知らせて、PagerDutyインシデントの購読者に追加します。事前に用意してある "SEV-1ステークホルダー" と "SEV-2ステークホルダー" を利用できます。</p>
 </li>
 <li>
-<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
-</li>
-</ol>
-<h2 id="steps-for-scribe">Steps for Scribe<a class="headerlink" href="#steps-for-scribe" title="Permanent link">#</a></h2>
-<p>You are there to document the key information from the incident in Slack.</p>
-<ol>
-<li>
-<p>Update the Slack room with who the IC is, who the Deputy is, and that you're the scribe (if not already done).</p>
-<ul>
-<li>e.g. "IC: Bob Boberson, Deputy: Deputy Deputyson, Scribe: Writer McWriterson"</li>
-</ul>
+<p>経営陣に対してSlackで定期的（だいたい30分ごと）に、現在の状態を知らせます。短く要点を抑えて<code>@here</code>を遣います。</p>
 </li>
 <li>
-<p>Start our status monitoring bot so that all responders can see the current state without needing to ask.</p>
-<ul>
-<li>OfficerURL can help you to monitor the status on Slack,<ul>
-<li><code>!status</code> - Will tell you the current status.</li>
-<li><code>!status stalk</code> - Will continually monitor the status and report it to the room every 30s.</li>
-</ul>
-</li>
-</ul>
+<p>インシデントコマンダーからの指示に従います。</p>
 </li>
 <li>
-<p>You should add notes to Slack when significant actions are taken, or findings are determined. You don't need to wait for the IC to direct this - use your own judgment.</p>
-<ul>
-<li>You should also add <code>TODO</code> notes to the Slack room that indicate follow-ups slated for later.</li>
-</ul>
-</li>
-<li>
-<p>Follow instructions from the Incident Commander.</p>
-</li>
-<li>
-<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
-</li>
-</ol>
-<h2 id="steps-for-subject-matter-experts">Steps for Subject Matter Experts<a class="headerlink" href="#steps-for-subject-matter-experts" title="Permanent link">#</a></h2>
-<p>You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation repair actions, and following through on the repair actions.</p>
-<ol>
-<li>
-<p>Investigate the incident by analyzing any graphs or logs at your disposal. Announce all findings to the incident commander.</p>
-<ul>
-<li>If you are unsure of the cause, that's fine, state that you are investigating and provide regular updates to the IC.</li>
-</ul>
-</li>
-<li>
-<p>Announce all suggestions for resolution to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so!</p>
-</li>
-<li>
-<p>Follow instructions from the incident commander.</p>
-</li>
-<li>
-<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
-</li>
-</ol>
-<h2 id="steps-for-customer-liaison">Steps for Customer Liaison<a class="headerlink" href="#steps-for-customer-liaison" title="Permanent link">#</a></h2>
-<p>Be on stand-by to post public facing messages regarding the incident.</p>
-<ol>
-<li>
-<p>You will typically be required to update the status page and to send Tweets from our various accounts at certain times during the call.</p>
-</li>
-<li>
-<p>Follow instructions from the Incident Commander.</p>
-</li>
-<li>
-<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
-</li>
-</ol>
-<h2 id="steps-for-internal-liaison">Steps for Internal Liaison<a class="headerlink" href="#steps-for-internal-liaison" title="Permanent link">#</a></h2>
-<p>You are there to provide updates to internal stakeholders, and to mobilize additional internal responders as necessary.</p>
-<ol>
-<li>
-<p>Be prepared to page other people as directed by the Incident Commander.</p>
-</li>
-<li>
-<p>Notify internal stakeholders as necessary, adding subscribers to the PagerDuty incident. We have pre-defined teams called "SEV-1 Stakeholders" and "SEV-2 Stakeholders" which can be used.</p>
-</li>
-<li>
-<p>Provide regular status updates in Slack (roughly every 30mins) to the executive team, giving an executive summary of the current status. Keep it short and to the point, and use <code>@here</code>.</p>
-</li>
-<li>
-<p>Follow instructions from the Incident Commander.</p>
-</li>
-<li>
-<p>Once the call is over, you can start to follow the steps from <a href="../../after/after_an_incident/">After an Incident</a>.</p>
+<p>通話が終了すると、<a href="../../after/after_an_incident/">インシデント対応後</a>のステップに従います。</p>
 </li>
 </ol>
           <aside class="copyright" role="note">
