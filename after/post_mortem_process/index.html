@@ -355,44 +355,44 @@
         <ul>
           
             <li class="anchor">
-              <a title="Owner Designation" href="#owner-designation">
-                Owner Designation
+              <a title="オーナーの指名" href="#_1">
+                オーナーの指名
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Owner Responsibilities" href="#owner-responsibilities">
-                Owner Responsibilities
+              <a title="オーナーの責務" href="#_2">
+                オーナーの責務
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Status Descriptions" href="#status-descriptions">
-                Status Descriptions
+              <a title="ステータス" href="#_3">
+                ステータス
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Post-Mortem" href="#post-mortem">
-                Post-Mortem
+              <a title="ポストモーテム" href="#_4">
+                ポストモーテム
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Post-Mortem Meeting" href="#post-mortem-meeting">
-                Post-Mortem Meeting
+              <a title="ポストモーテムのミーティング" href="#_5">
+                ポストモーテムのミーティング
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Examples" href="#examples">
-                Examples
+              <a title="例" href="#_6">
+                例
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Useful Resources" href="#useful-resources">
-                Useful Resources
+              <a title="参考文献" href="#_7">
+                参考文献
               </a>
             </li>
           
@@ -581,26 +581,34 @@
           
           
           <p><img alt="Post-Mortem" src="../../assets/img/headers/pagerduty_post_mortem.jpg" /></p>
-<p>For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.</p>
+<p>全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。
+誰かのせいにせず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。
+インシデント対応手順自身も含める必要があります。</p>
 <div class="admonition warning">
-<p class="admonition-title">Don't Neglect the Post-Mortem</p>
-<p>Don't make the mistake of neglecting a post-mortem after an incident. Without a post-mortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless post-mortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.</p>
+<p class="admonition-title">ポストモーテムをおろそかにしないで</p>
+<p>インシデント後のポストモーテムをおろそかにしないでください。
+ポストモーテムがないと、何が正しいのか、どこが改善できるのか、そして最も重要な再発防止のための方法がわからなくなります。
+よく設計され、誰も責めないポストもーテムは、チームに継続的に学ぶ機会を与え、インフラとインシデント対応手順を反復的に改善できます。</p>
 </div>
-<h2 id="owner-designation">Owner Designation<a class="headerlink" href="#owner-designation" title="Permanent link">#</a></h2>
-<p>The first step is that a post-mortem owner will be designated. This is done by the IC either at the end of a major incident call, or very shortly after. You will be notified directly by the IC if you are the owner for the post-mortem. The owner is responsible for populating the post-mortem, looking up logs, managing the followup investigation, and keeping all interested parties in the loop. Please use Slack for coordinating followup. A detailed list of the steps is available below,</p>
-<h2 id="owner-responsibilities">Owner Responsibilities<a class="headerlink" href="#owner-responsibilities" title="Permanent link">#</a></h2>
-<p>As owner of a post-mortem, you are responsible for the following,</p>
+<h2 id="_1">オーナーの指名<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>最初のステップはポストモーテムのオーナーを指名することです。
+これはインシデントコマンダーが、重大インシデントの通話の終わり、または直後に指名します。
+オーナーはポストモーテムを記録し、ログを精査し、追加調査を管理し、全ての関係者に情報を提供する責務があります。
+詳細の手順は次で説明します。</p>
+<h2 id="_2">オーナーの責務<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>ポストモーテムのオーナーになると次のような責務があります。</p>
 <ul>
-<li>Scheduling the post-mortem meeting (on the shared calendar) and inviting the relevant people (this should be <strong>scheduled within 3 calendar days</strong> for a SEV-1 and <strong>5 business days</strong> for a SEV-2).</li>
-<li>Investigating the incident, pulling in whomever you need from other teams to assist in the investigation.</li>
-<li>Updating the page with all of the necessary content.</li>
-<li>Creating follow-up JIRA tickets (<em>You are only responsible for creating the tickets, not following them up to resolution</em>).</li>
-<li>Reviewing the post-mortem content with appropriate parties before the meeting.</li>
-<li>Running through the topics at the post-mortem meeting (the IC will "run" the meeting and keep the discussion on track, but you will likely be doing most of the talking).</li>
-<li>Communicating the results of the post-mortem internally.</li>
+<li>ポストモーテムのミーティングを（共有カレンダーに）設定し、関係者を招待します（SEV-1の場合は<strong>3営業日</strong>以内、SEV-2の場合は<strong>5営業日</strong>以内が望ましいです）。</li>
+<li>インシデントの調査をして、他のチームから調査の助けになりそうな人を選びます。</li>
+<li>必要な内容をまとめてページを更新します。</li>
+<li>追加調査用のJIRAチケットを作成しします（<em>あなたの責務はチケットを作成することで、追加調査することではありません</em>）。</li>
+<li>ミーティングの前に、関係者とポストモーテムのレビューをします。</li>
+<li>ポストモーテムのミーティングで、議題について説明します（インシデントコマンダーがミーティングを進行するが、実際はあなたがほとんど喋ります）。</li>
+<li>ポストモーテムの結果を内部に伝えます。</li>
 </ul>
-<h2 id="status-descriptions">Status Descriptions<a class="headerlink" href="#status-descriptions" title="Permanent link">#</a></h2>
-<p>Our post-mortems have a "Status" field which indicates where in our process the post-mortem currently is. Here's a description of the values and how we use them.</p>
+<h2 id="_3">ステータス<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>私たちのポストモーテムには「ステータス」フィールドがあります。
+このフィールドの使い方は以下のとおりです。</p>
 <table>
 <thead>
 <tr>
@@ -611,135 +619,145 @@
 <tbody>
 <tr>
 <td><strong>Draft</strong></td>
-<td>Indicates that the content of the post-mortem is still being worked on.</td>
+<td>ポストモーテムの内容をまだ書いてる段階です。</td>
 </tr>
 <tr>
 <td><strong>In Review</strong></td>
-<td>The content of the post-mortem has been completed, and is ready to be reviewed during the post-mortem meeting.</td>
+<td>ポストモーテムの内容が書き終わり、レビュー可能な状態です。</td>
 </tr>
 <tr>
 <td><strong>Reviewed</strong></td>
-<td>The meeting is over and the content has been reviewed and agreed upon.<br/>If there is an "External Message", the Customer Support team will take the message and update our status page as appropriate.</td>
+<td>ミーティングが終了し、内容がレビューされて確認できました。<br/>もし外部への告知が必要な場合は、ステータスページを更新するようカスタマーサポートに連絡します。</td>
 </tr>
 <tr>
 <td><strong>Closed</strong></td>
-<td>No further actions are needed on the post-mortem (outstanding issues are tracked in JIRA).<br/>If no "External Message", you can skip straight to this once the meeting is over.<br/>If there's an "External Message", then the Support team will update it to this status once the message is posted.</td>
+<td>ポストモーテムに関する新たな作業はありません（まだ解決してない問題はJIRAによって追跡します）。<br/>もし外部への告知がない場合は、ミーティング終了後このステータスをスキップできます。<br/>もし外部への告知が必要な場合は、サポートチームが告知を出したあとに、サポートチームがステータスを更新します。</td>
 </tr>
 </tbody>
 </table>
-<h2 id="post-mortem">Post-Mortem<a class="headerlink" href="#post-mortem" title="Permanent link">#</a></h2>
-<p>Once you've been designated as the owner of a post-mortem, you should start creating one and updating it with all the relevant information.</p>
+<h2 id="_4">ポストモーテム<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>ポストモーテムのオーナーに指名されたときは、ポストモーテムの作成と関連情報を更新しましょう。</p>
 <ol>
 <li>
-<p>(If not already done by the IC) Create a new post-mortem for the incident.</p>
+<p>（もしインシデントコマンダーがまだ作って無ければ）ポストモーテムを作成します。</p>
 </li>
 <li>
-<p>Schedule a post-mortem meeting for within <strong>3 calendar days</strong> for a SEV-1 and <strong>5 business days</strong> for a SEV-2. You should schedule this before filling in the post-mortem, just so it's on the calendar.</p>
+<p>SEV-1の場合は<strong>3営業日</strong>以内に、SEV-2の場合は<strong>5営業日</strong>以内に、ポストモーテムのミーティングを設定します。
+   ポストモーテムを書き始める前にミーティングを設定したほうが良いです。</p>
 <ul>
-<li>Create the meeting on the "Incident Post-Mortem Meetings" shared calendar.</li>
+<li>共有カレンダーに「インシデントポストモーテムミーティング」を追加します。</li>
 </ul>
 </li>
 <li>
-<p>Begin populating the page with all of the information you have.</p>
+<p>持っている全ての情報を記入します。</p>
 <ul>
-<li>The timeline should be the main focus to begin with.<ul>
-<li>The timeline should include important changes in status/impact, and also key actions taken by responders.</li>
+<li>タイムラインに主眼に書くべきです。<ul>
+<li>タイムラインには、重要なステータスや影響の変化や、応答者によって行われた主要なアクションを記入すべきです。</li>
 </ul>
 </li>
-<li>Go through the history in Slack to identify the responders, and add them to the page.<ul>
-<li>Identify the Incident Commander and Scribe in this list.</li>
+<li>Slackの履歴をさかのぼり、誰が対応したかを記入します。<ul>
+<li>インシデントコマンダーと記録係もリストに入れます。</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p>Populate the post-mortem with more detailed information.</p>
+<p>より詳細な情報をポストモーテムに記入します。</p>
 <ul>
-<li>For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a Tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.</li>
-<li>Add a link to the incident call recording.</li>
+<li>タイムラインのそれぞれの項目では、データのもととなるメトリクスやサードパーティのページを特定します。
+  これはDataDog上のグラフや、SumoLogicの検索結果、ツイートなどへのリンクです。
+  タイムラインで説明しようとしているデータなら何でも構いません。</li>
+<li>インシデントの通話録音へのリンクを追加します。</li>
 </ul>
 </li>
 <li>
-<p>Perform an analysis of the incident.</p>
+<p>インシデントの解析を行います。</p>
 <ul>
-<li>Capture all available data regarding the incident. What caused it, how many customers were affected, etc.<ul>
-<li>Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.</li>
+<li>全てのインシデントに関するデータを収集します。
+  なにが原因で、どれくらいの顧客に影響があったか、などです。<ul>
+<li>どうやってデータを収集したかを他の人がわかるように、全てのコマンドやクエリを残します。</li>
 </ul>
 </li>
-<li>Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)</li>
-<li>Identify the underlying cause of the incident (What happened, and <em>why</em> did it happen).</li>
+<li>インシデントの根本原因を特定します（なにが起こって <em>なぜ</em> 発生したのか）。</li>
 </ul>
 </li>
 <li>
-<p>Write the external message that will be sent to customers. This will be reviewed during the post-mortem meeting before it is sent out.</p>
+<p>顧客に送られる告知メッセージを書きます。これは顧客に送る前に、ポストモーテムのミーティングで確認します。</p>
 <ul>
-<li>Avoid using the word "outage" unless it really was a full outage, use the word "incident" or "service degradation" instead. Customers generally see "outage" and assume the worst.</li>
-<li>Look at other examples of previous post-mortems to see the kind of thing you should send.</li>
+<li>本当にサービスが停止している場合を除いて、「停止（outage）」という言葉を使わないでください。
+  代わりに「インシデント」または「サービス劣化」などの用語を使ってください。
+  顧客は「停止」という言葉を見ると、最悪の事態を想定します。</li>
+<li>過去のポストモーテムから、どのような文章を送るべきか確認できます。</li>
 </ul>
 </li>
 <li>
-<p>Post a link to the post-mortem into Slack to be reviewed for style and content by internal parties, you should try to do this about <strong>24 hours before</strong> the meeting is scheduled.</p>
+<p>内部関係者でポストモーテムの内容やスタイルをレビューするためにSlackにリンクを送ります。
+   これは設定したミーティングの<strong>24時間より前</strong>を目指すべきです。</p>
 <ul>
-<li>Experienced post-mortem writers will give you feedback on the level of detail and content of the post-mortem. This avoids wasted time during the meeting.</li>
+<li>経験豊富なポストモーテム執筆者が、どれくらい詳細に書くかや、ポストモーテムの内容についてレビューしてくれます。
+  これでミーティング中の無駄な時間を回避します。</li>
 </ul>
 </li>
 <li>
-<p>Attend the post-mortem meeting (see below section for more information).</p>
+<p>ポストモーテムのミーティングに出席します（詳細は後述します）。</p>
 </li>
 <li>
-<p>Create any followup action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),</p>
+<p>追加調査のためのJIRAチケットを作成します（あるいはチケットを作成前に方針を決めたい場合は、議論のためのメモを書き留めておきます）。</p>
 <ul>
-<li>Go through the history in Slack to identify any TODO items.</li>
-<li>Label all tickets with their severity level and date tags.</li>
-<li>Any actions which can reduce re-occurrence of the incident.<ul>
-<li>(There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).</li>
+<li>Slackの履歴を遡り、全てのTODOを拾い上げます。</li>
+<li>全てのチケットに、緊急度のレベルと日付タグを付与します。</li>
+<li>インシデント再発を減らすための全てのアクション。<ul>
+<li>（これはトレードオフですが、それでも構わないです。ときには費やす労力が結果に見合わないこともあります）。</li>
 </ul>
 </li>
-<li>Identify any actions which can make our incident response process better.</li>
-<li>Be careful with creating too many tickets. Generally we only want to create things that are P0/P1's. Things that absolutely should be dealt with.</li>
+<li>インシデント対応手順を良くするためのアクションを特定します。</li>
+<li>チケットをあまり作りすぎないようにしましょう。絶対に対応すべきP0/P1のチケットのみを作成します。</li>
 </ul>
 </li>
 <li>
-<p>Communicate internally so we can learn from the incident.</p>
+<p>インシデントから何を学んだかを社内に報告します。</p>
 <ul>
-<li>Send out an internal email to the relevant stakeholders describing the results and key learnings.</li>
-<li>Include a link to the post-mortem.</li>
+<li>関係するステークホルダーに、結果と主に何を学んだかをメールします。</li>
+<li>ポストモーテムへのリンクを含めます。</li>
 </ul>
 </li>
 </ol>
-<h2 id="post-mortem-meeting">Post-Mortem Meeting<a class="headerlink" href="#post-mortem-meeting" title="Permanent link">#</a></h2>
-<p>These meetings should generally last 15-30 minutes, and are intended to be a wrap up of the post-mortem process. We should discuss what happened, what we could've done better, and any followup actions we need to take. The goal is to suss out any disagreement on the facts, analysis, or recommended actions, and to get some wider awareness of the problems that are causing reliability issues for us.</p>
-<p>You should invite the following people to the post-mortem meeting,</p>
+<h2 id="_5">ポストモーテムのミーティング<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>このミーティングは通常15-30分で、ポストモーテム手順のまとめのために実施します。
+何が発生して、どうすればよかったか、必要な追加調査について話し合います。
+このミーティングの目的は、事実や解析、推奨事項に関する認識をあわせ、信頼性に関する問題が発生していることを広く認知してもらいます。</p>
+<p>ポストモーテムのミーティングには、以下の人たちを招待すべきです。</p>
 <ul>
-<li>Always<ul>
-<li>The incident commander.</li>
-<li>The incident commander shadowee (if there was one).</li>
-<li>Service owners involved in the incident.</li>
-<li>Key engineer(s)/responders involved in the incident.</li>
-<li>Engineering manager for impacted systems.</li>
-<li>Product manager for impacted systems. </li>
+<li>常に参加<ul>
+<li>インシデントコマンダー</li>
+<li>インシデントコマンダーの補佐（いれば）</li>
+<li>インシデントに関するサービスオーナー</li>
+<li>インシデントに関わった主要なエンジニアや対応者</li>
+<li>影響のあったシステムのエンジニアリングマネージャー</li>
+<li>影響のあったシステムのプロダクトマネージャー</li>
 </ul>
 </li>
-<li>Optional<ul>
-<li>Customer liaison. (Only SEV-1 incidents)</li>
+<li>任意参加<ul>
+<li>カスタマー窓口（SEV-1のみ）</li>
 </ul>
 </li>
 </ul>
-<p>The incident commander will run the meeting, keeping the discussion focused and on track. However the post-mortem owner will likely be doing most of the talking as they walk through the post-mortem report.</p>
-<p>A general agenda for the meeting would be something like,</p>
+<p>インシデントコマンダーが会議を進行して議題が逸れないようにします。
+しかしオーナーがポストモーテムを通してほとんど喋ることになります。</p>
+<p>ミーティングの主な議題は以下のとおりです</p>
 <ol>
-<li>Recap the timeline, to make sure everyone agrees and is on the same page.</li>
-<li>Recap important points, and any unusual items.</li>
-<li>Discuss how the problem could've been caught.<ul>
-<li>Did it show up in <a href="https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases">canary</a>?</li>
-<li>Could it have been caught in tests, or loadtest environment?</li>
+<li>タイムラインの要約と確認。</li>
+<li>重要な点と変わった点の要約。</li>
+<li>問題をどうすれば気づくことができたかの議論。<ul>
+<li><a href="https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases">カナリア</a>では発見できなかったか？</li>
+<li>テストや、ロードテストの環境で発見できなかったか？</li>
 </ul>
 </li>
-<li>Discuss customer impact. Any comments from customers, etc.</li>
-<li>Review action items that have been created, discuss if appropriate, or if more are needed, etc.</li>
+<li>顧客への家今日について議論。顧客からのコメントなどは無かったか。</li>
+<li>作成されたアクションの各項目をレビューし、適切かどうか、追加でやるべきかどうかを議論。</li>
 </ol>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<p>Here are some examples of post-mortems from other companies as a reference,</p>
+<h2 id="_6">例<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>他社のポストモーテムの例をいくつか列挙します</p>
 <ul>
 <li><a href="https://support.stripe.com/questions/outage-postmortem-2015-10-08-utc">Stripe</a></li>
 <li><a href="https://blog.lastpass.com/2015/06/lastpass-security-notice.html/comment-page-2/">LastPass</a></li>
@@ -750,7 +768,7 @@
 <li><a href="https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016">GOV.UK Rail Accident Investigation</a></li>
 <li><a href="https://github.com/danluu/post-mortems">A List of Post-mortems!</a></li>
 </ul>
-<h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">#</a></h2>
+<h2 id="_7">参考文献<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011">Advanced PostMortem Fu and Human Error 101 (Velocity 2011)</a></li>
 <li><a href="http://fractio.nl/2015/10/30/blame-language-sharing/">Blame. Language. Sharing.</a></li>

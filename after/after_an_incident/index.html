@@ -346,20 +346,20 @@
         <ul>
           
             <li class="anchor">
-              <a title="Followup Actions for Response Roles" href="#followup-actions-for-response-roles">
-                Followup Actions for Response Roles
+              <a title="対応の役割ごとの事後アクション" href="#_1">
+                対応の役割ごとの事後アクション
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Reviewing the Incident" href="#reviewing-the-incident">
-                Reviewing the Incident
+              <a title="インシデントのレビュー" href="#_8">
+                インシデントのレビュー
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Reviewing the Process" href="#reviewing-the-process">
-                Reviewing the Process
+              <a title="手順のレビュー" href="#_9">
+                手順のレビュー
               </a>
             </li>
           
@@ -556,62 +556,70 @@
             <h1>After an Incident</h1>
           
           
-          <p>Information on what to do after a major incident. Our followup and after action review procedures.</p>
-<h2 id="followup-actions-for-response-roles">Followup Actions for Response Roles<a class="headerlink" href="#followup-actions-for-response-roles" title="Permanent link">#</a></h2>
-<p>In addition to any direct followup items generated from an incident, each of our response roles will have a few standard followup tasks. These are generally lightweight actions that ensure we organize information and followup with customers appropriately.</p>
-<h3 id="steps-for-incident-commander">Steps for Incident Commander<a class="headerlink" href="#steps-for-incident-commander" title="Permanent link">#</a></h3>
+          <p>重大インシデント発生後に何をすべきか。
+フォローアップと事後のレビュープロセス。</p>
+<h2 id="_1">対応の役割ごとの事後アクション<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>インシデントから作成された直接のフォローアップ項目に加え、それぞれの役割ごとにいくつかのフォローアップのタスクがあります。
+これらは情報の整理と顧客を適切にフォローアップする、軽微な作業であることが多いです。</p>
+<h3 id="_2">インシデントコマンダーのフォローアップ<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <ol>
 <li>
-<p>Update the incident in PagerDuty.</p>
+<p>PagerDuty内のインシデントを更新します。</p>
 <ul>
-<li>Group any related incidents under the primary incident.</li>
-<li>Set the final severity of the incident.</li>
-<li>Resolve the incident.</li>
+<li>関連するインシデントを最初のインシデントに関連付ける。</li>
+<li>最終的なインシデントの深刻度を設定する。</li>
+<li>インシデントを解決する。</li>
 </ul>
 </li>
 <li>
-<p>Create the post-mortem, and assign an owner to the post-mortem for the incident.</p>
+<p>インシデントに対するpost-mortemを作成し、オーナーを割り当てる。</p>
 </li>
 <li>
-<p>Send out an internal email to the relevant stakeholders explaining that we had an incident, provide a link to the post-mortem.</p>
+<p>関係するすケークホルダーに対して、インシデントが発生したこととポストモーテムへのリンクを送る。</p>
 </li>
 <li>
-<p>Occasionally check on the progress of the post-mortem to ensure that it is completed within the desired time frame.</p>
+<p>ときどきポストモーテムの進捗をチェックして、目的の時間までに終わるようにする。</p>
 </li>
 </ol>
-<h3 id="steps-for-deputy">Steps for Deputy<a class="headerlink" href="#steps-for-deputy" title="Permanent link">#</a></h3>
-<p>There are no additional steps after an incident is resolved. However the IC may ask for your help with their steps.</p>
-<h3 id="steps-for-scribe">Steps for Scribe<a class="headerlink" href="#steps-for-scribe" title="Permanent link">#</a></h3>
+<h3 id="_3">補佐のステップ<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p>インシデント解決後は追加の作業はありません。
+しかしインシデントコマンダーが各手順で確認する事があるかもしれません。</p>
+<h3 id="_4">記録係のステップ<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <ol>
 <li>
-<p>Review the chat communications and extract any relevant items from key events.</p>
+<p>チャットの会話を確認して、主要なイベントを関連する項目を抜き出します。</p>
 </li>
 <li>
-<p>Collect all <code>TODO</code> items and add them to the post-mortem.</p>
+<p>全ての <code>TODO</code> 項目をポストモーテムに追加します。</p>
 </li>
 </ol>
-<h3 id="steps-for-subject-matter-experts">Steps for Subject Matter Experts<a class="headerlink" href="#steps-for-subject-matter-experts" title="Permanent link">#</a></h3>
+<h3 id="_5">内容領域専門家のステップ<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <ol>
-<li>Add any notes you think are relevant to the post-mortem.</li>
+<li>ポストモーテムに重要と思われるメモを追加します。</li>
 </ol>
-<h3 id="steps-for-customer-liaison">Steps for Customer Liaison<a class="headerlink" href="#steps-for-customer-liaison" title="Permanent link">#</a></h3>
+<h3 id="_6">顧客窓口のステップ<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <ol>
 <li>
-<p>Reply to any customer enquiries we received about the incident.</p>
+<p>インシデントについて受け取った問い合わせへの返答をします。</p>
 </li>
 <li>
-<p>Follow the post-mortem progress, and update our status page with the external message once it is available.</p>
+<p>ポストモーテムプロセスをフォローアップして、外部向けのメッセージができればステータスページに更新します。</p>
 </li>
 </ol>
-<h3 id="steps-for-internal-liaison">Steps for Internal Liaison<a class="headerlink" href="#steps-for-internal-liaison" title="Permanent link">#</a></h3>
-<p>There are no additional steps after an incident is resolved. However the IC may ask for your help with answering questions from internal stakeholders.</p>
-<h2 id="reviewing-the-incident">Reviewing the Incident<a class="headerlink" href="#reviewing-the-incident" title="Permanent link">#</a></h2>
-<p>It's important that we review the incident in detail to see exactly what went wrong, why it went wrong, and what we can do to make sure it doesn't happen again. These take many names; after-action reviews, incident review, followup review, etc. We use the term post-mortem.</p>
-<p>You can read all about our <a href="../post_mortem_process/">post-mortem process</a>, which goes over this in more detail.</p>
-<h2 id="reviewing-the-process">Reviewing the Process<a class="headerlink" href="#reviewing-the-process" title="Permanent link">#</a></h2>
-<p>As well as reviewing the incident, it's important to review our process. Did we handle the incident well, or are there things we could have done better?</p>
-<p>This review isn't very formal yet, and typically involves a few of the incident commanders getting together to discuss how we might have done things differently, or if there are any tweaks we can make to our incident response process.</p>
-<p>If you're interested in joining these meetings, just let one of the incident commanders know and we'll be sure to invite you.</p>
+<h3 id="_7">内部窓口のステップ<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<p>インシデント解決後は追加の作業はありません。
+しかしインシデントコマンダーから、ステークホルダーへの解凍で確認することがあるかも知れません。</p>
+<h2 id="_8">インシデントのレビュー<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<p>インシデントの詳細をレビューして、問題の原因や発生した理由、そして再発防止のために何ができるか確認するのは大切です。
+これらは、アフターアクションレビュー、インシデントレビュー、フォローアップレビューなどと呼ばれます。
+私たちはポストモーテムと呼びます。</p>
+<p>私たちの<a href="../post_mortem_process/">ポストモーテム手順</a>に詳しい説明があります。</p>
+<h2 id="_9">手順のレビュー<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
+<p>インシデントのレビューと同じように、手順のレビューも大切です。
+インシデントに適切に対応できたか、また改善できる部分はあるか、などです。</p>
+<p>このレビューは正式なやり方はまだありません。
+普段はは、インシデントコマンダーが何人か集まり、他の手段が無かったか、インシデント対応手順に追加できる改善点はないかを議論します。</p>
+<p>この打ち合わせに興味がある場合は、参加したいとインシデントコマンダーの誰かに伝えてください。</p>
           <aside class="copyright" role="note">
             
               Copyright &copy; PagerDuty, Inc. &ndash;
