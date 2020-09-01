@@ -37,13 +37,13 @@ cover: assets/img/covers/incident_response_docs.png
 重大インシデント発生中の、情報と手順を紹介します。
 
 * [インシデント発生中](during/during_an_incident.md) - _インシデント発生中に何をすべきか、どう貢献すべきか_
-* [Security Incident Response](during/security_incident_response.md) - _Security incidents are handled differently to normal operational incidents._
+* [Security Incident Response](during/security_incident_response.md) - _セキュリティインシデントでは通常のインシデントと扱い方が異なります_
 
-## After an Incident
+## インシデント発生後
 
-Our followup processes, how we make sure we don't repeat mistakes and are always improving.
+フォローアッププロセスでは、再発防止に何ができるかなどを確認し、日々改善をします。
 
-* [After an Incident](after/after_an_incident.md) - _Information on what to do after an incident is resolved._
+* [After an Incident](after/after_an_incident.md) - _インシデントが解決したあとにやること_
 * [Post-Mortem Process](after/post_mortem_process.md) - _Information on our post-mortem process; what's involved and how to write or run a post-mortem._
 * [Post-Mortem Template](after/post_mortem_template.md) - _The template we use for writing our post-mortems for major incidents._
 * [Effective Post-Mortems](after/effective_post_mortems.md) - _A guide for writing effective post-mortems._

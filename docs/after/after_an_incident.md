@@ -2,54 +2,69 @@
 cover: assets/img/covers/resolved.png
 description: Information on what to do after a major incident. Our followup and after action review procedures.
 ---
-Information on what to do after a major incident. Our followup and after action review procedures.
 
-## Followup Actions for Response Roles
-In addition to any direct followup items generated from an incident, each of our response roles will have a few standard followup tasks. These are generally lightweight actions that ensure we organize information and followup with customers appropriately.
+重大インシデント発生後に何をすべきか。
+フォローアップと事後のレビュープロセス。
 
-### Steps for Incident Commander
 
-1. Update the incident in PagerDuty.
-    * Group any related incidents under the primary incident.
-    * Set the final severity of the incident.
-    * Resolve the incident.
+## 対応の役割ごとの事後アクション
 
-1. Create the post-mortem, and assign an owner to the post-mortem for the incident.
+インシデントから作成された直接のフォローアップ項目に加え、それぞれの役割ごとにいくつかのフォローアップのタスクがあります。
+これらは情報の整理と顧客を適切にフォローアップする、軽微な作業であることが多いです。
 
-1. Send out an internal email to the relevant stakeholders explaining that we had an incident, provide a link to the post-mortem.
+### インシデントコマンダーのフォローアップ
 
-1. Occasionally check on the progress of the post-mortem to ensure that it is completed within the desired time frame.
+1. PagerDuty内のインシデントを更新します。
+    * 関連するインシデントを最初のインシデントに関連付ける。
+    * 最終的なインシデントの深刻度を設定する。
+    * インシデントを解決する。
 
-### Steps for Deputy
-There are no additional steps after an incident is resolved. However the IC may ask for your help with their steps.
+1. インシデントに対するpost-mortemを作成し、オーナーを割り当てる。
 
-### Steps for Scribe
+1. 関係するすケークホルダーに対して、インシデントが発生したこととポストモーテムへのリンクを送る。
 
-1. Review the chat communications and extract any relevant items from key events.
+1. ときどきポストモーテムの進捗をチェックして、目的の時間までに終わるようにする。
 
-1. Collect all `TODO` items and add them to the post-mortem.
+### 補佐のステップ
 
-### Steps for Subject Matter Experts
+インシデント解決後は追加の作業はありません。
+しかしインシデントコマンダーが各手順で確認する事があるかもしれません。
 
-1. Add any notes you think are relevant to the post-mortem.
+### 記録係のステップ
 
-### Steps for Customer Liaison
+1. チャットの会話を確認して、主要なイベントを関連する項目を抜き出します。
 
-1. Reply to any customer enquiries we received about the incident.
+1. 全ての `TODO` 項目をポストモーテムに追加します。
 
-1. Follow the post-mortem progress, and update our status page with the external message once it is available.
+### 内容領域専門家のステップ
 
-### Steps for Internal Liaison
-There are no additional steps after an incident is resolved. However the IC may ask for your help with answering questions from internal stakeholders.
+1. ポストモーテムに重要と思われるメモを追加します。
 
-## Reviewing the Incident
-It's important that we review the incident in detail to see exactly what went wrong, why it went wrong, and what we can do to make sure it doesn't happen again. These take many names; after-action reviews, incident review, followup review, etc. We use the term post-mortem.
+### 顧客窓口のステップ
 
-You can read all about our [post-mortem process](post_mortem_process.md), which goes over this in more detail.
+1. インシデントについて受け取った問い合わせへの返答をします。
 
-## Reviewing the Process
-As well as reviewing the incident, it's important to review our process. Did we handle the incident well, or are there things we could have done better?
+1. ポストモーテムプロセスをフォローアップして、外部向けのメッセージができればステータスページに更新します。
 
-This review isn't very formal yet, and typically involves a few of the incident commanders getting together to discuss how we might have done things differently, or if there are any tweaks we can make to our incident response process.
+### 内部窓口のステップ
 
-If you're interested in joining these meetings, just let one of the incident commanders know and we'll be sure to invite you.
+インシデント解決後は追加の作業はありません。
+しかしインシデントコマンダーから、ステークホルダーへの解凍で確認することがあるかも知れません。
+
+## インシデントのレビュー
+
+インシデントの詳細をレビューして、問題の原因や発生した理由、そして再発防止のために何ができるか確認するのは大切です。
+これらは、アフターアクションレビュー、インシデントレビュー、フォローアップレビューなどと呼ばれます。
+私たちはポストモーテムと呼びます。
+
+私たちの[ポストモーテム手順](post_mortem_process.md)に詳しい説明があります。
+
+## 手順のレビュー
+
+インシデントのレビューと同じように、手順のレビューも大切です。
+インシデントに適切に対応できたか、また改善できる部分はあるか、などです。
+
+このレビューは正式なやり方はまだありません。
+普段はは、インシデントコマンダーが何人か集まり、他の手段が無かったか、インシデント対応手順に追加できる改善点はないかを議論します。
+
+この打ち合わせに興味がある場合は、参加したいとインシデントコマンダーの誰かに伝えてください。
