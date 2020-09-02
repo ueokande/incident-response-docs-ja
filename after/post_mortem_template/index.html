@@ -364,62 +364,62 @@
         <ul>
           
             <li class="anchor">
-              <a title="Overview" href="#overview">
-                Overview
+              <a title="オーバービュー" href="#_1">
+                オーバービュー
               </a>
             </li>
           
             <li class="anchor">
-              <a title="What Happened" href="#what-happened">
-                What Happened
+              <a title="何が起こったか" href="#_2">
+                何が起こったか
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Contributing Factors" href="#contributing-factors">
-                Contributing Factors
+              <a title="根本原因" href="#_3">
+                根本原因
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Resolution" href="#resolution">
-                Resolution
+              <a title="解決" href="#_4">
+                解決
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Impact" href="#impact">
-                Impact
+              <a title="影響" href="#_5">
+                影響
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Responders" href="#responders">
-                Responders
+              <a title="対応者" href="#_6">
+                対応者
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Timeline" href="#timeline">
-                Timeline
+              <a title="タイムライン" href="#_7">
+                タイムライン
               </a>
             </li>
           
             <li class="anchor">
-              <a title="How'd We Do?" href="#howd-we-do">
-                How'd We Do?
+              <a title="どうだったか？" href="#_8">
+                どうだったか？
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Action Items" href="#action-items">
-                Action Items
+              <a title="アクションアイテム" href="#_11">
+                アクションアイテム
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Messaging" href="#messaging">
-                Messaging
+              <a title="メッセージ" href="#_12">
+                メッセージ
               </a>
             </li>
           
@@ -601,24 +601,25 @@
           <p>This is a standard template we use for post-mortems at PagerDuty. Each section describes the type of information you will want to put in that section.</p>
 <hr />
 <div class="admonition note">
-<p class="admonition-title">Guidelines</p>
-<p>This page is intended to be reviewed during a post-mortem meeting that should be scheduled within 5 business days of any event.
-Your first step should be to schedule the post-mortem meeting in the shared calendar for within 5 business days after the incident.
-Don't wait until you've filled in the info to schedule the meeting, however make sure the page is completed by the meeting.</p>
+<p class="admonition-title">ガイドライン</p>
+<p>このページはインシデント発生後5営業日以内に設定されるポストモーテムのミーティングで確認することを目的とします。
+最初のステップはインシデント発生の5営業日以内に、共有カレンダーにミーティングを設定することです。
+情報が埋まるまでミーティングの設定を待ってはいけませんが、ミーティングまでにページができているようにしてください。</p>
 </div>
-<p>** Post-Mortem Owner:** <em>Your name goes here.</em></p>
-<p>** Meeting Scheduled For:** <em>Schedule the meeting on the "Incident Post-Mortem Meetings" shared calendar, for within 5 business days after the incident. Put the date/time here.</em></p>
-<p>** Call Recording:** <em>Link to the incident call recording.</em></p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p><em>Include a <strong>short</strong> sentence or two summarizing the contributing factors, timeline summary, and the impact. E.g. "On the morning of August 99th, we suffered a 1 minute SEV-1 due to a runaway process on our primary database machine. This slowness caused roughly 0.024% of alerts that had begun during this time to be delivered out of SLA."</em></p>
-<h2 id="what-happened">What Happened<a class="headerlink" href="#what-happened" title="Permanent link">#</a></h2>
-<p><em>Include a short description of what happened.</em></p>
-<h2 id="contributing-factors">Contributing Factors<a class="headerlink" href="#contributing-factors" title="Permanent link">#</a></h2>
-<p><em>Include a description of any conditions that contributed to the issue. If there were any actions taken that exacerbated the issue, also include them here with the intention of learning from any mistakes made during the resolution process.</em></p>
-<h2 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">#</a></h2>
-<p><em>Include a description what solved the problem. If there was a temporary fix in place, describe that along with the long-term solution.</em></p>
-<h2 id="impact">Impact<a class="headerlink" href="#impact" title="Permanent link">#</a></h2>
-<p><em>Be very specific here, include exact numbers.</em></p>
+<p>** ポストモーテのオーナー:** <em>ここにはあなたの名前が入ります。</em></p>
+<p>** ミーティングの対象:** <em>インシデント発生後5営業日以内に、「インシデントポストモーテムミーティング」を共有カレンダーにスケジュールします。ここに日付を入力してください</em></p>
+<p>** 通話の記録:** <em>インシデントの通話の記録へのリンクを貼る。</em></p>
+<h2 id="_1">オーバービュー<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><em><strong>短い</strong>1、2文で、インシデントの原因や、タイムライン、および影響などを要約します。
+たとえば「8月9日の朝、プライマリデータベースマシンの暴走により1分間のSEV-1が発生しました。この遅延により、0.024%のPagerDutyアラートがSLA違反となりました。」</em></p>
+<h2 id="_2">何が起こったか<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p><em>何が起こったかを簡潔に書く</em></p>
+<h2 id="_3">根本原因<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p><em>問題を引き起こした全ての条件を書く。問題を悪化させるようなアクションをしても、対応中に犯したミスから学ぶために全て書く。</em></p>
+<h2 id="_4">解決<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p><em>何によって問題が解決したか書く。一時的な措置を施した場合は、長期的な対策と共に書く。</em></p>
+<h2 id="_5">影響<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p><em>具体的な数字で正確に書く</em></p>
 <table>
 <thead>
 <tr>
@@ -628,43 +629,43 @@ Don't wait until you've filled in the info to schedule the meeting, however make
 </thead>
 <tbody>
 <tr>
-<td>Time in SEV-1</td>
-<td>?mins</td>
+<td>SEV-1の時間</td>
+<td>?分</td>
 </tr>
 <tr>
-<td>Time in SEV-2</td>
-<td>?mins</td>
+<td>SEV-2の時間</td>
+<td>?分</td>
 </tr>
 <tr>
-<td>Notifications Delivered out of SLA</td>
-<td>??% (?? of ??)</td>
+<td>SLA違反となった通知</td>
+<td>??% (?? 中 ??)</td>
 </tr>
 <tr>
-<td>Events Dropped / Not Accepted</td>
-<td>??% (?? of ??) <em>Should usually be 0, but always check</em></td>
+<td>破棄された/処理されなかったイベント</td>
+<td>??% (?? 中 ??) <em>通常は0であるべきだが確認する</em></td>
 </tr>
 <tr>
-<td>Accounts Affected</td>
+<td>影響を受けたアカウント</td>
 <td>??</td>
 </tr>
 <tr>
-<td>Users Affected</td>
+<td>影響を受けたユーザー数</td>
 <td>??</td>
 </tr>
 <tr>
-<td>Support Requests Raised</td>
-<td>?? <em>Include any relevant links to tickets</em></td>
+<td>発生したサポートリクエスト</td>
+<td>?? <em>関連するチケットへのリンク</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="responders">Responders<a class="headerlink" href="#responders" title="Permanent link">#</a></h2>
+<h2 id="_6">対応者<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <ul>
-<li><em>Who was the IC?</em></li>
-<li><em>Who was the scribe?</em></li>
-<li><em>Who else was involved?</em></li>
+<li><em>インシデントコマンダーはだれか？</em></li>
+<li><em>補佐は誰か？</em></li>
+<li><em>他に誰が関わったか？</em></li>
 </ul>
-<h2 id="timeline">Timeline<a class="headerlink" href="#timeline" title="Permanent link">#</a></h2>
-<p><em>Some important times to include: (1) time the contributing factor began, (2) time of the page, (3) time that the status page was updated (i.e. when the incident became public), (4) time of any significant actions, (5) time the SEV-2/1 ended, (6) links to tools/logs that show how the timestamp was arrived at.</em></p>
+<h2 id="_7">タイムライン<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<p><em>重要な時刻を書く。(1) 原因が発生した時刻、 (2) ページされた時刻、 (3) ステータスページが更新された時刻（つまり外部告知された時刻）、(4) 重要なアクションを実行した時刻、(5) SEV2/SEV-1が終わった時刻、(6) タイムスタンプが取得されたツール、ログへのリンク</em></p>
 <table>
 <thead>
 <tr>
@@ -681,29 +682,30 @@ Don't wait until you've filled in the info to schedule the meeting, however make
 </tr>
 </tbody>
 </table>
-<h2 id="howd-we-do">How'd We Do?<a class="headerlink" href="#howd-we-do" title="Permanent link">#</a></h2>
-<h3 id="what-went-well">What Went Well?<a class="headerlink" href="#what-went-well" title="Permanent link">#</a></h3>
+<h2 id="_8">どうだったか？<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<h3 id="_9">うまくいったこと<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <ul>
-<li><em>List anything you did well and want to call out. It's OK to not list anything.</em></li>
+<li><em>あなたがうまくいったと思ったことや、書きたいことをリストにします。全てを挙げなくても大丈夫です。</em></li>
 </ul>
-<h3 id="what-didnt-go-so-well">What Didn't Go So Well?<a class="headerlink" href="#what-didnt-go-so-well" title="Permanent link">#</a></h3>
+<h3 id="_10">うまくいかなかったこと<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <ul>
-<li><em>List anything you think we didn't do very well. The intent is that we should follow up on all points here to improve our processes.</em></li>
+<li><em>あなたがうまくいかなかったと思ったことをリストにします。その目的は、プロセスを改善して全ての点でフォローアップするためです。</em></li>
 </ul>
-<h2 id="action-items">Action Items<a class="headerlink" href="#action-items" title="Permanent link">#</a></h2>
-<p><em>Each action item should be in the form of a JIRA ticket, and each ticket should have the same set of two tags:  “sev1_YYYYMMDD” (such as sev1_20150911) and simply “sev1”. Include action items such as: (1) any fixes required to prevent the contributing factor in the future, (2) any preparedness tasks that could help mitigate the problem if it came up again, (3) remaining post-mortem steps, such as the internal email, as well as the status-page public post, (4) any improvements to our incident response process.</em></p>
-<h2 id="messaging">Messaging<a class="headerlink" href="#messaging" title="Permanent link">#</a></h2>
-<h3 id="internal-email">Internal Email<a class="headerlink" href="#internal-email" title="Permanent link">#</a></h3>
-<p><em>This is a follow-up for employees. It should be sent out right after the post-mortem meeting is over. It only needs a short paragraph summarizing the incident and a link to this wiki page.</em></p>
+<h2 id="_11">アクションアイテム<a class="headerlink" href="#_11" title="Permanent link">#</a></h2>
+<p><em>各アクションアイテムはJIRAチケットの形式で、それぞれのチケットは "sev1_YYYYMMDD" と "sev1" のタグを持ちます。
+アクションアイテムは (1) 再発防止のための修正、(2) 問題が再発しても問題が小さくなるような措置、 (3) 内部メールやステータスページの更新などのポストモーテムの残り作業、 (4) インシデント対応プロセスの改善、などです。</em></p>
+<h2 id="_12">メッセージ<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
+<h3 id="_13">内部メール<a class="headerlink" href="#_13" title="Permanent link">#</a></h3>
+<p><em>従業員に対するフォローアップです。ポストモーテムミーティングが終わった後すぐに送るべきです。メールにはインシデントの簡単な説明とwikiへのリンクを貼ります</em></p>
 <blockquote>
-<p>Briefly summarize what happened and where the post-mortem page (this page) can be found.</p>
+<p>何が起こったか、ポストモーテムへのページがどこにあるかを、簡単に要約します</p>
 </blockquote>
-<h3 id="external-message">External Message<a class="headerlink" href="#external-message" title="Permanent link">#</a></h3>
-<p><em>This is what will be included on the status.pagerduty.com website regarding this incident. What are we telling customers, including an apology? (The apology should be genuine, not rote.)</em></p>
+<h3 id="_14">外部告知<a class="headerlink" href="#_14" title="Permanent link">#</a></h3>
+<p><em>インシデントに関してstatus.pagerduty.comに掲載することです。顧客に何を伝えて、どう謝罪しますか？（謝罪は定型文ではなく真摯に書くべきです）</em></p>
 <blockquote>
-<p>Summary</p>
-<p>What Happened?</p>
-<p>What Are We Doing About This?</p>
+<p>概要</p>
+<p>何が起こったか</p>
+<p>これに対して私たちは何をしている</p>
 </blockquote>
           <aside class="copyright" role="note">
             
