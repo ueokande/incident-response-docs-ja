@@ -6,79 +6,90 @@ This is a standard template we use for post-mortems at PagerDuty. Each section d
 
 ---
 
-!!! note "Guidelines"
-    This page is intended to be reviewed during a post-mortem meeting that should be scheduled within 5 business days of any event.
-    Your first step should be to schedule the post-mortem meeting in the shared calendar for within 5 business days after the incident.
-    Don't wait until you've filled in the info to schedule the meeting, however make sure the page is completed by the meeting.
+!!! note "ガイドライン"
+    このページはインシデント発生後5営業日以内に設定されるポストモーテムのミーティングで確認することを目的とします。
+    最初のステップはインシデント発生の5営業日以内に、共有カレンダーにミーティングを設定することです。
+    情報が埋まるまでミーティングの設定を待ってはいけませんが、ミーティングまでにページができているようにしてください。
 
-** Post-Mortem Owner:** _Your name goes here._
+** ポストモーテのオーナー:** _ここにはあなたの名前が入ります。_
 
-** Meeting Scheduled For:** _Schedule the meeting on the "Incident Post-Mortem Meetings" shared calendar, for within 5 business days after the incident. Put the date/time here._
+** ミーティングの対象:** _インシデント発生後5営業日以内に、「インシデントポストモーテムミーティング」を共有カレンダーにスケジュールします。ここに日付を入力してください_
 
-** Call Recording:** _Link to the incident call recording._
+** 通話の記録:** _インシデントの通話の記録へのリンクを貼る。_
 
-## Overview
-_Include a **short** sentence or two summarizing the contributing factors, timeline summary, and the impact. E.g. "On the morning of August 99th, we suffered a 1 minute SEV-1 due to a runaway process on our primary database machine. This slowness caused roughly 0.024% of alerts that had begun during this time to be delivered out of SLA."_
+## オーバービュー
 
-## What Happened
-_Include a short description of what happened._
+_**短い**1、2文で、インシデントの原因や、タイムライン、および影響などを要約します。
+たとえば「8月9日の朝、プライマリデータベースマシンの暴走により1分間のSEV-1が発生しました。この遅延により、0.024%のPagerDutyアラートがSLA違反となりました。」_
 
-## Contributing Factors
-_Include a description of any conditions that contributed to the issue. If there were any actions taken that exacerbated the issue, also include them here with the intention of learning from any mistakes made during the resolution process._
+## 何が起こったか
 
-## Resolution
-_Include a description what solved the problem. If there was a temporary fix in place, describe that along with the long-term solution._
+_何が起こったかを簡潔に書く_
 
-## Impact
-_Be very specific here, include exact numbers._
+## 根本原因
 
-| | |
-|-|-|
-| Time in SEV-1 | ?mins |
-| Time in SEV-2 | ?mins |
-| Notifications Delivered out of SLA | ??% (?? of ??) |
-| Events Dropped / Not Accepted | ??% (?? of ??) _Should usually be 0, but always check_ |
-| Accounts Affected | ?? |
-| Users Affected | ?? |
-| Support Requests Raised | ?? _Include any relevant links to tickets_ |
+_問題を引き起こした全ての条件を書く。問題を悪化させるようなアクションをしても、対応中に犯したミスから学ぶために全て書く。_
 
-## Responders
+## 解決
 
-* _Who was the IC?_
-* _Who was the scribe?_
-* _Who else was involved?_
+_何によって問題が解決したか書く。一時的な措置を施した場合は、長期的な対策と共に書く。_
 
-## Timeline
-_Some important times to include: (1) time the contributing factor began, (2) time of the page, (3) time that the status page was updated (i.e. when the incident became public), (4) time of any significant actions, (5) time the SEV-2/1 ended, (6) links to tools/logs that show how the timestamp was arrived at._
+## 影響
+
+_具体的な数字で正確に書く_
+
+|                                     |                                                |
+| -                                   | -                                              |
+| SEV-1の時間                         | ?分                                          |
+| SEV-2の時間                         | ?分                                          |
+| SLA違反となった通知                 | ??% (?? 中 ??)                                 |
+| 破棄された/処理されなかったイベント | ??% (?? 中 ??) _通常は0であるべきだが確認する_ |
+| 影響を受けたアカウント              | ??                                             |
+| 影響を受けたユーザー数              | ??                                             |
+| 発生したサポートリクエスト          | ?? _関連するチケットへのリンク_                |
+
+## 対応者
+
+* _インシデントコマンダーはだれか？_
+* _補佐は誰か？_
+* _他に誰が関わったか？_
+
+## タイムライン
+
+_重要な時刻を書く。(1) 原因が発生した時刻、 (2) ページされた時刻、 (3) ステータスページが更新された時刻（つまり外部告知された時刻）、(4) 重要なアクションを実行した時刻、(5) SEV2/SEV-1が終わった時刻、(6) タイムスタンプが取得されたツール、ログへのリンク_
 
 | Time (UTC) | Event | Data Link |
 | ---------- | ----- | --------- |
 
-## How'd We Do?
+## どうだったか？
 
-### What Went Well?
+### うまくいったこと
 
-* _List anything you did well and want to call out. It's OK to not list anything._
+* _あなたがうまくいったと思ったことや、書きたいことをリストにします。全てを挙げなくても大丈夫です。_
 
-### What Didn't Go So Well?
+### うまくいかなかったこと
 
-* _List anything you think we didn't do very well. The intent is that we should follow up on all points here to improve our processes._
+* _あなたがうまくいかなかったと思ったことをリストにします。その目的は、プロセスを改善して全ての点でフォローアップするためです。_
 
-## Action Items
-_Each action item should be in the form of a JIRA ticket, and each ticket should have the same set of two tags:  “sev1_YYYYMMDD” (such as sev1_20150911) and simply “sev1”. Include action items such as: (1) any fixes required to prevent the contributing factor in the future, (2) any preparedness tasks that could help mitigate the problem if it came up again, (3) remaining post-mortem steps, such as the internal email, as well as the status-page public post, (4) any improvements to our incident response process._
+## アクションアイテム
 
-## Messaging
+_各アクションアイテムはJIRAチケットの形式で、それぞれのチケットは "sev1_YYYYMMDD" と "sev1" のタグを持ちます。
+アクションアイテムは (1) 再発防止のための修正、(2) 問題が再発しても問題が小さくなるような措置、 (3) 内部メールやステータスページの更新などのポストモーテムの残り作業、 (4) インシデント対応プロセスの改善、などです。_
 
-### Internal Email
-_This is a follow-up for employees. It should be sent out right after the post-mortem meeting is over. It only needs a short paragraph summarizing the incident and a link to this wiki page._
+## メッセージ
 
-> Briefly summarize what happened and where the post-mortem page (this page) can be found.
+### 内部メール
 
-### External Message
-_This is what will be included on the status.pagerduty.com website regarding this incident. What are we telling customers, including an apology? (The apology should be genuine, not rote.)_
+_従業員に対するフォローアップです。ポストモーテムミーティングが終わった後すぐに送るべきです。メールにはインシデントの簡単な説明とwikiへのリンクを貼ります_
 
-> Summary
+> 何が起こったか、ポストモーテムへのページがどこにあるかを、簡単に要約します
 
-> What Happened?
+### 外部告知
 
-> What Are We Doing About This?
+_インシデントに関してstatus.pagerduty.comに掲載することです。顧客に何を伝えて、どう謝罪しますか？（謝罪は定型文ではなく真摯に書くべきです）_
+
+> 概要
+
+> 何が起こったか
+
+> これに対して私たちは何をしている

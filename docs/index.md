@@ -45,7 +45,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 * [After an Incident](after/after_an_incident.md) - _インシデントが解決したあとにやること_
 * [Post-Mortem Process](after/post_mortem_process.md) - _ポストモーテムの手順について、何が関係してどうやって書くか_
-* [Post-Mortem Template](after/post_mortem_template.md) - _The template we use for writing our post-mortems for major incidents._
+* [Post-Mortem Template](after/post_mortem_template.md) - _重大インシデントに対するポストモーテムで使っているテンプレート_
 * [Effective Post-Mortems](after/effective_post_mortems.md) - _A guide for writing effective post-mortems._
 
 ## Training
