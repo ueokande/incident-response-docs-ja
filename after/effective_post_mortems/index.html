@@ -373,38 +373,38 @@
         <ul>
           
             <li class="anchor">
-              <a title="Dos" href="#dos">
-                Dos
+              <a title="やること" href="#_1">
+                やること
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Don'ts" href="#donts">
-                Don'ts
+              <a title="やらないこと" href="#_2">
+                やらないこと
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Suggestions" href="#suggestions">
-                Suggestions
+              <a title="推奨事項" href="#_3">
+                推奨事項
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Reviewing" href="#reviewing">
-                Reviewing
+              <a title="レビュー" href="#_4">
+                レビュー
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Examples" href="#examples">
-                Examples
+              <a title="例" href="#_5">
+                例
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Useful Resources" href="#useful-resources">
-                Useful Resources
+              <a title="役立つ情報" href="#_6">
+                役立つ情報
               </a>
             </li>
           
@@ -574,40 +574,55 @@
             <h1>Effective Post-Mortems</h1>
           
           
-          <p>Writing an effective post-mortem allows us to learn quickly from our mistakes and improve our systems and processes for everyone. We want to be sure we're writing detailed and accurate post-mortems in order to get the most benefit out of them. This guide lists some of the things we can do to make sure our post-mortems are effective.</p>
-<h2 id="dos">Dos<a class="headerlink" href="#dos" title="Permanent link">#</a></h2>
+          <p>効果的なポストモーテムを書くことで、ミスに早く気づき、私たちのシステムとプロセスの全てを改善できます。
+私たちは最大限の恩恵を受けるため、詳細かつ正確なポストモーテムを書くことを心がけています。
+このガイドではポストモーテムが効果的になるようないくつの事柄を説明します。</p>
+<h2 id="_1">やること<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
-<li>Make sure the timeline is an accurate representation of events.</li>
-<li>Describe any technical lingo/acronyms you use that newcomers may not understand.</li>
-<li><a href="https://www.pagerduty.com/blog/postmortem-understand-service-reliability/">Discuss how the incident fits into our understanding of the health and resiliency of the services affected</a>.</li>
+<li>タイムラインがイベントに対して正確であることを確認してください。</li>
+<li>新しくチームに入った人が理解できるように、技術用語や略語を説明してください。</li>
+<li><a href="https://www.pagerduty.com/blog/postmortem-understand-service-reliability/">インシデントによって、サービスの正常性や回復性への理解につながるか議論します。</a>.</li>
 </ul>
-<h2 id="donts">Don'ts<a class="headerlink" href="#donts" title="Permanent link">#</a></h2>
+<h2 id="_2">やらないこと<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
-<li>Don't use the word "outage" unless it really was an outage. We want to be sure we accurately reflect the impact of an incident, and outage is usually too broad a term to use. It can lead customers to think we were fully unavailable when that likely was nowhere near the case.</li>
-<li>Don't change details or events to make things "look better". We need to be honest in our post-mortems, even to ourselves, otherwise they lose their effectiveness.</li>
-<li>Don't name and shame someone. We keep our post-mortems blameless. If someone deployed a change that broke things, it's not their fault, it's our fault for having a system that allowed them to deploy a breaking change, etc.</li>
+<li>本当にサービスが停止した場合を除き「停止」という言葉は使わないでください。
+  私たちはインシデントの影響を正確に反映したいので、「停止」という言葉は意味が広いです。
+  また顧客に対して何もできなかったと思わせることになります。</li>
+<li>「見栄えを良くする」ために詳細やイベントを書き換えないでください。
+  効果的なポストモーテムにならないので、自分自身にも正直である必要があります。</li>
+<li>名前を挙げたり恥をかかせないようにしてください。
+  ポストモーテムは誰かを責めないようにします。
+  もし誰かが壊れる変更をデプロイしても、それは彼らの失敗ではなく、破壊的な変更ができるシステムである我々の責任です。</li>
 </ul>
-<h2 id="suggestions">Suggestions<a class="headerlink" href="#suggestions" title="Permanent link">#</a></h2>
+<h2 id="_3">推奨事項<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <ul>
-<li>Avoid the concept of "human error". This is related to the point above about "naming and shaming", but there's a subtle difference - very rarely is the mistake "rooted" in a human performing an action, there are often several contributing factors (the script the human ran didn't have rate limiting, the documentation was out of date, etc...) that can and should be addressed.</li>
-<li>Avoid "alternate reality" discussion in the timeline or description sections. "Service X started seeing elevated traffic early this morning, and stopped responding to requests. <em><em>If service X had</em></em> rate limited the requests from the customer, <em><em>it would not have</em></em> failed." &amp; "Service X began slowly responding to requests this evening, <em><em>there was insufficient monitoring</em></em> to detect the elevated CPU usage." as two examples, blends describing the actual problem with a hypothetical fix - keep the improvements separate from the description, so that each can be appropriately discussed.</li>
-<li>These videos go into more detail on the above points:</li>
+<li>「ヒューマンエラー」という概念を避けます。
+  これは上記の「名前を挙げたり恥をかかせない」と言うのに関連してますが、微妙な違いがあります。
+  人に起因するミスはとても稀で、多くの場合は対処すべき要因があります（たとえば、人間が実行するスクリプトにレートリミットが無かったり、ドキュメントが古かったり）。</li>
+<li>タイムライン、または説明の節で、仮定の話は避けます。
+  たとえば「早朝からサービスXのトラフィック増加が確認でき、リクエストへの応答が停止した。 <em><em>もしサービスXに</em></em> レートリミットがあれば、リクエストに失敗 <em><em>していないだろう</em></em>。」「今晩にサービスXのレスポンスが遅くなり始めました。これはCPU使用率の上昇を検知する <em><em>モニタリングが不十分</em></em> でした。」
+  この2つの例は実際に起きた問題と、対策の仮定を混同して議論しています。
+  これらは別々に適切に議論できるようにします。</li>
+<li>以下のビデオは上記の点について詳しく説明しています。<ul>
 <li>"<a href="https://www.youtube.com/watch?v=TqaFT-0cY7U">Three analytical traps in accident investigation</a>"</li>
 <li>"<a href="https://www.youtube.com/watch?v=rHeukoWWtQ8">Two views on Human Error</a>"</li>
 </ul>
-<h2 id="reviewing">Reviewing<a class="headerlink" href="#reviewing" title="Permanent link">#</a></h2>
-<p>We have a Slack room dedicated to reviewing post-mortems before the scheduled meeting. Here are some of the things we're looking for:</p>
-<ul>
-<li>Does it provide enough detail?</li>
-<li>Rather than just pointing out what went wrong, does it drill down to the underlying causes of the issue?</li>
-<li>Does it separate “What Happened?” from “How to Fix it”?</li>
-<li>Do the proposed action items make sense? Are they well-scoped enough?</li>
-<li>Is the post-mortem well written and understandable?</li>
-<li>Does the external message resonate well with customers or is it likely to cause outrage?</li>
+</li>
 </ul>
-<p>Reviewing a post-mortem isn't about nit-picking typos (although we should make sure our external message isn't littered with spelling errors). It's about providing constructive feedback on valuable changes to a post-mortem so that we get the most benefit from them.</p>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<p>Here are some examples of post-mortems from other companies as a reference,</p>
+<h2 id="_4">レビュー<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>設定したミーティングの前にレビューできるSlackルームがあります。
+以下の観点でレビューします。</p>
+<ul>
+<li>詳細が十分に説明されているか？</li>
+<li>問題の原因を指し示すだけでなく、問題の根本原因まで掘り下げて議論されているか？</li>
+<li>「何が起こったか」と「どう修正するか」を分けて説明できてるか。</li>
+<li>ポストモーテムが理解できるように書かれているか？</li>
+<li>外部への告知メッセージは顧客が納得できるか、怒らせてしまわないか？</li>
+</ul>
+<p>ポストモーテムのレビューは単なるタイポを指摘するだけではありません（外部告知にはスペルミスがないことを確認する必要があります）。
+最大限の恩恵を受けるための、価値のある変更ができる建設的なフィードバックを提供します。</p>
+<h2 id="_5">例<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>以下に他社のポストモーテムの例を示します。</p>
 <ul>
 <li><a href="https://support.stripe.com/questions/outage-postmortem-2015-10-08-utc">Stripe</a></li>
 <li><a href="https://blog.lastpass.com/2015/06/lastpass-security-notice.html/comment-page-2/">LastPass</a></li>
@@ -618,7 +633,7 @@
 <li><a href="https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016">GOV.UK Rail Accident Investigation</a></li>
 <li><a href="https://github.com/danluu/post-mortems">A List of Post-mortems!</a></li>
 </ul>
-<h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">#</a></h2>
+<h2 id="_6">役立つ情報<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011">Advanced PostMortem Fu and Human Error 101 (Velocity 2011)</a></li>
 <li><a href="http://fractio.nl/2015/10/30/blame-language-sharing/">Blame. Language. Sharing.</a></li>
