@@ -3,84 +3,111 @@ cover: assets/img/covers/training_overview.png
 title: Training Overview
 description: Learning about the PagerDuty major incident response process is an important part of being an effective on-call engineer at PagerDuty. This section goes over our training material for the various roles that are involved in our incident response, along with some additional information and training material from government agencies.
 ---
-Learning about the PagerDuty major incident response process is an important part of being an effective on-call engineer at PagerDuty. This section goes over our training material for the various roles that are involved in our incident response, along with some additional information and training material from government agencies.
 
-## Training Guides
-Our training guides are split up by role, however you are encouraged to read through the training guides even for roles you don't belong to, as it can give you some good insight into how those people will be behaving during major incidents.
+PagerDutyの重大インシデント対応プロセスを学ぶことは、PagerDutyで効率的なオンコールエンジニアに鳴るために重要なことです。
+この瀬古ションでは、インシデント対応における様々な役割に対するトレーニング資料と、政府機関からの追加情報とトレーニング資料を紹介します。
 
-* [Incident Commander Training](/training/incident_commander.md) - The "IC" is the person who drives a major incident to resolution. They're the person who will be directing everyone else.
-* [Deputy Training](/training/deputy.md) - The Deputy is someone who supports the Incident Commander and can take over for them if necessary.
-* [Scribe Training](/training/scribe.md) - This is intended for individuals who will be acting as a scribe during an incident.
-* [SME / Resolver Training](/training/subject_matter_expert.md) - This is relevant to everyone at PagerDuty who are on-call for any team.
-* [Customer Liaison Training](/training/customer_liaison.md) - This is for individuals who will be publicly representing us and interacting with customers.
-* [Internal Liaison Training](/training/internal_liaison.md) - This is relevant for anyone who might be called upon to work with teams internal during an incident.
+## トレーニングガイド
 
-## Training Courses
-We've also published slides and videos of some of our training courses. Originally used internally at PagerDuty to train our staff, we've since adapted them for a wider audience so you can make use of them in your own organizations.
+トレーニングガイドはそれぞれの役割ごとに分けられていますが、その役割に属していなくても読むことをお勧めします。
+重大インシデントで彼らがどのようなことをしているかを理解できます。
 
-* [Incident Response Training Course](/training/courses/incident_response.md) - Introductory course on incident response and the role of the Incident Commander.
+* [インシデントコマンダーのトレーニング](/training/incident_commander.md) - インシデントコマンダーは重大インシデントを解決に導きします。彼らは他の人を支持する人です。
+* [補佐のトレーニング](/training/deputy.md) - 補佐はインシデントコマンダーをサポートしたり、必要に応じて作業を引き継ぎます。
+* [記録係のトレーニング](/training/scribe.md) - インシデント発生中に、記録係として担当する人を対象とします。
+* [内容領域専門家/解決者のトレーニング](/training/subject_matter_expert.md) - これはチームでオンコールを担当するPagerDutyの全ての人が対象となります。
+* [顧客窓口のトレーニング](/training/customer_liaison.md) - 外部に告知して顧客とやり取りする人を対象とします。
+* [内部窓口のトレーニング](/training/internal_liaison.md) - これはインシデント発生中に、社内のチームと協力する可能性がある全ての人に関係します。
 
-## Example Incident
-This recorded call is a reenactment of an actual major incident that occurred at PagerDuty in [January 2017](https://status.pagerduty.com/incidents/510k1bnvwv6g). Some details have been changed in the interest of brevity and privacy, but the incident remains otherwise largely intact. For more details about the recording, you can read the [PagerDuty blog post](https://www.pagerduty.com/blog/incident-response-reenactment/).
+## トレーニングコース
+
+私たちは一部のトレーニングコースのスライドやビデオも公開しています。
+もともとはPagerDuty内部で使っていたものですが、より広く使えるようにしたので、あなたの組織にも利用できます。
+
+* [インシデント対応トレーニングコース](/training/courses/incident_response.md) - インシデント対応とインシデントコマンダーの役割に関する入門コース。
+
+## インシデントの例
+
+この通話記録は、[2017年1月](https://status.pagerduty.com/incidents/510k1bnvwv6g)にPagerDutyで発生した重大インシデントを再現したものです。
+簡略化とプライバシーの観点で詳細な部分は変更されていますが、それ以外の部分は当時のインシデントのままです。
+この記録の詳細については、[PagerDutyのブログ](https://www.pagerduty.com/blog/incident-response-reenactment/)に載っています。
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vw6I5DYWkNA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## National Incident Management System (NIMS)
-Our incident response process is loosely based on the [US National Incident Management System (NIMS)](https://www.fema.gov/national-incident-management-system), which is described as,
+## National Incident Management System : NIMS
 
-  _A systematic, proactive approach to guide departments and agencies at all levels of government, nongovernmental organizations, and the private sector to work together seamlessly and manage incidents involving all threats and hazards—regardless of cause, size, location, or complexity—in order to reduce loss of life, property and harm to the environment._
+私たちのインシデント対応プロセスは、ほぼ[National Incident Management System : NIMS](https://www.fema.gov/national-incident-management-system)に基づいています。
 
-While it might not initially seem that this would be applicable to an IT operations environment, we've found that many of the lessons learned from major incidents in these situations can be directly applied to our industry too. The principles are the same and span many different environments.
+_生命、財産、そして環境への影響を減らすために、政府機関、非政府機関、そして民間部門における、全てのレベルの部門や機関をシームレスに連携し、根本原因、規模、場所、複雑度など、全ての脅威や危険をもたらすインシデントを管理するための、体系的かつ危険予測するアプローチ。_
+
+最初はこれはITの運用環境には適用できないと思われていたが、これらの状況をもたらす重大インシデントからの学びで、私たちの業界にも直接適用できるということを学びました。
 
 [![NIMS](../assets/img/thumbnails/nims_core.png)](https://www.fema.gov/pdf/emergency/nims/NIMS_core.pdf) [![NIMS Training](../assets/img/thumbnails/nims_training.png)](https://www.fema.gov/pdf/emergency/nims/nims_training_program.pdf)
 
-If you want to learn more about NIMS, we recommend the [ICS-100](https://training.fema.gov/is/courseoverview.aspx?code=IS-100.b) and [ICS-700](https://training.fema.gov/is/courseoverview.aspx?code=IS-700.a) online training courses, which go over NIMS and the Incident Command System (You can also take an online examination after training in order to get a certificate from FEMA). There is also a wealth of [additional training material and courses from FEMA](https://training.fema.gov/nims/) on NIMS, which I would encourage you to look at.
+もしNIMOについて詳しく知りたいのなら、[ICS-100](https://training.fema.gov/is/courseoverview.aspx?code=IS-100.b) と [ICS-700](https://training.fema.gov/is/courseoverview.aspx?code=IS-700.a) のオンライントレーニングを受けることをお勧めします。
+これらのコースではNIMSとインシデントコマンダーシステム（FEMAから認証を得るためにトレーニング後にオンライン試験があります）について学ぶことができます。
+またNIMSには[FEMAによる追加トレーニング資料](https://training.fema.gov/nims/)があるので、そちらもご覧ください。
 
-If you're based in the US and interested in taking a more active incident response role in your community, we recommend investigating your local [CERT programs](https://www.fema.gov/community-emergency-response-teams) (Community Emergency Response Teams). Many cities offer CERT training, after which you can volunteer as a CERT contributor within your community. Not only is it an opportunity to get real world experience with disaster response, but the skills you learn can be applied to everyday life too.
+もしUSを拠点として、コミュニティ内でインシデント対応ロールを引き受ける場合には、[CERT（Community Emergency Response Teams）プログラム](https://www.fema.gov/community-emergency-response-teams)について調べることをお勧めします。
+多くの都市がCERTトレーニングを実施しており、コミュニティ内でCERTコントリビューターとしてボランティアができます。
+現実世界での災害対応を経験するだけでなく、そのスキルを日常生活で活かすこともできます。
 
-Also take a look at the [Additional Reading](/resources/reading) page.
+[追加情報](/resources/reading)もご覧ください。
 
-## Incident Response Around the World
-While NIMS is the US incident response framework, many countries have their own similar frameworks. Some are based on the US system, but many were developed on their own. There's a wealth of additional information to be learned by investigating the methods and frameworks used in countries all over the world.
+## 世界のインシデント対応
 
-A book called "[Comparative Emergency Management: Understanding Disaster Policies, Organizations, and Initiatives from Around the World](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/)" (available from the [FEMA website](https://training.fema.gov/hiedu/aemrc/)) compares the systems used by 30 or so different countries, and is an amazing collection of information on emergency management frameworks used around the world.
+NIMSはUSのインシデント対応フレームワークですが、多くの国で独自のフレームワークがあります。
+一部はUSのシステムを元にしてるものもありますが、ほとんどは独自のものが多いです。
+世界各国で使われているメソッドとフレームワークを調査することで新たな学びもあります。
 
-Here are a few of the systems we looked at in more detail in order to adapt and improve our own process at PagerDuty.
 
-### United Kingdom
+"[Comparative Emergency Management: Understanding Disaster Policies, Organizations, and Initiatives from Around the World](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/)"（[FEMA website](https://training.fema.gov/hiedu/aemrc/)から入手可能）という本は、30カ国ほどで利用されているシステムを比較し、世界中で利用されている危機管理フレームワークについての情報が載っています。
 
-The United Kingdom emergency services use a command hierarchy called [**Gold-Silver-Bronze Command Structure**](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure) for their major operations. The framework involves three levels responsible for strategic (gold), tactical (silver), and operational (bronze) command decisions.
+ここでは私たちPagerDuty内のプロセスに適合して改善するために調べたいくつかのシステムを紹介します。
 
-Here are some useful reading materials if you're interested in learning more:
+### イギリス
+
+イギリスの危機管理システムは、[**Gold-Silver-Bronze Command Structure**](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)と呼ばれるコマンド階層を遣います。
+このフレームワークは、戦略的（ゴールド）、戦術的（シルバー）、運用（ブロンズ）の、コマンドの決定をする責務3つのレベルが含まれます。
+
+詳細については以下の資料をご覧ください。
 
 * [UK.GOV - Emergency Response and Recovery](https://www.gov.uk/guidance/emergency-response-and-recovery).
 * [UK.GOV - Incident Command - 3rd Edition (2008)](https://www.gov.uk/government/publications/fire-and-rescue-manual-volume-1-incident-command).
 * [UK Home Office - Critical Incident Management](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/735103/critical-incident-management-v12.0ext.pdf) (PDF).
 
 
-### New Zealand
+### ニュージーランド
 
-New Zealand's system is called the [**Coordinated Incident Management System (CIMS)**](https://en.wikipedia.org/wiki/Coordinated_Incident_Management_System) and is based upon the Incident Command System used in the US. One area we particularly liked from CIMS is its focus on common terminology, which helps prevents confusion during an incident and allows for a faster and more effective response. Some terminology has been changed from ICS (e.g. "Control" instead of "Command" to describe the management functions), but should still be familiar.
+ニュージラーンドには[**Coordinated Incident Management System (CIMS)**](https://en.wikipedia.org/wiki/Coordinated_Incident_Management_System)と呼ばれるシステムがあり、USのインシデントコマンドシステム (Incident Command System : ICS) に基づいています。
+CIMSで特に私たちが気に入った部分は、一般的な用語に重点を置いていることで、インシデント発生中の混乱を防いで迅速かつ効率的な対応を可能にしています。
+いくつかの用語はICSから変更があります（たとえば"Command"ではなく"Control"にするなど）が、馴染み深いものです。
 
-Here are some useful reading materials if you're interested in learning more:
+
+詳細については以下の資料をご覧ください。
 
 * [Ministry of Civil Defence & Emergency Management - New Zealand Coordinated Incident Management System (CIMS)](https://www.civildefence.govt.nz/resources/new-zealand-coordinated-incident-management-system-cims-2nd-edition/) ([PDF](https://www.civildefence.govt.nz/assets/Uploads/publications/CIMS-2nd-edition.pdf)).
 * [Devereux-Blum Training & Development - Emergency Management Training](https://www.emergencymanagement.co.nz/)
 
-### Australia
+### オーストラリア
 
-Australia uses a system called the [**Australasian Inter-Service Incident Management System (AIIMS)**](https://en.wikipedia.org/wiki/Australasian_Inter-Service_Incident_Management_System) which is a derivative of the NIMS framework used in the US. While based on ICS, AIIMS puts a bigger focus on _span of control_ than other frameworks. As with New Zealand's system, there are some differences to the terminology being used (e.g. "Incident Controller" instead of "Incident Commander"), but it should still be familiar to those who know ICS.
+オーストラリアの[**Australasian Inter-Service Incident Management System (AIIMS)**](https://en.wikipedia.org/wiki/Australasian_Inter-Service_Incident_Management_System)は、USのNIMSから派生したものです。
+ICSをベースにしているので、AIIMSは他のフレームワークよりも _管理範囲_ に重点を置いています。
+ニュージーランドのシステムのように、用語の使い方にいくつかの相違点があります（たとえば"Incident Commander"ではなく"Incident Controller"など）が、ICSを知っている人には馴染みがあります。
 
-Here are some useful reading materials if you're interested in learning more:
+詳細については以下の資料をご覧ください。
 
 * [The Australasian Inter-Service Incident Management System, 3rd Edition](https://training.fema.gov/hiedu/docs/cem/comparative%20em%20-%20session%2021%20-%20handout%2021-1%20aiims%20manual.pdf) (PDF).
 * [Incident Management in Australia Handbook](https://knowledge.aidr.org.au/resources/handbook-14-incident-management-in-australia/)
 
-### Canada
+### カナダ
 
-Canada uses their own [**Incident Command System**](http://www.icscanada.ca/images/upload//ICS%20OPS%20Description2012.pdf) (PDF). The standard for which is maintained by a network of organizations called [ICS Canada](http://www.icscanada.ca/en/home.html). Their website has a collection of information on how you can find local training courses in Canada, depending on your Province.
+カナダでは独自の[**Incident Command System**](http://www.icscanada.ca/images/upload//ICS%20OPS%20Description2012.pdf)があります。
+この規格は[ICS Canada](http://www.icscanada.ca/en/home.html)と呼ばれる組織たちによって管理されておりいます。
+このウェブサイトにはカナダの州にごとに応じて、トレーニングコースを見つける方法が載っています。
 
-Here are some useful reading materials if you're interested in learning more:
+詳細については以下の資料をご覧ください。
+
 
 * [ICSCanada - I-100 Introduction to Incident Command System](http://www.aema.alberta.ca/documents/studentreferencenote86439.pdf) (PDF).
-* [Canada ICS Forms](http://www.icscanada.ca/en/Forms.html) - _Standard ICS forms that you can download and use in your own incidents ([FEMA has the US equivalents](https://training.fema.gov/icsresource/icsforms.aspx))._
+* [Canada ICS Forms](http://www.icscanada.ca/en/Forms.html) - _ダウンロードして各自のインシデントに利用できる標準ICSフォーム（同様のものが[FEMA](https://training.fema.gov/icsresource/icsforms.aspx)にもあります）_

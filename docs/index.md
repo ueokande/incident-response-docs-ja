@@ -48,11 +48,13 @@ cover: assets/img/covers/incident_response_docs.png
 * [Post-Mortem Template](after/post_mortem_template.md) - _重大インシデントに対するポストモーテムで使っているテンプレート_
 * [Effective Post-Mortems](after/effective_post_mortems.md) - _効果的なポストモーテムを書くためのガイド_
 
-## Training
+## トレーニング
 
-So, you want to learn about incident response? You've come to the right place.
+それではインシデント対応について学びたいですか？
+あなたは正しい場所にたどり着きました。
 
-* [Training Overview](training/overview.md) - _An overview of our training guides and additional training material from third-parties._
+* [Training Overview](training/overview.md) - _私たちのトレーニングガイドの概要と、3rdパーティーのトレーニング資料_
+* An overview of our training guides and additional training material from third-parties._
 * [Glossary of Incident Response Terms](training/glossary.md) - _A collection of terms that you may hear being used, along with their definition._
 
 ### Training Guides
