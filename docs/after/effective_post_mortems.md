@@ -2,43 +2,59 @@
 cover: assets/img/covers/blameless.png
 description: Writing an effective post-mortem allows us to learn quickly from our mistakes and improve our systems and processes for everyone. We want to be sure we're writing detailed and accurate post-mortems in order to get the most benefit out of them. This guide lists some of the things we can do to make sure our post-mortems are effective.
 ---
-Writing an effective post-mortem allows us to learn quickly from our mistakes and improve our systems and processes for everyone. We want to be sure we're writing detailed and accurate post-mortems in order to get the most benefit out of them. This guide lists some of the things we can do to make sure our post-mortems are effective.
 
-## Dos
+効果的なポストモーテムを書くことで、ミスに早く気づき、私たちのシステムとプロセスの全てを改善できます。
+私たちは最大限の恩恵を受けるため、詳細かつ正確なポストモーテムを書くことを心がけています。
+このガイドではポストモーテムが効果的になるようないくつの事柄を説明します。
 
-* Make sure the timeline is an accurate representation of events.
-* Describe any technical lingo/acronyms you use that newcomers may not understand.
-* [Discuss how the incident fits into our understanding of the health and resiliency of the services affected](https://www.pagerduty.com/blog/postmortem-understand-service-reliability/).
+## やること
 
-## Don'ts
+* タイムラインがイベントに対して正確であることを確認してください。
+* 新しくチームに入った人が理解できるように、技術用語や略語を説明してください。
+* [インシデントによって、サービスの正常性や回復性への理解につながるか議論します。](https://www.pagerduty.com/blog/postmortem-understand-service-reliability/).
 
-* Don't use the word "outage" unless it really was an outage. We want to be sure we accurately reflect the impact of an incident, and outage is usually too broad a term to use. It can lead customers to think we were fully unavailable when that likely was nowhere near the case.
-* Don't change details or events to make things "look better". We need to be honest in our post-mortems, even to ourselves, otherwise they lose their effectiveness.
-* Don't name and shame someone. We keep our post-mortems blameless. If someone deployed a change that broke things, it's not their fault, it's our fault for having a system that allowed them to deploy a breaking change, etc.
+## やらないこと
 
-## Suggestions
+* 本当にサービスが停止した場合を除き「停止」という言葉は使わないでください。
+  私たちはインシデントの影響を正確に反映したいので、「停止」という言葉は意味が広いです。
+  また顧客に対して何もできなかったと思わせることになります。
+* 「見栄えを良くする」ために詳細やイベントを書き換えないでください。
+  効果的なポストモーテムにならないので、自分自身にも正直である必要があります。
+* 名前を挙げたり恥をかかせないようにしてください。
+  ポストモーテムは誰かを責めないようにします。
+  もし誰かが壊れる変更をデプロイしても、それは彼らの失敗ではなく、破壊的な変更ができるシステムである我々の責任です。
 
-* Avoid the concept of "human error". This is related to the point above about "naming and shaming", but there's a subtle difference - very rarely is the mistake "rooted" in a human performing an action, there are often several contributing factors (the script the human ran didn't have rate limiting, the documentation was out of date, etc...) that can and should be addressed.
-* Avoid "alternate reality" discussion in the timeline or description sections. "Service X started seeing elevated traffic early this morning, and stopped responding to requests. _*If service X had*_ rate limited the requests from the customer, _*it would not have*_ failed." & "Service X began slowly responding to requests this evening, _*there was insufficient monitoring*_ to detect the elevated CPU usage." as two examples, blends describing the actual problem with a hypothetical fix - keep the improvements separate from the description, so that each can be appropriately discussed.
-* These videos go into more detail on the above points:
-  * "[Three analytical traps in accident investigation](https://www.youtube.com/watch?v=TqaFT-0cY7U)"
-  * "[Two views on Human Error](https://www.youtube.com/watch?v=rHeukoWWtQ8)"
 
-## Reviewing
+## 推奨事項
 
-We have a Slack room dedicated to reviewing post-mortems before the scheduled meeting. Here are some of the things we're looking for:
+* 「ヒューマンエラー」という概念を避けます。
+  これは上記の「名前を挙げたり恥をかかせない」と言うのに関連してますが、微妙な違いがあります。
+  人に起因するミスはとても稀で、多くの場合は対処すべき要因があります（たとえば、人間が実行するスクリプトにレートリミットが無かったり、ドキュメントが古かったり）。
+* タイムライン、または説明の節で、仮定の話は避けます。
+  たとえば「早朝からサービスXのトラフィック増加が確認でき、リクエストへの応答が停止した。 _*もしサービスXに*_ レートリミットがあれば、リクエストに失敗 _*していないだろう*_。」「今晩にサービスXのレスポンスが遅くなり始めました。これはCPU使用率の上昇を検知する _*モニタリングが不十分*_ でした。」
+  この2つの例は実際に起きた問題と、対策の仮定を混同して議論しています。
+  これらは別々に適切に議論できるようにします。
+* 以下のビデオは上記の点について詳しく説明しています。
+    * "[Three analytical traps in accident investigation](https://www.youtube.com/watch?v=TqaFT-0cY7U)"
+    * "[Two views on Human Error](https://www.youtube.com/watch?v=rHeukoWWtQ8)"
 
-* Does it provide enough detail?
-* Rather than just pointing out what went wrong, does it drill down to the underlying causes of the issue?
-* Does it separate “What Happened?” from “How to Fix it”?
-* Do the proposed action items make sense? Are they well-scoped enough?
-* Is the post-mortem well written and understandable?
-* Does the external message resonate well with customers or is it likely to cause outrage?
+## レビュー
 
-Reviewing a post-mortem isn't about nit-picking typos (although we should make sure our external message isn't littered with spelling errors). It's about providing constructive feedback on valuable changes to a post-mortem so that we get the most benefit from them.
+設定したミーティングの前にレビューできるSlackルームがあります。
+以下の観点でレビューします。
 
-## Examples
-Here are some examples of post-mortems from other companies as a reference,
+* 詳細が十分に説明されているか？
+* 問題の原因を指し示すだけでなく、問題の根本原因まで掘り下げて議論されているか？
+* 「何が起こったか」と「どう修正するか」を分けて説明できてるか。
+* ポストモーテムが理解できるように書かれているか？
+* 外部への告知メッセージは顧客が納得できるか、怒らせてしまわないか？
+
+ポストモーテムのレビューは単なるタイポを指摘するだけではありません（外部告知にはスペルミスがないことを確認する必要があります）。
+最大限の恩恵を受けるための、価値のある変更ができる建設的なフィードバックを提供します。
+
+## 例
+
+以下に他社のポストモーテムの例を示します。
 
 * [Stripe](https://support.stripe.com/questions/outage-postmortem-2015-10-08-utc)
 * [LastPass](https://blog.lastpass.com/2015/06/lastpass-security-notice.html/comment-page-2/)
@@ -49,7 +65,7 @@ Here are some examples of post-mortems from other companies as a reference,
 * [GOV.UK Rail Accident Investigation](https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016)
 * [A List of Post-mortems!](https://github.com/danluu/post-mortems)
 
-## Useful Resources
+## 役立つ情報
 
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
