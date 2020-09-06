@@ -59,7 +59,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 ### Training Guides
 
-* [Incident Commander Training](training/incident_commander.md) - _A guide to becoming our next Incident Commander._
+* [Incident Commander Training](training/incident_commander.md) - _次のインシデントコマンダーになるためのガイド_
 * [Deputy Training](training/deputy.md) - _How to be a deputy and back up the Incident Commander._
 * [Scribe Training](training/scribe.md) - _A guide to scribing._
 * [Subject Matter Expert Training](training/subject_matter_expert.md) - _A guide on responsibilities and behavior for all participants in a major incident._

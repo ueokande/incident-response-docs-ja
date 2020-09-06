@@ -5,348 +5,498 @@ description: So you want to be an incident commander? You've come to the right p
 ![Gene Kranz](../assets/img/headers/gene_kranz.jpg)
 *Credit: [NASA](https://en.wikipedia.org/wiki/File:Eugene_F._Kranz_at_his_console_at_the_NASA_Mission_Control_Center.jpg)*
 
-So you want to be an Incident Commander (IC)? You've come to the right place! You don't need to be a senior team member to become an IC, anyone can do it providing you have the requisite knowledge (yes, even an intern)!
+インシデントコマンダーになりたいですか。
+あなたは正しい場所にたどり着けました！
+インシデントコマンダーはシニアメンバーである必要はなく、必要な知識があれば誰でもなることができます（もちろんインターンも含みます）。
 
-## Purpose
-If you could boil down the purpose of an Incident Commander to one sentence, it would be,
+## 目的
 
-> Keep the incident moving towards resolution.
+インシデントコマンダーの目的を1文でまとめるなら
 
-The Incident Commander is the decision maker during an major incident; Delegating tasks and listening to input from subject matter experts in order to bring the incident to resolution. They become the highest ranking individual on any major incident call, regardless of their day-to-day rank. Their decisions made as commander are final.
+> インシデントを解決に導く
 
-Your job as an Incident Commander is to listen to the call and to watch the incident Slack room in order to provide clear coordination, recruiting others to gather context/details. **You should not be performing any actions or remediations, checking graphs, or investigating logs.** Those tasks should be delegated.
+インシデントコマンダーは重大インシデント発生中に意思決定をします。
+インシデントを解決するために、タスクを委譲し内容領域専門家からの意見を聞きます。
+日々の地位に関係なく、重大インシデントでは最も位の高い人です。
+コマンダーとしての意思決定は最終的なものです。
 
-An IC should also be considering next steps and backup plans at every opportunity, in an effort avoid getting stuck without any clear options to proceed, and to keep things moving towards resolution.
+インシデントコマンダーとしての仕事は、他の背景情報や詳細情報を集約して明確な調整をするために、通話を聞きインシデントのSlackルームを見ます。
+**インシデントコマンダーは、任意のアクションの実行や修正をしたり、グラフやログの調査をすべきではないです。**
+それらのタスクは委譲すべきです。
 
-## Prerequisites
-Before you can be an Incident Commander, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+インシデントコマンダーはいつでも、次のステップやバックアッププランも考慮すべきです。
+実行する選択肢がなく手詰まりになるのを避けて、解決に向けて前進し続けるように心がけます。
 
-* Excellent verbal and written **communication skills**.
-* Has **high-level knowledge** of how the different PagerDuty services interact with each other.
-* Ability to size-up a situation, **assess the effectiveness** of various tactics/strategies, and **make rapid decisions** on appropriate courses of action.
-* Has flexibility, and is able to **listen to expert feedback**, modifying plans on-the-fly as necessary.
-* Has been **involved in at least two major incident responses**, either as a spectator, or as an active participant.
-* Has gravitas, **takes command**, and is **willing to kick people off a call** to remove distractions, even if it's the CEO.
+## 前提条件
 
-!!!tip "Deep technical knowledge not required!"
-    [Incident Commanders do not require deep technical knowledge of our systems](../resources/anti_patterns.md#requiring-incident-commanders-to-have-deep-technical-knowledge). Your job as Incident Commander is to coordinate the response, not make technical changes. Don’t think you can’t be an Incident Commander just because you’re not in the engineering department!
+インシデントコマンダーになる前に、次の基準を満たしている必要があります。
+全てを満たしていなくても、トレーニングを続ける事ができるので心配しないでください。
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](/before/different_roles.md) to see what is expected from an Incident Commander, as well as what we expect from the other roles you'll be interacting with.
+* 優れた口頭および書面での **コミュニケーションスキル**がある。
+* PagerDutyの様々なサービスがどのように連携しているかの **高レベルな知識**を持っている。
+* 状況を判断して、 様々な戦術、戦略の**効果の評価**ができて、行動方針に対する**迅速な意思決定**ができる。
+* **専門家のフィードバック** に耳を傾け、必要に応じてその場で計画を変更できる柔軟性がある。
+* 直近の2つの重大インシデントに、見学または対応者として関わっている。
+* **指揮を執り**、CEOであっても通話の妨げとなる人を **通話から追い出す** ことのできる厳格さがある。
 
-## Training Process
-The process is fairly loose for now. Here's a list of things you can do to train though,
+!!!tip "深い技術知識は必要ありません"
+    [インシデントコマンダーはシステムの深い技術知識は必要ありません](../resources/anti_patterns.md#requiring-incident-commanders-to-have-deep-technical-knowledge)。
+    インシデントコマンダーはインシデント対応を調整することであって、技術的な変更を行うことではありません。
+    もしあなたが開発部にいなくても、インシデントコマンダーになれないと思わないでください。
 
-* Read the rest of this page, particularly the sections below.
+## 責務
 
-* Participate in [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) (FF).
-    * Shadow a FF to see how it's run.
-    * Be the scribe for multiple FF's.
-    * Be the incident commander for multiple FF's.
 
-* Play a game of "[Keep Talking and Nobody Explodes](http://www.keeptalkinggame.com/)" with other people in the office.
-    * For a more realistic experience, play it with someone in a different office over Hangouts.
+[インシデントの異なる役割](/before/different_roles.md)を読んで、インシデントコマンダーに何を期待されているか、またインシデントコマンダーがやり取りする他の役割に何を期待するかを読んでください。
 
-* Shadow a current incident commander for at least a full week shift.
-    * Get alerted when they do, join in on the same calls.
-    * Sit in on an active incident call, follow along with the chat, and follow along with what the Incident Commander is doing.
-    * **Do not actively participate in the call, keep your questions until the end.**
+## トレーニングプロセス
 
-* Reverse shadow a current incident commander for at least a full week shift.
-    * You should be the one to respond to incidents, and you will take point on calls, however the current IC will be there to take over should you not know how to proceed.
+今の所は厳密に決まっていないです。
+トレーニングのためにできることを次に示します。
 
-## Graduation
-What's the difference between an IC in training, and an IC? (This isn't the set up to a joke). Simple, an IC puts themselves on the schedules.
+* このページの残りの部分を読んでください。特に以下の項目には目を通しておいてください。
 
-Also, don't forget to announce yourself in the IC Slack channel, and get yourself added to our IC mailing list.
+* [金曜日の障害 (Failure Friday : FF)](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/)に参加してください。
 
-## Handling Incidents
-Every incident is different (we're hopefully not repeating the same issue multiple times!), but there's a common process you can apply to each one. The language used in each step is discussed in more detail in the "Procedures and Lingo" section below.
+    * FFをシャドーイングして、どのように実行するか確認します
+    * 複数のFFの記録係になります
+    * 複数のFFのインシデントコマンダーになります
 
-![Handling Incidents](/assets/img/misc/handling_incidents.png)
+* オフィスの他の人と、"[Keep Talking and Nobody Explodes](http://www.keeptalkinggame.com/)" ゲームをします。
 
-### Size-Up
-_Sizing-up involves getting an idea of what's going on, and how much impact it's having. This is an information gathering step that will allow you to make good decisions later._
+    * よりリアルな体験をするためには、電話を通して他の人とプレイします。
 
-1. **Identify the symptoms. _- Ask "What's wrong?"_**
-    * Identify what the symptoms are, ask your experts to provide this information.
-    * Gather as much information as you can, as quickly as you can (remember the incident is still happening while you're doing this).
+* 少なくとも1週間のシフトで、現在のインシデントコマンダーをシャドーイングしてください。
 
-1. **Identify scope of incident. _- Ask "Is this affecting multiple services?"_**
-    * Identify how big the issue is, and whether it's escalating/flapping/static.
-    * Get the facts, the possibilities of what can happen, and the probability of those things happening.
+    * 同じアラートを受け取り、同じ通話に参加します。
+    * 現在発生しているのインシデント通話に参加し、チャットをフォローアップして、インシデントコマンダーが何をしているかをフォローします。
+    * **通話の議論には参加しないでください。質問は通話が終了するまで控えておきます。**
 
-### Stabilize
-_Next step is to stabilize the incident. We need to determine what we can do to fix it, and then execute those actions._
+* 少なくとも1週間のシフトで、インシデントコマンダーを逆シャドウイングします。
 
-1. **Identify possible actions. _- Ask "What actions can we take? How risky are they?"_**
-    * Identify any actions you can take to alleviate the issue. Ask your experts what they want to do.
-    * Identify the risks associated with each of those actions.
+    * あなたがインシデント対応する必要があり、通話で議論をしますが、進め方がわからない場合は現在のインシデントコマンダーが引き継ぎます。
 
-1. **Make a decision. _- Say "We're proceeding with..."_**
-    * Decide which action to take based on the information you have available.
-    * Making the "wrong" decision is better than making no decision. If you have nothing but bad options, pick one and proceed.
 
-1. **Gain consensus. _- Ask "Are there any strong objections?"_**
-    * Gather support for the plan (See "Polling During a Decision" below).
-    * Listen for objections.
-    * Be prepared to adjust your plan if new information is presented.
+## 卒業
 
-1. **Assign task. _- Say "A, please perform B, I'll come back to you in X minutes. Understood?"_**
-    * Delegate remediation actions to your SME's.
-    * Tasks should be assigned to an individual and be time-boxed.
-    * Get acknowledgement that the task was understood and is being executed.
+トレーニング中のインシデントコマンダーと、通常のインシデントコマンダーとの違いはなんでしょうか。
+答えは簡単で、インシデントコマンダーはスケジュールに基づいて行動します。
 
+インシデントコマンダーのSlackチャネルに参加して、インシデントコマンダーのメーリングリストに追加することを忘れないでください。
 
-### Update
-_While remediation steps are being carried out, it's important to provide status updates, not just to responders, but other stakeholders within the organization._
+## インシデントを処理する
 
-1. **Provide regular updates. _- Say "Here's a status update: ..."_**
-    * Maintain a cadence, and provide regular updates to everyone on the call.
-    * What's happening, what are we doing about it, etc.
-    * Keep updates short and factual.
+全てのインシデントは異なります（同じ問題を何度も繰り返し起こさない事を願います）が、それぞれのインシデントで共通した手順があります。
+各ステップで使われる用語については「手順と用語」というセクションで詳しく説明します。
 
 
-### Verify
-_Once remediation actions have been performed, we need to verify that they have been successful or not, and proceed with a backup plan if not._
+![インシデントへの対応](/assets/img/misc/handling_incidents.png)
 
-1. **Follow-up on task completion. _- Ask "Have you finished?"_**
-    * Ask for the status of task completion from the tasks you assigned out.
-    * If responders need more time, give them more time.
-    * If problems persist, begin again from the size-up step.
+### 把握する（Size-Up）
 
-## Deputy
-The deputy for an incident is generally the backup Incident Commander. However, as an Incident Commander, you may appoint one or more Deputies. Note that Deputy Incident Commanders must be as qualified as the Incident Commander, and that if a Deputy is assigned, he or she must be fully qualified to assume the Incident Commander’s position if required.
+_何が発生しているか、それがどの程度の影響があるかを判断します。これは後によい意思決定ができるための、情報収集のステップです_
 
-## Communication Responsibilities
-Sharing information during an incident is a critical process. As an Incident Commander (or Deputy), you should be prepared to brief others as necessary. You will also be required to communicate your intentions and decisions clearly so that there is no ambiguity in your commands.
+1. **症状を特定する - 「なにが悪いのか？」を問う**
 
-When given information from a responder, you should clearly acknowledge that you have received and understood their message, so that the responder can be confident in moving on to other tasks.
+    * 症状を特定して、専門家に情報を提供するよう依頼します。
+    * 可能な限り多くの情報を術役収集します（この間にもインシデントは継続していることに気をつけてください）。
 
-After an incident, you should communicate with other training Incident Commanders on any debrief actions you feel are necessary.
+1. **インシデントの範囲を特定する - 「複数サービスに影響があるのか？」を問う**
+    * 問題の規模と、拡大しているか、バタついているか、静的なのかを判断します。
+    * 事実、起こりうること、それが起こる確立を取得します。
 
-!!!info "Clear is better than concise."
-    Remember that clear communication is better than concise communication. It can be tempting to try and abbreviate or rush speech in order to speed up the response. This can lead to confusion and misunderstandings which will ultimate increase the response time. Always favour clear communication, even if takes a little bit longer.
+### 安定させる（Stabilize）
 
-## Incident Call Procedures and Lingo
-The [Steps for Incident Commander](/during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+_次のステップはインシデントを安定させることです。修正するには何ができるのかを特定して、それを実行します。_
 
-Additionally, aside from following the [usual incident call etiquette](/before/call_etiquette.md), there a few extra etiquette guidelines you should follow as IC:
+1. **可能なアクションを見つける - 「どのような行動を取ることができるか？それのリクスは？」を問う**
 
-* Always announce when you join the call if you are the on-call IC.
-* Don't let discussions get out of hand. Keep conversations short.
-* Note objections from others, but your call is final.
-* If anyone is being actively disruptive to your call, kick them off.
-* Announce the end of the call.
+    * 問題を軽減できる全てのアクションを特定します。また専門家に何ができるかを問います。
+    * それぞれのアクションに対するリスクを評価します。
 
-Here are some examples of phrases and patterns you should use during incident calls.
+1. **意思決定をする - 「私たちは...を実行する」と宣言する**
 
-### Start of Call Announcement
-At the start of any major incident call, the incident commander should announce the following,
+    * 持っている情報を元に、どのアクションを実行するか意思決定します。
+    * 間違った判断をするのは、何もしないよりも良いです。悪い選択肢しかない場合はどれかを選択します。
 
-> This is [NAME], I am the Incident Commander for this call.
+1. **同意を得る - 「強い異論はありますか？」を問う**
 
-This establishes to everyone on the call what your name is, and that you are now the commander. Identify yourself by name and state that you are the "Incident Commander" and not "IC", as newcomers may not be familiar with the terminology yet. The word "commander" makes it very clear that you're in charge.
+    * 計画に対するサポートを集めます（下記の「意思決定時の投票」もご覧ください）
+    * 反対意見を聞きます。
+    * 新しい情報があるときは、計画を調整するようにします。
 
-### Start of Incident, IC Not Present
-If you are trained to be an IC and have joined a call, even if you aren't the IC on-call, you should do the following,
+1. **タスクを割り当てる - 「Aさん、Bを実行してください。X分後に戻ってきます。分かりましたか？」と宣言する**
+    * 修復アクションを内容領域専門家に委譲します。
+    * タスクは個人に割り当てられ、タイムボックスが設定されるべきです。
+    * タスクの内容を理解して、実行されているか確認します。
 
-> Is there an IC on the call?
+### 更新する（Update）
 
-> (pause)
+_ 修正手順が実行されているとき、対応者だけでなく組織内の他のステークホルダーにも、ステータスを提供することが重要です_
 
-> Hearing no response, this is [NAME], and I am now the Incident Commander for this call.
+1. **定期的な更新を提供する - 「ここにステータスの更新があります」と宣言します**
 
-If the on-call IC joins later, you may hand over to them at your discretion (see below for the hand-off procedure)
+    * 頻度を維持して、通話の全ての人に定期的に更新情報を提供します
+    * 何が起こっていて、今何をしているかなど。
+    * 更新情報は短く、事実に基づいてください。
 
-### Checking if SME's are Present
-During a call, you will want to know who is available from the various teams in order to resolve the incident. Etiquette dictates that people should announce themselves, but sometimes you may be joining late to the call. If you need a representative from a team, just ask on the call. Your deputy can page one if no one answers.
+### 確認する（Verify）
 
-> Do we have a representative from [X] on the call?
+_修復作業が実行されたら、それが成功したかどうかを確認して、そうでない場合はバックアッププランを実行します_
 
-> (pause)
+1. **タスクの完了状況を確認する - 「終了しましたか？」を問う**
+    * タスクを割り当てたひとに、タスクの完了状況を確認します。
+    * もう少し時間がかかりそうな場合は、さらなる時間を与えます。
+    * 問題が解決しない場合は、Size-upからやり直します。
 
-> Deputy, can you go ahead and page the [X] on-call please.
+## 補佐
 
-### Assigning Tasks
-When you need to give out an assignment or task, you should follow these three steps,
+インシデントの補佐は、通常インシデントコマンダーのバックアップです。
+しかしインシデントコマンダーとして、1人以上の補佐を指名できます。
+補佐のインシデントコマンダーは、インシデントコマンダーとしての資格が必要です。
+補佐が割り当てる人は、必要に応じてインシデントコマンダーのポジションになることを想定して、インシデントコマンダーとしての資格が必要になります。
 
-1. Assign the task to a specific person directly.
-1. Time-box the task with a specific number of minutes.
-1. Confirm that the responder has acknowledged and understood the instructions.
+## コミュニケーションの責務
 
-!!!warning "Can someone..."
-    Never say "Can someone..." as this leads to the [bystander effect](https://en.wikipedia.org/wiki/Bystander_effect). Tasks should always be assigned directly to an individual, and never just thrown out with the hope that someone will pick it up.
+インシデント発生中の情報共有は重要なプロセスです。
+インシデントコマンダー（または補佐）として、必要に応じて他の人に説明する準備をすべきです。として、必要に応じて他の人に説明する準備が必要になります。
+またあなたのコマンドが曖昧にならないように、意図と決定事項を明確に説明する必要もあります。
 
-> IC: Bob, please investigate the high latency on web app boxes. I'll come back to you for an answer in 3 minutes.
+対応者から情報を貰ったときは、そのメッセージを受信して理解したと応答すべきです。
+対応者は確認して他のタスクに移行できます。
 
-> Bob: Understood
+インシデント後は、トレーニング中のインシデントコマンダーに、必要だと思われる報告アクションについてコミュニケーションする必要があります。
 
-Keep track of how many minutes you assigned, and check in with that person after that time. You can get help from your deputy to help track the timings.
+!!!info "簡潔よりも明確に"
+    明確なコミュニケーションは簡潔なコミュニケーションよりも良いことを覚えておいてください。
+    応答を急ぐために、スピーチを省略したり急いだりしたいかも知れません。
+    しかしこれは混乱と誤解を生み、最終的に応答時間が長くなる可能性があります。
+    少し時間がかかる場合でも、明確なコミュニケーションを心がけてください。
 
-### Gaining Consensus (Polling During a Decision)
-If a decision needs to be made, it comes down to the IC. Once the IC makes a decision, it is final. But it's important that no one can come later and object to the plan, saying things like "I knew that would happen". An IC will use very specific language to be sure that doesn't happen, and to gain implicit consensus of everyone on the response.
+## インシデント通話手順と用語
 
-> The proposal is to [EXPLAIN PROPOSAL]
+[インシデントコマンダーのためのステップ](/during/during_an_incident.md)で、インシデント発生中に何をすべきか解説しました。
 
-> Are there any strong objections to this plan?
+これに加えて、[インシデント通話中のエチケット](/before/call_etiquette.md)で、インシデントコマンダーとして従うべき追加のエチケットガイドラインがあります。
 
-> (pause)
+* オンコールのインシデントコマンダーとして通話に参加した場合はアナウンスしてください。
+* 議論を手放さないでください。会話は短くするようにしてください。
+* 他の人からの意見に注意しつつ、あなたの判断が最終決定となります。
+* もし議論の妨げになる人が通話に参加してきたら追い出してください
+* 通話の終了をアナウンスしてください。
 
-> Hearing no objects, we are proceeding with this proposal.
+インシデント通話中に使うべき、フレーズとパターンの例をいくつか紹介します。
 
-If you were to ask "Does everyone agree?", you'd get people speaking over each other, you'd have quiet people not speaking up, etc. Asking for any STRONG objections gives people the chance to object, but only if they feel strongly on the matter. It also means that the information you care about the most (objections to proceeding) are heard loud and clearly.
+### 通話開始のアナウンス
 
-### Status Updates
-It's important to maintain a cadence during a major incident call. Whenever there is a lull in the proceedings, usually because you're waiting for someone to get back to you, you can fill the gap by explaining the current situation and the actions that are outstanding. This makes sure everyone is on the same page.
+重大インシデントの通話のスタート時には、インシデントコマンダーが以下のことをアナウンスします。
 
-> While we wait for [X], here's an update of our current situation.
+> こちらは[名前]です。私はこの通話のインシデントコマンダーです。
 
-> We are currently in a SEV-1 situation, we believe to be caused by [X]. There's an open question to [Y] who will be getting back to us in 2 minutes. In the meantime, we have Tweeted out that we are experiencing issues. Our next Tweet will be in 10 minutes if the incident is still ongoing at that time.
+これにより通話の参加者が、あなたの名前とあなたがインシデントコマンダーであることを確認します。
+自分で名前を明言し、あなたがICではなくインシデントコマンダーであることを宣言します。
+新しく参加した人はまだその言葉になれていません。
+「コマンダー」という言葉は、あなたに権限があることが明確に成ります。
 
-> Are there any additional actions or proposals from anyone else at this time?
 
-### Reducing Scope
-Once you've identified the cause of an incident, you can take some time to reduce the scope of your call. For example, if you've identified that a bad deploy is the cause, there's no need to keep your network engineering responder on the call. Responders will usually appreciate not having to stick around for something that doesn't involve them, especially when it's 3am. Generally, it's best to list out the people you want to remain on the call (rather than listing those that can leave), as this not only re-affirms who is required, but makes sure you won't forget about anyone who can leave.
+### インシデントが発生したが、インシデントコマンダーがいない
 
-> Now that we've identified the primary cause and are on the way to recovery, I need the deputy, scribe, support, and site-reliability experts to stay on the call. Everyone else, thanks very much for your response, feel free to drop-off at your discretion.
+あなたがインシデントコマンダーの訓練をして通話に参加したとき、あなたはオンコールのインシデントコマンダーではなくても、以下のことをします。
 
-There's no need to forcibly remove anyone from the call, leave the choice open. Sometimes responders prefer to remain to see how the incident eventually resolves, since they're already awake anyway.
+> この通話にインシデントコマンダーはいますか？
 
-### Spinning Off Sub-Teams
-When handling [complex incidents](/before/complex_incidents.md), it will sometimes be necessary to spin off a sub-team (or multiple sub-teams) to investigate specific issues in more detail before reporting back. This is to ensure that you can maintain an effective span of control. To do this, you should assign a team leader, give them a specific task (time-boxed in the usual way), and re-affirm that they are your primary contact and that all communication from their team should come via the leader. Use our pre-defined team names of Alpha, Bravo, and Charlie to avoid confusion when creating the teams.
+> (応答なし)
 
-> IC: Anne, I'd like you to lead a sub-team to investigate the ongoing latency in the web-tier. Please gather your desired team and investigate, get back to me in 20 minutes. All communication from your team should be filtered through you. Use the Alpha team rooms and phone bridge.
+> 返事がありません。わたしは[名前]です。今から私がこの通話のインシデントコマンダーとなります。
 
-> Anne: Understood, I'll get back with an update in 20 minutes.
+もしオンコールのインシデントコマンダーが後から参加する場合は、あなたの裁量で引き継ぐことができます（引き継ぎ手順は下を参照してください）。
 
-You do not need to prescribe who their team consists of. Either they will have a pre-existing team structure they can utilize, or they should take the initiative to assemble a team on their own. You should pick your team leaders accordingly.
+### 内容領域専門家がいるか確認する
 
-### Transfer of Command
-Transfer of command, involves (as the name suggests) transferring command to another Incident Commander. There are multiple reasons why a transfer of command might take place,
+通話中は、インシデントを解決するために、さまざまなチームから誰が対応可能かを知りたいです。
+エチケットに従えば、彼ら自身がアナウンスすべきですが、あなたが後から参加することもあります。
+もしチームからの代表者が必要になったら、通話でそれを訪ねてください。
+もし解凍がない場合は、補佐が彼を呼び出せます。
 
-* Commander has become fatigued and is unable to continue.
-* Incident complexity changes.
-* Change of command is necessary for effectiveness or efficiency.
-* Personal emergencies arise (e.g., Incident Commander has a family emergency).
+> この通話に[X]の代表はいますか？
 
-Never feel like you are not doing your job properly by handing over. Handovers are encouraged. In order to handover, out of band from the main call (via Slack for example), notify the other IC that you wish to transfer command. Update them with anything you feel appropriate. Then announce on the call,
+> (応答なし)
 
-> Everyone on the call, be advised, at this time I am handing over command to [X].
+> 補佐、[X]のオンコールを呼び出してください。
 
-The new IC should then announce on the call as if they were joining a new call (see above), so that everyone is aware of the new commander.
+### タスクの割り当て
 
-Note that the arrival of a more qualified person does NOT necessarily mean a change in incident command.
+もし割り当てまたはタスクが必要になったら、以下の3つのステップに従ってください。
 
-### End of Call Sign-Off
-At the end of an incident, you should announce to everyone on the call that you are ending the call at this time, and provide information on where followup discussion can take place. It's also customary to thank everyone.
+1. 特定の誰かにタスクを直接割り当てます。
+1. タスクのタイムボックスを何分かで決めます。
+1. 対応者が指示に応答して、理解していることを確認します。
 
-> Ok everyone, we're ending the call at this time. Please continue any followup discussion on Slack. Thanks everyone.
+!!!warning "誰かできますか"
+    [傍観者効果](https://en.wikipedia.org/wiki/Bystander_effect)を引き起こすため、「誰かできますか」は言わないでください。
+    タスクは誰かが拾うことを期待せず、常に特定の誰かに直接割り振ります。
 
-## Handling Problems
-Things don't always go smoothly on incident response calls, so as an Incident Commander you need to be prepared for instances where the conversation gets derailed, either intentionally or unintentionally. Here are some procedures and lingo you can follow when things get disruptive, in order to get things back on track.
+> インシデントコマンダー: ボブ、ウェブアプリでレイテンシが高くなっている件について調べてください。3分後に結果を危機に来ます。
 
-### Maintaining Order
-Often times on a call people will be talking over one another, or an argument on the correct way to proceed may break out. As Incident Commander it's important that order is maintained on a call. The Incident Commander has the power to remove someone from the call if necessary (even if it's the CEO). But often times you just need to remind people to speak one at a time. Sometimes the discussion can be healthy even if it starts as an argument, but you shouldn't let it go on for too long.
+> ボブ: 理解しました。
 
-> (noise)
+何分割り当てたかを追跡して、その時間が経過したあとに確認します。
+タイミングを追跡するために、補佐に手助けしてもらうことができます。
 
-> Ok everyone, can we all speak one at a time please. So far I'm hearing two options to proceed: 1) [X], 2) [Y].
+### 同意を得る (意思決定時の投票)
 
-> Are there any other proposals someone would like to make at this time?
+意思決定が必要な場合は、インシデントコマンダーが判断します。
+インシデントコマンダーが決定を下すと、それが最終決定となります。
+もし後からきた誰かが「それが起こることは知っていた」と言っても、計画には反対できません。
+それが起こらないようにインシデントコマンダーは特定の言語を使い、みんなから明示的に同意を得ます。
 
-> ...etc
 
-### Getting Straight Answers
-You may ask a question as IC and receive an answer that doesn't actually answer your question. This is generally when you ask for a yes/no answer but get a more detailed explanation. This can often times be because the person doesn't understand the call etiquette. But if it continues, you need to take action in order to proceed.
+> 提案は[提案内容]です
 
-> IC: Is this going to disable the service for everyone?
+> この計画に強く反対する人はいますか？
 
-> SME: Well... for some people it....
+> (応答なし)
 
-> IC: Stop. I need a yes/no answer. Is this going to disable the service for everyone?
+> 反対意見が無いようなので、この提案で進めたいと思います
 
-> SME: Well... it might not do...
+「皆さん賛成ですか？」と聞いてしまうと、参加者たちが互いに議論を始めたり、静かな人が発言できなくなったりします。
+強く反対する人の意見を乞うことで、反対する機会が与えられますが、それは強く反対したい場合に限られます。
+またこれは、最も気にしている情報（手順への反対意見）も大きくはっきりと聞くことができます。
 
-> IC: Stop. I'm going to ask again, and the only two words I want to hear from you are "yes" or "no. Is this going to disable the service for everyone?
 
-> SME: Well.. like I was saying..
+### ステータス更新
 
-> IC: Stop. Leave the call. Backup IC can you please page the backup on-call for [service] so that we can get an answer.
+重大インシデントの通話では、リズムを維持することが重要です。
+沈黙が続いているときはいつでも、通常はあなたが誰かの返事を待っているときで、現在の状況と特別なアクションを説明することで空白時間を埋めることができます。
+これはみんなに同じ認識であることを確認できます。
 
-### Executive Swoop - Overriding the Incident Commander
-> Executive: Ignore the incident commander, do what I say!
+> [X]を待っている間、現在の状況の更新情報を説明します。
 
-This is an extreme example, but illustrates the concept of "Executive Swoop", whereby someone who would be senior to you during peacetime comes on the call and starts overriding your decisions as IC. This is unacceptable behaviour during wartime, as the IC is in command. This is rare, but can cripple the response process if it happens. There is a simple question you can ask as an Incident Commander to get things back on track, "Do you wish to take command?",
+> 私たちはSEV-1の状況にあり、[X]が原因だと考えられます。
+> 未解決である[Y]については2分後も返ってくる結果で明らかに成ります。
+> それまでの間、問題が発生していることをツイートしました。
+> インシデントがまだ発生している場合は、次のツイートは10分以内に行われます。
 
-> Executive: No, I don't want us doing that. Everyone stop. We need to rollback instead.
+> 現在、追加のアクションや提案はありますか？
 
-> IC: Hold please. [EXECUTIVE], do you wish to take over command?
+### スコープの縮小
 
-> Executive: Yes/No
+インシデントの原因を特定できれば、インシデントの通話の範囲を縮小できます。
+例えば、悪いデプロイが原因だとわかれば、ネットワークエンジニアの対応者は通話に残り続ける必要はありません。
+対応者は普通、特に午前3時となると、自分に関連しないことに居続けなくてもよいことに感謝します。
+通話に残り続けて欲しい人をリスト化するのが良いです（退出できる人をリスト化するのではなく）。
+これは誰が必要かを再認識できるだけでなく、退出できる人を忘れなくできます。
 
-> (If yes) IC: Understood. Everyone on the call, be advised, at this time I am handling over command to [EXECUTIVE]. They are now the incident commander for this call.
+> 主な根本原因を特定できて、現在回復に向かっています。
+> 補佐、記録係、サポート、そしてサイトリライアビリティエキスパートは残ってください。
+> その他の人はご協力感謝します。あなたの裁量で通話を抜けてください。
 
-> (If no) IC: In that case, please cause no further interruptions or I will remove you from the call.
+通話から強制的に追い出す必要はなく、選択する余地を残しておきます。
+対応者はすでに起きてしまっているので、インシデントが最終的にどうなったかを確かめたい場合があります。
 
-This makes it clear to the executive that they have the option of being in charge and making decisions, but in order to do so they must continue as an Incident Commander. If they refuse, then remind them that you are in charge and disruptive interruptions will not be tolerated. If they continue, remove them from the call.
+### サブチームを作る
 
-### Executive Swoop - Anti-Motivation
-> Executive: Let's try and resolve this in 10 minutes please!
+[複雑なインシデント](/before/complex_incidents.md)に対処するときは、報告の前に特定の問題を詳細に調査するために、サブチーム（または複数のサーブチーム）を作ることも大事です。
+これは管理範囲を維持もできます。
+サブチームを作るには、チームリーダーを指名して特定のタスクを割り当てます（通常と同じようにタイムボックスを設けます）。
+そしてリーダーが連絡先で、チームからの全てのコミュニケーションはリーダーを経由することを再確認します。
+チームを作る時に混乱しないように、我々が予め用意したチーム名、Alpha、Bravo、Charlieを使います。
 
-It's rare for an executive to maliciously derail an incident response call, usually it is done with the best of intentions. However, these good intentions can still derail your response process and demotivate responders. As an Incident Commander you will need to recognize and respond to these situations. In the case above, it seems motivational, however it assumes responders aren't already working as hard as possible to solve the problem, and adds no value to the response process. You can respond to this by reminding the commenter that these things should be kept until after the incident is over.
+> インシデントコマンダー: アン、Web層で発生している遅延について調査するサブチームを作りたいと思います。
+> 必要なチームメンバーを集めてそれを調査してください。
+> 20分後に報告をお願いします。
+> あなたのチームから私への報告は、全てあなたを通してください。
+> Web回日にはAlphaチームを使ってください。
 
-> IC: We're in the middle of an incident, please keep your comments until the end.
+> アン: 分かりました。20分以内に更新情報を持ってきます。
 
-### Executive Swoop - Wants Information
-> Executive: Can I get a spreadsheet of all affected customers?
+あなたはチームメンバーが誰かを決める必要はありません。
+彼らはすでにチーム構成があるか、またはチームが率先して自分たちでチームを構成する必要があります。
+あなたはそれに応じて、チームリーダーを指名する必要があります。
 
-The most common case of executive swoop is a request for more information. Unfortunately, when in the middle of an incident, you typically cannot spare the resources to gather such information. As an incident commander you should remind the executive of this, and that the incident takes priority.
+### コマンドの転送
 
-> We can either get you that list, or fix the incident. Not both. The incident takes priority.
+コマンドの転送には、（その名の通り）他のインシデントコマンダーにコマンドを転送します。
+コマンドの転送が行われる理由はいくつかあります。
 
-Note that this isn't phrased as a question, you've already made the decision as Incident Commander, you're just informing the executive of that decision.
+* コマンダーは疲れて継続ができない
+* インシデントの複雑度が変わった
+* 効果や効率のためにコマンドが変更した
+* 保人的な緊急事態の発生（家族の緊急事態）
 
-### Executive Swoop - Questioning Severity
-> Executive: Is this really a SEV-1?
+引き継いだ時にきちんと処理されないと思ってはいけません。
+引き継ぎを推奨します。
+引き継ぎをするには、メインの通話外（例えばSlackなど）で、他のインシデントコマンダーに交代するようお願いします。
+必要に応じて、彼らに感じたことを伝えます。
+そして通話でアナウンスします。
 
-Our severity levels determine the scale of response we give to an incident. Conversations on what severity an incident is can very quickly consume the entire call and doesn't change the fact that there is an incident on-going. We do not discuss incident severity during an incident call, as we treat an incident as the highest severity we think it could be. We can downgrade the severity during the post-mortem, however we cannot waste time litigating severities on an incident call. So simply remind folks of this in order to get things back on track,
+> この通話にいる皆さん、ここからは私がコマンド[X]を担当します
 
-> IC: We do not discuss incident severity during the call. We're treating this as a SEV-1.
+新しいインシデントコマンダーは、新しい通話に参加したときのようにアナウンスします（上を参照）。
+これでみんなが、新しいコマンダーがだれだか分かります。
 
-### The Belligerent Responder
-Sometimes you will have a responder who does not follow instructions and/or is being actively disruptive to your response call. Perhaps this is being done intentionally, or it could even be unintentional (an un-muted microphone while in a loud environment, etc). In either case, you need to resolve the situation and get back to the incident at hand. State the fact that the individual is being disruptive, provide them a way to save face, but also state what will happen if they don't stop. No second chances, if they don't follow through, remove them from the call.
+### 通話を終了する
 
+インシデントの終わりに、この時点で通話を終了することをアナウンスします。
+そして追加の議論ができる場所の情報を提供します。
+参加者に感謝するのも慣例です。
+
+> OKみなさん、これにて通話を終了します。
+> なにか追加の議論があればSlackで続けてください。
+> みなさんありがとうございました。
+
+## 問題に対処する
+
+インシデント対応の通話はいつもスムーズに進むとは限らないので、意図的または無意識のうちに会話が脱線したときに備える必要があります。
+話が脱線したとき、軌道を元に戻すためにできるいくつかの手順と用語を説明します。
+
+### 順序を維持する
+
+多くの場合、人は通話時に互いに話したり、正しく進行するための討論が発生することがあります。
+インシデントコマンダーは通話中の話す順番を維持することが大事です。
+インシデントコマンダーは必要に応じて通話から追い出すことができます（たとえCEOであっても）。
+しかしほとんどの場合、一度に話す人を1人にするよう注意する必要があります。
+議論が討論として始まったとしても正しい場合がありますが、あまり長くならないよう注意してください。
+
+> （ノイズ）
+
+> OK、皆さん。一度の1人ずつ話してください。現在2つの選択肢があります。 1) [X]、2) [Y]
+
+> 現段階で誰か他に提案したい人はいますか
+
+> ...など
+
+### 正解を得る
+
+インシデントコマンダーは質問に対する正確な答えをもらえない場合があります。
+これは通常、YES/NOで答えられる質問に対して、より詳細を答えてしまう場合が多いです。
+これは多くの場合、通話中のエチケットを知らない場合があります。
+しかしこれが続く場合、議論を進めるためのアクションが必要になります。
+
+> インシデントコマンダー: これにより全ての人がサービスが無効化されますか？
+
+> 内容領域専門家: ええと、一部の人は...
+
+> インシデントコマンダー: やめて、YES/NOで答えてください。これにより全ての人がサービスが無効化されますか？
+
+> 内容領域専門家: ええと、うまくイカないかも知れない...
+
+> インシデントコマンダー: やめて、もう一度尋ねます。YESまたはNOの答えが欲しいです。これにより全ての人がサービスが無効化されますか？
+
+> 内容領域専門家: ええと、私が言ったように...
+
+> インシデントコマンダー: やめて、通話を終了します。バックアップのインシデントコマンダーが[service]のバックアップオンコールを呼び出して答えを聞きます。
+
+### 経営陣の乱入 - インシデントコマンダーの無視
+
+> 経営陣: インシデントコマンダーを無視して、私が言うことを実行してください！
+
+これは極端な例ですが、「経営陣の乱入」の例を示しています。
+あなたより年上の人が通話に現れ、あなたのインシデントコマンダーとしての意思決定を無視します。
+これは戦時では容認できない行動です。
+これは稀ですが、もし発生すればインシデント対応の障害となります。
+物事を正常な軌道に戻すために、インシデントコマンダーとして尋ねられる簡単な質問があります。
+「指揮を取りたいですか？」
+
+> 経営陣: いいえ、私はやりたくないです。全てが止まっています。代わりにロールバックが必要です。
+
+> インシデントコマンダー: お待ちください。[経営陣]、指揮を引き継ぎたいですか？
+
+> 経営陣: Yes/No
+
+> (Yesの場合) インシデントコマンダー: 分かりました。この通話の皆さん、助言しておきますが現時点で指揮は[経営陣]に映りました。彼らがこの通話でのインシデントコマンダーです。
+
+> (Noの場合) インシデントコマンダー: それなら対応をこれ以上中断させないでください。そうしないと通話から追い出します。
+
+これにより経営陣が選択できることが明らかになりますが、そのためにインシデントコマンダーを続ける必要があります。
+もし拒否されたら、彼らがその責任を負うことを伝えて、混乱を招くようなことは許されないよう伝えます。
+もし彼らが続けるなら、通話から追い出します。
+
+### 経営陣の乱入 - アンチモチベーション
+
+> 経営陣: 10分で解決できるよう挑戦してみましょう！
+
+経営陣が意図的にインシデント対応の通話を脱線させるのは稀で、通常は善意のつもりです。
+しかしこれらの善意は通話を脱線させ、対応者のやる気を失わせます。
+インシデントコマンダーはそれを認識してこの状況に対応する必要があります。
+上記のケースではやる気を起こさせるつもりでしょうが、対応者はすでに問題解決のために必死に対応しています。
+インシデント終了までは、コメントを控えるように伝えることで対応します。
+
+
+> インシデントコマンダー: 私たちはインシデントの真っ最中です。コメントはインシデント終了まで控えてください。
+
+### 経営陣の乱入 - 情報が欲しい
+
+> 経営陣: 影響を受ける全ての顧客のスプレッドシートはありますか？
+
+最も多い経営陣の乱入は、さらなる情報の要求です。
+残念ながら私たちはインシデントのまっただ中で、情報を収集するためのリソースがありません。
+インシデントコマンダーはこの事実とインシデントを優先することを経営陣に伝えます。
+
+> インシデントコマンダー: そのリストを修正するか、インシデントに対応します。両方ではありません。インシデントを優先します。
+
+これは質問ではなく、インシデントコマンダーとしての意思決定をすでにしてることに注意してください。
+その決定事項を経営陣に伝えているだけです。
+
+### 経営陣の乱入 - 深刻度に対する質問
+
+> 経営陣: これは本当にSEV-1ですか？
+
+私たちの深刻度レベルは、インシデントへの対応規模を決定します。
+深刻度についてすでに議論されており、インシデントがまだ発生中という事実は変わりません。
+インシデントの通話中には深刻度について議論せず、可能な限り悪いレベルを想定します。
+ポストモーテムで深刻度を下げることができますが、インシデントの通話中に深刻度を繰り返し議論して時間を無駄にはできません。
+なので物事の軌道を元に戻すために、以下のことを伝えてください。
+
+> インシデントコマンダー: インシデント中は深刻度について議論しません。SEV-1として扱っています。
+
+### 好戦的な対応者
+
+場合によっては指示に従わなかったり、積極的に通話を部外する対応者がいます。
+これは意図的に行われていることもあれば、そうでない場合もあります（騒がしい環境でマイクがミュートになってないなど）。
+どちらの場合もこの状況を解決して、インシデントの対応に戻る必要があります。
+個人的に問題であり、面目を保つ方法を提供しますが、それを止めないとどうなるか説明します。
+もし従わない場合は、2回目のチャンスはありません。
+通話から追い出してください。
+
+> インシデントコマンダー: あなたの行為は問題です。さもなくば通話から外します。
 > You're being disruptive. Please stop, or I will have to remove you from the call.
 
+## ポップカルチャーからの例
 
-## Examples From Pop Culture
-PagerDuty employees have access to all previous incident calls, and can listen to them at their discretion. We can't release these calls, so for everyone else, here are some short examples from popular culture to show the techniques at work.
+PagerDutyの従業員は、過去の全てのインシデント通話にアクセスでき、自由に聴くことができます。
+私たちはそれらの通話を公開できないのですが、いくつかのポップカルチャーからの例を用いて、仕事でのテクニックを示します。
 
----
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XLMDSjCzEx8" frameborder="0" allowfullscreen></iframe>
-Here's a clip from the movie Apollo 13, where Gene Kranz (Flight Director / Incident Commander) shows some great examples of Incident Command. Here are some things to note:
 
-* Walks into the room, and immediately obvious that he's the IC. Calms the noise, and makes sure everyone is paying attention.
-* Provides a status update so people are aware of the situation.
-* Projector breaks, doesn't get sidetracked on fixing it, just moves on to something else.
-* Provides a proposal for how to proceed and elicits feedback.
-    * Listens to the feedback calmly.
-    * When counter-proposal is raised, states that he agrees and why.
-* Allows a discussion to happen, listens to all points. When discussion gets out of hand, re-asserts command of the situation.
-    * Explains his decision, and why.
-* Explains his full plan and decision, so everyone is on the same page.
+これは映画「アポロ13」の場面です。
+ジーン・クランツ（フライトディレクター/インシデントコマンダー）が、インシデントコマンダーの良い例を示しています。
+以下に注意すべき点を示します。
+
+* 部屋に入ると、すぐに彼がインシデントコマンダーであることを宣言します。
+  騒音を静めて、全員が注意を払っていることを確認します。
+* 状態の更新情報を伝えて、人々が状況を認識できるようにします。
+* プロジェクターが壊れてましたが、それを修正せずに別の物を使います。
+* 進め方を提案し、フィードバックを引き出します。
+    * フィードバックを静かに聞きます
+    * 反対意見が挙げられると、彼は同意と理由を述べます。
+* 議論ができるようにして、全ての人に耳を傾けます。議論が手に負えなくなったら、状況の指揮を再度確認します。
+    * 彼の意思決定とその理由を述べます
+* 彼の完全な計画と意思決定を説明して、全員が合意しています
+
 
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tid44iy6Rjs" frameborder="0" allowfullscreen></iframe>
-Another clip from Apollo 13. Things to note:
 
-* Summarizes the situation, and states the facts.
-* Listens to the feedback from various people.
-* When a trusted SME provides information counter to what everyone else is saying, asks for additional clarification ("What do you mean, everything?")
-* Wise cracking remarks are not acknowledged by the IC ("You can't run a vacuum cleaner on 12 amps!")
-* "That's the deal?".. "That's the deal".
-* Once decision is made, moves on to the next discussion.
-* Delegates tasks.
+アポロ13から別の場面です。
+
+* 状況を要約して、事実を述べます。
+* 様々な人からのフィードバックに耳を傾けます。
+* 信頼できる内容領域専門家が他の人に反対する情報を提供したとき、追加で説明を求めます（どういう意味か、全てか？）
+* 冗談などの発言はインシデントコマンダーに受け入れられません。（12Aでは掃除機を使えない）
+* 「それは絶対か？」「これは絶対だ」
+* 一度意思決定をすると、次の議論に進みます。
+* タスクを委任します。
