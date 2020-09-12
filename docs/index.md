@@ -57,14 +57,14 @@ cover: assets/img/covers/incident_response_docs.png
 * An overview of our training guides and additional training material from third-parties._
 * [Glossary of Incident Response Terms](training/glossary.md) - _A collection of terms that you may hear being used, along with their definition._
 
-### Training Guides
+### トレーニングガイド
 
 * [Incident Commander Training](training/incident_commander.md) - _次のインシデントコマンダーになるためのガイド_
 * [Deputy Training](training/deputy.md) - _補佐になりインシデントコマンダーをバックアップするためのガイド_
 * [Scribe Training](training/scribe.md) - _記録係のためのガイド_
 * [Subject Matter Expert Training](training/subject_matter_expert.md) - _重大インシデント発生中の、全ての参加者への責務と振る舞いのガイド_
 * [Customer Liaison Training](training/customer_liaison.md) - _インシデント発生中に外部への告知するためのガイド_
-* [Internal Liaison Training](training/internal_liaison.md) - _A guide on how to liaise with internal teams during an incident._
+* [Internal Liaison Training](training/internal_liaison.md) - _インシデント発生中に、社内チームと連携するためのガイド_
 
 ### Training Courses
 

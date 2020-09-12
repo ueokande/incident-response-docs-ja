@@ -4,50 +4,73 @@ description: So you want to be an internal liaison? You've come to the right pla
 ---
 ![Internal Liaison](../assets/img/headers/internal_liaison.jpg)
 
-So you want to be an internal liaison? You've come to the right place!
+内部窓口になりたいですか？
+あなたは正しい場所にたどり着けました！
 
-## Purpose
-The purpose of the Internal Liaison is to be the primary individual in charge of notifying internal stakeholders of the current conditions, and informing the Incident Commander of any relevant feedback from stakeholders as the incident progresses. They are also responsible for mobilizing additional responders during an incident if requested by the incident commander.
+## 目的
 
-It's important for the rest of the command staff to be able to focus on the problem at hand, rather than worrying about crafting messages to internal teams, or having to find a user's contact information in order to page them.
+内部窓口の目的は、内部のステークホルダーに現在の状態を知らせ、ステークホルダーからのフィードバックをインシデントコマンダーに伝えることです。
+またインシデントコマンダーからの要求に応じて、インシデント発生中に追加の対応者を動員します。。
 
-Your job as Internal Liaison is to listen to the call, watch the incident Slack room, and follow instructions from the IC. The Incident Commander will instruct you to notify stakeholders of the incident and keep them updated at various points throughout the call. They will also instruct you to page additional responders should it be necessary.
+インシデントを対応している他のコマンドスタッフが、社内チームや連絡に気をもむのではなく、目の前の問題に取り組むほうが重要です。
 
-## Prerequisites
-Before you can be an Internal Liaison, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+内部窓口の仕事は、通話を聞きインシデントのSlackルームを監視して、インシデントコマンダーからの指示に従います。
+インシデントコマンダーは、通話を通じてインシデントのステークホルダーに更新情報を伝えるよう支持します。
+また必要な追加の対応者をページするよう支持します。
 
-* Excellent verbal and written **communication skills**.
+## 前提条件
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](/before/different_roles.md) to see what is expected from an Internal Liaison, as well as what we expect from the other roles you'll be interacting with.
+内部窓口になる前に、次のいくつかの基準を満たしている必要があります。
+その基準をまだ満たしていなくても心配しないでください。
+トレーニングを受けることができます！。
 
-## Training Process
-There is no formal training process for this role, reading this page should be sufficient for most tasks.
+* 口頭および文面での**コミュニケーション能力**
 
-## Incident Call Procedures and Lingo
-The [Steps for Internal Liaison](/during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+## 責務
 
-Here are some examples of phrases and patterns you should use during incident calls.
+[インシデントの異なる役割](/before/different_roles.md)よ読んで、補佐には何が期待されて、他のやり取りする役割から期待されることを確認してください。
 
-### Keep Track of Responders
-As you listen to the call, you should keep track of the responders to the call as you hear them speak. Make a note on a piece of paper, or use the `!ic responders` to see who they are. The IC may ask you who is on-call for a particular system, and you should know the answer, and be able to page them.
+## トレーニングプロセス
 
-> Do we have a representative from [X] on the call?
+この役割に関する決まったトレーニングプロセスはありません。
+このページを読むことでほとんどのタスクに対応できます。
 
-> (pause)
+## インシデント通話手順と用語
 
-> Hearing no response, Internal Liaison, please page the [X] on-call.
+[内部窓口のためのステップ](/during/during_an_incident.md)に、インシデント発生中に何をすべきかが説明されています。
 
-You can page them however you see fit, phone call, etc.
+以下はインシデントの通話中に使うべきフレーズとパターンの例です。
 
-### Mobilizing Additional Responders
-As you listen to the call, the IC may ask you to reach out to another internal team and include them in the response. Teams such as Legal, Marketing, Finance, etc may be called upon. You should be ready to page such teams as necessary.
+### 対応者を把握しておく
 
-> IC: Internal Liaison, please page the Marketing team and ask them to join the call.
+通話中は、誰が喋っているかを把握しておく必要があります。
+紙にメモをしても良いですし、 `!ic responders` コマンドで誰がいるか確認できます。
+インシデントコマンダーは特定のシステムのオンコールが誰か尋ねて、ページするためにそれに答える必要があります。
 
-> IL: Understood, paging Marketing team.
+> [X]の担当者はいますか？
 
-### Provide Executive Status Updates
-Provide regular status updates on Slack (roughly every 30mins), giving an executive summary of the current status during SEV-1 incidents. Keep it short and to the point, and use `@here`. Mention the current state, the actions in progress, customer impact, and expected time remaining. It's OK to miss out some of those if the information isn't known.
+> (応答なし)
 
-> @here: We are in SEV-1 due to X. Current actions in progress are to do Y. Expecting 3 mins to complete that action. Once action is complete, system should recover on its own within 5 minutes.
+> 応答がないですね。内部窓口、Xのオンコールをページしてください。
+
+彼らを電話など適切な方法でページできます。
+
+### 追加の対応者を動員する
+
+通話中に、インシデントコマンダーは他の社内チームに連絡して、対応に加わるよういいます。
+法務、マーケティング、経理などのチームが必要に鳴る可能性があります。
+あなたはそれらのチームを呼び出せる準備が必要です。
+
+> インシデントコマンダー: 内部窓口、マーケティングチームをページして、通話に加わるよう言ってください。
+
+> 内部窓口: 超治しました。マーケティングチームをページします。
+
+### 経営陣に更新情報を提供する
+
+SEV-1のインシデントが発生しているときは、経営陣向けの要約をSlackに更新情報を投稿します（大体30分ごとです）。
+短く要点を絞って、 `@here` を使ってください。
+現在の状態、実行中のアクション、顧客への影響、残り時間の見積もりについて説明します。
+それらの情報がわからなければ飛ばしても大丈夫です。
+
+> @here 現在XによってSEV-1です。現在はYをするアクションを実行中です。このアクション完了まで3分かかる予想です。
+> アクションが完了したら、5分以内にシステムは修正される蓮です。
