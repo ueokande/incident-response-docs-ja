@@ -63,7 +63,7 @@ cover: assets/img/covers/incident_response_docs.png
 * [Deputy Training](training/deputy.md) - _補佐になりインシデントコマンダーをバックアップするためのガイド_
 * [Scribe Training](training/scribe.md) - _記録係のためのガイド_
 * [Subject Matter Expert Training](training/subject_matter_expert.md) - _重大インシデント発生中の、全ての参加者への責務と振る舞いのガイド_
-* [Customer Liaison Training](training/customer_liaison.md) - _A guide on how to act as our public representative during an incident._
+* [Customer Liaison Training](training/customer_liaison.md) - _インシデント発生中に外部への告知するためのガイド_
 * [Internal Liaison Training](training/internal_liaison.md) - _A guide on how to liaise with internal teams during an incident._
 
 ### Training Courses
