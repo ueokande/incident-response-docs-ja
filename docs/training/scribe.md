@@ -5,74 +5,109 @@ description: So you want to be a scribe? You've come to the right place! You don
 ![Scribe](../assets/img/headers/fountain_pen.jpg)
 *Credit: [John-Mark Smith](https://www.pexels.com/photo/person-holding-fountain-pen-211291/)*
 
-So you want to be a scribe? You've come to the right place! You don't need to be a senior team member to become a deputy or scribe, anyone can do it providing you have the requisite knowledge!
+記録係に成りたいですか？
+あなたは正しい場所にたどり着きました！
+補佐や記録係になるには、シニアメンバーである必要はありません・
+必要な知識があれば誰でもなれます。
 
-## Purpose
-The purpose of the Scribe is to maintain a timeline of key events during an incident. Documenting actions, and keeping track of any followup items that will need to be addressed.
+## 目的
 
-It's important for the rest of the command staff to be able to focus on the problem at hand, rather than worrying about documenting the steps.
+記録係の目的は、インシデント発生中の重要なイベントの時系列を記録しておくことです。
+アクションを文書化し、対応が必要なフォローアップを確認します。
 
-Your job as Scribe is to listen to the call and to watch the incident Slack room, keeping track of context and actions that need to be performed, documenting these in Slack as you go. **You should not be performing any remediations, checking graphs, or investigating logs.** Those tasks will be delegated to the subject matter experts (SME's) by the Incident Commander.
+他の他メンバーは、手順の文書化を心配せずに、目の前の問題に取り組むのが重要です。
+
+記録係としての仕事は、Slackルームを監視し、背景と実行されたアクションを追跡し、これらをSlackに記録することです。
+**修正や、グラフの確認、ログの調査はおこななないでください。**
+それらはインシデントコマンダーによって、内容領域専門家に委譲されます。
+
+## 前提条件
+
+補佐になるまえに、次の基準を満たしている必要があります。
+その基準をまだ満たしていなくても心配しないでください。
+トレーニングを受けることができます！。
+
+* 口頭および文面での**コミュニケーション能力**
+
+## 責務
+
+[インシデントの異なる役割](/before/different_roles.md)よ読んで、補佐には何が期待されて、他のやり取りする役割から期待されることを確認してください。
+
+## トレーニングプロセス
+
+この役割には決まったトレーニングプロセスはありません。
+このページを読むだけでほとんどのタスクを実行できます。
+トレーニングに必要なことを次に示します。
+
+* このページの残りの部分、とくにこれより下のセクションを参照してください。
+
+* [金曜日の障害](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/)に参加してください。
+    * 金曜日の障害をシャドウイングする
+    * 複数の金曜日の障害の記録係になる
+
+## 記録する
+
+記録とは科学と言うよりは芸術です。
+その目的は通話中に起こった重要なイベントを正確に記録することです。
+これにより、なにか起こったかをタイムラインから振り返ることができます。
+しかし厳密には何が重要か？
+これに対する世界くな答えはなく、判断と経験により決まります。
+しかし記録係として、本当に書き留めておきたいことがいくつかあります。
+
+* 投票の結果
+    * <span class="bad">&#x2718;</span> 「9人が賛成、3人が反対」
+    * <span class="good">&#x2713;</span> 「ローリングリスタートをすべきか投票され、ユーザーAがリスタートをしている」
+
+* 「...すべき」「なぜしないか」などのフォローアップ項目
+    * <span class="bad">&#x2718;</span> 「なぜサポート担当者にいなかったか？」
+    * <span class="good">&#x2713;</span> 「TODO: なぜもっと早くページできなかったか？」
+
+## インシデント通話手順と用語
+
+[記録係のためのステップ](/during/during_an_incident.md)に、インシデントに何をすべきかが説明されています。
+
+以下はインシデントの通話中に使うべきフレーズとパターンの例です。
+
+### ステータスの追従
 
 
-## Prerequisites
-Before you can be a Scribe, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
-
-* Excellent verbal and written **communication skills**.
-
-## Responsibilities
-Read up on our [Different Roles for Incidents](/before/different_roles.md) to see what is expected from a Scribe, as well as what we expect from the other roles you'll be interacting with.
-
-## Training Process
-There is no formal training process for this role, reading this page should be sufficient for most tasks. Here's a list of things you can do to train though,
-
-* Read the rest of this page, particularly the sections below.
-
-* Participate in [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) (FF).
-    * Shadow a FF to see how it's run.
-    * Be the scribe for multiple FF's.
-
-## Scribing
-Scribing is more art than science. The objective is to keep an accurate record of important events that occurred on the call, so that we can look back at the timeline to see what happened. But what exactly is important? There's no overwhelming answer, and it really comes down the judgement and experience. But here are some general things you most definitely want to capture as scribe.
-
-* The result of any polling decisions.
-    * <span class="bad">&#x2718;</span> This is not "9 people voted yay, 3 voted nay".
-    * <span class="good">&#x2713;</span> It is "Polled for if we should do rolling restart. <USER_A> is proceeding with restart."
-* Any followup items that are called out as "We should do this..", "Why didn't this?..", etc.
-    * <span class="bad">&#x2718;</span> This is not "Why isn't the Support representative on the call?"
-    * <span class="good">&#x2713;</span> This is "TODO: Why didn't we get paged for this earlier?"
-
-## Incident Call Procedures and Lingo
-The [Steps for Scribe](/during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
-
-Here are some examples of phrases and patterns you should use during incident calls.
-
-### Status Stalking
-At the start of any major incident call, you should start our status stalking bot, so that it will post to the room an update automatically.
+インシデントの通話の始まりに、ステータスを自動更新するBOTをスタートします。
+BOTは更新情報を自動で投稿します。
 
 > !status stalk
 
-This will provide the update and allow the IC to see the status without having to keep asking.
+これにより自動で情報が更新され、インシデントコマンダーが問い合わせなくても状態を確認できます。
 
-### Note Important Actions
-During a call, you will hear lots of discussion happening, you should not be documenting all of this in the chat room. You only want to document things which will be important for the final timeline. It's not always obvious what this might be, and it's usually a matter of judgement. You generally want to note any actions the IC has asked someone to perform, along with the result of any polling decisions.
+### 重要なアクションを書き留める
 
-> Polled for decision on whether to perform rolling restart. We are proceeding with restart. [USER_A] to execute.
+通話中は多くの議論が聞こえますが、チャットルームに全てを記録しなくてもよいです。
+最終的なタイムラインで重要になるものだけ記録すれば良いです。
+これが何かは明白ではなく、判断の問題であることが多いです。
+通常はインシデントコマンダーが誰かに要求したアクションや、意思決定の投票結果などでよいです。
 
-Some actions might seem important at the time, but end up not being. That's OK. It's better to have more info than not enough, but don't go overboard.
+> ローリングリスタートすべきかどうか投票しました。再起動することにして、USER_Aが実行します。
 
-### Note Followup Actions
-Sometimes during the call, someone will either mention something we "should fix", or the IC will specifically ask you to note a followup item. You can do this in Slack by simply prefixing with "TODO", this will make it easier to search for later.
+いくつかのアクションはそのときは大事に思えても、終わってからはそうでないことがあります。
+これでよいのです。
+十分な情報が無いよりも、多い情報があることが重要です。
+でもやりすぎないでください。
 
-> TODO: Why did we not get paged for the fall in traffic on [X] cluster?
+### フォローアップアクションを書き留める
 
-The post-mortem owner will find these after and raise tasks for them.
+ときどき通話中に、誰かが「修正すべき」と言及したり、インシデントコマンダーがフォローアップ事項を要求することがあります。
+これをSlackじょうでするには「TODO」というプレフィックスを付けるだけです。
+これにより後から検索しやすくなります。
 
-### End of Call Notification
-When the IC ends the call, you should post a message into Slack to let everyone know the call is over, and that they should continue discussion elsewhere.
+> TODO: クラスターXのトラフィック現状でページされなかったのはなぜか？
 
-> Call is over, thanks everyone. Follow up in Slack.
+ポストモーテムのオーナーはこれを後から見つけることができ、タスク化することができます。
 
-Don't forget to also stop the status stalking.
+### 通話の終了のお知らせ
+
+インシデントコマンダーが通話を終了させると、通話が終了したことと、他の場所で継続議論することをお知らせします。
+
+> 通話は終わりました。みなさんありがとうございます。Slackでフォローアップします。
+
+ステータスの追従も止めることを忘れないでください。
 
 > !status unstalk
