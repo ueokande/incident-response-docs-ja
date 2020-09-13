@@ -70,10 +70,10 @@ cover: assets/img/covers/incident_response_docs.png
 
 * [Incident Response Training Course](training/courses/incident_response.md) - _An introductory course on incident response and the role of the Incident Commander._
 
-## Additional Resources
+## 追加資料
 
-Useful material and resources from external parties that are relevant to incident response.
+インシデント対応に関する、外部の資料とリソースです。
 
-* [Reading](resources/reading.md) - _Recommended reading material relevant to incident response._
-* [ChatOps](resources/chatops.md) - _Description of the chat bot commands we've referenced in this documentation._
-* [Anti-Patterns](resources/anti_patterns.md) - _List of things we've tried and then rejected, learn from our mistakes._
+* [Reading](resources/reading.md) - _インシデント対応に関連する、お勧めの読み物_
+* [ChatOps](resources/chatops.md) - _ドキュメントで参照しているチャットBotのコマンドについて_
+* [Anti-Patterns](resources/anti_patterns.md) - _試してみてダメだったものや、その失敗からの学び_
