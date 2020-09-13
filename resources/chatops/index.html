@@ -499,14 +499,14 @@
         <ul>
           
             <li class="anchor">
-              <a title="Incident Response" href="#incident-response">
-                Incident Response
+              <a title="インシデント対応" href="#_1">
+                インシデント対応
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Status" href="#status">
-                Status
+              <a title="ステータス" href="#_2">
+                ステータス
               </a>
             </li>
           
@@ -550,40 +550,68 @@
             <h1>ChatOps</h1>
           
           
-          <p>Throughout this documentation, references are made to various chat commands, all starting with an exclamation (e.g. <code>!ic page</code>). We have bots running in our Slack rooms which watch for these commands and execute various actions for us when they're detected. This page gives an overview of the commands we've referenced in this documentation, and what they do behind the scenes.</p>
+          <p>このドキュメント全体を通して、"!"で始まる様々なチャットコマンドを参照しています（<code>!ic page</code>）。
+これらのコマンドはSlack上のBotで実行し、私たちが問題を検出した時にこのコマンドを監視しています。
+このページでは、このドキュメントで利用したコマンドの概要と、そのコマンドが実行する処理について紹介します。</p>
 <div class="admonition question">
-<p class="admonition-title">Are these bots open-source?</p>
-<p>The chat plugins and bots we use are unfortunately not currently open-sourced, however we would like to eventually get them open-sourced so that you can all benefit from them. In the meantime, the hope is that the descriptions on this page can help you to reproduce similar functionality with your own  tooling.</p>
+<p class="admonition-title">これらのBotはオープンソースですか？</p>
+<p>私たちが利用しているチャットプラグインとBotは、現在は残念がらこれらのBotはオープンソース化されていません。
+しかし将来、それらをオープンソース化して、皆さんが利用できるようにしたいと考えています。
+それまでの間は、このページにある説明が、独自のツールで同じ機能を再現するのに役立つのを願います。</p>
 </div>
-<h2 id="incident-response">Incident Response<a class="headerlink" href="#incident-response" title="Permanent link">#</a></h2>
-<p>Our <code>!ic</code> commands poll the PagerDuty API behind the scenes for various on-call schedules we specify. It caches the names and contact details for the current on-call users, so that if there's any issue in making API requests, the funtionality isn't impacted.</p>
+<h2 id="_1">インシデント対応<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><code>!ic</code> コマンドは、して体の様々なオンコールスケジュールで、PagerDuty APIをポーリングします。
+現在のオンコールユーザーの名前と連絡先をキャッシュして、APIリクエストに問題が発生しても、問題ありません。</p>
 <h3 id="ic"><code>!ic</code><a class="headerlink" href="#ic" title="Permanent link">#</a></h3>
-<p>This command lists out the current Incident Commanders on-call, their phone numbers, and a message telling users how to page them.</p>
+<p>このコマンドは現在のオンコールのインシデントコマンダーと、彼らの電話番号とユーザーをページする方法を通知する方法を表示します。</p>
 <p><img alt="Incident Commander List" src="../../assets/img/chatops/ic.png" /></p>
 <h3 id="ic-page"><code>!ic page</code><a class="headerlink" href="#ic-page" title="Permanent link">#</a></h3>
-<p>This is the command we use to manually trigger our incident response process. It uses the cached schedule information and will page all of the current Incident Commanders on-call (the primary, the backup, and any trainees who are shadowing). It will also notify into the room if it is unable to page them for any reason, and direct users to manually call the person using their contact information. Additionally, it will create a new PagerDuty incident and link users to it.</p>
+<p>このコマンドはインシデント対応プロセスを手動でトリガーします。
+スケジュール情報をキャッシュし、現在のオンコールを担当するインシデントコマンダー（プライマリとバックアップ、トレーニングでシャドウイングする人）をページします。
+また何らかの理由でページできない場合はSlackループに通知し、ユーザーに連絡先を表示して手動で電話をかけられるようにします。
+さらに新しいPagerDutyインシデントを作成して、ユーザーを関連付けます。</p>
+<p>This is the command we use to manually trigger our incident response process.
+It uses the cached schedule information and will page all of the current
+Incident Commanders on-call (the primary, the backup, and any trainees who are
+shadowing). It will also notify into the room if it is unable to page them for
+any reason, and direct users to manually call the person using their contact
+information. Additionally, it will create a new PagerDuty incident and link
+users to it.</p>
 <p><img alt="Paging Incident Commanders" src="../../assets/img/chatops/ic_page.png" /></p>
-<p>If for any reason we are unable to page the Incident Commanders automatically, the bot will let us know that it has failed, and give us the phone numbers for the relevant people so we can manually call them. Here is some example output from our test bot, where we have simulated being unable to page via PagerDuty due to an unresponsive API call.</p>
+<p>何らかの理由でインシデントコマンダーを自動で呼べなかった場合は、Botは失敗を検知します。
+関連するメンバーの電話番号を表示して、手動で連絡できるようにします。
+テスト用のBotの出力結果を示します。
+API経由でPagerDutyで呼び出せなかった場合をシミュレートしています。</p>
 <p><img alt="Testing for Failure" src="../../assets/img/chatops/test_for_failure.png" /></p>
 <h3 id="ic-responders"><code>!ic responders</code><a class="headerlink" href="#ic-responders" title="Permanent link">#</a></h3>
-<p>This works similarly to the <code>!ic</code> command, only it uses all our service team schedules instead of just the IC schedules. It will list out all the current people who are on-call for each engineering team. This is useful to also know who will likely be joining the incident call momentarily.</p>
+<p>これは <code>!ic</code> コマンドと同じように機能しますが、インシデントコマンダーだけでなく、チーム全員に対する情報を表示します。
+それぞれのチームの、現在オンコール担当である人たちが一覧表示されます。
+これは一時的に誰がインシデントの通話に参加するかを知るのに便利です。</p>
 <p><img alt="Listing Responders" src="../../assets/img/chatops/ic_responders.png" /></p>
 <h3 id="ic-page-responders"><code>!ic page responders</code><a class="headerlink" href="#ic-page-responders" title="Permanent link">#</a></h3>
-<p>This works similarly to <code>!ic page</code>, only it pages the responders list instead of the Incident Commanders. This is rarely used, since generally only the relevant team will get paged. However, sometimes we require an "all hands on deck" response, and need the ability to quickly page all the current on-calls.</p>
+<p>これは <code>!ic page</code> コマンドと同じように機能しますが、インシデントコマンダーだけでなく対応者一覧に対してページします。
+通常は関連するチームだけがページされるのでめったに利用されることはありません。
+しかし全員が総力を挙げて対応が必要になる場合や、現在のオンコール全員をページするのに必要です。</p>
 <p><img alt="Paging Responders" src="../../assets/img/chatops/ic_page_responders.png" /></p>
 <h3 id="ic-who-ltusergt"><code>!ic who &lt;user&gt;</code><a class="headerlink" href="#ic-who-ltusergt" title="Permanent link">#</a></h3>
-<p>Sometimes we may need to identify a specific individual to bring them onto a call. This command lists out the contact info for a specific user, and a message telling users how to page them.</p>
+<p>場合によっては、特定の誰かを指定して通話に参加させる必要があります。
+このコマンドは特定のユーザーの連絡先と、ページする方法を表示します。</p>
 <p><img alt="Identifying Users" src="../../assets/img/chatops/ic_who_rich.png" /></p>
 <h3 id="ic-page-ltusergt"><code>!ic page &lt;user&gt;</code><a class="headerlink" href="#ic-page-ltusergt" title="Permanent link">#</a></h3>
-<p>This will page a specific person by username.</p>
+<p>このコマンドは特定のユーザーをページします。</p>
 <p><img alt="Paging a User" src="../../assets/img/chatops/ic_page_rich.png" /></p>
-<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">#</a></h2>
-<p>Our <code>!status</code> commands look at our internal monitoring systems to determine the current system state, as reported by the systems themselves. This is the status our alerting tooling uses to automatically notify us of issues.</p>
-<h3 id="status_1"><code>!status</code><a class="headerlink" href="#status_1" title="Permanent link">#</a></h3>
-<p>This will tell us the current overview of our system state. It will also alert us if it is unable to check for the status, since that could also be an indication of an issue. Typically though, it will hopefully show a status of <code>NORMAL</code>.</p>
+<h2 id="_2">ステータス<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p><code>!status</code>コマンドは、私たちの内部監視システムを参照して、システムによって報告された現在の状態を判断します。
+これはアラートツールが問題を問題の自動で通知するために利用するステータスです。</p>
+<h3 id="status"><code>!status</code><a class="headerlink" href="#status" title="Permanent link">#</a></h3>
+<p>現在のシステムステータスの概要が分かります。
+またステータスを確認できない場合は、問題が発生している可能性があるため、アラートが表示されます。
+通常はステータスは <code>NORMAL</code> になっているはずです。</p>
 <p><img alt="Displaying Status" src="../../assets/img/chatops/status.png" /></p>
 <h3 id="status-stalk"><code>!status stalk</code><a class="headerlink" href="#status-stalk" title="Permanent link">#</a></h3>
-<p>This does the same as the above, only it polls every 30s until we stop it (with <code>!status unstalk</code>). It will only report the status into the chat room if it has changed since the last time it checked. We have this running during an incident so we can easily see if our system is getting worse or recovering without having to manually check our monitoring.</p>
+<p>これは上記のコマンドと同じですが、停止するまで（<code>!status unstalk</code>）の間、30秒ごとに状態をポーリングします。
+前回のチェックからステータスが変更された場合のみ、チャットルームにステータスを報告します。
+インシデント発生中にこれを実行することで、モニタリングシステムを手動で確認しなくても、システムが悪い状態か回復したかを簡単に確認できます。</p>
 <p><img alt="Stalking Status" src="../../assets/img/chatops/status_stalk.png" /></p>
           <aside class="copyright" role="note">
             
