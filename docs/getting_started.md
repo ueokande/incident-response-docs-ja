@@ -3,7 +3,7 @@ cover: assets/img/covers/getting_started.png
 description: This 'Getting Started' guide will help you to navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in.
 ---
 
-![Getting Started](../assets/img/headers/getting_started.jpg)
+![Getting Started](./assets/img/headers/getting_started.jpg)
 *Credit: [Breakingpic @ Pexels](https://www.pexels.com/photo/young-game-match-kids-2923/)*
 
 まだ組織に決まったプロセスがン赤ったり、作り始めようとしているのなら、このドキュメントに圧倒的な情報量があることでしょう。

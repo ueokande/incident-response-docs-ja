@@ -1,7 +1,7 @@
 ---
 cover: assets/img/covers/incident_response_docs.png
 ---
-![PagerDuty](../assets/img/headers/pagerduty_logo.png)
+![PagerDuty](./assets/img/headers/pagerduty_logo.png)
 
 
 このサイトはPagerDutyの障害対応プロセスの一部をドキュメント化しました。
