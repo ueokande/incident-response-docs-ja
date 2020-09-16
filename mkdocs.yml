@@ -1,6 +1,6 @@
 # Project Information
 site_name: PagerDuty Incident Response Documentation
-site_description: A collection of information about the PagerDuty incident response process. Not only how to prepare new employees for on-call responsibilities, but also how to handle major incidents, both in preparation and after-work.
+site_description: これはPagerDutyのインシデント対応プロセスに関するドキュメントです。オンコールを始める新入社員のためだけではなく、重大インシデントに対する事前と事後の処理についても解説します。
 site_author: PagerDuty, Inc.
 site_favicon: 'assets/img/favicon.png'
 site_url: https://ueokande.github.io/incident-response-docs-ja/
