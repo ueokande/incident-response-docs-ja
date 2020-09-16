@@ -1,17 +1,17 @@
 ---
 cover: assets/img/covers/getting_started.png
-description: This 'Getting Started' guide will help you to navigate the most important parts of our process, and provide some guidelines about which bits we think you should start with. If you're just starting out with your own incident response process, this is a great way to know what order we think you should do things in.
+description: このガイドをまとめて、私たちの最も大事な部分を案内し、あなたがどこから始めるべきかのガイドラインを提供します。もし独自のインシデントプロセスを始めているのなら、このドキュメントはどこから始めるべきかを知るための素晴らしい方法です。
 ---
 
-![Getting Started](./assets/img/headers/getting_started.jpg)
+![はじめに](./assets/img/headers/getting_started.jpg)
 *Credit: [Breakingpic @ Pexels](https://www.pexels.com/photo/young-game-match-kids-2923/)*
 
-まだ組織に決まったプロセスがン赤ったり、作り始めようとしているのなら、このドキュメントに圧倒的な情報量があることでしょう。
+まだ組織に決まったプロセスが無かったり、作り始めようとしているのなら、このドキュメントに圧倒的な情報量があることでしょう。
 これは**一晩で実装できない**ということを覚えておいてください。
 これは時間をかけて築き上げるべきプロセスです。
 この時点まで何年もかかりましたが、このドキュメントによって私たちが遭遇した苦難や、可能な限り効率化した成熟したインシデント対応に到達できることを祈ります。
 
-そのためにも、この「入門」ガイドをまとめて、私たちの最も大事な部分を案内し、あなたがどこから始めるべきかのガイドラインを提供します。
+そのためにも、このガイドをまとめて、私たちの最も大事な部分を案内し、あなたがどこから始めるべきかのガイドラインを提供します。
 もし独自のインシデントプロセスを始めているのなら、このドキュメントはどこから始めるべきかを知るための素晴らしい方法です。
 
 ## あなたにとっての「インシデント」と「重大インシデント」を定義する
@@ -53,7 +53,7 @@ description: This 'Getting Started' guide will help you to navigate the most imp
 また[対応者への期待](/oncall/being_oncall.md)があります。
 ページを受け取ったときは、単に問題を解決するためだけに飛び込むのではなく、通話やチャットルームに参加する必要があります。
 
-最後に、[アラートが実行可能](/oncall/alerting_principles.md)であることを確認します。
+最後に、[アラートには実行可能なアクションがある](/oncall/alerting_principles.md)ことを確認します。
 なにか制御ができないことに対して、是認が起こされることは避けたいです。
 インシデント対応のトリガーとページは、**即座に人が対応できるもの**のみに対して実行される事を確認してください。
 

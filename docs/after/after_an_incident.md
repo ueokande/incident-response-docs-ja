@@ -1,11 +1,10 @@
 ---
 cover: assets/img/covers/resolved.png
-description: Information on what to do after a major incident. Our followup and after action review procedures.
+description: 重大インシデント収束後に何をすべきか。フォローアップと事後のレビュープロセスについて紹介します。
 ---
 
-重大インシデント発生後に何をすべきか。
-フォローアップと事後のレビュープロセス。
-
+重大インシデント収束後に何をすべきか。
+フォローアップと事後のレビュープロセスについて紹介します。
 
 ## 対応の役割ごとの事後アクション
 
@@ -19,7 +18,7 @@ description: Information on what to do after a major incident. Our followup and 
     * 最終的なインシデントの深刻度を設定する。
     * インシデントを解決する。
 
-1. インシデントに対するpost-mortemを作成し、オーナーを割り当てる。
+1. インシデントに対するポストモーテムを作成し、オーナーを割り当てる。
 
 1. 関係するすケークホルダーに対して、インシデントが発生したこととポストモーテムへのリンクを送る。
 
@@ -57,7 +56,7 @@ description: Information on what to do after a major incident. Our followup and 
 これらは、アフターアクションレビュー、インシデントレビュー、フォローアップレビューなどと呼ばれます。
 私たちはポストモーテムと呼びます。
 
-私たちの[ポストモーテム手順](post_mortem_process.md)に詳しい説明があります。
+私たちの[ポストモーテムプロセス](post_mortem_process.md)に詳しい説明があります。
 
 ## 手順のレビュー
 

@@ -1,8 +1,8 @@
 ---
 cover: assets/img/covers/incident_commander.png
-description: So you want to be an incident commander? You've come to the right place! You don't need to be a senior team member to become an IC, anyone can do it providing you have the requisite knowledge (yes, even an intern)!
+description: インシデントコマンダーになりたいですか。あなたは正しい場所にたどり着けました！インシデントコマンダーはシニアメンバーである必要はなく、必要な知識があれば誰でもなることができます（もちろんインターンも含みます）。
 ---
-![Gene Kranz](../assets/img/headers/gene_kranz.jpg)
+![ジーン・クランツ](../assets/img/headers/gene_kranz.jpg)
 *Credit: [NASA](https://en.wikipedia.org/wiki/File:Eugene_F._Kranz_at_his_console_at_the_NASA_Mission_Control_Center.jpg)*
 
 インシデントコマンダーになりたいですか。

@@ -31,7 +31,7 @@ It is intended for on-call practitioners and those involved in an operational in
 
 ## 何がカバーされていますか？
 
-[オンコール](/oncall/being_oncall.md)へのなり方、[深刻度](/before/severity_levels.md)の定義、インシデントの[通話中のエチケット](/before/call_etiquette.md)、[ポストモーテム](/after/post_mortem_process.md),の方法、[ポストも〜テムのテンプレート](/after/post_mortem_template.md)などが含まれます。
+[オンコール](/oncall/being_oncall.md)のなり方、[深刻度](/before/severity_levels.md)の定義、インシデントの[通話中のエチケット](/before/call_etiquette.md)、[ポストモーテム](/after/post_mortem_process.md),の方法、[ポストも〜テムのテンプレート](/after/post_mortem_template.md)などが含まれます。
 
 ## なにがカバーされていないですか？
 

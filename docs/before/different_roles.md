@@ -1,6 +1,6 @@
 ---
 cover: assets/img/covers/roles.png
-description: There are several main roles for our incident response teams at PagerDuty. This page describes each of our roles in detail, why it's important to have them, and what their responsibilities are.
+description: PagerDutyのインシデント対応チームには、いくつかの重要な役割があります。このページではいくつかの役割を説明し、なぜその役割が重要か、彼らの責務は何なのかを解説します。
 ---
 
 PagerDutyのインシデント対応チームには、いくつかの重要な役割があります。

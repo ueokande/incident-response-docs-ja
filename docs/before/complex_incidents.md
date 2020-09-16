@@ -1,10 +1,10 @@
 ---
 cover: assets/img/covers/complex_incidents.png
-description: There will come a time when you will be involved in an incident (or multiple concurrent incidents) which ends up spanning a large number of resources. In these cases it's important for everyone to maintain an effective span of control. This page describes how we manage such incidents.
+description: 多くのリソースにまたがった、インシデント（または同時多発的な複数インシデント）に出くわす時が来るでしょう。このような場合には、全員が効果的に管理範囲を守ることが重要です。このページでは、このようなインシデントにどう対処するかを説明します。
 ---
 
 多くのリソースにまたがった、インシデント（または同時多発的な複数インシデント）に出くわす時が来るでしょう。
-このような場合には、全員が効果的に[span of control](../training/glossary.md#span-of-control)を守ることが重要です。
+このような場合には、全員が効果的に[管理範囲](../training/glossary.md#span-of-control)を守ることが重要です。
 このページでは、このようなインシデントにどう対処するかを説明します。
 
 ## 複雑なインシデントを特定する

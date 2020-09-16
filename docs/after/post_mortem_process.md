@@ -1,8 +1,9 @@
 ---
 cover: assets/img/covers/post-mortem_process.png
-description: For every major incident (SEV-2/1), we need to follow up with a post-mortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future.
+description: 全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。
+誰かのせいにせず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。
 ---
-![Post-Mortem](../assets/img/headers/pagerduty_post_mortem.jpg)
+![ポストモーテム](../assets/img/headers/pagerduty_post_mortem.jpg)
 
 全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。
 誰かのせいにせず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。

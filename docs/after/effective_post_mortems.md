@@ -1,6 +1,6 @@
 ---
 cover: assets/img/covers/blameless.png
-description: Writing an effective post-mortem allows us to learn quickly from our mistakes and improve our systems and processes for everyone. We want to be sure we're writing detailed and accurate post-mortems in order to get the most benefit out of them. This guide lists some of the things we can do to make sure our post-mortems are effective.
+description: 効果的なポストモーテムを書くことで、ミスに早く気づき、私たちのシステムとプロセスの全てを改善できます。私たちは最大限の恩恵を受けるため、詳細かつ正確なポストモーテムを書くことを心がけています。このガイドではポストモーテムが効果的になるようないくつの事柄を説明します。
 ---
 
 効果的なポストモーテムを書くことで、ミスに早く気づき、私たちのシステムとプロセスの全てを改善できます。

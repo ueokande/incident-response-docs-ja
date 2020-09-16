@@ -30,44 +30,41 @@ extra:
 # Contents
 pages:
   - Home: 'index.md'
-  - Getting Started: 'getting_started.md'
-  - On-Call:
-    - Being On-Call: 'oncall/being_oncall.md'
-    - Who's On-Call?: 'oncall/whos_oncall.md'
-    - Alerting Principles: 'oncall/alerting_principles.md'
-  - Before an Incident:
-    - What is an Incident?: 'before/what_is_an_incident.md'
-    - Severity Levels: 'before/severity_levels.md'
-    - Different Roles: 'before/different_roles.md'
-    - Call Etiquette: 'before/call_etiquette.md'
-    - Complex Incidents: 'before/complex_incidents.md'
-  - During an Incident:
-    - During an Incident: 'during/during_an_incident.md'
-    - Security Incident: 'during/security_incident_response.md'
-  - After an Incident:
-    - After an Incident: 'after/after_an_incident.md'
-    - Post-Mortem Process: 'after/post_mortem_process.md'
-    - Post-Mortem Template: 'after/post_mortem_template.md'
-    - Effective Post-Mortems: 'after/effective_post_mortems.md'
-  - Training:
-    - Overview: 'training/overview.md'
-    - Incident Commander: 'training/incident_commander.md'
-    - Deputy: 'training/deputy.md'
-    - Scribe: 'training/scribe.md'
-    - Subject Matter Expert: 'training/subject_matter_expert.md'
-    - Customer Liaison: 'training/customer_liaison.md'
-    - Internal Liaison: 'training/internal_liaison.md'
-    - Glossary: 'training/glossary.md'
-  - Training Courses:
-    - Incident Response: 'training/courses/incident_response.md'
-  - Additional Resources:
-    - Reading: 'resources/reading.md'
+  - はじめに: 'getting_started.md'
+  - オンコール:
+    - オンコールを始める: 'oncall/being_oncall.md'
+    - 誰がオンコールになるか: 'oncall/whos_oncall.md'
+    - アラートの原則: 'oncall/alerting_principles.md'
+  - インシデント前に:
+    - インシデントとはなにか？: 'before/what_is_an_incident.md'
+    - 深刻度レベル: 'before/severity_levels.md'
+    - 異なる役割: 'before/different_roles.md'
+    - 通話中のエチケット: 'before/call_etiquette.md'
+    - 複雑なインシデント: 'before/complex_incidents.md'
+  - インシデント発生中:
+    - インシデント発生中: 'during/during_an_incident.md'
+    - セキュリティインシデント: 'during/security_incident_response.md'
+  - インシデント収束後:
+    - インシデント収束後: 'after/after_an_incident.md'
+    - ポストモーテムプロセス: 'after/post_mortem_process.md'
+    - ポストモーテムテンプレート: 'after/post_mortem_template.md'
+    - 効果的なポストモーテム: 'after/effective_post_mortems.md'
+  - トレーニング:
+    - 概要: 'training/overview.md'
+    - インシデントコマンダー: 'training/incident_commander.md'
+    - 補佐: 'training/deputy.md'
+    - 記録係: 'training/scribe.md'
+    - 内容領域専門家: 'training/subject_matter_expert.md'
+    - 顧客窓口: 'training/customer_liaison.md'
+    - 内部窓口: 'training/internal_liaison.md'
+    - 用語集: 'training/glossary.md'
+  - トレーニングコース:
+    - インシデント対応: 'training/courses/incident_response.md'
+  - 追加資料:
+    - 読み物: 'resources/reading.md'
     - ChatOps: 'resources/chatops.md'
-    - Anti-Patterns: 'resources/anti_patterns.md'
-  - About: 'about.md'
-
-# Analytics
-google_analytics: ['UA-8759953-1', 'auto']
+    - アンチパターン: 'resources/anti_patterns.md'
+  - このドキュメントについて: 'about.md'
 
 # Extensions
 markdown_extensions:

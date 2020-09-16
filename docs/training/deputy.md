@@ -1,8 +1,8 @@
 ---
 cover: assets/img/covers/deputy.png
-description: So you want to be a deputy? You've come to the right place!
+description:補佐になりたいですか？あなたは正しい場所にたどり着きました！
 ---
-![Deputy](../assets/img/headers/incident_command_support.jpg)
+![補佐](../assets/img/headers/incident_command_support.jpg)
 *Credit: [oregondot @ Flickr](https://www.flickr.com/photos/oregondot/8743801731/in/album-72157633494644719/)*
 
 So you want to be a deputy? You've come to the right place!

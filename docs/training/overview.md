@@ -1,11 +1,12 @@
 ---
 cover: assets/img/covers/training_overview.png
 title: Training Overview
-description: Learning about the PagerDuty major incident response process is an important part of being an effective on-call engineer at PagerDuty. This section goes over our training material for the various roles that are involved in our incident response, along with some additional information and training material from government agencies.
+description: PagerDutyの重大インシデント対応プロセスを学ぶことは、PagerDutyで効率的なオンコールエンジニアに鳴るために重要なことです。
+このセクションでは、インシデント対応における様々な役割に対するトレーニング資料と、政府機関からの追加情報とトレーニング資料を紹介します。
 ---
 
 PagerDutyの重大インシデント対応プロセスを学ぶことは、PagerDutyで効率的なオンコールエンジニアに鳴るために重要なことです。
-この瀬古ションでは、インシデント対応における様々な役割に対するトレーニング資料と、政府機関からの追加情報とトレーニング資料を紹介します。
+このセクションでは、インシデント対応における様々な役割に対するトレーニング資料と、政府機関からの追加情報とトレーニング資料を紹介します。
 
 ## トレーニングガイド
 

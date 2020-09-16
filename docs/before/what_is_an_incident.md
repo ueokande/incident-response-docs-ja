@@ -1,8 +1,9 @@
 ---
 cover: assets/img/covers/incident.png
-description: Before defining an incident response process, we should first define what an incident (and a major incident) is, along with how we should trigger the response for such incidents.
+description: インシデント対応プロセスを定義する前に、まずは私たちの対応するべきインシデント（または重大インシデント）が何なのかを定義します。
 ---
-![Incident](../assets/img/headers/server_incident.png)
+
+![インシデント](../assets/img/headers/server_incident.png)
 
 まずインシデント対応手順を定義する前に、何がインシデントで何が重大インシデントか定義します。
 

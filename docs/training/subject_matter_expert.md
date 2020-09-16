@@ -1,6 +1,6 @@
 ---
 cover: assets/img/covers/sme.png
-description: If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility.
+description: もしあなたがPagerDutyのオンコールをするのなら、サービスの内容領域専門家（Subject Matter Expert）として、重大インシデント発生時にページされて対応されることが期待されます。このページには、その責務のために準備すべきことを紹介します。
 ---
 ![Incident Response](../assets/img/headers/incident_response.jpg)
 *Credit: [oregondot @ Flickr](https://www.flickr.com/photos/oregondot/8743809853/in/album-72157633494644719/)*

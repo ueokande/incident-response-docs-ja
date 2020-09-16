@@ -1,6 +1,6 @@
 ---
 cover: assets/img/covers/reading.png
-description: This is a collection of additional reading on the topic of incident response that we've found useful.
+description: インシデント対応に関する、いくつかの資料を紹介します。
 ---
 ![Looking up information](../assets/img/headers/resources.jpg)
 *Credit: [Axelle B](http://www.publicdomainpictures.net/view-image.php?image=151506&picture=young-woman-my-computer)*

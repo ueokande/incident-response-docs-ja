@@ -1,6 +1,6 @@
 ---
 cover: assets/img/covers/anti-patterns.png
-description: These are some processes that we've found do not work well. We've either tried them in the past and regretted it, or spent considerable time thinking about them and ultimately rejected them. We want to document them to make sure we don't repeat mistakes or wonder why a decision was made later down the line.
+description: ここではうまく機能しないということがわかったいくつかのプロセスを紹介します。過去に試してみて後悔したり、かなりの時間考えたが結果的に却下したものなどです。同じ間違いを繰り返さないように、またなぜそれを後から却下したかを文書化しておきます。
 ---
 
 !!! warning "プロセスのアンチパターン"

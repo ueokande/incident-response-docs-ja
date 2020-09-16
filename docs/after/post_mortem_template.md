@@ -1,8 +1,10 @@
 ---
 cover: assets/img/covers/post-mortem_template.png
-description: This is a standard template we use for post-mortems at PagerDuty. Each section describes the type of information you will want to put in that section.
+description: これはPagerDutyで利用している標準的なポストモーテムのテンプレートです。それぞれのセクションでは、あなたがポストモーテムに書くべき情報について説明します。
 ---
-This is a standard template we use for post-mortems at PagerDuty. Each section describes the type of information you will want to put in that section.
+
+これはPagerDutyで利用している標準的なポストモーテムのテンプレートです。
+それぞれのセクションでは、あなたがポストモーテムに書くべき情報について説明します。
 
 ---
 

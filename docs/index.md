@@ -10,7 +10,7 @@ cover: assets/img/covers/incident_response_docs.png
 このドキュメントが何なのか、なぜ存在するかは、[About](about.md)を参照してください。
 
 !!! tip "どこから手を付けるべきか？"
-    もしあなたがインシデント対応が初めてで、組織的な手順がない場合は、まず[Getting Started](/getting_started.md)で何ができるかを確認してください。
+    もしあなたがインシデント対応が初めてで、組織的な手順がない場合は、まず[「はじめに」](/getting_started.md)で何ができるかを確認してください。
     そして詳細な手順を、[Training Course](training/courses/incident_response.md)から確認することをお勧めします。
 
 ## オンコールになる
@@ -18,7 +18,7 @@ cover: assets/img/covers/incident_response_docs.png
 まだあなたがオンコールを体験していないのなら、それが何なのかが疑問に思うかも知れません。
 このページでは、オンコールに期待されていることと、いくつかの実例を紹介します。
 
-* [オンコールになる](oncall/being_oncall.md) - _オンコールになるには。あなたの責務とそうでないもの_
+* [オンコールを始める](oncall/being_oncall.md) - _オンコールになるには。あなたの責務とそうでないもの_
 * [アラートの原則](oncall/alerting_principles.md) - _エンジニアを呼び出すための手段やタイミングなどの原則_
 
 ## インシデント発生前

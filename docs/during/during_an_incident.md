@@ -1,6 +1,6 @@
 ---
 cover: assets/img/covers/dont_panic.png
-description: Information on what to do during a major incident.
+description: 重大インシデント発生中に何をすべきかについて説明します。
 ---
 
 重大インシデント発生中に何をすべきかについて説明します。

@@ -1,6 +1,6 @@
 ---
 cover: assets/img/covers/severity_levels.png
-description: Incidents are typically classified by severity or priority. At PagerDuty we use 'SEV' levels, with lower numbered severities being more urgent. Operational issues can be classified at one of these severity levels, and in general you are able to take more risky moves to resolve a higher severity issue.
+description: インシデントは通常、深刻度や優先度によって種類分けされます。PagerDutyでは、小さいな数字ほど緊急度が高い 'SEV' レベルを使っています。運用上の問題はこの深刻度レベルによって分類され、一般的には深刻度の高い問題を解決するにはリクスの高い行動を取ることができます。
 ---
 
 インシデント対応手順の最初のステップは、何が[インシデントを引き起こしている](/before/what_is_an_incident.md)かを特定することです。

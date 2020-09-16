@@ -1,9 +1,9 @@
 ---
 cover: assets/img/covers/alerting_principles.png
-description: We manage how we get alerted based on a simple principle, an alert is something which requires a human to perform an action. Anything else is a notification, which is something that we cannot control, and for which we cannot make any action to affect it. Notifications are useful, but they shouldn't be waking people up under any circumstance.
+description: 私たちは、アラートは人間によるアクションが必要というシンプルな原則に基づいて、アラートを管理します。それ以外の我々で制禦できないものは通知であり、それに対するアクションもできません。通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。
 ---
 
-私たちは、**アラートは人手によるアクションが必要** というシンプルな原則に基づいて、アラートを管理します。
+私たちは、**アラートは人間によるアクションが必要** というシンプルな原則に基づいて、アラートを管理します。
 それ以外の我々で制禦できないものは通知であり、それに対するアクションもできません。
 通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。
 
