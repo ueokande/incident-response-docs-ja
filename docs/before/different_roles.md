@@ -17,7 +17,7 @@ PagerDutyのインシデント対応チームには、いくつかの重要な�
 
 !!! tip "柔軟に構成する"
     全てのインシデントにおいて、各役割をそれぞれ別の人で構成する必要はありません。
-    例えばインシデントのスコープが十分に小さい場合は、補佐（Deputy）は記録係（Scribe）と内部窓口（Internal Liaison）をしても良いのです。
+    例えばインシデントのスコープが十分に小さい場合は、補佐（Deputy）は記録係（Scribe）と内部連絡（Internal Liaison）をしても良いのです。
     インシデントの規模に基づいてスケールできるように、チームの構成は柔軟であるべきです。
 
 ---
@@ -159,7 +159,7 @@ The Scribe is expected to:
 
 ---
 
-## 顧客窓口（Customer Liaison）
+## 顧客連絡（Customer Liaison）
 
 ### この役割はなにか？
 
@@ -179,15 +179,15 @@ The Scribe is expected to:
 
 ### 誰がすべきか？
 
-サポートチームのメンバーは誰でも顧客窓口になれます。
+サポートチームのメンバーは誰でも顧客連絡になれます。
 
 ### どうすればなれるか？
 
-[顧客窓口トレーニングガイド](/training/customer_liaison.md)を読んで、サポートチームで誰が顧客窓口になるか話し合ってください。
+[顧客連絡トレーニングガイド](/training/customer_liaison.md)を読んで、サポートチームで誰が顧客窓口になるか話し合ってください。
 
 ---
 
-## 内部窓口（Internal Liaison）
+## 内部連絡（Internal Liaison）
 
 ### この役割はなにか？
 
@@ -197,7 +197,7 @@ The Scribe is expected to:
 ### なぜ必要か？
 
 大規模インシデントでは、組織をまたいだ複数チームが関係する事があります。
-これらのチームを動員して、迅速にインシデントに対応できるように、特定の窓口を設置します。
+これらのチームを動員して、迅速にインシデントに対応できるように、特定の連絡を設置します。
 
 ### この役割の責務は？
 
@@ -213,4 +213,4 @@ Anyone designated by the Incident Commander during incident response.
 
 ### どうすればなれるか？
 
-[内部窓口トレーニング](/training/internal_liaison.md)を読んでください。
+[内部連絡トレーニング](/training/internal_liaison.md)を読んでください。
