@@ -39,7 +39,7 @@ cover: assets/img/covers/incident_response_docs.png
 * [インシデント発生中](during/during_an_incident.md) - _インシデント発生中に何をすべきか、どう貢献すべきか_
 * [Security Incident Response](during/security_incident_response.md) - _セキュリティインシデントでは通常のインシデントと扱い方が異なります_
 
-## インシデント発生後
+## インシデント収束後
 
 フォローアッププロセスでは、再発防止に何ができるかなどを確認し、日々改善をします。
 
