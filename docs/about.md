@@ -9,16 +9,18 @@ cover: assets/img/covers/incident_response_docs.png
 インシデントの中日だけではなく、インシデント発生中やインシデント収束後についても述べています。
 
 重大インシデントを取り扱うプロセスについて議論している企業は少ししかありません。
-私たちのドキュメントコミュニティに後悔して、独自のプロセスを策定したい人にとって役立つことを期待します。
+私たちのドキュメントコミュニティに公開して、独自のプロセスを策定したい人にとって役立つことを期待します。
 また他の人に改善を提案できる機会を提供し、それがみんなの助けになることでしょう。
 
 ## これは何ですか？
 
-A collection of pages detailing how to efficiently deal with any major incidents that might arise, along with information on how to go on-call effectively. It provides lessons learned the hard way, along with training material for getting you up to speed quickly.
+どうやって効果的にオンコールに対応し、発生するかもしれない重大インシデントの効率的な対応の仕方を紹介します。
+苦労して学んだ教訓を、すばやく習得できるトレーニング資料と共に提供します。
 
 ## これは誰のためですか？
 
-It is intended for on-call practitioners and those involved in an operational incident response process, or those wishing to enact a formal incident response process.
+これはオンコール参加者と、運用上のインシデント対応プロセスに関わっている人たちのためです。
+またインシデント対応プロセスを制定したい人も対象とします。
 
 ## なぜ必要ですか？
 
