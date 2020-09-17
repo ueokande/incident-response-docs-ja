@@ -55,8 +55,8 @@ pages:
     - 補佐: 'training/deputy.md'
     - 記録係: 'training/scribe.md'
     - 内容領域専門家: 'training/subject_matter_expert.md'
-    - 顧客窓口: 'training/customer_liaison.md'
-    - 内部窓口: 'training/internal_liaison.md'
+    - 顧客連絡: 'training/customer_liaison.md'
+    - 内部連絡: 'training/internal_liaison.md'
     - 用語集: 'training/glossary.md'
   - トレーニングコース:
     - インシデント対応: 'training/courses/incident_response.md'
