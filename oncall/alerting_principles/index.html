@@ -15,7 +15,7 @@
     <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
 
     <!-- Page Description -->
-    <meta name="description" content="私たちは、アラートは人間によるアクションが必要というシンプルな原則に基づいて、アラートを管理します。それ以外の我々で制禦できないものは通知であり、それに対するアクションもできません。通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。" />
+    <meta name="description" content="私たちは、アラートは人間によるアクションが必要というシンプルな原則に基づいて、アラートを管理します。それ以外の私たちで制禦できないものは通知であり、それに対するアクションもできません。通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。" />
     <meta name="keywords" content="pagerduty, incident, response" />
 
     <!-- Mobile -->
@@ -39,7 +39,7 @@
     <meta property="og:url" content="https://ueokande.github.io/incident-response-docs-ja/oncall/alerting_principles/" />
     <meta property="og:title" content="アラートの原則 - PagerDuty Incident Response Documentation" />
     <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
-    <meta property="og:description" content="私たちは、アラートは人間によるアクションが必要というシンプルな原則に基づいて、アラートを管理します。それ以外の我々で制禦できないものは通知であり、それに対するアクションもできません。通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。" />
+    <meta property="og:description" content="私たちは、アラートは人間によるアクションが必要というシンプルな原則に基づいて、アラートを管理します。それ以外の私たちで制禦できないものは通知であり、それに対するアクションもできません。通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。" />
     <meta property="og:image" content="https://ueokande.github.io/incident-response-docs-ja//assets/img/covers/alerting_principles.png" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="アラートの原則 - PagerDuty Incident Response Documentation" />
-    <meta name="twitter:description" content="私たちは、アラートは人間によるアクションが必要というシンプルな原則に基づいて、アラートを管理します。それ以外の我々で制禦できないものは通知であり、それに対するアクションもできません。通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。" />
+    <meta name="twitter:description" content="私たちは、アラートは人間によるアクションが必要というシンプルな原則に基づいて、アラートを管理します。それ以外の私たちで制禦できないものは通知であり、それに対するアクションもできません。通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。" />
     <meta name="twitter:image" content="https://ueokande.github.io/incident-response-docs-ja//assets/img/covers/alerting_principles.png" />
 
     <!-- Style -->
@@ -282,7 +282,7 @@
           
             
   <li>
-    <span class="section">インシデント前に</span>
+    <span class="section">インシデントの前に</span>
     <ul>
       
         
@@ -562,12 +562,12 @@
             <h1>アラートの原則</h1>
           
           
-          <p>私たちは、<strong>アラートは人間によるアクションが必要</strong> というシンプルな原則に基づいて、アラートを管理します。
-それ以外の我々で制禦できないものは通知であり、それに対するアクションもできません。
+          <p>私たちは <strong>アラートは人間によるアクションが必要</strong> というシンプルな原則に基づいて、受け取るアラートを管理します。
+それ以外の私たちで制御できないものは通知であり、それに対するアクションもありません。
 通知は便利ですが、いかなる状況でも人々を目覚めさせてはいけません。</p>
 <h2 id="_1">アラートの優先度<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">再優先度アラート</p>
+<p class="admonition-title">高優先度アラート</p>
 <p>深夜に人を叩き起こすものは <strong>すぐに人が対応できるもの</strong> であるべきです。
 そうでなければ、人々を呼び出さないようアラートを調整する必要があります。</p>
 </div>
@@ -612,7 +612,7 @@
 <p>優先度<strong>Medium</strong>で、すぐにではないが人手による対応が必要になります。。</p>
 <p><img alt="Medium Urgency" src="../../assets/img/screenshots/high_business_hours.png" /></p>
 <h4 id="1ssl">1週間以内にSSL証明書が失効する<a class="headerlink" href="#1ssl" title="Permanent link">#</a></h4>
-<p>これは優先度<strong>Low</strong>で、人手による対応がそのうち必要です。</p>
+<p>これは優先度<strong>Low</strong>で、近うちに人手による対応が必要になります。</p>
 <p><img alt="Low Urgency" src="../../assets/img/screenshots/low_urgency.png" /></p>
 <h4 id="_3">デプロイが成功した<a class="headerlink" href="#_3" title="Permanent link">#</a></h4>
 <p>これは<strong>Notification</strong>で、イベントは抑制されて送信されるべきです。
@@ -621,7 +621,7 @@
 <h2 id="_4">アラートの内容<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p>アラートには問題を迅速に特定できる文脈と、復旧できる可能性がある手順を含むべきです。
 アラートに一般的なタイトルまたは説明文を使うと返って混乱を招く可能性があります。
-私たちにはアラートの内容に関する一連のガイドアリンがあり、全てのアラートがそれに従うべきです。</p>
+私たちにはアラートの内容に関する一連のガイドラインがあり、全てのアラートがそれに従うべきです。</p>
 <h4 id="_5">タイトルやサマリーは説明的で簡潔にする<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
 <ul>
 <li><span class="bad">&#x2718;</span> ALERT: 何かが壊れた</li>
@@ -632,7 +632,7 @@
 <li><span class="bad">&#x2718;</span> ディスク空き容量が枯渇しています</li>
 <li><span class="good">&#x2713;</span> <code>avg(last_1h):max:system.disk.in_use{env:prod-web-loadbalancer} by {host} &gt; 0.8</code></li>
 </ul>
-<h4 id="_7">本文には実際に何が問題で、なぜ問題なのかを載せる<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
+<h4 id="_7">本文には実際の問題が何で、なぜ問題なのかを載せる<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
 <ul>
 <li><span class="bad">&#x2718;</span> ディスクがいっぱいです</li>
 <li><span class="good">&#x2713;</span> ディスクの使用量が80%になりました。もしディスクがいっぱいになると、ファイルを作成したり卯川期ができなくなり、システムが不安定になります。</li>
@@ -646,11 +646,11 @@
 <div class="admonition info">
 <p class="admonition-title">テストは重要です</p>
 <p>テストしていなアラートは、アラートが無いのと同じです。
-いざという時、アラートが動作するかわかりません。
+いざというときにアラートが動作するかわかりません。
 アラートが実際に動作するかをテストするのは、正常なサービス運用にとって重要で、リリースの計画やデプロイのデプロイ作業に含めるべきです。</p>
 </div>
 <p>追加されたアラートは必ずテストしてください。
-これは新しいサービスの<a href="https://www.pagerduty.com/blog/failure-friday-at-pagerduty/">金曜日の障害</a>によってカバーされますが、より迅速にする場合は手動でテストしてください。
+これは新しいサービスの<a href="https://www.pagerduty.com/blog/failure-friday-at-pagerduty/">Failure Friday</a>によってカバーされますが、より迅速にする場合は手動でテストしてください。
 テストすべきものは</p>
 <ul>
 <li>閾値が適切に設定されているか。ノイズの多いアラートは必要ないです。</li>

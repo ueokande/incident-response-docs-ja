@@ -15,7 +15,7 @@
     <meta name="dcterms.license" content="http://www.apache.org/licenses/LICENSE-2.0" />
 
     <!-- Page Description -->
-    <meta name="description" content="全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。" />
+    <meta name="description" content="全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。誰も責めず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。" />
     <meta name="keywords" content="pagerduty, incident, response" />
 
     <!-- Mobile -->
@@ -39,7 +39,7 @@
     <meta property="og:url" content="https://ueokande.github.io/incident-response-docs-ja/after/post_mortem_process/" />
     <meta property="og:title" content="ポストモーテムプロセス - PagerDuty Incident Response Documentation" />
     <meta property="og:site_name" content="PagerDuty Incident Response Documentation" />
-    <meta property="og:description" content="全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。" />
+    <meta property="og:description" content="全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。誰も責めず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。" />
     <meta property="og:image" content="https://ueokande.github.io/incident-response-docs-ja//assets/img/covers/post-mortem_process.png" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ポストモーテムプロセス - PagerDuty Incident Response Documentation" />
-    <meta name="twitter:description" content="全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。" />
+    <meta name="twitter:description" content="全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。誰も責めず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。" />
     <meta name="twitter:image" content="https://ueokande.github.io/incident-response-docs-ja//assets/img/covers/post-mortem_process.png" />
 
     <!-- Style -->
@@ -251,7 +251,7 @@
           
             
   <li>
-    <span class="section">インシデント前に</span>
+    <span class="section">インシデントの前に</span>
     <ul>
       
         
@@ -355,49 +355,43 @@
         <ul>
           
             <li class="anchor">
-              <a title="誰かのせいにせず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。" href="#_1">
-                誰かのせいにせず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="オーナーの指名" href="#_2">
+              <a title="オーナーの指名" href="#_1">
                 オーナーの指名
               </a>
             </li>
           
             <li class="anchor">
-              <a title="オーナーの責務" href="#_3">
+              <a title="オーナーの責務" href="#_2">
                 オーナーの責務
               </a>
             </li>
           
             <li class="anchor">
-              <a title="ステータス" href="#_4">
+              <a title="ステータス" href="#_3">
                 ステータス
               </a>
             </li>
           
             <li class="anchor">
-              <a title="ポストモーテム" href="#_5">
+              <a title="ポストモーテム" href="#_4">
                 ポストモーテム
               </a>
             </li>
           
             <li class="anchor">
-              <a title="ポストモーテムのミーティング" href="#_6">
+              <a title="ポストモーテムのミーティング" href="#_5">
                 ポストモーテムのミーティング
               </a>
             </li>
           
             <li class="anchor">
-              <a title="例" href="#_7">
+              <a title="例" href="#_6">
                 例
               </a>
             </li>
           
             <li class="anchor">
-              <a title="参考文献" href="#_8">
+              <a title="参考文献" href="#_7">
                 参考文献
               </a>
             </li>
@@ -586,23 +580,22 @@
             <h1>ポストモーテムプロセス</h1>
           
           
-          <h2 id="_1">誰かのせいにせず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<p><img alt="ポストモーテム" src="../../assets/img/headers/pagerduty_post_mortem.jpg" /></p>
+          <p><img alt="ポストモーテム" src="../../assets/img/headers/pagerduty_post_mortem.jpg" /></p>
 <p>全ての重大インシデント (SEV-2/SEV-1) では、ポストモーテムによるフォローアップが必要です。
-誰かのせいにせず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。
+誰も責めず、何が問題でインシデントを引き起こしたか、今後に再発を防止するために何ができるかを詳細に記述します。
 インシデント対応プロセス自身も含める必要があります。</p>
 <div class="admonition warning">
 <p class="admonition-title">ポストモーテムをおろそかにしないで</p>
 <p>インシデント対応後のポストモーテムをおろそかにしないでください。
-ポストモーテムがないと、何が正しいのか、どこが改善できるのか、そして最も重要な再発防止のための方法がわからなくなります。
+ポストモーテムがないと、何が正しいのか、どこが改善できるのか、そして最も重要な再発防止策がわからなくなります。
 よく設計され、誰も責めないポストもーテムは、チームに継続的に学ぶ機会を与え、インフラとインシデント対応プロセスを反復的に改善できます。</p>
 </div>
-<h2 id="_2">オーナーの指名<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h2 id="_1">オーナーの指名<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>最初のステップはポストモーテムのオーナーを指名することです。
 これはインシデントコマンダーが、重大インシデントの通話の終わり、または直後に指名します。
 オーナーはポストモーテムを記録し、ログを精査し、追加調査を管理し、全ての関係者に情報を提供する責務があります。
-詳細の手順は次で説明します。</p>
-<h2 id="_3">オーナーの責務<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+詳しい手順は次で説明します。</p>
+<h2 id="_2">オーナーの責務<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>ポストモーテムのオーナーになると次のような責務があります。</p>
 <ul>
 <li>ポストモーテムのミーティングを（共有カレンダーに）設定し、関係者を招待します（SEV-1の場合は<strong>3営業日</strong>以内、SEV-2の場合は<strong>5営業日</strong>以内が望ましいです）。</li>
@@ -613,7 +606,7 @@
 <li>ポストモーテムのミーティングで、議題について説明します（インシデントコマンダーがミーティングを進行するが、実際はあなたがほとんど喋ります）。</li>
 <li>ポストモーテムの結果を内部に伝えます。</li>
 </ul>
-<h2 id="_4">ステータス<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<h2 id="_3">ステータス<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>私たちのポストモーテムには「ステータス」フィールドがあります。
 このフィールドの使い方は以下のとおりです。</p>
 <table>
@@ -642,7 +635,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_5">ポストモーテム<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h2 id="_4">ポストモーテム<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p>ポストモーテムのオーナーに指名されたときは、ポストモーテムの作成と関連情報を更新しましょう。</p>
 <ol>
 <li>
@@ -658,7 +651,7 @@
 <li>
 <p>持っている全ての情報を記入します。</p>
 <ul>
-<li>タイムラインに主眼に書くべきです。<ul>
+<li>タイムラインに主眼を置いて書くべきです。<ul>
 <li>タイムラインには、重要なステータスや影響の変化や、応答者によって行われた主要なアクションを記入すべきです。</li>
 </ul>
 </li>
@@ -729,7 +722,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="_6">ポストモーテムのミーティング<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<h2 id="_5">ポストモーテムのミーティング<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <p>このミーティングは通常15-30分で、ポストモーテム手順のまとめのために実施します。
 何が発生して、どうすればよかったか、必要な追加調査について話し合います。
 このミーティングの目的は、事実や解析、推奨事項に関する認識をあわせ、信頼性に関する問題が発生していることを広く認知してもらいます。</p>
@@ -745,7 +738,7 @@
 </ul>
 </li>
 <li>任意参加<ul>
-<li>カスタマー連絡（SEV-1のみ）</li>
+<li>顧客連絡（SEV-1のみ）</li>
 </ul>
 </li>
 </ul>
@@ -763,7 +756,7 @@
 <li>顧客への家今日について議論。顧客からのコメントなどは無かったか。</li>
 <li>作成されたアクションの各項目をレビューし、適切かどうか、追加でやるべきかどうかを議論。</li>
 </ol>
-<h2 id="_7">例<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<h2 id="_6">例<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <p>他社のポストモーテムの例をいくつか列挙します</p>
 <ul>
 <li><a href="https://support.stripe.com/questions/outage-postmortem-2015-10-08-utc">Stripe</a></li>
@@ -775,7 +768,7 @@
 <li><a href="https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016">GOV.UK Rail Accident Investigation</a></li>
 <li><a href="https://github.com/danluu/post-mortems">A List of Post-mortems!</a></li>
 </ul>
-<h2 id="_8">参考文献<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<h2 id="_7">参考文献<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011">Advanced PostMortem Fu and Human Error 101 (Velocity 2011)</a></li>
 <li><a href="http://fractio.nl/2015/10/30/blame-language-sharing/">Blame. Language. Sharing.</a></li>

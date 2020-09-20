@@ -102,7 +102,7 @@
           <span class="path">
             
               
-                インシデント前に <i class="icon icon-link"></i>
+                インシデントの前に <i class="icon icon-link"></i>
               
             
           </span>
@@ -251,7 +251,7 @@
           
             
   <li>
-    <span class="section">インシデント前に</span>
+    <span class="section">インシデントの前に</span>
     <ul>
       
         
@@ -542,7 +542,7 @@ SEV-3を超える深刻度は機械的に重大インシデント (Major Inciden
 <p class="admonition-title">常に最悪の事態を考える</p>
 <p>もしインシデントのレベルがわからない場合（SEV-2かSEV-1かわからない場合など）は、<strong>より深刻度の高い方</strong>に分類します。
 インシデント対応中は、深刻度を議論したりそれを決める時間ではありません。
-深刻度の高いものとして扱い、後のpost-mortemで振り返りましょう。</p>
+深刻度の高いものとして扱い、後のポストモーテムで振り返りましょう。</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">SEV-3は重大インシデントか？</p>
@@ -573,7 +573,7 @@ SEV-3を超える深刻度は機械的に重大インシデント (Major Inciden
         <p class="response">重大インシデント対応</p>
         <ul>
           <li>Slackでインシデント司令官を呼び出す<code>!ic page</code>.</li>
-          <li><a href="/during/during_an_incident">インシデント対応中</a>を読む</li>
+          <li><a href="/during/during_an_incident">インシデント発生中</a>を読む</li>
           <li>社内のステークホルダーに通知する</li>
           <li>外部へ通知する</li>
         </ul>
@@ -585,7 +585,7 @@ SEV-3を超える深刻度は機械的に重大インシデント (Major Inciden
         <p class="intent">顧客が製品を利用するのに影響がある致命的なシステムの問題</p>
         <ul>
           <li>通知パイプラインに重大な障害が発生している。</li>
-          <li>インシデント対応の機能(応答、解決、など)が利用できない。</li>
+          <li>インシデント対応の機能（応答、解決、など）が利用できない。</li>
           <li>Webアプリが利用できないか、多くのユーザーにパフォーマンス劣化が発生している。</li>
           <li>重大インシデントに対するPagerDutyの監視システムが停止している</li>
           <li>PagerDutyの従業員がインシデント対応が必要だとみなしたイベント</li>
@@ -595,24 +595,24 @@ SEV-3を超える深刻度は機械的に重大インシデント (Major Inciden
         <p class="response">重大インシデント対応</p>
         <ul>
           <li>Slackでインシデント司令官を呼び出す<code>!ic page</code>.</li>
-          <li><a href="/during/during_an_incident">インシデント対応中</a>を読む</li>
+          <li><a href="/during/during_an_incident">インシデント発生中</a>を読む</li>
         </ul>
     </tr>
     <tr>
-      <td class="warning" colspan="3">このラインを超えるのは「重大インシデント」と扱います。我々のインシデント対応プロセスは、あらゆる重大インシデントに対して発動されるべきです。</td>
+      <td class="warning" colspan="3">このラインを超えるのは「重大インシデント」と扱います。私たちのインシデント対応プロセスは、あらゆる重大インシデントに対してトリガーされるべきです。</td>
     </tr>
     <tr>
       <td class="sev-3">SEV-3</td>
       <td>
-        <p class="intent">サービス所有者が直ちに対応する必要がある、安定性や一部の顧客に影響がある軽微な問題。</p>
+        <p class="intent">サービスオーナーが直ちに対応する必要がある、安定性や一部の顧客に影響がある軽微な問題。</p>
         <ul>
           <li>一部の機能が使えないが、多くの顧客には影響しない。</li>
           <li>何もしなければSEV-2になる可能性があるもの。</li>
-          <li>サービスの冗長度がないもの（もう1つのノードが停止すると障害になる）</li>
+          <li>サービスの冗長度がないもの（もう1つのノードが停止すると障害になる）。</li>
         </ul>
       </td>
       <td>
-        <p class="response">サービスチームへの緊急度の高い呼び出し</p>
+        <p class="response">サービスチームへの緊急度の高いページ</p>
         <ul>
           <li>最優先で問題に取り掛かる。</li>
           <li>影響するシステムのエンジニアと連絡をとり、原因の特定する。</li>
@@ -635,7 +635,7 @@ SEV-3を超える深刻度は機械的に重大インシデント (Major Inciden
         </ul>
       </td>
       <td>
-        <p class="response">サービスチームへの緊急度の低い呼び出し</p>
+        <p class="response">サービスチームへの緊急度の低いページ</p>
         <ul>
           <li>最優先で問題に取り掛かる（通常のタスクよりも上）。</li>
           <li>ステータスを監視して事態が悪化しているか、いつから悪化しているかを知らせる。</li>
@@ -653,7 +653,7 @@ SEV-3を超える深刻度は機械的に重大インシデント (Major Inciden
       <td>
         <p class="response">JIRAチケット</p>
         <ul>
-          <li>JIRAチケットを作成して影響のあるシステムの所有者に割り当てる。</li>
+          <li>JIRAチケットを作成して影響のあるシステムのオーナーに割り当てる。</li>
         </ul>
       </td>
     </tr>
@@ -663,7 +663,7 @@ SEV-3を超える深刻度は機械的に重大インシデント (Major Inciden
 <div class="admonition note">
 <p class="admonition-title">具体的に</p>
 <p>これらの深刻度の解説は、PagerDutyの社内で利用している定義から、より一般的な説明に置き換えています。
-読者の内部ドキュメントとしてリユする場合は、ユーザーやアカウントの何%に影響しているかなどを元にした、具体的な定義を作ることをお勧めします。
+読者の内部ドキュメントとして利用する場合は、ユーザーやアカウントの何%に影響しているかなどを元にした、具体的な定義を作ることをお勧めします。
 通常はメトリクスに基づいて深刻度を定義するのが望ましいです。</p>
 </div>
           <aside class="copyright" role="note">
