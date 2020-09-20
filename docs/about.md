@@ -33,7 +33,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 ## 何がカバーされていますか？
 
-[オンコール](/oncall/being_oncall.md)の初め方、[深刻度](/before/severity_levels.md)の定義、インシデントの[通話中のエチケット](/before/call_etiquette.md)、[ポストモーテム](/after/post_mortem_process.md)の方法、[ポストモーテムのテンプレート](/after/post_mortem_template.md)などが含まれます。
+[オンコール](/oncall/being_oncall.md)の始め方、[深刻度](/before/severity_levels.md)の定義、インシデントの[通話中のエチケット](/before/call_etiquette.md)、[ポストモーテム](/after/post_mortem_process.md)の方法、[ポストモーテムのテンプレート](/after/post_mortem_template.md)などが含まれます。
 
 ## なにがカバーされていないですか？
 
