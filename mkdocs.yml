@@ -35,7 +35,7 @@ pages:
     - オンコールを始める: 'oncall/being_oncall.md'
     - 誰がオンコールになるか: 'oncall/whos_oncall.md'
     - アラートの原則: 'oncall/alerting_principles.md'
-  - インシデント前に:
+  - インシデントの前に:
     - インシデントとはなにか？: 'before/what_is_an_incident.md'
     - 深刻度レベル: 'before/severity_levels.md'
     - 異なる役割: 'before/different_roles.md'

@@ -3,7 +3,7 @@ cover: assets/img/covers/definitions.png
 description: Ever wonder what all of those strange words you sometimes see in our documentation mean? This page is here to help.
 ---
 
-私たちのドキュメントに登場する、奇妙な単語が何を意味するか気に成りませんでしたか？
+私たちのドキュメントに登場する、奇妙な単語が何を意味するか気になりませんでしたか？
 このページで解説します。
 
 ### インシデントコマンダー（Incident Commander / IC）
@@ -21,7 +21,7 @@ description: Ever wonder what all of those strange words you sometimes see in ou
 
 ### 記録係（Scribe）
 
-記録係のしごとは、通話中に実行された全てのアクティビティを記録し、Slackに書き込むことです。
+記録係の仕事は、通話中に実行された全てのアクティビティを記録し、Slackに書き込むことです。
 [詳しい情報](../before/different_roles.md)。
 
 ### 解決者（Resolver）
@@ -48,7 +48,7 @@ CANは「Conditions」「Actions」「Needs」を意味します。
 インシデントがどれだけ深刻か表します。
 インシデントのSevは対応の種類を示します。
 深刻度が高くなると、問題解決のためにリクスのあるアクションを実行できます。
-[More info](../before/different_roles.md)。
+[詳しい情報](../before/different_roles.md)。
 
 ### 管理範囲（Span of Control）
 

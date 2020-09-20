@@ -6,7 +6,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 このサイトはPagerDutyの障害対応プロセスの一部をドキュメント化しました。
 これはPagerDutyの全ての重大インシデントで使用している、全ての新入オンコールエンジニアが利用している、社内ドキュメントの縮小版です。
-インシデントの中日だけではなく、インシデント発生中やインシデント収束後についても述べています。
+インシデントへの対策だけではなく、インシデント発生中やインシデント収束後についても述べています。
 
 重大インシデントを取り扱うプロセスについて議論している企業は少ししかありません。
 私たちのドキュメントコミュニティに公開して、独自のプロセスを策定したい人にとって役立つことを期待します。
@@ -24,7 +24,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 ## なぜ必要ですか？
 
-インシデント対応は絶対に必要ないと願いたいですか、もしやる必要がある場合は、スムーズかつシームレスに済ませたいです。
+インシデント対応は絶対に必要ないと願いたいですか、必要になったときは、スムーズかつシームレスに済ませたいです。
 通常、社内でのインシデントの対応方法は、時間とともに蓄積されて、インシデントとともに改善されています。
 [PagerDutyの重大インシデント向けのアプリケーション](https://www.pagerduty.com/applications/#major-incidents-application)などのツールは問題の迅速な収束に役立ちますが、実行するプロセスもまた重要です。
 このドキュメントにより、私たちが数年にもわたり築き上げてきたものを最初から学ぶことができます。
@@ -33,7 +33,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 ## 何がカバーされていますか？
 
-[オンコール](/oncall/being_oncall.md)のなり方、[深刻度](/before/severity_levels.md)の定義、インシデントの[通話中のエチケット](/before/call_etiquette.md)、[ポストモーテム](/after/post_mortem_process.md),の方法、[ポストも〜テムのテンプレート](/after/post_mortem_template.md)などが含まれます。
+[オンコール](/oncall/being_oncall.md)の初め方、[深刻度](/before/severity_levels.md)の定義、インシデントの[通話中のエチケット](/before/call_etiquette.md)、[ポストモーテム](/after/post_mortem_process.md)の方法、[ポストモーテムのテンプレート](/after/post_mortem_template.md)などが含まれます。
 
 ## なにがカバーされていないですか？
 

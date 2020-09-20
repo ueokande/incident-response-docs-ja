@@ -31,14 +31,6 @@ description: このドキュメント全体を通して、"!"で始まる様々�
 また何らかの理由でページできない場合はSlackループに通知し、ユーザーに連絡先を表示して手動で電話をかけられるようにします。
 さらに新しいPagerDutyインシデントを作成して、ユーザーを関連付けます。
 
-This is the command we use to manually trigger our incident response process.
-It uses the cached schedule information and will page all of the current
-Incident Commanders on-call (the primary, the backup, and any trainees who are
-shadowing). It will also notify into the room if it is unable to page them for
-any reason, and direct users to manually call the person using their contact
-information. Additionally, it will create a new PagerDuty incident and link
-users to it.
-
 ![Paging Incident Commanders](../assets/img/chatops/ic_page.png)
 
 何らかの理由でインシデントコマンダーを自動で呼べなかった場合は、Botは失敗を検知します。
