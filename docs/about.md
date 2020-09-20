@@ -4,7 +4,7 @@ cover: assets/img/covers/incident_response_docs.png
 ![PagerDuty](./assets/img/headers/pagerduty_logo.png)
 
 
-このサイトはPagerDutyの障害対応プロセスの一部をドキュメント化しました。
+このサイトはPagerDutyのインシデント対応プロセスの一部をドキュメント化しました。
 これはPagerDutyの全ての重大インシデントで使用している、全ての新入オンコールエンジニアが利用している、社内ドキュメントの縮小版です。
 インシデントへの対策だけではなく、インシデント発生中やインシデント収束後についても述べています。
 
@@ -43,7 +43,7 @@ cover: assets/img/covers/incident_response_docs.png
 
 ## License
 
-このドキュメントはApache License 2.0の元で提供されます。
+このドキュメントおよびその邦訳版はApache License 2.0の元で提供されます。
 このドキュメントの仕様および変更ができ、商用および個人利用の両方ができます。
 ただし元の著作権情報と、元のLICENSEファイルを含める必要があります。
 
