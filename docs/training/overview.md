@@ -67,7 +67,7 @@ NIMSはUSのインシデント対応フレームワークですが、多くの�
 
 ### イギリス
 
-イギリスの危機管理システムは、[**Gold-Silver-Bronze Command Structure**](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)と呼ばれるコマンド階層を遣います。
+イギリスの危機管理システムは、[**Gold-Silver-Bronze Command Structure**](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)と呼ばれるコマンド階層を使います。
 このフレームワークは、戦略的（ゴールド）、戦術的（シルバー）、運用（ブロンズ）の、コマンドの決定をする責務3つのレベルが含まれます。
 
 詳細については以下の資料をご覧ください。
