@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//getting_started/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -21,19 +21,19 @@
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//oncall/being_oncall/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//oncall/whos_oncall/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//oncall/alerting_principles/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -43,31 +43,31 @@
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//before/what_is_an_incident/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//before/severity_levels/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//before/different_roles/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//before/call_etiquette/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//before/complex_incidents/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -77,13 +77,13 @@
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//during/during_an_incident/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//during/security_incident_response/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -93,25 +93,25 @@
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//after/after_an_incident/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//after/post_mortem_process/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//after/post_mortem_template/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//after/effective_post_mortems/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -121,49 +121,49 @@
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/overview/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/incident_commander/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/deputy/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/scribe/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/subject_matter_expert/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/customer_liaison/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/internal_liaison/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/glossary/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -173,7 +173,7 @@
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//training/courses/incident_response/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -183,19 +183,19 @@
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//resources/reading/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//resources/chatops/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//resources/anti_patterns/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -204,7 +204,7 @@
     
     <url>
      <loc>https://ueokande.github.io/incident-response-docs-ja//about/</loc>
-     <lastmod>2020-10-19</lastmod>
+     <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
