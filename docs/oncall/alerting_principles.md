@@ -35,7 +35,7 @@ description: 私たちは、アラートは人間によるアクションが必�
 
 #### 本番サーバーのディスクが枯渇して、48時間以内にディスクフルになる。ログローテーションでは解決しない。
 
-優先度**Medium**で、すぐにではないが人手による対応が必要になります。。
+優先度**Medium**で、すぐにではないが人手による対応が必要になります。
 
 ![Medium Urgency](../assets/img/screenshots/high_business_hours.png)
 
