@@ -22,7 +22,7 @@ description: So you want to be an internal liaison? You've come to the right pla
 
 内部連絡になる前に、次のいくつかの基準を満たしている必要があります。
 その基準をまだ満たしていなくても心配しないでください。
-トレーニングを受けることができます！。
+トレーニングを受けることができます！
 
 * 口頭および文面での**コミュニケーション能力**
 
